@@ -5,7 +5,7 @@ info:
   author: zzeitlin
   reference: https://docs.mapbox.com/api/search/geocoding/
   severity: info
- 
+  tags: token-spray,mapbox
 
 self-contained: true
 requests:
