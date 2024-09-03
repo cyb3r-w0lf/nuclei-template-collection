@@ -1,0 +1,31 @@
+id: robots-txt
+
+info:
+  name: robots.txt file
+  author: CasperGN,TheZakMan,Arqsz
+  severity: info
+  tags: basic,remote
+
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}/robots.txt"
+
+    matchers-condition: and
+    host-redirects: true
+    matchers:
+      - type: word
+        words:
+          - "Disallow:"
+          - "Allow:"
+          - "Sitemap:"
+        condition: or
+
+      - type: word
+        part: header
+        words:
+          - text/plain
+
+      - type: status
+        status:
+          - 200

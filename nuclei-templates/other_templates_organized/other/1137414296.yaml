@@ -1,12 +1,16 @@
 id: ftp-proxy
 info:
-  name: JanaServer ftp proxy
+  name: AnalogX FTP proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
   metadata:
-    operating_system: Windows
+    hostname: $1
+    product: proxy
     rarity: 0
+    vendor: analogx
+    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +21,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^220 FTP Gateway at Jana Server ready\r\n
+    - ^220 ([-.+\w]+) FTP AnalogX Proxy (\d[-.\w]+) \(Release\) ready\r\n

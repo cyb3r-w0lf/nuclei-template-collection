@@ -5,7 +5,7 @@ info:
   author: zzeitlin
   reference: https://developers.weglot.com/api/reference
   severity: info
-  tags: token-spray,weglot
+ 
 
 self-contained: true
 requests:
