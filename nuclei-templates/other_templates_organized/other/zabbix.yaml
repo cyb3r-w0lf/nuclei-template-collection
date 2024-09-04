@@ -5,19 +5,21 @@ info:
   tags: detect,tech,zabbix,service
   severity: info
   metadata:
+    fallback:
+    - get-request
     product: zabbix
-    rarity: 8
+    rarity: 5
     vendor: zabbix
     verified: true
 tcp:
-- name: nessus-tpv10
+- name: sipoptions
   inputs:
-  - data: < NTP/1.0 >\n
+  - data: 'OPTIONS sip:nm SIP/2.0\r\nVia: SIP/2.0/TCP nm;branch=foo\r\nFrom: <sip:nm@nm>;tag=root\r\nTo: <sip:nm2@nm2>\r\nCall-ID: 50000\r\nCSeq: 42 OPTIONS\r\nMax-Forwards: 70\r\nContent-Length: 0\r\nContact: <sip:nm@nm>\r\nAccept: application/sdp\r\n\r\n'
   host:
   - '{{Hostname}}'
-  port: '1241'
+  port: 406,5060,8081,31337
   extractors:
   - name: zabbix
     type: regex
     regex:
-    - ^NOT OK\n$
+    - ^OK$
