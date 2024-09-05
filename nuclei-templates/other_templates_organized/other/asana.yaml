@@ -5,7 +5,7 @@ info:
   author: zzeitlin
   reference: https://developers.asana.com/docs/using-terminal
   severity: info
- 
+  tags: token-spray,asana
 
 self-contained: true
 requests:

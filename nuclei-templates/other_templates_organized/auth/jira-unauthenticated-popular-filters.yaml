@@ -1,9 +1,10 @@
 id: jira-unauth-popular-filters
+
 info:
   name: Jira Unauthenticated Popular Filters
   author: TechbrunchFR
-  severity: info
-  tags: atlassian,jira
+  severity: low
+
 requests:
   - method: GET
     path:

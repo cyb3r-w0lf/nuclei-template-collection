@@ -5,7 +5,7 @@ info:
   author: zzeitlin
   severity: info
   reference: https://openweathermap.org/current
- 
+  tags: token-spray,weather,openweather
 
 self-contained: true
 requests:

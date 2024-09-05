@@ -5,7 +5,7 @@ info:
   author: zzeitlin
   reference: https://dev.bitly.com/api-reference
   severity: info
- 
+  tags: token-spray,bitly
 
 self-contained: true
 requests:

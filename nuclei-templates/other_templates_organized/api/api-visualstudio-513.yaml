@@ -5,7 +5,7 @@ info:
   author: zzeitlin
   severity: info
   reference: https://openapi.appcenter.ms/
- 
+  tags: token-spray,visualstudio,microsoft
 
 self-contained: true
 requests:
