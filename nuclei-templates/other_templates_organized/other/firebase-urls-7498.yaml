@@ -5,7 +5,7 @@ info:
   description: Find firebaseio urls to check for security permissions
   author: panch0r3d
   severity: info
- 
+  tags: tech,firebase,google
 
 requests:
   - method: GET

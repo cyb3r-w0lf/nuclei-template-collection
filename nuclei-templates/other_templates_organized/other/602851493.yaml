@@ -20,4 +20,4 @@ tcp:
   - name: lmtp
     type: regex
     regex:
-    - ^220 ([\w._-]+) Zimbra LMTP ready\r\n
+    - ^220 ([\w._-]+) Zimbra LMTP (?:server )?ready\r\n

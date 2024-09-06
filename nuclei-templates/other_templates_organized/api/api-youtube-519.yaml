@@ -5,7 +5,7 @@ info:
   author: zzeitlin
   reference: https://developers.google.com/youtube/v3/docs
   severity: info
- 
+  tags: token-spray,youtube
 
 self-contained: true
 requests:

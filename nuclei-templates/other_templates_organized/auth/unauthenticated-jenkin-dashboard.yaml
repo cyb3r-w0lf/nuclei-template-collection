@@ -4,7 +4,7 @@ info:
   name: Unauthenticated Jenkins Dashboard
   author: dhiyaneshDK
   severity: high
- 
+  tags: jenkins
 
 requests:
   - method: GET
