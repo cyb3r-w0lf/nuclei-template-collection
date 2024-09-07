@@ -60,6 +60,8 @@ requests:
       - "{{BaseURL}}/hystrix.stream"
       - "{{BaseURL}}/jolokia"
       - "{{BaseURL}}/jolokia/list"
+      - "{{BaseURL}}:8090/jolokia"
+      - "{{BaseURL}}:8090/jolokia/list"
       - "{{BaseURL}}/loggers"
       - "{{BaseURL}}/management"
       - "{{BaseURL}}/mappings"
@@ -82,7 +84,6 @@ requests:
           - "JMImplementation"
           - "EnvironmentManager"
           - "org.springframework.boot.loader"
-          - "health"
         condition: or
       - type: status
         status:
@@ -95,4 +96,3 @@ requests:
           - "hprof"
         condition: or
         part: header
-

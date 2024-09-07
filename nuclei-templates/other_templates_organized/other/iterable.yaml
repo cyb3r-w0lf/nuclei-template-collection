@@ -5,7 +5,7 @@ info:
   author: zzeitlin
   severity: info
   reference: https://api.iterable.com/api/docs
- 
+  tags: token-spray,iterable
 
 self-contained: true
 requests:

@@ -1,11 +1,16 @@
 id: sieve
 info:
-  name: Dovecot Pigeonhole sieve
+  name: Cyrus timsieved
   author: nmap,cn-kali-team
   tags: detect,tech,sieve,service
   severity: info
   metadata:
+    info: Debian
+    operating_system: Linux
+    product: cyrus_imap_server
     rarity: 0
+    vendor: cmu
+    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -17,4 +22,4 @@ tcp:
   - name: sieve
     type: regex
     regex:
-    - ^\"IMPLEMENTATION\" \"Dovecot Pigeonhole\"\r\n\"SIEVE\" \"[\w._;-]+(?:\s+[\w._;-]+)*\"\r\n\"NOTIFY\" \"mailto\"\r\n\"SASL\" \"[\w._;-]*(?:\s+[\w._;-]+)*\"\r\n\"STARTTLS\"\r\n\"VERSION\" \"([\w._-]+)\"\r\nOK \"[^"]*\"\r\n$
+    - ^\"IMPLEMENTATION\" \"Cyrus timsieved v([\w._-]+-Debian[- ][\w._+-]+)\"\r\n
