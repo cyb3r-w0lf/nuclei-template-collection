@@ -1,11 +1,16 @@
 id: sieve
 info:
-  name: pysieved
+  name: Cyrus timsieved
   author: nmap,cn-kali-team
   tags: detect,tech,sieve,service
   severity: info
   metadata:
+    info: Red Hat
+    operating_system: Linux
+    product: cyrus_imap_server
     rarity: 0
+    vendor: cmu
+    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -17,4 +22,4 @@ tcp:
   - name: sieve
     type: regex
     regex:
-    - ^\"IMPLEMENTATION\" \"pysieved ([\w._-]+)\"\r\n
+    - ^\"IMPLEMENTATION\" \"Cyrus timsieved v([\w._-]+-Red Hat[- ][\w._+-]+)\"\r\n

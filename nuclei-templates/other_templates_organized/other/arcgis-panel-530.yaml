@@ -9,9 +9,14 @@ info:
     - https://enterprise.arcgis.com/en/
   classification:
     cwe-id: CWE-200
-  tags: docs,arcgis,cms,panel
+    cpe: cpe:2.3:a:esri:arcgis_enterprise:*:*:*:*:*:*:*:*
+  metadata:
+    max-request: 1
+    product: arcgis_enterprise
+    vendor: esri
+  tags: docs,arcgis,cms,panel,esri
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}/portal/portalhelp/en/'
@@ -39,6 +44,6 @@ requests:
         part: body
         group: 2
         regex:
-          - '(Released Version:</strong>[\n\t ]+(([0-9]+(.[0-9]+)?(.[0-9]+)?)([\n\t ]+\([A-Za-z]+[\t ]+20[0-9][0-9]\))?))'
-
-# Enhanced by mp on 2022/03/20
+          - '(Released Version:</strong>[\n\t ]+(([0-9]+(.[0-9]+)?(.[0-9]+)?)([\n\t
+            ]+\([A-Za-z]+[\t ]+20[0-9][0-9]\))?))'
+# digest: 4a0a004730450220281ad388414a5d110cfd5a7c7e9785b4aadcb95d806f94ecc6259d78b8b79a04022100b1a6fb2363b60f1e9b677cf1f4cf12abd8088cd5b53a6659d95408c585b82bac:922c64590222798bb761d5b6d8e72950

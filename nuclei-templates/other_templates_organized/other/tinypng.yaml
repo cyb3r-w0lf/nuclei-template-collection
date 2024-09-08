@@ -5,7 +5,7 @@ info:
   author: zzeitlin
   reference: https://tinypng.com/developers
   severity: info
- 
+  tags: token-spray,tinypng
 
 self-contained: true
 requests:
