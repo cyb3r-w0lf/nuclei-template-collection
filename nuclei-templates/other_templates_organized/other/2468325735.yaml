@@ -1,15 +1,15 @@
 id: sip
 info:
-  name: Snom $1 VoIP phone
+  name: Sipek VoIP
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
   metadata:
-    device_type: VoIP phone
     fallback:
     - get-request
+    info: on PJSUA
     rarity: 5
-    version: $2
+    version: $1
 tcp:
 - name: sipoptions
   inputs:
@@ -21,4 +21,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?User-Agent: snom([\w._-]+)/([\w._-]+)\r\n'
+    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?User-Agent: Sipek on PJSUA v([\w._-]+)/win32\r\n'

@@ -4,7 +4,7 @@ info:
   name: SkyCaiji Exposed Installation
   author: pikpikcu
   severity: high
- 
+  tags: tech,skycaiji,exposure,misconfig
 
 requests:
   - method: GET

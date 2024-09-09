@@ -1,15 +1,14 @@
 id: tftp
 info:
-  name: Cisco router tftpd
+  name: TFTP Server SP
   author: nmap,cn-kali-team
   tags: detect,tech,tftp,service
   severity: info
   metadata:
-    device_type: router
-    operating_system: IOS
-    product: tftp_server
+    operating_system: Windows
+    product: tftp_server_sp
     rarity: 5
-    vendor: cisco
+    vendor: tftp
     verified: true
 tcp:
 - name: dnsstatus-request
@@ -22,4 +21,4 @@ tcp:
   - name: tftp
     type: regex
     regex:
-    - ^\0\x05\0\x04Illegal operation\0$
+    - ^\0\x05\0\x05Unknown transfer ID\0

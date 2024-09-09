@@ -5,7 +5,7 @@ info:
   author: zzeitlin
   severity: info
   reference: https://docs.npmjs.com/creating-and-viewing-access-tokens
- 
+  tags: token-spray,node,npm
 
 self-contained: true
 requests:
