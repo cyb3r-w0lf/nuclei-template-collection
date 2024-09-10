@@ -1,11 +1,10 @@
 id: daytime
 info:
-  name: Atomic Time Synchonizer daytime
+  name: Microsoft Windows daytime
   author: nmap,cn-kali-team
   tags: detect,tech,daytime,service
   severity: info
   metadata:
-    info: $1
     operating_system: Windows
     rarity: 0
 tcp:
@@ -18,4 +17,4 @@ tcp:
   - name: daytime
     type: regex
     regex:
-    - ^\w+, +\d+ +\w+ +\d+ +\d+:\d+:\d+ [+-]\d+\r\n([\w:._ /\\-]+\\ats\.exe)\r\n
+    - ^[A-Z][a-z]+day, [A-Z][a-z]+ \d{1,2}, (?:19|20)\d\d \d{1,2}:\d\d:\d\d\n\0$

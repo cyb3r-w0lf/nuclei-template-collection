@@ -1,13 +1,14 @@
 id: nntp
 info:
-  name: Leafnode nntpd
+  name: Diablo NNTP service
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
     hostname: $1
-    info: misconfigured
+    info: 'Admin: $2'
     rarity: 0
+    version: $3
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +19,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^\nLeafnode must have a fully-qualified and globally unique domain name,\nnot just \"([-\w_.]+)\"\.\n
+    - ^200 ([-.\w]+) NNTP Service Ready - ([-.\w]+@[-.\w]+) \(DIABLO (\d[-.\w ]+)\)\r\n
