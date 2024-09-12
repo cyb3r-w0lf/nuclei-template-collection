@@ -20,64 +20,68 @@
 | CVE-2016 | 249 |
 | CVE-2017 | 396 |
 | CVE-2018 | 446 |
-| CVE-2019 | 513 |
-| CVE-2020 | 593 |
-| CVE-2021 | 1738 |
-| CVE-2022 | 2469 |
-| CVE-2023 | 4760 |
-| CVE-2024 | 4986 |
-| Other | 24771 |
+| CVE-2019 | 514 |
+| CVE-2020 | 594 |
+| CVE-2021 | 1734 |
+| CVE-2022 | 2470 |
+| CVE-2023 | 4759 |
+| CVE-2024 | 4993 |
+| Other | 24797 |
 ## Quantity changes in recent days
-|2024-09-05 | 2024-09-06 | 2024-09-07 | 2024-09-08 | 2024-09-09 | 2024-09-10 | 2024-09-11|
+|2024-09-06 | 2024-09-07 | 2024-09-08 | 2024-09-09 | 2024-09-10 | 2024-09-11 | 2024-09-12|
 |--- | ------ | ------ | ------ | ------ | ------ | ---|
-|42422 | 42544 | 42595 | 42612 | 42614 | 42615 | 42645|
+|42544 | 42595 | 42612 | 42614 | 42615 | 42645 | 42676|
 ## Recently added files
 | templates name | 
 | --- |
-| CVE-2024-8241.yaml |
-| CVE-2024-8517.yaml |
-| CVE-2024-6282.yaml |
-| CVE-2024-8369.yaml |
-| CVE-2024-7655.yaml |
-| CVE-2024-8543.yaml |
-| CVE-2024-7618.yaml |
-| CVE-2024-8268.yaml |
-| CVE-2024-44849.yaml |
-| CVE-2024-7770.yaml |
-| CVE-2024-8478.yaml |
-| CVE-2000-0760.yaml |
-| 3767071583.yaml |
-| qualitor.yaml |
-| webp-server-lfi.yaml |
-| 3945099041.yaml |
-| yonyou-ufida-nc-cloud-sqli.yaml |
-| 2503596678.yaml |
-| 3292348530.yaml |
-| 1583697331.yaml |
-| nsfocus-lfi.yaml |
-| 2678416293.yaml |
-| nsfocus-auth-bypass.yaml |
-| 1436262384.yaml |
-| 3097736164.yaml |
-| 2645636649.yaml |
-| ibm-api-connect-developer-portal-detect.yaml |
-| 2466214697.yaml |
-| apache-jspwiki-detect.yaml |
-| directory-listing-no-host-header.yaml |
-| apache-jspwiki-ip-userenum.yaml |
-| imo-rce.yaml |
-| 1068393374.yaml |
-| nova-blocks.yaml |
-| 4206215244.yaml |
-| 279300274.yaml |
-| ibm-api-connect-panel.yaml |
-| 3301367136.yaml |
-| authentik-panel.yaml |
-| 931022683.yaml |
-| 3198126306.yaml |
-| 3716330286.yaml |
-| kemp-loadmaster-panel.yaml |
-| imo-file-download.yaml |
-| slider-comparison-image-before-and-after.yaml |
-| fumasoft-sqli.yaml |
-| CVE-2023-2919.yaml |
+| CVE-2024-8277.yaml |
+| CVE-2024-7626.yaml |
+| CVE-2024-6335.yaml |
+| CVE-2024-8440.yaml |
+| CVE-2024-7727.yaml |
+| CVE-2024-8045.yaml |
+| CVE-2024-5416.yaml |
+| CVE-2024-8253.yaml |
+| CVE-2024-7721.yaml |
+| CVE-2019-25212.yaml |
+| 1409293928.yaml |
+| 12.1.1.yaml |
+| 3173320170.yaml |
+| 121512318.yaml |
+| ords-panel.yaml |
+| 2616655835.yaml |
+| 3562947886.yaml |
+| 5.5.2.yaml |
+| 403317930.yaml |
+| 2359402748.yaml |
+| 1999825028.yaml |
+| woocommerce-photo-reviews.yaml |
+| 12.3.3.yaml |
+| 12.6.1.yaml |
+| Devias-kit-register.yaml |
+| 12.1.1.2.yaml |
+| SQLNet-log.yaml |
+| 400617202.yaml |
+| 1390239666.yaml |
+| oracle-ebs-lfi.yaml |
+| 3879724070.yaml |
+| advanced-backgrounds.yaml |
+| 5.3.3.1.yaml |
+| 5.1.5.yaml |
+| 3629830184.yaml |
+| 5.3.3.2.yaml |
+| 5.2.6.yaml |
+| 2619220508.yaml |
+| 3744989892.yaml |
+| xss-oracle.yaml |
+| 3641132158.yaml |
+| 8.2.1.yaml |
+| 873291280.yaml |
+| 1260987045.yaml |
+| 1727118266.yaml |
+| 1055477858.yaml |
+| 780547518.yaml |
+| custom-css-js-php.yaml |
+| 2083493010.yaml |
+| 9.1.2.yaml |
+| 3314355367.yaml |

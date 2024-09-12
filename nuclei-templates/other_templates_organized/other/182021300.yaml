@@ -1,12 +1,15 @@
 id: ldap
 info:
-  name: Anonymous bind OK
+  name: OpenLDAP
   author: nmap,cn-kali-team
   tags: detect,tech,ldap,service
   severity: info
   metadata:
-    info: Anonymous bind OK
+    info: access denied
+    product: openldap
     rarity: 6
+    vendor: openldap
+    verified: true
 tcp:
 - name: ldapbind-req
   inputs:
@@ -18,4 +21,4 @@ tcp:
   - name: ldap
     type: regex
     regex:
-    - ^0\x0c\x02\x01\x01a\x07\n\x01\0\x04\0\x04\0
+    - ^0%\x02\x01\x01a \n\x010\x04\0\x04\x19anonymous bind disallowed$
