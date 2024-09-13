@@ -1,16 +1,17 @@
 id: ssh
 info:
-  name: Apache Mina sshd
+  name: OpenSSH
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    info: Gitblit $2; protocol $1
-    product: gitblit
+    info: NetBSD $3; protocol $1
+    operating_system: NetBSD
+    product: openssh
     rarity: 0
-    vendor: jamesmoger
+    vendor: openbsd
     verified: true
-    version: $3
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +22,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-Gitblit_v([\d.]+) \(SSHD-CORE-([\d.]+)-NIO2\)\r\n
+    - ^SSH-([\d.]+)-OpenSSH_([\w._-]+) NetBSD_Secure_Shell-([\w._+-]+)\r?\n

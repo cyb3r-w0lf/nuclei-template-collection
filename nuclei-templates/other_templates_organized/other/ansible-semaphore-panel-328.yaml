@@ -1,33 +1,26 @@
 id: ansible-semaphore-panel
 
 info:
-  name: Ansible Semaphore Panel Detect
+  name: Ansible Semaphore Panel
   author: Yuzhe-zhang-0
   severity: info
-  description: An Ansible Semaphore login panel was detected.
-  reference:
-    - https://ansible-semaphore.com/
-    - https://github.com/ansible-semaphore/semaphore
-  classification:
-    cwe-id: CWE-200
-  metadata:
-    max-request: 1
-    shodan-query: http.html:"Semaphore</title>"
-  tags: panel,ansible,semaphore,cicd,oss
+  reference: https://www.shodan.io/search?query=http.title%3A%22Ansible+Semaphore%22
+  tags: panel,ansible,semaphore,cicd
 
-http:
+requests:
   - method: GET
+    redirects: true
+    max-redirects: 5
     path:
-      - '{{BaseURL}}/auth/login'
+      - '{{BaseURL}}/'
 
-    matchers-condition: or
+    matchers-condition: and
     matchers:
       - type: word
         words:
-          - '<title>Ansible Semaphore</title>'
+          - '<title>Ansible Semaphore'
+          - '>Semaphore</title>'
 
-      - type: regex
-        regex:
-          - '<title(.*)>Semaphore</title>'
-
-# digest: 4a0a004730450220135b2b9cf2ac5a95af88106fccd7f324c5defbcf3820e1e3ab9b4a9e01209c40022100ab99487635f572c6301e3fe8d9973979f1c0e7892e92e218a3f295511d74c02c:922c64590222798bb761d5b6d8e72950
+      - type: status
+        status:
+          - 200
