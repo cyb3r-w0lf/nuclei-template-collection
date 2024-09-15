@@ -1,12 +1,16 @@
 id: sip-proxy
 info:
-  name: Nokia CFX-5000 SIP core controller
+  name: Asterisk
   author: nmap,cn-kali-team
   tags: detect,tech,sip-proxy,service
   severity: info
   metadata:
-    device_type: PBX
+    info: FreePBX $1
+    product: asterisk
     rarity: 5
+    vendor: digium
+    verified: true
+    version: $2
 tcp:
 - name: sipoptions
   inputs:
@@ -18,4 +22,4 @@ tcp:
   - name: sip-proxy
     type: regex
     regex:
-    - ^SIP/2\.0 400 Bad Request - [A-Z] - 16007\r\nv:SIP/2\.0/UDP nm;branch=foo;rport=\d+;received=[\d.]+\r\nf:<sip:nm@nm>;tag=root\r\nt:<sip:nm2@nm2>;tag=\d+\r\ni:50000\r\nCSeq:42 OPTIONS\r\nl:0\r\n\r\n
+    - '^SIP/2\.0 200 OK\r\nVia: SIP/2\.0/UDP nm;branch=foo;received=[\d.]+;rport=\d+\r\nFrom: <sip:nm@nm>;tag=root\r\nTo: <sip:nm2@nm2>;tag=as\d+\r\nCall-ID: 50000\r\nCSeq: 42 OPTIONS\r\nServer: -(\d[\w._-]+)\((\d[\w._-]+)\)\r\nAllow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO, PUBLISH\r\nSupported: replaces, timer\r\nContact: .*\r\nAccept: application/sdp\r\nContent-Length: 0\r\n\r\n'

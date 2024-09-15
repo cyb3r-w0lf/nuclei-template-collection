@@ -1,12 +1,13 @@
 id: nntp
 info:
-  name: WendzelNNTPd
+  name: NetWare nntpd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
+    hostname: $1
     rarity: 0
-    version: $1
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +18,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 WendzelNNTPd-OSE \(Open Source Edition\) ([\w._-]+) '\w+'  - \([^)]+\) ready \(posting ok\)\.\r\n
+    - ^200 ([\w.-_]+) NetWare-News-Server/([\d.]+) 'LDNUM' NNRP ready \(posting ok\)\.\r\n

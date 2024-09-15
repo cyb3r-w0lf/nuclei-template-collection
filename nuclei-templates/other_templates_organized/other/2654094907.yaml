@@ -1,24 +1,23 @@
 id: smtp-proxy
 info:
-  name: AVG smtp proxy
+  name: Dr.Web SMTP-proxy
   author: nmap,cn-kali-team
   tags: detect,tech,smtp-proxy,service
   severity: info
   metadata:
-    operating_system: Windows
-    product: anti-virus
-    rarity: 0
-    vendor: avg
+    product: smtp-proxy
+    rarity: 8
+    vendor: drweb
     verified: true
-    version: $1
 tcp:
-- name: 'null'
+- name: hello
   inputs:
-  - data: ''
+  - data: EHLO\r\n
   host:
   - '{{Hostname}}'
+  port: 25,587,3025
   extractors:
   - name: smtp-proxy
     type: regex
     regex:
-    - ^220 AVG ESMTP Proxy Server Beta - ([\d./]+) \[[\d.]+\]\r\n
+    - ^220 OutgoingFilter SMTP\r\n502 OutgoingFilter Command not implemented\r\n
