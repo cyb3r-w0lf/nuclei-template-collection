@@ -21,51 +21,36 @@
 | CVE-2017 | 397 |
 | CVE-2018 | 446 |
 | CVE-2019 | 514 |
-| CVE-2020 | 595 |
+| CVE-2020 | 596 |
 | CVE-2021 | 1735 |
 | CVE-2022 | 2472 |
 | CVE-2023 | 4762 |
-| CVE-2024 | 5053 |
-| Other | 25100 |
+| CVE-2024 | 5052 |
+| Other | 25099 |
 ## Quantity changes in recent days
-|2024-09-09 | 2024-09-10 | 2024-09-11 | 2024-09-12 | 2024-09-13 | 2024-09-14 | 2024-09-15|
+|2024-09-10 | 2024-09-11 | 2024-09-12 | 2024-09-13 | 2024-09-14 | 2024-09-15 | 2024-09-16|
 |--- | ------ | ------ | ------ | ------ | ------ | ---|
-|42614 | 42615 | 42645 | 42676 | 42969 | 43029 | 43047|
+|42615 | 42645 | 42676 | 42969 | 43029 | 43047 | 43046|
 ## Recently added files
 | templates name | 
 | --- |
-| CVE-2024-8669.yaml |
-| CVE-2024-34750.yaml |
-| CVE-2024-8271.yaml |
-| CVE-2024-6482.yaml |
-| CVE-2024-8797.yaml |
-| CVE-2024-8479.yaml |
-| CVE-2024-6409.yaml |
-| CVE-2024-8246.yaml |
-| CVE-2024-40725.yaml |
-| CVE-2024-43044.yaml |
-| CVE-2024-8724.yaml |
-| CVE-2022-3459.yaml |
-| intank-iiot.yaml |
-| gavazzi-automation.yaml |
-| 2650449041.yaml |
-| rockwell-plc-detect.yaml |
-| 2190341012.yaml |
-| frontpage-exposure.yaml |
-| 624006148.yaml |
-| 3762182881.yaml |
-| 4225438834.yaml |
-| 2561176781.yaml |
-| 1444233358.yaml |
-| woocommerce-multiple-free-gift.yaml |
-| siemens-simatic.yaml |
-| 185797405.yaml |
-| hipcam-detect.yaml |
-| 2306284163.yaml |
-| 1103093225.yaml |
-| noauth-vnc.yaml |
-| 965604649.yaml |
-| 3341375954.yaml |
-| 3405747635.yaml |
-| 3973665500.yaml |
-| CVE-2023-3410.yaml |
+| 1254070126.yaml |
+| 3512117859.yaml |
+| 1179446339.yaml |
+| ssrf-detect.yaml |
+| 3257899591.yaml |
+| 3041134173.yaml |
+| 3343562980.yaml |
+| 259768170.yaml |
+| 364099918.yaml |
+| 1263392530.yaml |
+| 353449819.yaml |
+| 2923561922.yaml |
+| 845729784.yaml |
+| 4141864798.yaml |
+| 1826353917.yaml |
+| 3945748084.yaml |
+| 31261124.yaml |
+| 2545972775.yaml |
+| 4186514691.yaml |
+| 1030535846.yaml |
