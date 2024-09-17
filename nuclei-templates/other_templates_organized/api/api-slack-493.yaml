@@ -5,7 +5,7 @@ info:
   author: zzeitlin
   reference: https://api.slack.com/methods/auth.test
   severity: info
- 
+  tags: token-spray,slack
 
 self-contained: true
 requests:

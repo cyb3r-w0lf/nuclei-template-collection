@@ -1,31 +1,23 @@
 id: robots-txt
-
 info:
   name: robots.txt file
-  author: CasperGN,TheZakMan,Arqsz
+  author: CasperGN,TheZakMan
   severity: info
-  tags: basic,remote
-
+  tags: misc,generic
 requests:
   - method: GET
     path:
       - "{{BaseURL}}/robots.txt"
-
     matchers-condition: and
-    host-redirects: true
+    redirects: true
     matchers:
       - type: word
         words:
           - "Disallow:"
-          - "Allow:"
-          - "Sitemap:"
-        condition: or
-
       - type: word
         part: header
         words:
           - text/plain
-
-      - type: status
-        status:
-          - 200
+      - type: dsl
+        dsl:
+          - "len(body)>=140 && status_code==200"
