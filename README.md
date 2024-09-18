@@ -20,52 +20,44 @@
 | CVE-2016 | 249 |
 | CVE-2017 | 397 |
 | CVE-2018 | 446 |
-| CVE-2019 | 514 |
-| CVE-2020 | 594 |
+| CVE-2019 | 515 |
+| CVE-2020 | 593 |
 | CVE-2021 | 1735 |
-| CVE-2022 | 2472 |
-| CVE-2023 | 4761 |
-| CVE-2024 | 5054 |
-| Other | 25116 |
+| CVE-2022 | 2471 |
+| CVE-2023 | 4762 |
+| CVE-2024 | 5058 |
+| Other | 25128 |
 ## Quantity changes in recent days
-|2024-09-11 | 2024-09-12 | 2024-09-13 | 2024-09-14 | 2024-09-15 | 2024-09-16 | 2024-09-17|
+|2024-09-12 | 2024-09-13 | 2024-09-14 | 2024-09-15 | 2024-09-16 | 2024-09-17 | 2024-09-18|
 |--- | ------ | ------ | ------ | ------ | ------ | ---|
-|42645 | 42676 | 42969 | 43029 | 43047 | 43046 | 43062|
+|42676 | 42969 | 43029 | 43047 | 43046 | 43062 | 43078|
 ## Recently added files
 | templates name | 
 | --- |
-| sangforrce-220331-222605.yaml |
-| cve202120837-220331-223044.yaml |
-| 4263585038.yaml |
-| shipped100-220331-222640.yaml |
-| CVE202127562-220331-222408.yaml |
-| djangodebug-220331-222254.yaml |
-| 3055795723.yaml |
-| esaitongdocmanagementrce-220331-222541.yaml |
-| icewarprce-220331-222842.yaml |
-| 3297770987.yaml |
-| mpsecfileread-220331-222738.yaml |
-| shopxo-220331-222700.yaml |
-| wordpresssdexml-220331-222235.yaml |
-| concrete5xss210530001807-220331-222149.yaml |
-| jeewmsfileread-220331-222758.yaml |
-| gitlistnew-220331-222623.yaml |
-| akamaiarl-220331-222955.yaml |
-| jiracve202036289-220331-222715.yaml |
-| netterce-220331-222453.yaml |
-| 1810200922.yaml |
-| 587481785.yaml |
-| locomotivesubdomaintakeover-220331-222520.yaml |
-| ibmqradarssrf-220331-222931.yaml |
-| 4287034669.yaml |
-| 1206533912.yaml |
-| tg8preauthrce-220331-222435.yaml |
-| 2315604765.yaml |
-| ciscoasaxss-220331-222901.yaml |
-| 355234442.yaml |
-| wordpressconfig210604203646-220331-222211.yaml |
-| 1823050869.yaml |
-| apachesolrlfissrf-220331-222316.yaml |
-| 2873067058.yaml |
-| php8devrce-220331-222821.yaml |
-| laravelphpunitrce-220331-222918.yaml |
+| CVE-2024-8490.yaml |
+| CVE-2024-8761.yaml |
+| CVE-2024-8752.yaml |
+| domibus-detect.yaml |
+| 422910393.yaml |
+| 4083870025.yaml |
+| 2567122009.yaml |
+| 1335308282.yaml |
+| 2569498493.yaml |
+| motic-dsm-arbitrary-file-read.yaml |
+| bonita-default-login.yaml |
+| 2407258475.yaml |
+| nginx-proxy-manager-default-login.yaml |
+| 3473856739.yaml |
+| webiq.yaml |
+| 4043528891.yaml |
+| owncast.yaml |
+| bonita-portal-panel.yaml |
+| media-suite.yaml |
+| wordpress-theme-detect.yaml |
+| 1497412393.yaml |
+| 2418111455.yaml |
+| 120616753.yaml |
+| 4105250355.yaml |
+| 3942423849.yaml |
+| CVE-2023-3188.yaml |
+| CVE-2023-39024.yaml |

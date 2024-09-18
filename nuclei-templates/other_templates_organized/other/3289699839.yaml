@@ -1,15 +1,16 @@
 id: ftp-proxy
 info:
-  name: Symantec Enterprise Firewall FTP proxy
+  name: AnalogX FTP proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
   metadata:
-    device_type: firewall
-    product: enterprise_firewall
+    hostname: $1
+    product: proxy
     rarity: 0
-    vendor: symantec
+    vendor: analogx
     verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +21,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^220 Secure Gateway FTP server
+    - ^220 ([-.+\w]+) FTP AnalogX Proxy (\d[-.\w]+) \(Release\) ready\r\n
