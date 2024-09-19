@@ -1,12 +1,14 @@
 id: textui
 info:
-  name: Huawei UGW
+  name: TeamSpeak 3 ClientQuery
   author: nmap,cn-kali-team
   tags: detect,tech,textui,service
   severity: info
   metadata:
-    info: 'time zone: $1'
+    product: teamspeak3
     rarity: 0
+    vendor: teamspeak
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +19,4 @@ tcp:
   - name: textui
     type: regex
     regex:
-    - ^\+\+\+    UGW-HUAWEI *\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d ([A-Z]+)\r\nO&M
+    - ^TS3 Client\n\r

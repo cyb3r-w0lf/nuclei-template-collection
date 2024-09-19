@@ -10,14 +10,14 @@ info:
     - https://mspcontrol.org/downloads/
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cvss-score: 0.0
     cwe-id: CWE-200
   metadata:
-    google-query: intitle:"MSPControl - Sign In"
-    max-request: 1
     shodan-query: http.title:"MSPControl - Sign In"
+    google-query: intitle:"MSPControl - Sign In"
   tags: panel,mspcontrol
 
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}/Default.aspx?pid=Login"
@@ -37,4 +37,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100d978a1df75963a70dd6dde30db8f8b0766533984dc762c6255ddb96497c994b00221009703405b2f15d26874231bb2ac0d0387c695e2e2c41563ed656a6001d9f4387c:922c64590222798bb761d5b6d8e72950
+
+# Enhanced by md on 2022/11/29

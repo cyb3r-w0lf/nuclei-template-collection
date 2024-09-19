@@ -1,16 +1,15 @@
 id: sip-proxy
 info:
-  name: 3CX PhoneSystem PBX
+  name: Audiocodes $1 SIP gateway
   author: nmap,cn-kali-team
   tags: detect,tech,sip-proxy,service
   severity: info
   metadata:
-    device_type: PBX
+    device_type: VoIP adapter
     fallback:
     - get-request
-    info: misconfigured
-    operating_system: Windows
     rarity: 5
+    version: $2
 tcp:
 - name: sipoptions
   inputs:
@@ -22,4 +21,4 @@ tcp:
   - name: sip-proxy
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 503 Remote end of tunnel is not connected\r\n(?:[^\r\n]+\r\n)*?Warning: \d+ \w+ \"Remote end of the bridge is not connected\"\r\n'
+    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?Server: Audiocodes-Sip-Gateway-(MP-[\w._ -]+)/v\.([\w._-]+)\r\n'

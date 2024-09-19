@@ -1,7 +1,7 @@
 id: wordpress-advanced-custom-fields
 
 info:
-  name: Advanced Custom Fields (ACF) Detection
+  name: Advanced Custom Fields Detection
   author: ricardomaia
   severity: info
   reference:
@@ -11,7 +11,7 @@ info:
     wpscan: https://wpscan.com/plugin/advanced-custom-fields
   tags: tech,wordpress,wp-plugin,top-100,top-200
 
-http:
+requests:
   - method: GET
 
     path:
