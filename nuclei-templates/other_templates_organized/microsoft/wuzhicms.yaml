@@ -5,14 +5,22 @@ info:
   tags: detect,tech,wuzhicms
   severity: info
   metadata:
+    fofa-query:
+    - title="wuzhicms"
     product: wuzhicms
-    vendor: 00_unknown
-    verified: false
+    shodan-query:
+    - http.html:"wuzhicms"
+    vendor: wuzhicms
+    verified: true
 http:
 - method: GET
   path:
   - '{{BaseURL}}/'
   matchers:
+  - type: word
+    words:
+    - wuzhicms
+    case-insensitive: true
   - type: word
     words:
     - content="wuzhicms

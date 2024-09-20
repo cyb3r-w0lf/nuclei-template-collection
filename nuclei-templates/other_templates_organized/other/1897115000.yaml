@@ -1,12 +1,10 @@
 id: tftp
 info:
-  name: SolarWinds tftpd
+  name: SolarWinds Free tftpd
   author: nmap,cn-kali-team
   tags: detect,tech,tftp,service
   severity: info
   metadata:
-    info: IP disallowed
-    operating_system: Windows
     product: tftp_server
     rarity: 5
     vendor: solarwinds
@@ -22,4 +20,4 @@ tcp:
   - name: tftp
     type: regex
     regex:
-    - ^\0\x05\0\x02\0The IP address is not in the range of allowable addresses\.\0
+    - '^\0\x05\0\x04Unknown operatation code: 0 received from [\d.]+:\d+\0'

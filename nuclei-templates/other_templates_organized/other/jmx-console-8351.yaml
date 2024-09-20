@@ -3,7 +3,6 @@ info:
   name: JMX Console
   author: Yash Anand @yashanand155
   severity: low
-  tags: panel
 
 requests:
   - method: GET

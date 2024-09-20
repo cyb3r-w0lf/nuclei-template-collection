@@ -6,13 +6,19 @@ info:
   severity: info
   metadata:
     product: oscommerce
-    vendor: 00_unknown
-    verified: false
+    shodan-query:
+    - html:"oscommerce"
+    vendor: oscommerce
+    verified: true
 http:
 - method: GET
   path:
   - '{{BaseURL}}/'
   matchers:
+  - type: word
+    words:
+    - oscommerce
+    case-insensitive: true
   - type: word
     words:
     - src="images/oscommerce.png
