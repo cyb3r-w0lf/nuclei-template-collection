@@ -1,12 +1,15 @@
 id: smtp
 info:
-  name: Cisco PIX sanitized smtpd
+  name: Symantec Messaging Gateway smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    device_type: firewall
+    hostname: $1
+    product: messaging_gateway
     rarity: 0
+    vendor: symantec
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +20,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 [\*\d\ ]{2,300}\r\n
+    - ^220 ([\w._-]+) ESMTP Symantec Messaging Gateway\r\n
