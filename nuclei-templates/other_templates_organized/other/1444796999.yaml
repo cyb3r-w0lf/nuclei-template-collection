@@ -1,24 +1,23 @@
 id: smtp-proxy
 info:
-  name: Trustwave Secure Email Gateway
+  name: Dr.Web SMTP-proxy
   author: nmap,cn-kali-team
   tags: detect,tech,smtp-proxy,service
   severity: info
   metadata:
-    hostname: $1
-    product: secure_email_gateway
-    rarity: 0
-    vendor: trustwave
+    product: smtp-proxy
+    rarity: 8
+    vendor: drweb
     verified: true
-    version: $2
 tcp:
-- name: 'null'
+- name: hello
   inputs:
-  - data: ''
+  - data: EHLO\r\n
   host:
   - '{{Hostname}}'
+  port: 25,587,3025
   extractors:
   - name: smtp-proxy
     type: regex
     regex:
-    - ^220 ([\w.-]+) ESMTP Trustwave SEG \(v([\d.]+)\) Ready\r\n
+    - ^220 OutgoingFilter SMTP\r\n502 OutgoingFilter Command not implemented\r\n

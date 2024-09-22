@@ -1,14 +1,22 @@
 id: kafka-center-default-login
 
 info:
-  name: Kafka Center Default Login
+  name: Apache Kafka Center Default Login
   author: dhiyaneshDK
   severity: high
-  tags: kafka,default-login
+  description: Apache Kafka Center default admin credentials were discovered.
+  reference:
+    - https://developer.ibm.com/tutorials/kafka-authn-authz/
+  classification:
+    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L
+    cvss-score: 8.3
+    cwe-id: CWE-522
   metadata:
+    max-request: 1
     shodan-query: http.title:"Kafka Center"
+  tags: kafka,default-login
 
-requests:
+http:
   - raw:
       - |
         POST /login/system HTTP/1.1
@@ -36,3 +44,5 @@ requests:
       - type: status
         status:
           - 200
+
+# Enhanced by mp on 2022/03/10

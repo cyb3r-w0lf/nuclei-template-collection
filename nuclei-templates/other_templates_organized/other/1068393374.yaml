@@ -5,6 +5,7 @@ info:
   tags: detect,tech,imap,service
   severity: info
   metadata:
+    info: German
     operating_system: Windows
     product: exchange_server
     rarity: 0
@@ -21,4 +22,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK Microsoft Exchange 2000 IMAP4rev1 server version (\d[-.\w]+) \([-.\w]+\) ready\.\r\n
+    - ^\* OK Der Microsoft Exchange Server \(IMAP4rev1, Version (\d[-.\w]+) \([-.\w]+\)\) steht zur Verf\xfcgung\.\r\n

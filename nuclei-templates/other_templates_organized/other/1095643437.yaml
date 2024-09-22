@@ -1,23 +1,23 @@
 id: smtp
 info:
-  name: cbdev cmail smtpd
+  name: Lotus Domino smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    hostname: $1
-    product: cmail
-    rarity: 0
-    vendor: cbdev
+    product: lotus_domino
+    rarity: 8
+    vendor: ibm
     verified: true
 tcp:
-- name: 'null'
+- name: hello
   inputs:
-  - data: ''
+  - data: EHLO\r\n
   host:
   - '{{Hostname}}'
+  port: 25,587,3025
   extractors:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([\w.-]+) ESMTP service ready\r\n
+    - ^220 .* SMTP ready at .*\r\n501 Command \"EHLO\" requires an argument\r\n

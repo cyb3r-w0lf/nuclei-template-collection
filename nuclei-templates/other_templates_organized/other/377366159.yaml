@@ -5,7 +5,7 @@ info:
   tags: detect,tech,mysql,service
   severity: info
   metadata:
-    info: unauthorized; Italian
+    info: unauthorized; German
     product: mysql
     rarity: 0
     vendor: mysql
@@ -20,4 +20,4 @@ tcp:
   - name: mysql
     type: regex
     regex:
-    - (?i)^.\0\0\0\xff..Al sistema '[-.\w]+' non e` consentita la connessione a questo server MySQL$
+    - (?i)^.\0\0\0\xff..Host '[-\w_.]+' hat keine Berechtigung, sich mit diesem MySQL-Server zu verbinden

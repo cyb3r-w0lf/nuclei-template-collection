@@ -18,6 +18,8 @@ http:
     payloads:
       reflection:
         - "'\"><{{first}}"
+        - "'\"`//><{{first}}"
+    
 
     fuzzing:
       - part: query
@@ -26,7 +28,7 @@ http:
         fuzz:
           - "{{reflection}}"
 
-    stop-at-first-match: true
+    stop-at-first-match: false
     matchers-condition: and
     matchers:
       - type: word

@@ -1,15 +1,13 @@
 id: sip
 info:
-  name: Ekiga
+  name: AVM $1 SIP
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
   metadata:
-    product: ekiga
+    device_type: WAP
     rarity: 5
-    vendor: ekiga
-    verified: true
-    version: $1
+    version: $2
 tcp:
 - name: sipoptions
   inputs:
@@ -21,4 +19,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?User-Agent: Ekiga/([\w._-]+)\r\n'
+    - '(?i)^SIP/2\.0 404 Not Found\r\n(?:[^\r\n]+\r\n)*?User-Agent: AVM (FRITZ!Box Fon WLAN [\w._ -]+) (?:Annex A )?(?:\(UI\) )?([\w._ -]+ \(\w+ +\d+ +\d+\))'

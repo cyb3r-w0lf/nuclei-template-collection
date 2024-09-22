@@ -1,12 +1,15 @@
 id: pop3pw
 info:
-  name: SINA pop3pw
+  name: CommuniGate Pro pop3pw
   author: nmap,cn-kali-team
   tags: detect,tech,pop3pw,service
   severity: info
   metadata:
+    info: access denied
+    product: communigate_pro
     rarity: 0
-    version: $1
+    vendor: stalker
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +20,4 @@ tcp:
   - name: pop3pw
     type: regex
     regex:
-    - ^200 hello and welcome to SchoolsNET SINA poppassd \[([-\d.]+)\]\r\n
+    - ^500 access from your network is denied\r\n$

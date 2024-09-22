@@ -1,16 +1,12 @@
 id: spark-webui-unauth
-
 info:
   name: Unauthenticated Spark WebUI
   author: princechaddha
   severity: medium
-  reference:
-    - https://github.com/vulhub/vulhub/tree/master/spark/unacc
-  tags: unauth,vulhub,spark
-  metadata:
-    max-request: 1
+  reference: https://github.com/vulhub/vulhub/tree/master/spark/unacc
+  tags: spark,unauth
 
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}"

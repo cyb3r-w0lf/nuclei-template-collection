@@ -1,11 +1,11 @@
 id: ftp
 info:
-  name: AXIS 250S Network Video ftpd
+  name: Brother/HP printer ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: webcam
+    device_type: printer
     rarity: 0
     version: $1
 tcp:
@@ -18,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 AXIS 250S MPEG-2 Video Server ([\d.]+) \([^)]+\) ready\.\r\n
+    - ^220 FTP print service:V-(\d[-.\w]+)/Use the network password for the ID if updating\.\r\n

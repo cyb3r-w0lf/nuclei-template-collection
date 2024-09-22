@@ -1,16 +1,13 @@
 id: pop3
 info:
-  name: Microsoft Exchange 2003 pop3d
+  name: CommuniGate Pro
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    hostname: $2
-    info: Korean
-    operating_system: Windows
-    product: exchange_server
+    product: communigate_pro
     rarity: 0
-    vendor: microsoft
+    vendor: stalker
     verified: true
     version: $1
 tcp:
@@ -23,4 +20,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK Microsoft Exchange Server 2003 POP3 \xbc\xad\xb9\xf6 \xb9\xf6\xc0\xfc ([\d.]+) \(([-\w_.]+)\)
+    - ^\+OK CommuniGate Pro POP3 Server ([-.\w]+) ready
