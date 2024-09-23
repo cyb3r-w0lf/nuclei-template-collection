@@ -1,12 +1,11 @@
 id: printer
 info:
-  name: VSE lpd
+  name: Solaris lpd
   author: nmap,cn-kali-team
   tags: detect,tech,printer,service
   severity: info
   metadata:
-    device_type: print server
-    operating_system: z/VSE
+    operating_system: Solaris
     rarity: 6
 tcp:
 - name: lpdstring
@@ -19,4 +18,4 @@ tcp:
   - name: printer
     type: regex
     regex:
-    - ^VSE Line Printer Daemon has rejected this request\.\0\0
+    - '^default: unknown printer\n$'

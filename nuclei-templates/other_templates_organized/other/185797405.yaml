@@ -5,7 +5,7 @@ info:
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    info: access disabled
+    hostname: $1
     product: communigate_pro
     rarity: 0
     vendor: stalker
@@ -20,4 +20,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^-ERR access from your network is temporarily disabled\r\n
+    - ^\+OK POP3 Server OK <[\d.]+@([-\w_.]+)>\r\n

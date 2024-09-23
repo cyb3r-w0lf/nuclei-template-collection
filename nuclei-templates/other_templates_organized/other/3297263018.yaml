@@ -1,22 +1,20 @@
 id: smtp-proxy
 info:
-  name: Trend Micro IMSS smtp proxy
+  name: spamd smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp-proxy,service
   severity: info
   metadata:
     hostname: $1
-    operating_system: Windows
-    rarity: 8
+    rarity: 0
 tcp:
-- name: hello
+- name: 'null'
   inputs:
-  - data: EHLO\r\n
+  - data: ''
   host:
   - '{{Hostname}}'
-  port: 25,587,3025
   extractors:
   - name: smtp-proxy
     type: regex
     regex:
-    - ^220 ([-\w_.]+) .*\r\n250-[-\w_.]+ supports the following ESMTP extensions:\r\n250-SIZE \d+\r\n250-DSN\r\n250-8bitmime\r\n250 OK\r\n
+    - ^220 ([-\w_.]+) ESMTP spamd IP-based SPAM blocker; .*\r\n

@@ -1,12 +1,11 @@
 id: textui
 info:
-  name: Satel INT-TSI keypad telnetd
+  name: Huawei UGW
   author: nmap,cn-kali-team
   tags: detect,tech,textui,service
   severity: info
   metadata:
-    device_type: security-misc
-    info: busy
+    info: 'time zone: $1'
     rarity: 0
 tcp:
 - name: 'null'
@@ -18,4 +17,4 @@ tcp:
   - name: textui
     type: regex
     regex:
-    - ^Cannot accept a new connection
+    - ^\+\+\+    UGW-HUAWEI *\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d ([A-Z]+)\r\nO&M
