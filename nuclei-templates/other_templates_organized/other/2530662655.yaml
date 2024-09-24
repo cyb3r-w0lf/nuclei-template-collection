@@ -1,14 +1,13 @@
 id: shell
 info:
-  name: Netkit rshd
+  name: FreeBSD rshd
   author: nmap,cn-kali-team
   tags: detect,tech,shell,service
   severity: info
   metadata:
-    product: netkit_rsh
+    info: Access denied
+    operating_system: Unix
     rarity: 0
-    vendor: netkit
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +18,4 @@ tcp:
   - name: shell
     type: regex
     regex:
-    - '^\x01getnameinfo: Temporary failure in name resolution\n'
+    - ^\* You are not welcome to use rshd from .*\n

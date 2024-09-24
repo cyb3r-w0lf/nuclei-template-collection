@@ -1,15 +1,15 @@
 id: tftp
 info:
-  name: SolarWinds tftpd
+  name: Cisco router tftpd
   author: nmap,cn-kali-team
   tags: detect,tech,tftp,service
   severity: info
   metadata:
-    info: IP disallowed
-    operating_system: Windows
+    device_type: router
+    operating_system: IOS
     product: tftp_server
     rarity: 5
-    vendor: solarwinds
+    vendor: cisco
     verified: true
 tcp:
 - name: dnsstatus-request
@@ -22,4 +22,4 @@ tcp:
   - name: tftp
     type: regex
     regex:
-    - ^\0\x05\0\x02\0The IP address is not in the range of allowable addresses\.\0
+    - ^\0\x05\0\x04Illegal operation\0$
