@@ -1,22 +1,23 @@
 id: http
 info:
-  name: Adaptec Storage Manager Agent httpd
+  name: httpd_gargoyle
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    fallback:
-    - get-request
-    rarity: 5
+    device_type: WAP
+    info: Gargoyle WAP firmware
+    operating_system: Linux
+    rarity: 0
+    version: $1
 tcp:
-- name: rtsprequest
+- name: 'null'
   inputs:
-  - data: OPTIONS / RTSP/1.0\r\n\r\n
+  - data: ''
   host:
   - '{{Hostname}}'
-  port: 80,554,3052,3372,5000,7070,8080,10000
   extractors:
   - name: http
     type: regex
     regex:
-    - ^HTTP/1\.1 400 Bad Request\n\n$
+    - '^\(null\) 400 Bad Request\r\nServer: httpd_gargoyle/([\w._ -]+)\r\n'

@@ -1,6 +1,6 @@
 id: smtp
 info:
-  name: GMX smtpd
+  name: Yahoo! smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
@@ -17,4 +17,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 (\S+) GMX Mailservices ESMTP
+    - ^220 YSmtp(\S+) ESMTP service ready

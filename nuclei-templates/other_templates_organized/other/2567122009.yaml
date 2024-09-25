@@ -1,13 +1,13 @@
 id: sip
 info:
-  name: Sipek VoIP
+  name: Aladino SIP phone
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
   metadata:
+    device_type: VoIP phone
     fallback:
     - get-request
-    info: on PJSUA
     rarity: 5
     version: $1
 tcp:
@@ -21,4 +21,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?User-Agent: Sipek on PJSUA v([\w._-]+)/win32\r\n'
+    - '(?i)^SIP/2\.0 500 Server Internal Error\r\n(?:[^\r\n]+\r\n)*?User-Agent: Thomson Inventel / HW_V[\w._-]+ / FW_V[\w._-]+ / SW_V([\w._-]+)\r\n'

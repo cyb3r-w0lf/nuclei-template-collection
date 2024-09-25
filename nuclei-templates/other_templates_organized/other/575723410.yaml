@@ -1,24 +1,23 @@
 id: http-proxy
 info:
-  name: Squid
+  name: I2P anonymizing http proxy
   author: nmap,cn-kali-team
   tags: detect,tech,http-proxy,service
   severity: info
   metadata:
-    product: squid
-    rarity: 8
-    vendor: squid-cache
+    info: Polish
+    product: i2p
+    rarity: 0
+    vendor: i2p_project
     verified: true
-    version: $1
 tcp:
-- name: nessus-tpv10
+- name: 'null'
   inputs:
-  - data: < NTP/1.0 >\n
+  - data: ''
   host:
   - '{{Hostname}}'
-  port: '1241'
   extractors:
   - name: http-proxy
     type: regex
     regex:
-    - '^HTTP/1\.0 400 Bad Request\r\nServer: squid/([\w._+-]+)\r\n'
+    - '(?i)^HTTP/1\.1 403 Bad Protocol\r\n.*<title>(?:I2P )?Ostrzeżenie: protokół inny niż HTTP</title>\r\n<link rel=\"shortcut icon\" href=\"http://proxy\.i2p/themes/console/images/favicon\.ico\" ?>\r\n'
