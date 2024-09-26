@@ -19,7 +19,7 @@ network:
 
     host:
       - "{{Host}}:21"
-      - "{{Hostname}}"
+      - "{{Hostname}}:21"
 
     matchers:
       - type: word

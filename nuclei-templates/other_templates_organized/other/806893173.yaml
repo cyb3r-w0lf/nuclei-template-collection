@@ -1,11 +1,18 @@
 id: imap
 info:
-  name: Arvixe imapd
+  name: Cyrus imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
+    hostname: $1
+    info: Mac OS X $3
+    operating_system: Mac OS X
+    product: cyrus_imap_server
     rarity: 0
+    vendor: cmu
+    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -16,4 +23,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK Welcome to Arvixe IMAP server\.\r\n
+    - '^\* OK \[[^\]]+\] ([-\w_.]+) Cyrus IMAP4 v([-\w_.]+)-OS X Server ([\d.]+):'

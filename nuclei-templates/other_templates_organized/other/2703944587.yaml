@@ -18,4 +18,4 @@ tcp:
   - name: distccd
     type: regex
     regex:
-    - '^DONE00000001.*ccache: failed to create /usr/share/distcc/\.ccache \(Permission denied\)\n'
+    - (?i)^DONE00000001.*CRITICAL! distcc seems to have invoked itself recursively!\n

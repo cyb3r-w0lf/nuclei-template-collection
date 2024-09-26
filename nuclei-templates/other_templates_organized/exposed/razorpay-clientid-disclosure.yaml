@@ -9,7 +9,7 @@ info:
     - https://docs.gitguardian.com/secrets-detection/detectors/specifics/razorpay_apikey
   tags: exposure,token,razorpay
 
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}"

@@ -5,22 +5,18 @@ info:
   tags: detect,tech,teamspeak-tcpquery,service
   severity: info
   metadata:
-    info: $2
-    operating_system: Windows
     product: teamspeak2
-    rarity: 9
+    rarity: 0
     vendor: teamspeak
     verified: true
-    version: $1
 tcp:
-- name: teamspeak-tcpquery-ver
+- name: 'null'
   inputs:
-  - data: ver\r\n
+  - data: ''
   host:
   - '{{Hostname}}'
-  port: 51234,9998
   extractors:
   - name: teamspeak-tcpquery
     type: regex
     regex:
-    - ^\[TS\]\r\n([\w._-]+) Win32 ([\w._-]+)\r\nOK\r\n$
+    - ^\[TS\]\r\n

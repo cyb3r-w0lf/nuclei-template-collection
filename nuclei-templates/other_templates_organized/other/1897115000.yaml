@@ -1,23 +1,21 @@
 id: tftp
 info:
-  name: SolarWinds Free tftpd
+  name: Windows 2003 Server Deployment Service
   author: nmap,cn-kali-team
   tags: detect,tech,tftp,service
   severity: info
   metadata:
-    product: tftp_server
-    rarity: 5
-    vendor: solarwinds
-    verified: true
+    operating_system: Windows
+    rarity: 6
 tcp:
-- name: dnsstatus-request
+- name: xdmcp
   inputs:
-  - data: \0\0\x10\0\0\0\0\0\0\0\0\0
+  - data: \0\x01\0\x02\0\x01\0
   host:
   - '{{Hostname}}'
-  port: 53,69,135,1761,26198
+  port: '177'
   extractors:
   - name: tftp
     type: regex
     regex:
-    - '^\0\x05\0\x04Unknown operatation code: 0 received from [\d.]+:\d+\0'
+    - ^\0\x05\0\x04Illegal TFTP operation\0
