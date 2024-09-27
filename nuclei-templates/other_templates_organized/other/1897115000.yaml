@@ -1,11 +1,11 @@
 id: tftp
 info:
-  name: Windows 2003 Server Deployment Service
+  name: Windows 10 IoT tftpd
   author: nmap,cn-kali-team
   tags: detect,tech,tftp,service
   severity: info
   metadata:
-    operating_system: Windows
+    operating_system: Windows 10
     rarity: 6
 tcp:
 - name: xdmcp
@@ -18,4 +18,4 @@ tcp:
   - name: tftp
     type: regex
     regex:
-    - ^\0\x05\0\x04Illegal TFTP operation\0
+    - ^\0\x05\0\x02No such file or directory\0

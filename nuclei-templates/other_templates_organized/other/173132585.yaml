@@ -1,11 +1,11 @@
 id: vnc
 info:
-  name: Ultr@VNC
+  name: Ultr@VNC Repeater
   author: nmap,cn-kali-team
   tags: detect,tech,vnc,service
   severity: info
   metadata:
-    product: ultravnc
+    product: repeater
     rarity: 0
     vendor: ultravnc
     verified: true
@@ -19,4 +19,4 @@ tcp:
   - name: vnc
     type: regex
     regex:
-    - (?i)^.{27}\x16\x20\xe4\xb0\x95\x63\x29\x78\xdb\x6e\x35\x92$
+    - ^RFB 000\.000\n$

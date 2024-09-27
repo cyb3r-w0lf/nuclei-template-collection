@@ -1,15 +1,14 @@
 id: zebra
 info:
-  name: GNU Zebra routing software
+  name: Quagga routing software
   author: nmap,cn-kali-team
   tags: detect,tech,zebra,service
   severity: info
   metadata:
-    product: zebra
+    product: quagga
     rarity: 0
-    vendor: gnu
+    vendor: quagga
     verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +19,4 @@ tcp:
   - name: zebra
     type: regex
     regex:
-    - ^\r\nHello, this is zebra \(version (\d[-.\w]+)\)\.\r\nCopyright 200\d
+    - ^Vty password is not set\.\r\n$

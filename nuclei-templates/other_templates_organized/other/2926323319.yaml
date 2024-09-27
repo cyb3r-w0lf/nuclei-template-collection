@@ -1,13 +1,12 @@
 id: nntp
 info:
-  name: NetWare nntpd
+  name: NNTPCache
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    hostname: $1
+    info: Access denied
     rarity: 0
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +17,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 ([\w.-_]+) NetWare-News-Server/([\d.]+) 'LDNUM' NNRP ready \(posting ok\)\.\r\n
+    - ^502 access denied <[-\w_.]+@[-\w_.]+>, you do not have connect permissions in the nntpcache\.access file\.\r\n

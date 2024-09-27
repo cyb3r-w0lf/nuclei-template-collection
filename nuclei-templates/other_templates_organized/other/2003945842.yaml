@@ -1,10 +1,12 @@
 id: pop3-proxy
 info:
-  name: Reivernet captive portal pop3 proxy
+  name: Avast! anti-virus pop3 proxy
   author: nmap,cn-kali-team
   tags: detect,tech,pop3-proxy,service
   severity: info
   metadata:
+    info: cannot connect to $1
+    operating_system: Windows
     rarity: 0
 tcp:
 - name: 'null'
@@ -16,4 +18,4 @@ tcp:
   - name: pop3-proxy
     type: regex
     regex:
-    - ^-ERR Not Enrolled\r\rPlease open your internet browser and accept the terms and conditions of use for this service\.\r\n
+    - ^-ERR Cannot connect to POP server ([\w._-]+) \([^)]*\), connect error \d+\r\n
