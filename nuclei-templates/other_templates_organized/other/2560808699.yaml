@@ -1,16 +1,12 @@
 id: textui
 info:
-  name: Nomad Digital Charger command interface
+  name: HP LaserJet telnet_debug
   author: nmap,cn-kali-team
   tags: detect,tech,textui,service
   severity: info
   metadata:
-    info: build $2
-    product: charger
+    device_type: printer
     rarity: 0
-    vendor: nomad_digital
-    verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +17,4 @@ tcp:
   - name: textui
     type: regex
     regex:
-    - ^This is the command interface for nd-charger \(version ([\d.]+) build ([\d.-]+)\)\.\r\nReady\.\.\. Type "help" for a list of available commands\.\r\nOK\(0\)\r\n\r\n
+    - '^\r\n\*{52}\r\n\* Welcome to telnet_debug {26}\*\r\n\* Type "help" to see a list of supported commands\. \*\r\n\*{52}\r\n\r\ntelnet_debug> '
