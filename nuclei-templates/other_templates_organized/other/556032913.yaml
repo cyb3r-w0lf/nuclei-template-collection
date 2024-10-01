@@ -1,12 +1,13 @@
 id: nntp
 info:
-  name: Leafnode NNTPd
+  name: NNTPCache
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
+    hostname: $1
     rarity: 0
-    version: $1
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +18,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 Leafnode NNTP Daemon, version (\d[-.\w]+) running at
+    - ^20\d ([\w.-_]+) NNTPCache server V([\d.]+) \[see www\.nntpcache\.org\]

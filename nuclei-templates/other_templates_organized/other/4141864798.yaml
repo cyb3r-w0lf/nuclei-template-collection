@@ -1,23 +1,20 @@
 id: rtsp
 info:
-  name: Monster Digital Villain or Denver AC-5000W MK2 rtspd
+  name: Geovision webcam rtspd
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
   metadata:
     device_type: webcam
-    fallback:
-    - get-request
-    rarity: 5
+    rarity: 0
 tcp:
-- name: rtsprequest
+- name: 'null'
   inputs:
-  - data: OPTIONS / RTSP/1.0\r\n\r\n
+  - data: ''
   host:
   - '{{Hostname}}'
-  port: 80,554,3052,3372,5000,7070,8080,10000
   extractors:
   - name: rtsp
     type: regex
     regex:
-    - '^RTSP/1\.0 400 Bad Request\r\nDate: \d\d\d\d/\d\d?/\d\d?\r\nAllow: OPTIONS, DESCRIBE, SETUP, TEARDOWN, PLAY, PAUSE, GET_PARAMETER, SET_PARAMETER\r\n\r\n'
+    - '^RTSP/1\.0 400 Bad Request\r\nDate: .*\r\nAllow: OPTIONS, DESCRIBE, SETUP, PLAY, PAUSE, TEARDOWN\r\n\r\n$'

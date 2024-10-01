@@ -1,11 +1,11 @@
 id: finger
 info:
-  name: Lexmark T642 printer fingerd
+  name: cfingerd
   author: nmap,cn-kali-team
   tags: detect,tech,finger,service
   severity: info
   metadata:
-    device_type: printer
+    info: Broken
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +17,4 @@ tcp:
   - name: finger
     type: regex
     regex:
-    - '^\r\nIntegrated port\r\nPrinter Type: Lexmark T642\r\nPrint Job Status:'
+    - ^No cfingerd\.conf file present\.  Check your setup\.\n$
