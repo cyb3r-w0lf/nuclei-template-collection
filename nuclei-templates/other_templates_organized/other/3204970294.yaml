@@ -1,12 +1,12 @@
 id: printer
 info:
-  name: BSD/Linux lpd
+  name: lpsched
   author: nmap,cn-kali-team
   tags: detect,tech,printer,service
   severity: info
   metadata:
     hostname: $1
-    info: source port denied
+    info: host denied
     rarity: 0
 tcp:
 - name: 'null'
@@ -18,4 +18,4 @@ tcp:
   - name: printer
     type: regex
     regex:
-    - '^lpd \[@([-\w_.]+)\]: connected from invalid port \(\d+\)\n'
+    - '^([-\w_.]+): lpsched: Your host does not have line printer access\n'

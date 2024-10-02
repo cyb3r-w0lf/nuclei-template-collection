@@ -1,12 +1,14 @@
 id: finger
 info:
-  name: cfingerd
+  name: OpenLDAP fingerd
   author: nmap,cn-kali-team
   tags: detect,tech,finger,service
   severity: info
   metadata:
-    info: Broken
+    product: openldap
     rarity: 0
+    vendor: openldap
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +19,4 @@ tcp:
   - name: finger
     type: regex
     regex:
-    - ^No cfingerd\.conf file present\.  Check your setup\.\n$
+    - ^OpenLDAP Finger Service\.\.\.\r\n

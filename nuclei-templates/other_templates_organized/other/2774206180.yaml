@@ -1,22 +1,22 @@
 id: minecraft
 info:
-  name: Minecraft game server
+  name: Minecraft
   author: nmap,cn-kali-team
   tags: detect,tech,minecraft,service
   severity: info
   metadata:
-    fallback:
-    - dnsstatus-request
-    rarity: 7
+    info: 'Protocol: $P(1), Message: $P(3), Users: $P(4)/$P(5)'
+    rarity: 8
+    version: $P(2)
 tcp:
-- name: dnsstatus-request-tcp
+- name: minecraft-ping
   inputs:
-  - data: \0\x0C\0\0\x10\0\0\0\0\0\0\0\0\0
+  - data: \xFE\x01
   host:
   - '{{Hostname}}'
-  port: 53,513,514,6050,41523
+  port: '25565'
   extractors:
   - name: minecraft
     type: regex
     regex:
-    - ^\xff\0\x0e\0P\0r\0o\0t\0o\0c\0o\0l\0 \0e\0r\0r\0o\0r$
+    - (?i)^\xff\x00.\x00\xa7\x00\x31\x00\x00(.+?)\x00\x00(.+?)\x00\x00(.+?)\x00\x00(.+?)\x00\x00(.+)

@@ -1,15 +1,13 @@
 id: telnet-proxy
 info:
-  name: WinProxy telnet proxy
+  name: kingate telnet proxy
   author: nmap,cn-kali-team
   tags: detect,tech,telnet-proxy,service
   severity: info
   metadata:
     operating_system: Windows
-    product: winproxy
     rarity: 0
-    vendor: bluecoat
-    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +18,4 @@ tcp:
   - name: telnet-proxy
     type: regex
     regex:
-    - ^\r\n\r\nEnter computer name to connect to\.\r\ne\.g\. \"NetCom\.com\"<CR>
+    - '^Welcome to kingate ([\w._-]+)-win32 telnet proxy\.\r\nPlease enter host and port\r\nexample: abc\.com 23\r\nkingate >'

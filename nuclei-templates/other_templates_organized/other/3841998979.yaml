@@ -1,15 +1,15 @@
 id: nntp
 info:
-  name: INN nntpd
+  name: Symantec Enterprise Firewall nntpd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    hostname: $1
-    info: posting ok
-    product: inn
+    device_type: firewall
+    info: unauthorized
+    product: enterprise_firewall
     rarity: 0
-    vendor: isc
+    vendor: symantec
     verified: true
 tcp:
 - name: 'null'
@@ -21,4 +21,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 ([-\w_.]+) NNRP Service Ready - [-\w_.]+@[-\w_.]+ \(posting ok\)\.\r\n
+    - ^201 NNTP server ready \(no posting\)\r\n502 No permission\r\n

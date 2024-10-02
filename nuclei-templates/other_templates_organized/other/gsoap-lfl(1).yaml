@@ -5,7 +5,7 @@ info:
   author: 0x_Akoko
   severity: high
   reference: https://www.exploit-db.com/exploits/47653
- 
+  tags: gsoap,lfi
 
 requests:
   - raw:
