@@ -1,17 +1,15 @@
 id: imap
 info:
-  name: Microsoft Exchange 2000 imapd
+  name: Microsoft Exchange 2007 imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    info: German
     operating_system: Windows
     product: exchange_server
     rarity: 0
     vendor: microsoft
     verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -22,4 +20,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK Der Microsoft Exchange Server \(IMAP4rev1, Version (\d[-.\w]+) \([-.\w]+\)\) steht zur Verf\xfcgung\.\r\n
+    - ^\* OK Microsoft Exchange Server 2007 IMAP4 service ready\r\n

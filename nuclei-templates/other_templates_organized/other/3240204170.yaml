@@ -5,7 +5,7 @@ info:
   tags: detect,tech,cmrcservice,service
   severity: info
   metadata:
-    info: CmRcService.exe
+    info: 'Error: existing session'
     operating_system: Windows
     product: systems_management_server
     rarity: 0
@@ -21,4 +21,4 @@ tcp:
   - name: cmrcservice
     type: regex
     regex:
-    - ^\"\0\0\x80 \0S\0T\0A\0R\0T\0_\0H\0A\0N\0D\0S\0H\0A\0K\0E\0\0\0
+    - ^0\0\0\x80\.\0E\0R\0R\0O\0R\0_\0E\0X\0I\0S\0T\0I\0N\0G\0_\0S\0E\0S\0S\0I\0O\0N\0\0\0
