@@ -1,11 +1,12 @@
 id: irc
 info:
-  name: BitlBee IRCd
+  name: ConferenceRoom ircd
   author: nmap,cn-kali-team
   tags: detect,tech,irc,service
   severity: info
   metadata:
     hostname: $1
+    info: Spanish
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +18,4 @@ tcp:
   - name: irc
     type: regex
     regex:
-    - '^Warning: Unable to read configuration file `.*/bitlbee\.conf''\.\n:([-:\w_.]+)\. NOTICE AUTH :BitlBee-IRCd initialized, please go on\r\n'
+    - ^:([\w._-]+) 451 \* HELP :No te has registrado\r\n

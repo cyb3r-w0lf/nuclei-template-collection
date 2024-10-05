@@ -8,7 +8,7 @@
 | CVE-2004 | 5 |
 | CVE-2005 | 15 |
 | CVE-2006 | 19 |
-| CVE-2007 | 63 |
+| CVE-2007 | 62 |
 | CVE-2008 | 74 |
 | CVE-2009 | 45 |
 | CVE-2010 | 139 |
@@ -19,125 +19,157 @@
 | CVE-2015 | 528 |
 | CVE-2016 | 249 |
 | CVE-2017 | 400 |
-| CVE-2018 | 447 |
-| CVE-2019 | 517 |
-| CVE-2020 | 593 |
-| CVE-2021 | 1731 |
-| CVE-2022 | 2473 |
-| CVE-2023 | 4772 |
-| CVE-2024 | 5335 |
-| Other | 26281 |
+| CVE-2018 | 446 |
+| CVE-2019 | 516 |
+| CVE-2020 | 596 |
+| CVE-2021 | 1734 |
+| CVE-2022 | 2472 |
+| CVE-2023 | 4774 |
+| CVE-2024 | 5384 |
+| Other | 26347 |
 ## Quantity changes in recent days
-|2024-09-28 | 2024-09-29 | 2024-09-30 | 2024-10-01 | 2024-10-02 | 2024-10-03 | 2024-10-04|
+|2024-09-29 | 2024-09-30 | 2024-10-01 | 2024-10-02 | 2024-10-03 | 2024-10-04 | 2024-10-05|
 |--- | ------ | ------ | ------ | ------ | ------ | ---|
-|44276 | 44286 | 44289 | 44341 | 44407 | 44434 | 44521|
+|44286 | 44289 | 44341 | 44407 | 44434 | 44521 | 44640|
 ## Recently added files
 | templates name | 
 | --- |
-| 282943269.yaml |
-| truepush-free-web-push-notifications.yaml |
-| wp-newsletter-subscription.yaml |
-| seized-site.yaml |
-| nicejob.yaml |
-| wpspx.yaml |
-| users-control.yaml |
-| 2651190104.yaml |
-| abcapp-creator.yaml |
-| 1658678651.yaml |
-| 3810689258.yaml |
-| viala.yaml |
-| wp-timelines.yaml |
-| cities-shipping-zones-for-woocommerce.yaml |
-| catch-base.yaml |
-| bus-booking-manager.yaml |
-| charity-addon-for-elementor.yaml |
-| quick-adsense-reloaded.yaml |
-| social-web-suite.yaml |
-| podiant.yaml |
-| mh-board.yaml |
-| 542976489.yaml |
-| 2512832688.yaml |
-| 2533318898.yaml |
-| vmax-project-manager.yaml |
-| 1300795122.yaml |
-| medical-addon-for-elementor.yaml |
-| wp-ticket-ultra.yaml |
-| cubewp-forms.yaml |
-| css-js-files.yaml |
-| instant-chat-wp.yaml |
-| 474459835.yaml |
-| trustmary.yaml |
-| 2395280650.yaml |
-| contact-form-7-campaign-monitor-extension.yaml |
-| CVE-2024-47313.yaml |
-| CVE-2024-44038.yaml |
-| CVE-2024-44042.yaml |
-| CVE-2024-47304.yaml |
-| CVE-2024-44030.yaml |
-| CVE-2024-44023.yaml |
-| CVE-2024-47302.yaml |
-| CVE-2024-44031.yaml |
-| CVE-2024-8352.yaml |
-| CVE-2024-47300.yaml |
-| CVE-2024-47328.yaml |
-| CVE-2024-47306.yaml |
-| CVE-2024-47314.yaml |
-| CVE-2024-44015.yaml |
-| CVE-2024-43338.yaml |
-| CVE-2024-47317.yaml |
-| CVE-2024-47308.yaml |
-| CVE-2024-47318.yaml |
-| CVE-2024-47329.yaml |
-| CVE-2024-47323.yaml |
-| CVE-2024-47396.yaml |
-| CVE-2024-47298.yaml |
-| CVE-2024-44032.yaml |
-| CVE-2024-44045.yaml |
-| CVE-2024-47320.yaml |
-| CVE-2024-44041.yaml |
-| CVE-2024-47316.yaml |
-| CVE-2024-44021.yaml |
-| CVE-2024-44013.yaml |
-| CVE-2024-44012.yaml |
-| CVE-2024-47310.yaml |
-| CVE-2024-47327.yaml |
-| CVE-2024-44029.yaml |
-| CVE-2024-44040.yaml |
-| CVE-2024-44026.yaml |
-| CVE-2024-44027.yaml |
-| CVE-2024-44034.yaml |
-| CVE-2024-44043.yaml |
-| CVE-2024-44014.yaml |
-| CVE-2024-44024.yaml |
-| CVE-2024-47324.yaml |
-| CVE-2024-47319.yaml |
-| CVE-2024-47322.yaml |
-| CVE-2024-44018.yaml |
-| CVE-2024-44011.yaml |
-| CVE-2024-44016.yaml |
-| CVE-2024-44037.yaml |
-| CVE-2024-9146.yaml |
-| CVE-2024-47297.yaml |
-| CVE-2024-44036.yaml |
-| CVE-2024-44035.yaml |
-| CVE-2024-47311.yaml |
-| CVE-2024-44022.yaml |
-| CVE-2024-47325.yaml |
-| CVE-2024-44039.yaml |
-| CVE-2024-47315.yaml |
-| CVE-2024-44033.yaml |
-| CVE-2024-47309.yaml |
-| CVE-2024-44046.yaml |
-| CVE-2024-44020.yaml |
-| CVE-2024-44017.yaml |
-| CVE-2024-47374.yaml |
-| CVE-2024-44019.yaml |
-| CVE-2024-44028.yaml |
-| CVE-2024-47299.yaml |
-| CVE-2024-47301.yaml |
-| CVE-2024-47307.yaml |
-| CVE-2024-44025.yaml |
-| CVE-2024-47305.yaml |
-| CVE-2024-47326.yaml |
-| CVE-2024-47312.yaml |
-| CVE-2017-5871.yaml |
+| CVE-2020-23792.yaml |
+| ruijie-smartweb-disclosure.yaml |
+| apache-source-code-disclosure.yaml |
+| eea-disclosure.yaml |
+| aggregator-advanced-settings.yaml |
+| avantfax-panel-detect.yaml |
+| eibiz-vulns.yaml |
+| xunchi-file-read.yaml |
+| identityguard-detect.yaml |
+| missing-x-content-type-options.yaml |
+| landray-oa-file-read.yaml |
+| sqlite-panel-detect.yaml |
+| 404page.yaml |
+| nextjs-cve-2020-5284.yaml |
+| 3505253905.yaml |
+| WOOYUN-2010-080723.yaml |
+| 3673239035.yaml |
+| google-cloud-api-key.yaml |
+| vertigis-detect.yaml |
+| listserv_maestro_rce.yaml |
+| htpasswd-leak.yaml |
+| unautneicated-cache-purge.yaml |
+| strut-debug-mode.yaml |
+| apache-local-gadget-lfr.yaml |
+| 1545900515.yaml |
+| sensitive-storage-data-exposure.yaml |
+| apache-flink.yaml |
+| jetty-detect.yaml |
+| typecho-rce.yaml |
+| tikiwiki-detect.yaml |
+| 1841563447.yaml |
+| jira-cve-2017-9506.yaml |
+| riello-netman204-panel.yaml |
+| 3916482711.yaml |
+| apache-superset-default-credentials.yaml |
+| captcha-bank.yaml |
+| atlassian-confluence-detect.yaml |
+| drupal-panel-detect.yaml |
+| Concrete-CMS-XSS.yaml |
+| jellyfin-workflow.yaml |
+| exposed-pagespess-global-admin.yaml |
+| aem-groovy-console.yaml |
+| wordpress-misconfig.yaml |
+| magento-sqli.yaml |
+| tangible-loops-and-logic.yaml |
+| zoho-flow.yaml |
+| wholesale-pricing-woocommerce.yaml |
+| 3246334731.yaml |
+| drupal-version-disclosure.yaml |
+| wp-blocks-hub.yaml |
+| ds-cf7-math-captcha.yaml |
+| popularis-extra.yaml |
+| joomla-version-disclosure.yaml |
+| uuid-detection.yaml |
+| fish-and-ships.yaml |
+| ruijie-smartweb-default-password.yaml |
+| apache-tomcat-detect.yaml |
+| apache-host-static-code-disclosure.yaml |
+| adobe-aem-default-credentials.yaml |
+| login-logout-shortcode.yaml |
+| apache-redmine-rce.yaml |
+| clockwork-php-header.yaml |
+| ays-chatgpt-assistant.yaml |
+| 3903736765.yaml |
+| 533176455.yaml |
+| concrete5-xss.yaml |
+| djangoapi.yaml |
+| dell-idrac-detect.yaml |
+| fangweicms-sqli.yaml |
+| development-config-file.yaml |
+| mailman-version-disclosure.yaml |
+| easy-demo-importer.yaml |
+| gitlab-saml.yaml |
+| arcgis-detect.yaml |
+| apache-davical-phpinfo.yaml |
+| cf7-multi-step.yaml |
+| phpshe-sqli.yaml |
+| 1889260128.yaml |
+| apache-feed2js-ssrf.yaml |
+| solarwind-creds.yaml |
+| rewp.yaml |
+| memberful-wp.yaml |
+| discuz-v72-sqli.yaml |
+| aspx-debugmode.yaml |
+| circarlife-system-log.yaml |
+| azure-blob-core-detection.yaml |
+| hongdian-default-password.yaml |
+| apache-solr-detect.yaml |
+| display-medium-posts.yaml |
+| 1867519515.yaml |
+| wpexperts-square-for-give.yaml |
+| xiuno-bbs-reinstallation.yaml |
+| trace-method-enabled.yaml |
+| mssql-reporting-server-detect.yaml |
+| CVE-2024-8519.yaml |
+| CVE-2024-3635.yaml |
+| CVE-2024-47339.yaml |
+| CVE-2024-47346.yaml |
+| CVE-2024-9345.yaml |
+| CVE-2024-8499.yaml |
+| CVE-2024-8802.yaml |
+| CVE-2024-47336.yaml |
+| CVE-2024-8804.yaml |
+| CVE-2024-8520.yaml |
+| CVE-2024-9375.yaml |
+| CVE-2024-47334.yaml |
+| CVE-2024-8283.yaml |
+| CVE-2024-47344.yaml |
+| CVE-2024-9384.yaml |
+| CVE-2024-45409.yaml |
+| CVE-2024-47332.yaml |
+| CVE-2024-9368.yaml |
+| CVE-2024-47345.yaml |
+| CVE-2024-9204.yaml |
+| CVE-2024-47331.yaml |
+| CVE-2024-9349.yaml |
+| CVE-2024-9237.yaml |
+| CVE-2024-8536.yaml |
+| CVE-2024-9353.yaml |
+| CVE-2024-9306.yaml |
+| CVE-2024-9372.yaml |
+| CVE-2024-47337.yaml |
+| CVE-2024-6517.yaml |
+| CVE-2024-9435.yaml |
+| CVE-2024-47338.yaml |
+| CVE-2024-47343.yaml |
+| CVE-2024-9271.yaml |
+| CVE-2024-47335.yaml |
+| CVE-2024-9242.yaml |
+| CVE-2024-47333.yaml |
+| CVE-2024-9445.yaml |
+| CVE-2024-47342.yaml |
+| CVE-2024-9421.yaml |
+| CVE-2024-47347.yaml |
+| CVE-2024-47340.yaml |
+| CVE-2024-47341.yaml |
+| CVE-2024-8877.yaml |
+| CVE-2024-7714.yaml |
+| CVE-2024-9071.yaml |

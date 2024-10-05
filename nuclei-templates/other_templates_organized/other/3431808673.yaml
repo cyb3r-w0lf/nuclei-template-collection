@@ -1,16 +1,12 @@
 id: tftp
 info:
-  name: Cisco router tftpd
+  name: Brother printer tftpd
   author: nmap,cn-kali-team
   tags: detect,tech,tftp,service
   severity: info
   metadata:
-    device_type: router
-    operating_system: IOS
-    product: tftp_server
+    device_type: printer
     rarity: 5
-    vendor: cisco
-    verified: true
 tcp:
 - name: dnsstatus-request
   inputs:
@@ -22,4 +18,4 @@ tcp:
   - name: tftp
     type: regex
     regex:
-    - ^\0\x05\0\x04Illegal operation\0$
+    - ^\0\x05\0\x04illegal \(unrecognized\) tftp operation\0$
