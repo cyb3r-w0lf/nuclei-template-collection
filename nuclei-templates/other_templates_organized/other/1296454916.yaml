@@ -1,11 +1,11 @@
 id: rtsp
 info:
-  name: Mango DSP AVS Raven-M video server rtspd
+  name: AXIS 207W or 212 PTZ network camera rtspd
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
   metadata:
-    device_type: media device
+    device_type: webcam
     fallback:
     - get-request
     rarity: 5
@@ -20,4 +20,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '^RTSP/1\.0 400 Bad Request\r\nServer: Mango DSP RTSP Stack\r\n\r\n'
+    - '^RTSP/1\.0 200 OK\r\nPublic: DESCRIBE, GET_PARAMETER, PAUSE, PLAY, SETUP, SET_PARAMETER, TEARDOWN\r\n\r\n$'

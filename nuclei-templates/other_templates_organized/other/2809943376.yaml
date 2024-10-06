@@ -5,18 +5,15 @@ info:
   tags: detect,tech,minecraft,service
   severity: info
   metadata:
-    fallback:
-    - dnsstatus-request
-    rarity: 7
+    rarity: 0
 tcp:
-- name: dnsstatus-request-tcp
+- name: 'null'
   inputs:
-  - data: \0\x0C\0\0\x10\0\0\0\0\0\0\0\0\0
+  - data: ''
   host:
   - '{{Hostname}}'
-  port: 53,513,514,6050,41523
   extractors:
   - name: minecraft
     type: regex
     regex:
-    - ^\xff\0\x0e\0P\0r\0o\0t\0o\0c\0o\0l\0 \0e\0r\0r\0o\0r$
+    - ^\xff\0\x17Took too long to log in$

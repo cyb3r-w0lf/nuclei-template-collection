@@ -1,13 +1,18 @@
 id: pop3
 info:
-  name: DAWKCo pop3d
+  name: MDaemon pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
+    hostname: $1
+    info: unregistered
     operating_system: Windows
+    product: mdaemon
     rarity: 0
-    version: $1
+    vendor: altn
+    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +23,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK DAWKCo POP3 Server v([-\w_.]+) ready <
+    - ^\+OK ([-.\w]+) POP3? MDaemon ready using UNREGISTERED SOFTWARE ([\d.]+) <MDAEMON
