@@ -1,11 +1,10 @@
 id: ftp-proxy
 info:
-  name: CCProxy ftp proxy
+  name: Zscaler ftp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
   metadata:
-    operating_system: Windows
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +16,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - '^220-CCProxy FTP Service\r\n220-you need to input userid@site as login name\.\r\n220 Example: user anonymous@ftp\.netscape\.com\r\n'
+    - ^421 Proxy is closed \(unknown user location\)\r\n$
