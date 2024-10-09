@@ -1,23 +1,23 @@
 id: irc-proxy
 info:
-  name: psyBNC
+  name: ShroudBNC irc-proxy
   author: nmap,cn-kali-team
   tags: detect,tech,irc-proxy,service
   severity: info
   metadata:
-    fallback:
-    - get-request
-    info: Login Failed
-    rarity: 5
+    product: shroudbnc
+    rarity: 0
+    vendor: gunnar_beutner
+    verified: true
+    version: $1 revision $2
 tcp:
-- name: sipoptions
+- name: 'null'
   inputs:
-  - data: 'OPTIONS sip:nm SIP/2.0\r\nVia: SIP/2.0/TCP nm;branch=foo\r\nFrom: <sip:nm@nm>;tag=root\r\nTo: <sip:nm2@nm2>\r\nCall-ID: 50000\r\nCSeq: 42 OPTIONS\r\nMax-Forwards: 70\r\nContent-Length: 0\r\nContact: <sip:nm@nm>\r\nAccept: application/sdp\r\n\r\n'
+  - data: ''
   host:
   - '{{Hostname}}'
-  port: 406,5060,8081,31337
   extractors:
   - name: irc-proxy
     type: regex
     regex:
-    - ^Login failed\. Disconnecting\.\r\n$
+    - '^:[-\w_.!@]+ NOTICE \S+ :\*\*\* shroudBNC *([\d.]+) .Revision: (\d+)'

