@@ -8,7 +8,7 @@
 | CVE-2004 | 5 |
 | CVE-2005 | 15 |
 | CVE-2006 | 19 |
-| CVE-2007 | 62 |
+| CVE-2007 | 63 |
 | CVE-2008 | 74 |
 | CVE-2009 | 45 |
 | CVE-2010 | 139 |
@@ -16,56 +16,48 @@
 | CVE-2012 | 146 |
 | CVE-2013 | 169 |
 | CVE-2014 | 423 |
-| CVE-2015 | 528 |
+| CVE-2015 | 527 |
 | CVE-2016 | 249 |
-| CVE-2017 | 400 |
-| CVE-2018 | 447 |
+| CVE-2017 | 401 |
+| CVE-2018 | 448 |
 | CVE-2019 | 517 |
-| CVE-2020 | 595 |
-| CVE-2021 | 1732 |
-| CVE-2022 | 2473 |
-| CVE-2023 | 4777 |
-| CVE-2024 | 5433 |
-| Other | 26477 |
+| CVE-2020 | 598 |
+| CVE-2021 | 1735 |
+| CVE-2022 | 2474 |
+| CVE-2023 | 4775 |
+| CVE-2024 | 5442 |
+| Other | 25506 |
 ## Quantity changes in recent days
-|2024-10-03 | 2024-10-04 | 2024-10-05 | 2024-10-06 | 2024-10-07 | 2024-10-08 | 2024-10-09|
+|2024-10-04 | 2024-10-05 | 2024-10-06 | 2024-10-07 | 2024-10-08 | 2024-10-09 | 2024-10-10|
 |--- | ------ | ------ | ------ | ------ | ------ | ---|
-|44434 | 44521 | 44640 | 44697 | 44759 | 44803 | 44823|
+|44521 | 44640 | 44697 | 44759 | 44803 | 44823 | 43868|
 ## Recently added files
 | templates name | 
 | --- |
-| CVE-2022-4534.yaml |
-| CVE-2023-39007.yaml |
-| CVE-2023-47105.yaml |
-| dizquetv-detect.yaml |
-| m-bus-panel.yaml |
-| 1643448480.yaml |
-| ariang-debug-console.yaml |
-| 2210782463.yaml |
-| 3259901568.yaml |
-| seeyon_v9_upload.yaml |
-| loxone-web-panel.yaml |
-| 2642732205.yaml |
-| macos-server-panel.yaml |
-| webview-javascript-enabled.yaml |
-| 798299957.yaml |
-| 2534840648.yaml |
-| exposed-filezilla.yaml |
-| ivanti-epm-detect.yaml |
-| 2462172714.yaml |
-| dockwatch-panel.yaml |
-| 324225873.yaml |
-| amazon-docker-config-exposure.yaml |
-| netentsec-ngfw-rce.yaml |
-| etcpasswd.yaml |
-| CVE-2024-4340.yaml |
-| CVE-2024-8433.yaml |
-| CVE-2024-8911.yaml |
-| CVE-2024-8629.yaml |
-| CVE-2024-9292.yaml |
-| CVE-2024-8943.yaml |
-| CVE-2024-8964.yaml |
-| CVE-2024-8482.yaml |
-| CVE-2024-8488.yaml |
-| CVE-2024-9207.yaml |
-| CVE-2024-8431.yaml |
+| CVE-2024-7762.yaml |
+| CVE-2024-9449.yaml |
+| CVE-2024-8187.yaml |
+| CVE-2024-9451.yaml |
+| CVE-2024-7963.yaml |
+| cRlf.yaml |
+| activeadmin-exposure.yaml |
+| embed-pdf-viewer.yaml |
+| cmsmasters-content-composer.yaml |
+| auctionPlugin.yaml |
+| 1868756807.yaml |
+| 3062326062.yaml |
+| auto-iframe.yaml |
+| 1200191409.yaml |
+| 2790345891.yaml |
+| open-redirect-fuzz.yaml |
+| redmin-cli-detect.yaml |
+| 1264631379.yaml |
+| 874387195.yaml |
+| ruijie-EG-fileDownload.yaml |
+| blooog-v1.1.yaml |
+| wp-db-backup.php.yaml |
+| blooog-v1.1-45ac458cb27fa77cb00c1e35f16d1aed.yaml |
+| 2279934307.yaml |
+| 4219829820.yaml |
+| 294366997.yaml |
+| 4234833417.yaml |

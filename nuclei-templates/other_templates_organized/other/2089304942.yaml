@@ -1,12 +1,15 @@
 id: irc-proxy
 info:
-  name: BNC irc-proxy
+  name: ShroudBNC irc-proxy
   author: nmap,cn-kali-team
   tags: detect,tech,irc-proxy,service
   severity: info
   metadata:
+    product: shroudbnc
     rarity: 0
-    version: $1
+    vendor: gunnar_beutner
+    verified: true
+    version: $1 revision $2
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +20,4 @@ tcp:
   - name: irc-proxy
     type: regex
     regex:
-    - '^NOTICE AUTH :\*\*\* .*\r\nNOTICE AUTH :\*\*\* \[BNC ([\d.]+) '
+    - '^:[-\w_.!@]+ NOTICE \S+ :\*\*\* shroudBNC *([\d.]+) .Revision: (\d+)'

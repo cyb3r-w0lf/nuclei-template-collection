@@ -5,18 +5,17 @@ info:
   author: PaperPen
   severity: high
   description: An Apollo default login was discovered.
+  metadata:
+    shodan-query: http.favicon.hash:11794165
   reference:
     - https://github.com/apolloconfig/apollo
   classification:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:L
     cvss-score: 8.3
     cwe-id: CWE-522
-  metadata:
-    max-request: 2
-    shodan-query: http.favicon.hash:11794165
   tags: apollo,default-login
 
-http:
+requests:
   - raw:
       - |
         POST /signin HTTP/1.1

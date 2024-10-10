@@ -1,7 +1,7 @@
 id: wordpress-akismet
 
 info:
-  name: Akismet Spam Protection Detection
+  name: Akismet Anti-spam' Spam Protection Detection
   author: ricardomaia
   severity: info
   reference:
@@ -11,7 +11,7 @@ info:
     wpscan: https://wpscan.com/plugin/akismet
   tags: tech,wordpress,wp-plugin,top-100,top-200
 
-requests:
+http:
   - method: GET
 
     path:
