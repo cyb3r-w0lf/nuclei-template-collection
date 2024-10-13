@@ -1,12 +1,11 @@
 id: printer
 info:
-  name: AIX lpd
+  name: lpsched
   author: nmap,cn-kali-team
   tags: detect,tech,printer,service
   severity: info
   metadata:
-    info: Unauthorized
-    operating_system: AIX
+    hostname: $1
     rarity: 0
 tcp:
 - name: 'null'
@@ -18,4 +17,4 @@ tcp:
   - name: printer
     type: regex
     regex:
-    - ^\d+-202 your host does not have line printer access\.
+    - '^([-\w_.]+): lpsched: Malformed from address\n'
