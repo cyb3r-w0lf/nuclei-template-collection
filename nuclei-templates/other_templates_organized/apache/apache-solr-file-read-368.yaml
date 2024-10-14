@@ -4,7 +4,7 @@ info:
   author: DhiyaneshDk
   severity: high
   tags: apache,solr,lfi
-  reference: |
+  reference:
     - https://twitter.com/Al1ex4/status/1382981479727128580
     - https://nsfocusglobal.com/apache-solr-arbitrary-file-read-and-ssrf-vulnerability-threat-alert/
     - https://twitter.com/sec715/status/1373472323538362371
@@ -22,15 +22,16 @@ requests:
         Connection: close
     extractors:
       - type: regex
-        regex:
-          - '"status"\:\{"(.*?)"\:\{"name"'
+        internal: true
         name: core
         group: 1
-        internal: true
-    req-condition: true
+        regex:
+          - '"name"\:"(.*?)"'
+    matchers-condition: and
     matchers:
-      - type: dsl
-        dsl:
-          - 'status_code_2 == 200'
-          - 'regex("root:[x*]:0:0:", body_2)'
-        condition: and
+      - type: status
+        status:
+          - 200
+      - type: regex
+        regex:
+          - "root:.*:0:0:"

@@ -1,15 +1,15 @@
 id: nntp
 info:
-  name: Mailtraq nntpd
+  name: Lotus Domino nntpd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    hostname: $1
-    operating_system: Windows
-    product: mailtraq
+    info: posting ok
+    operating_system: $1
+    product: lotus_domino
     rarity: 0
-    vendor: mailtraq
+    vendor: ibm
     verified: true
     version: $2
 tcp:
@@ -22,4 +22,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 ([-\w_.]+) ready for action \(Mailtraq ([\d.]+)/NNTP\)\r\n
+    - ^200 Lotus Domino NNTP Server for ([-./\w]+) \(Release (\d[-.\w]+), .*\) - OK to post\r\n$

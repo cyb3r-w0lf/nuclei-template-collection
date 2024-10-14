@@ -17,4 +17,4 @@ tcp:
   - name: irc-proxy
     type: regex
     regex:
-    - ^:.*!pb@lam3rz\.de NOTICE \* :pb([-.\w]+)\r\n
+    - ^:.*!psyBNC@lam3rz\.de NOTICE \* :psyBNC([-.\w]+)\r\n
