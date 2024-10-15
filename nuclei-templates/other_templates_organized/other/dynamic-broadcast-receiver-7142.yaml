@@ -1,14 +1,11 @@
 id: dynamic-registered-broadcast-receiver
 
 info:
-  name: Dynamic Registered Broadcast Receiver Detection
-  author: YoruYagami
-  severity: medium
-  description: |
-    This template detects the presence of dynamically registered broadcast receivers in Android applications. Dynamically registering broadcast receivers can make the application susceptible to security issues such as broadcast interception or privilege escalation if not handled securely. It is recommended to implement proper access control and permissions when using dynamically registered broadcast receivers.
-  remediation: |
-    Apply security measures such as restricting broadcast receivers to private broadcasts by using permissions or specifying the broadcast receiver's scope. Avoid using dynamically registered broadcast receivers for sensitive actions and prefer static registration in the `AndroidManifest.xml` file where possible.
-    
+  name: Dynamic Registered Broadcast Receiver
+  author: gaurang
+  severity: info
+  tags: android,file
+
 file:
   - extensions:
       - all
@@ -17,4 +14,3 @@ file:
       - type: word
         words:
           - ";->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)"
-          - "registerReceiver("

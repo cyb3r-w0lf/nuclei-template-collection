@@ -1,14 +1,15 @@
 id: ldap
 info:
-  name: PGP Corp. PGP Keyserver
+  name: OpenLDAP
   author: nmap,cn-kali-team
   tags: detect,tech,ldap,service
   severity: info
   metadata:
-    product: keyserver
+    product: openldap
     rarity: 6
-    vendor: pgp
+    vendor: openldap
     verified: true
+    version: 2.2.X - 2.3.X
 tcp:
 - name: ldapbind-req
   inputs:
@@ -20,4 +21,4 @@ tcp:
   - name: ldap
     type: regex
     regex:
-    - '^0\x17\x02\x01\x01a\x12\n\x01\0\x04\0\x04\x0bPGPError #0$'
+    - ^0E\x02\x01\x01a@\n\x01\x02\x04\0\x049historical protocol version requested, use LDAPv3 instead

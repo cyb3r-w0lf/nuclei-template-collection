@@ -1,11 +1,11 @@
 id: backdoor
 info:
-  name: netcat -e
+  name: Subseven backdoor
   author: nmap,cn-kali-team
   tags: detect,tech,backdoor,service
   severity: info
   metadata:
-    info: misconfigured
+    info: '**BACKDOOR**'
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +17,4 @@ tcp:
   - name: backdoor
     type: regex
     regex:
-    - '^exec .* failed : No such file or directory\n$'
+    - ^\r\n\[RPL\]002\r\n$
