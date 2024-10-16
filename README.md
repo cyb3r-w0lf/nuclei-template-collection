@@ -16,41 +16,65 @@
 | CVE-2012 | 146 |
 | CVE-2013 | 169 |
 | CVE-2014 | 423 |
-| CVE-2015 | 527 |
+| CVE-2015 | 528 |
 | CVE-2016 | 249 |
 | CVE-2017 | 401 |
-| CVE-2018 | 448 |
-| CVE-2019 | 518 |
-| CVE-2020 | 597 |
-| CVE-2021 | 1733 |
-| CVE-2022 | 2475 |
-| CVE-2023 | 4775 |
-| CVE-2024 | 5580 |
-| Other | 25565 |
+| CVE-2018 | 451 |
+| CVE-2019 | 517 |
+| CVE-2020 | 598 |
+| CVE-2021 | 1736 |
+| CVE-2022 | 2474 |
+| CVE-2023 | 4779 |
+| CVE-2024 | 5597 |
+| Other | 25567 |
 ## Quantity changes in recent days
-|2024-10-09 | 2024-10-10 | 2024-10-11 | 2024-10-12 | 2024-10-13 | 2024-10-14 | 2024-10-15|
+|2024-10-10 | 2024-10-11 | 2024-10-12 | 2024-10-13 | 2024-10-14 | 2024-10-15 | 2024-10-16|
 |--- | ------ | ------ | ------ | ------ | ------ | ---|
-|44823 | 43868 | 43901 | 44021 | 44053 | 44058 | 44064|
+|43868 | 43901 | 44021 | 44053 | 44058 | 44064 | 44093|
 ## Recently added files
 | templates name | 
 | --- |
-| 4167678185.yaml |
-| errsqli.yaml |
-| apache_traversal.yaml |
-| 2193906630.yaml |
-| 4239468851.yaml |
-| 2796080848.yaml |
-| 2058525765.yaml |
-| 4290069275.yaml |
-| api-exposures.yaml |
-| timesqli.yaml |
-| 2159237760.yaml |
-| 3170504396.yaml |
-| x-forwarded.yaml |
-| 10784051.yaml |
-| 983080390.yaml |
-| 1336550643.yaml |
-| put.yaml |
-| 835528560.yaml |
-| extendify.yaml |
-| 186036525.yaml |
+| CVE-2024-9837.yaml |
+| CVE-2024-9895.yaml |
+| CVE-2024-9546.yaml |
+| CVE-2024-45293.yaml |
+| CVE-2024-9944.yaml |
+| CVE-2024-9820.yaml |
+| CVE-2024-9548.yaml |
+| CVE-2024-39713.yaml |
+| CVE-2024-6757.yaml |
+| CVE-2024-24216.yaml |
+| CVE-2024-43360.yaml |
+| CVE-2024-5910.yaml |
+| CVE-2024-9529.yaml |
+| CVE-2024-9687.yaml |
+| CVE-2024-25414.yaml |
+| CVE-2024-40711.yaml |
+| CVE-2024-44349.yaml |
+| CVE-2018-7196.yaml |
+| CVE-2018-7193.yaml |
+| CVE-2018-7192.yaml |
+| vmware-aria-panel.yaml |
+| veritas-netbackup-panel.yaml |
+| 3614403620.yaml |
+| root-path-disclosure.yaml |
+| 3294172390.yaml |
+| yonyou-u8-crm-tb-sqli.yaml |
+| oracle-fusion-detect.yaml |
+| mirth-connect-detect.yaml |
+| 4185884208.yaml |
+| 3706920567.yaml |
+| traccar-panel.yaml |
+| paloalto-expedition-panel.yaml |
+| auto-date-year-month.yaml |
+| accellion-detect.yaml |
+| 3220179953.yaml |
+| 104606789.yaml |
+| 3412501645.yaml |
+| txadmin-panel.yaml |
+| two-factor-login-telegram.yaml |
+| CVE-2015-8562.yaml |
+| CVE-2021-45811.yaml |
+| CVE-2023-1315.yaml |
+| CVE-2023-1317.yaml |
+| CVE-2023-1318.yaml |

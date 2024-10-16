@@ -1,11 +1,10 @@
 id: donkey
 info:
-  name: MLDonkey multi-network P2P GUI port
+  name: MLDonkey multi-network P2P server control port
   author: nmap,cn-kali-team
   tags: detect,tech,donkey,service
   severity: info
   metadata:
-    info: chrooted
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +16,4 @@ tcp:
   - name: donkey
     type: regex
     regex:
-    - ^\xff\xfd\x1f\n\n\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\n\n                         Welcome to MLdonkey chrooted
+    - '^\xff\xfd\x1f\n\x1b\[34mWelcome on mldonkey command-line\x1b\[2;37;0m\n\nUse \x1b\[31m\?\x1b\[2;37;0m for help\n\n\x1b\[7mMLdonkey command-line:\x1b\[2;37;0m\n> '
