@@ -1,15 +1,12 @@
 id: vnc
 info:
-  name: RealVNC Enterprise
+  name: VNC
   author: nmap,cn-kali-team
   tags: detect,tech,vnc,service
   severity: info
   metadata:
-    info: protocol 3.$1
-    product: realvnc
+    info: protocol 3.$1; Locked out
     rarity: 0
-    vendor: realvnc
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +17,4 @@ tcp:
   - name: vnc
     type: regex
     regex:
-    - ^RFB 003\.00(\d)\n\0\0\0\0\0\0\0jServer license key is missing, invalid or has expired\.\nVisit http://www\.realvnc\.com to purchase a license\.
+    - ^RFB 003\.00(\d)\n\0\0\0\0\0\0\0\x1aToo many security failures$

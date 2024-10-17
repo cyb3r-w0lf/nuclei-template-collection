@@ -9,6 +9,7 @@ info:
     rarity: 0
     vendor: eggheads
     verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +20,4 @@ tcp:
   - name: eggdrop
     type: regex
     regex:
-    - Copyright \(C\) 1997 Robey Pointer\r\n.*Eggheads
+    - (?i)\(Eggdrop v([\d.]+) \(C\) 1997 Robey Pointer.*Eggheads

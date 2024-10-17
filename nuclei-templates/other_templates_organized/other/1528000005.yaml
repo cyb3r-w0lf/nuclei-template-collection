@@ -1,12 +1,13 @@
 id: directconnect
 info:
-  name: Shadows DirectConnect hub
+  name: Shakespeer Direct Connect GUI
   author: nmap,cn-kali-team
   tags: detect,tech,directconnect,service
   severity: info
   metadata:
-    info: Banned for $1 minutes
+    operating_system: Mac OS X
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +18,4 @@ tcp:
   - name: directconnect
     type: regex
     regex:
-    - <Hub-Security> Your IP is temporarily banned for (\d+) minutes\.\|
+    - ^server-version\$([\w._-]+)\|init-completion\$200\|port\$\d+\|

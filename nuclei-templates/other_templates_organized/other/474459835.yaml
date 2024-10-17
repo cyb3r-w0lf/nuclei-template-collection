@@ -1,11 +1,11 @@
 id: pop3
 info:
-  name: K9 pop3d from keir.net
+  name: GNU POP3
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    operating_system: Windows
+    hostname: $2
     rarity: 0
     version: $1
 tcp:
@@ -18,4 +18,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK K9 - ([\d.]+) - http://keir\.net ready <[\w.]+>\r\n
+    - ^\+OK POP3 Welcome to GNU POP3 ([-\d.]+) <[\d.]+@([-\w_.]+)>\r\n

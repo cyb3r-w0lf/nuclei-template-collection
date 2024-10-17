@@ -1,13 +1,13 @@
 id: sieve
 info:
-  name: Citadel timsieved
+  name: DBMail timsieved
   author: nmap,cn-kali-team
   tags: detect,tech,sieve,service
   severity: info
   metadata:
-    product: ux
+    product: dbmail
     rarity: 0
-    vendor: citadel
+    vendor: paul_j_stevens
     verified: true
     version: $1
 tcp:
@@ -20,4 +20,4 @@ tcp:
   - name: sieve
     type: regex
     regex:
-    - ^\"IMPLEMENTATION\" \"CITADEL Sieve ([\d.]+)\"\r\n
+    - ^\"IMPLEMENTATION\" \"DBMail timsieved ([\w._-]+)\"\r\n

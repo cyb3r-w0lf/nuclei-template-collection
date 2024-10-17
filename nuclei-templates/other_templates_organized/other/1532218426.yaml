@@ -6,9 +6,8 @@ info:
   severity: info
   metadata:
     hostname: $1
-    operating_system: Unix
+    info: IP unauthorized
     rarity: 0
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +18,4 @@ tcp:
   - name: hylafax
     type: regex
     regex:
-    - ^220 ([-.\w]+) server \(HylaFAX \(tm\) Version (\d[-.\w]+)\) ready\.\r\n$
+    - ^130 Warning, client address \"[\d.]+\" is not listed for host name \"([-.\w]+)\"\.\r\n
