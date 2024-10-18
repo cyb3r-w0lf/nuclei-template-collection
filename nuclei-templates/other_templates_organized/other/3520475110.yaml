@@ -1,15 +1,16 @@
 id: ftp-proxy
 info:
-  name: NetApp NetCache ftp proxy
+  name: WinProxy FTP proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
   metadata:
-    hostname: $1
-    product: netcache
+    operating_system: Windows
+    product: winproxy
     rarity: 0
-    vendor: netapp
+    vendor: bluecoat
     verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +21,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^220 ([-\w_.]+) \(NetCache\) .*\r\n
+    - ^220 WinProxy \(Version ([^)]+)\) ready\.\r\n
