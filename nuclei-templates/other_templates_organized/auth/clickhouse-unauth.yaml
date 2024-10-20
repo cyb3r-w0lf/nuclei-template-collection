@@ -18,3 +18,5 @@ network:
       - type: word
         words:
           - "ClickHouse"
+          - "UTC"
+        condition: and

@@ -1,13 +1,16 @@
 id: nntp
 info:
-  name: NetWare nntpd
+  name: INN nntpd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
     hostname: $1
+    info: posting ok
+    product: inn
     rarity: 0
-    version: $2
+    vendor: isc
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +21,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 ([\w.-_]+) NetWare-News-Server/([\d.]+) 'LDNUM' NNRP ready \(posting ok\)\.\r\n
+    - ^200 ([-\w_.]+) NNRP Service Ready - [-\w_.]+@[-\w_.]+ \(posting ok\)\.\r\n
