@@ -1,11 +1,11 @@
 id: vnc
 info:
-  name: VNC
+  name: ATEN KVM-over-IP VNC
   author: nmap,cn-kali-team
   tags: detect,tech,vnc,service
   severity: info
   metadata:
-    info: unofficial protocol 3.130
+    device_type: remote management
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +17,4 @@ tcp:
   - name: vnc
     type: regex
     regex:
-    - ^RFB 003.130\n$
+    - ^RFB 009\.123\n
