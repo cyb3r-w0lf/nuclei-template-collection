@@ -6,6 +6,7 @@ info:
   severity: info
   metadata:
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -16,4 +17,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^421 Proxy is closed \(unknown user location\)\r\n$
+    - '^220 Zscaler/([\d.]+): USER expected \(Unix syntax\)\r\n'

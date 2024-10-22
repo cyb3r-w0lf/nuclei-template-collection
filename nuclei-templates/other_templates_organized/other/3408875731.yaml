@@ -7,7 +7,6 @@ info:
   metadata:
     hostname: $1
     rarity: 0
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +17,4 @@ tcp:
   - name: irc-proxy
     type: regex
     regex:
-    - ^:.*!BNC@([\w._-]+) NOTICE \* :psyBNC([\w._-]+)\r\n
+    - ^:.*!psyBNC@[-\w_.]+ NOTICE \* :psyBNC on ([-\w_.]+)\r\n

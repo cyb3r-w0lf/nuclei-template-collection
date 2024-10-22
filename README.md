@@ -21,25 +21,39 @@
 | CVE-2017 | 404 |
 | CVE-2018 | 451 |
 | CVE-2019 | 523 |
-| CVE-2020 | 609 |
+| CVE-2020 | 610 |
 | CVE-2021 | 1746 |
 | CVE-2022 | 2479 |
-| CVE-2023 | 4792 |
-| CVE-2024 | 5821 |
-| Other | 25809 |
+| CVE-2023 | 4790 |
+| CVE-2024 | 5823 |
+| Other | 25821 |
 ## Quantity changes in recent days
-|2024-10-15 | 2024-10-16 | 2024-10-17 | 2024-10-18 | 2024-10-19 | 2024-10-20 | 2024-10-21|
+|2024-10-16 | 2024-10-17 | 2024-10-18 | 2024-10-19 | 2024-10-20 | 2024-10-21 | 2024-10-22|
 |--- | ------ | ------ | ------ | ------ | ------ | ---|
-|44064 | 44093 | 44194 | 44257 | 44333 | 44615 | 44611|
+|44093 | 44194 | 44257 | 44333 | 44615 | 44611 | 44624|
 ## Recently added files
 | templates name | 
 | --- |
-| 2083865041.yaml |
-| 2318944228.yaml |
-| TVE-2024-105272140.yaml |
-| insecure-provider-path.yaml |
-| 179777589.yaml |
-| 2616960077.yaml |
-| 4244987203.yaml |
-| 3816027082.yaml |
-| 2228517820.yaml |
+| identification-auth-failures.yaml |
+| sato-default-login.yaml |
+| 4283739589.yaml |
+| 425618774.yaml |
+| 3804868593.yaml |
+| wp-footnote-xss.yaml |
+| injection.yaml |
+| logging-monitoring-failures.yaml |
+| XVE-2024-2116.yaml |
+| 568620400.yaml |
+| 1737297198.yaml |
+| 3412263252.yaml |
+| security-misconfiguration.yaml |
+| 3904586513.yaml |
+| insecure-design.yaml |
+| 523733067.yaml |
+| cryptographic-failures.yaml |
+| application-pass-xss.yaml |
+| 1808358279.yaml |
+| software-integrity-failures.yaml |
+| Server-Side-Request-Forgery.yaml |
+| broken-access-control.yaml |
+| 2289896263.yaml |
