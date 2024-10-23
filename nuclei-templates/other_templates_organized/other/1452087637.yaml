@@ -1,12 +1,15 @@
 id: vnc
 info:
-  name: VNC
+  name: RealVNC Enterprise
   author: nmap,cn-kali-team
   tags: detect,tech,vnc,service
   severity: info
   metadata:
-    info: protocol 3.$1; Locked out
+    info: protocol 4.1
+    product: realvnc
     rarity: 0
+    vendor: realvnc
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +20,4 @@ tcp:
   - name: vnc
     type: regex
     regex:
-    - ^RFB 003\.00(\d)\n\0\0\0\0\0\0\0\x1aToo many security failures$
+    - ^RFB 004\.001\n

@@ -1,7 +1,7 @@
 id: wordpress-updraftplus
 
 info:
-  name: UpdraftPlus' WordPress Backup & Migration Plugin Detection
+  name: UpdraftPlus WordPress Backup & Migration Plugin Detection
   author: ricardomaia
   severity: info
   reference:
@@ -11,9 +11,8 @@ info:
     wpscan: https://wpscan.com/plugin/updraftplus
   tags: tech,wordpress,wp-plugin,top-100,top-200
 
-http:
+requests:
   - method: GET
-
     path:
       - "{{BaseURL}}/wp-content/plugins/updraftplus/readme.txt"
 

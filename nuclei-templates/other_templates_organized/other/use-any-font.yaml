@@ -11,9 +11,8 @@ info:
     wpscan: https://wpscan.com/plugin/use-any-font
   tags: tech,wordpress,wp-plugin,top-200
 
-http:
+requests:
   - method: GET
-
     path:
       - "{{BaseURL}}/wp-content/plugins/use-any-font/readme.txt"
 
