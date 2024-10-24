@@ -7,7 +7,7 @@ info:
   metadata:
     fallback:
     - terminal-server
-    operating_system: Windows XP
+    operating_system: Windows
     rarity: 7
 tcp:
 - name: terminal-server-cookie
@@ -20,4 +20,4 @@ tcp:
   - name: ms-wbt-server
     type: regex
     regex:
-    - ^\x03\0\0\x0b\x06\xd0\0\0\x124\0$
+    - ^\x03\0\0\x13\x0e\xd0\0\0\x124\0\x02\x1f\x08\0\x02\0\0\0

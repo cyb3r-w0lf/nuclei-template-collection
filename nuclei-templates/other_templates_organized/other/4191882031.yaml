@@ -1,6 +1,6 @@
 id: irc-proxy
 info:
-  name: dircproxy
+  name: dirkproxy
   author: nmap,cn-kali-team
   tags: detect,tech,irc-proxy,service
   severity: info
@@ -16,4 +16,4 @@ tcp:
   - name: irc-proxy
     type: regex
     regex:
-    - ^:dircproxy NOTICE AUTH :Looking up your hostname\.\.\.\r\n:dircproxy NOTICE AUTH :Got your hostname\.\r\n
+    - ^:dirkproxy NOTICE AUTH :Looking up your hostname\.\.\.\r\n:dirkproxy NOTICE AUTH :Got your hostname\.\r\n

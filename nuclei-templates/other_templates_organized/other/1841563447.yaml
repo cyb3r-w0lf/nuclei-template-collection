@@ -1,14 +1,14 @@
 id: imap
 info:
-  name: Perdition imapd
+  name: Microsoft Exchange 2007 imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    hostname: $1
-    product: perdition
+    operating_system: Windows
+    product: exchange_server
     rarity: 0
-    vendor: horms
+    vendor: microsoft
     verified: true
 tcp:
 - name: 'null'
@@ -20,4 +20,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK IMAP4 Ready ([-\w_.]+) \w+\r\n
+    - ^\* OK Microsoft Exchange Server 2007 IMAP4 service ready\r\n

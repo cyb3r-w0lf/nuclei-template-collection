@@ -1,13 +1,13 @@
 id: tftp
 info:
-  name: HP Intelligent Management Center tftpd
+  name: SolarWinds Free tftpd
   author: nmap,cn-kali-team
   tags: detect,tech,tftp,service
   severity: info
   metadata:
-    product: intelligent_management_center
+    product: tftp_server
     rarity: 5
-    vendor: hp
+    vendor: solarwinds
     verified: true
 tcp:
 - name: dnsstatus-request
@@ -20,4 +20,4 @@ tcp:
   - name: tftp
     type: regex
     regex:
-    - ^\0\x05\0\0Not defined, see error message\(if any\)\.\0
+    - '^\0\x05\0\x04Unknown operatation code: 0 received from [\d.]+:\d+\0'
