@@ -1,14 +1,12 @@
 id: ftp-proxy
 info:
-  name: Frox ftp proxy
+  name: jftpgw ftp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
   metadata:
-    product: frox
     rarity: 0
-    vendor: james_hollingshead
-    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +17,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^220 Frox transparent ftp proxy\. Login with username\[@host\[:port\]\]\r\n
+    - ^220 FTP proxy \(v([\d.]+)\) ready\r\n530 Login incorrect\. Expected USER command\r\n

@@ -1,12 +1,11 @@
 id: backdoor
 info:
-  name: OptixPro backdoor
+  name: Deep Throat keylogger
   author: nmap,cn-kali-team
   tags: detect,tech,backdoor,service
   severity: info
   metadata:
-    info: '**BACKDOOR**'
-    operating_system: Windows
+    info: '**MALWARE**'
     rarity: 0
 tcp:
 - name: 'null'
@@ -18,4 +17,4 @@ tcp:
   - name: backdoor
     type: regex
     regex:
-    - ^ \r\n$
+    - ^DT Key Logger -- Logging System Wide Key Presses\r\n

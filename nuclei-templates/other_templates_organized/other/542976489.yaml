@@ -1,16 +1,13 @@
 id: ftp
 info:
-  name: Serv-U ftpd
+  name: WebGate $2 eDVR camera ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    info: SSL Required
-    operating_system: Windows
-    product: serv-u
+    device_type: webcam
     rarity: 0
-    vendor: serv-u
-    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^431 Unable to negotiate secure command connection\.\r\n
+    - ^ftpd - accept the connection from [\d.]+\n220-eDVR FTP Server v([\d.]+) \(c\)Copyright WebGate Inc\. \w+-\w+\r\n220-Welcome to (DS\w+)\r\n220 You will be disconnected after 180 seconds of inactivity\.\r\n

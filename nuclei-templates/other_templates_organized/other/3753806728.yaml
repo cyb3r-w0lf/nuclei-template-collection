@@ -1,15 +1,19 @@
 id: rtsp
 info:
-  name: Gordian httpd
+  name: Apple AirTunes rtspd
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
   metadata:
-    device_type: webcam
+    device_type: media device
     fallback:
     - get-request
-    info: IQinVision IQeye3 webcam rtspd
+    info: Apple TV
+    operating_system: Mac OS X
+    product: apple_tv
     rarity: 5
+    vendor: apple
+    verified: true
     version: $1
 tcp:
 - name: rtsprequest
@@ -22,4 +26,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '(?i)^RTSP/1\.0 200 OK\r\nServer: Gordian Embedded([\d\.]+)\r\n(?:[^\r\n]+\r\n)*?Public: OPTIONS, DESCRIBE, SETUP, PLAY, TEARDOWN\r\n'
+    - '^RTSP/1\.0 200 OK\r\nPublic: ANNOUNCE, SETUP, RECORD, PAUSE, FLUSH, TEARDOWN, OPTIONS, GET_PARAMETER, SET_PARAMETER, POST, GET\r\nServer: AirTunes/([\w._-]+)\r\n\r\n'

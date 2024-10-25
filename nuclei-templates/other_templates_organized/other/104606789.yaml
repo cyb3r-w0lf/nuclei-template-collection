@@ -1,6 +1,6 @@
 id: smtp
 info:
-  name: WinRoute Pro smtpd
+  name: hMailServer
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
@@ -19,4 +19,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([-\w_.]+) ESMTP - WinRoute Pro ([\d.]+)\r\n
+    - ^220 ([-\w_.]+) ESMTP hMailServer ([\w.-]+)\r\n
