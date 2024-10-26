@@ -1,13 +1,13 @@
 id: irc
 info:
-  name: ircu ircd
+  name: Hybrid ircd
   author: nmap,cn-kali-team
   tags: detect,tech,irc,service
   severity: info
   metadata:
-    product: ircu
+    product: ircd-hybrid
     rarity: 0
-    vendor: undernet
+    vendor: ircd-hybrid
     verified: true
 tcp:
 - name: 'null'
@@ -19,4 +19,4 @@ tcp:
   - name: irc
     type: regex
     regex:
-    - ^NOTICE AUTH :\*\*\* Looking up your hostname\r\nNOTICE AUTH :\*\*\* Checking Ident\r\nNOTICE AUTH :\*\*\* Got ident response\r\nNOTICE AUTH :\*\*\* Couldn't look up your hostname\r\n
+    - ^ERROR :Trying to reconnect too fast\.\r\n

@@ -1,15 +1,16 @@
 id: http
 info:
-  name: Virtual Programming Lab for Moodle
+  name: Embedthis-Appweb
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    product: vpl
+    info: 'date: $1'
+    product: appweb
     rarity: 0
-    vendor: ulpgc
+    vendor: mbedthis
     verified: true
-    version: $1
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +21,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.1 408 Request Time-out\r\nServer: vpl-jail-system ([\d.]+)\r\n'
+    - '^HTTP/1\.1 405 Method Not Allowed\r\nDate: ([^\r]+)\r\nServer: Embedthis-Appweb/([\w._-]+)\r\n'

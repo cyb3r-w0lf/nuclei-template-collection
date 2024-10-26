@@ -1,16 +1,12 @@
 id: ftp-proxy
 info:
-  name: WinProxy FTP proxy
+  name: Secure Computing Sidewinder firewall ftp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
   metadata:
-    operating_system: Windows
-    product: winproxy
+    device_type: firewall
     rarity: 0
-    vendor: bluecoat
-    verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +17,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^220 WinProxy \(Version ([^)]+)\) ready\.\r\n
+    - ^220-Firewall ftp proxy\.  You must login to the proxy first\.\r\n220 Use   proxy-user:auth-method@destination\.\r\n
