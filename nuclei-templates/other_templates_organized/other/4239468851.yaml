@@ -1,21 +1,25 @@
 id: http
 info:
-  name: Cisco ODN set-top box httpd
+  name: Apache Tomcat httpd
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    device_type: media device
-    info: 'MAC: $2; time zone: $1; interface forbidden'
-    rarity: 0
+    fallback:
+    - get-request
+    product: tomcat
+    rarity: 5
+    vendor: apache
+    verified: true
 tcp:
-- name: 'null'
+- name: rtsprequest
   inputs:
-  - data: ''
+  - data: OPTIONS / RTSP/1.0\r\n\r\n
   host:
   - '{{Hostname}}'
+  port: 80,554,3052,3372,5000,7070,8080,10000
   extractors:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.1 403 OK\r\nDate: [^\r\n]+ ([A-Z]+) \d\d\d\d\r\nServer: ODN Webserver\[([\dA-F:]{17})\]\r\n'
+    - '^HTTP/1\.1 505 HTTP Version Not Supported\r\nDate: .*\r\nConnection: close\r\nServer: Apache\r\n\r\n'

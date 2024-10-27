@@ -1,6 +1,6 @@
 id: pop3-proxy
 info:
-  name: POPgate pop3 proxy
+  name: HTML2POP3 pop3 proxy
   author: nmap,cn-kali-team
   tags: detect,tech,pop3-proxy,service
   severity: info
@@ -17,4 +17,4 @@ tcp:
   - name: pop3-proxy
     type: regex
     regex:
-    - ^\+OK hello from popgate\(([\d.]+)\)\r\n
+    - ^\+OK HTML2POP3 server ready \(([\d.]+)\)\r\n

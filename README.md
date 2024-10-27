@@ -20,52 +20,64 @@
 | CVE-2016 | 252 |
 | CVE-2017 | 404 |
 | CVE-2018 | 452 |
-| CVE-2019 | 523 |
-| CVE-2020 | 609 |
-| CVE-2021 | 1744 |
-| CVE-2022 | 2477 |
-| CVE-2023 | 4803 |
-| CVE-2024 | 5914 |
-| Other | 25890 |
+| CVE-2019 | 524 |
+| CVE-2020 | 607 |
+| CVE-2021 | 1745 |
+| CVE-2022 | 2478 |
+| CVE-2023 | 4801 |
+| CVE-2024 | 5941 |
+| Other | 25904 |
 ## Quantity changes in recent days
-|2024-10-20 | 2024-10-21 | 2024-10-22 | 2024-10-23 | 2024-10-24 | 2024-10-25 | 2024-10-26|
+|2024-10-21 | 2024-10-22 | 2024-10-23 | 2024-10-24 | 2024-10-25 | 2024-10-26 | 2024-10-27|
 |--- | ------ | ------ | ------ | ------ | ------ | ---|
-|44615 | 44611 | 44624 | 44568 | 44621 | 44771 | 44793|
+|44611 | 44624 | 44568 | 44621 | 44771 | 44793 | 44833|
 ## Recently added files
 | templates name | 
 | --- |
-| CVE-2024-9488.yaml |
-| CVE-2024-10341.yaml |
-| CVE-2024-9235.yaml |
-| CVE-2024-9628.yaml |
-| CVE-2024-10150.yaml |
-| CVE-2024-10342.yaml |
-| CVE-2024-10374.yaml |
-| CVE-2024-10016.yaml |
-| CVE-2024-9302.yaml |
-| CVE-2024-9109.yaml |
-| CVE-2024-9686.yaml |
-| CVE-2024-9607.yaml |
-| CVE-2024-10011.yaml |
-| CVE-2024-10148.yaml |
-| CVE-2024-9598.yaml |
-| CVE-2024-9630.yaml |
-| CVE-2024-8666.yaml |
-| CVE-2024-10112.yaml |
-| CVE-2024-10343.yaml |
-| 1387946175.yaml |
-| bamazoo-button-generator.yaml |
-| 2012020411.yaml |
-| 124504227.yaml |
-| beek-widget-extention.yaml |
-| 1103468766.yaml |
-| league-of-legends-shortcodes.yaml |
-| file-upload-types.yaml |
-| 1001735086.yaml |
-| wp-awesome-buttons.yaml |
-| shoutcast-icecast-html5-radio-player.yaml |
-| wps-telegram-chat.yaml |
-| order-notification-for-telegram.yaml |
-| 1927974575.yaml |
-| simple-news.yaml |
-| 1693893569.yaml |
+| CVE-2024-9772.yaml |
+| CVE-2024-9613.yaml |
+| CVE-2024-9116.yaml |
+| CVE-2024-10091.yaml |
+| CVE-2024-9932.yaml |
+| CVE-2024-9637.yaml |
+| CVE-2024-9454.yaml |
+| CVE-2024-9584.yaml |
+| CVE-2024-10092.yaml |
+| CVE-2024-9890.yaml |
+| CVE-2024-9853.yaml |
+| CVE-2024-9930.yaml |
+| CVE-2024-9626.yaml |
+| CVE-2024-9475.yaml |
+| CVE-2024-9462.yaml |
+| CVE-2024-10117.yaml |
+| CVE-2024-9933.yaml |
+| CVE-2024-8870.yaml |
+| CVE-2024-10402.yaml |
+| CVE-2024-9642.yaml |
+| CVE-2024-10357.yaml |
+| CVE-2024-9456.yaml |
+| CVE-2024-8392.yaml |
+| CVE-2024-9501.yaml |
+| CVE-2024-9585.yaml |
+| CVE-2024-9967.yaml |
+| CVE-2024-9931.yaml |
+| zemanta.yaml |
+| sogrid.yaml |
+| 1128033808.yaml |
+| wux-blog-editor.yaml |
+| 59558288.yaml |
+| uix-shortcodes.yaml |
+| wp-awesome-login.yaml |
+| user-toolkit.yaml |
+| idsk-toolkit.yaml |
+| editor-custom-color-palette.yaml |
+| sb-core.yaml |
+| 2699381848.yaml |
+| 4166036708.yaml |
+| 3079579688.yaml |
+| wp-show-more.yaml |
+| 3571748865.yaml |
+| pripre.yaml |
+| monkee-boy-wp-essentials.yaml |
+| 3726820938.yaml |
+| 188846188.yaml |
