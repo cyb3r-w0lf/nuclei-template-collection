@@ -19,65 +19,25 @@
 | CVE-2015 | 528 |
 | CVE-2016 | 252 |
 | CVE-2017 | 404 |
-| CVE-2018 | 452 |
+| CVE-2018 | 451 |
 | CVE-2019 | 524 |
-| CVE-2020 | 607 |
-| CVE-2021 | 1745 |
-| CVE-2022 | 2478 |
-| CVE-2023 | 4801 |
-| CVE-2024 | 5941 |
-| Other | 25904 |
+| CVE-2020 | 608 |
+| CVE-2021 | 1747 |
+| CVE-2022 | 2479 |
+| CVE-2023 | 4803 |
+| CVE-2024 | 5944 |
+| Other | 25899 |
 ## Quantity changes in recent days
-|2024-10-21 | 2024-10-22 | 2024-10-23 | 2024-10-24 | 2024-10-25 | 2024-10-26 | 2024-10-27|
+|2024-10-22 | 2024-10-23 | 2024-10-24 | 2024-10-25 | 2024-10-26 | 2024-10-27 | 2024-10-28|
 |--- | ------ | ------ | ------ | ------ | ------ | ---|
-|44611 | 44624 | 44568 | 44621 | 44771 | 44793 | 44833|
+|44624 | 44568 | 44621 | 44771 | 44793 | 44833 | 44836|
 ## Recently added files
 | templates name | 
 | --- |
-| CVE-2024-9772.yaml |
-| CVE-2024-9613.yaml |
-| CVE-2024-9116.yaml |
-| CVE-2024-10091.yaml |
-| CVE-2024-9932.yaml |
-| CVE-2024-9637.yaml |
-| CVE-2024-9454.yaml |
-| CVE-2024-9584.yaml |
-| CVE-2024-10092.yaml |
-| CVE-2024-9890.yaml |
-| CVE-2024-9853.yaml |
-| CVE-2024-9930.yaml |
-| CVE-2024-9626.yaml |
-| CVE-2024-9475.yaml |
-| CVE-2024-9462.yaml |
-| CVE-2024-10117.yaml |
-| CVE-2024-9933.yaml |
-| CVE-2024-8870.yaml |
-| CVE-2024-10402.yaml |
-| CVE-2024-9642.yaml |
-| CVE-2024-10357.yaml |
-| CVE-2024-9456.yaml |
-| CVE-2024-8392.yaml |
-| CVE-2024-9501.yaml |
-| CVE-2024-9585.yaml |
-| CVE-2024-9967.yaml |
-| CVE-2024-9931.yaml |
-| zemanta.yaml |
-| sogrid.yaml |
-| 1128033808.yaml |
-| wux-blog-editor.yaml |
-| 59558288.yaml |
-| uix-shortcodes.yaml |
-| wp-awesome-login.yaml |
-| user-toolkit.yaml |
-| idsk-toolkit.yaml |
-| editor-custom-color-palette.yaml |
-| sb-core.yaml |
-| 2699381848.yaml |
-| 4166036708.yaml |
-| 3079579688.yaml |
-| wp-show-more.yaml |
-| 3571748865.yaml |
-| pripre.yaml |
-| monkee-boy-wp-essentials.yaml |
-| 3726820938.yaml |
-| 188846188.yaml |
+| 126014385.yaml |
+| 3624929206.yaml |
+| 185718846.yaml |
+| 2178295107.yaml |
+| 2930834808.yaml |
+| 619810252.yaml |
+| 3224163904.yaml |

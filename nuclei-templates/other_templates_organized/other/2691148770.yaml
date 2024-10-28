@@ -1,12 +1,10 @@
 id: bindshell
 info:
-  name: bind shell
+  name: Metasploitable root shell
   author: nmap,cn-kali-team
   tags: detect,tech,bindshell,service
   severity: info
   metadata:
-    info: '**BACKDOOR**'
-    operating_system: Unix
     rarity: 0
 tcp:
 - name: 'null'
@@ -18,4 +16,4 @@ tcp:
   - name: bindshell
     type: regex
     regex:
-    - '^(?:ba)?sh: no job control in this shell\n(?:ba)?sh-\d\.\d+\w?\$ $'
+    - '^root@metasploitable:/# '

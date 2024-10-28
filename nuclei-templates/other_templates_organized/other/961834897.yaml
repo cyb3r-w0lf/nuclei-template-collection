@@ -1,11 +1,12 @@
 id: irc-proxy
 info:
-  name: sbnc
+  name: BNC irc-proxy
   author: nmap,cn-kali-team
   tags: detect,tech,irc-proxy,service
   severity: info
   metadata:
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -16,4 +17,4 @@ tcp:
   - name: irc-proxy
     type: regex
     regex:
-    - ^:sbnc!sbnc@sbnc\.soohrt\.org NOTICE \* :Wellcum\r\n
+    - '^NOTICE AUTH :\*\*\* .*\r\nNOTICE AUTH :\*\*\* \[BNC ([\d.]+) '

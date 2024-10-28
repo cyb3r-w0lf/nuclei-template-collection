@@ -1,18 +1,15 @@
 id: sip
 info:
-  name: CSipSimple sipd
+  name: Epygi Quadro $2 PBX SIP
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
   metadata:
+    device_type: PBX
     fallback:
     - get-request
-    info: 'device: $SUBST(1,"_"," ")'
-    product: csipsimple
     rarity: 5
-    vendor: csipsimple
-    verified: true
-    version: $2
+    version: $1
 tcp:
 - name: sipoptions
   inputs:
@@ -24,4 +21,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?User-Agent: CSipSimple_([^/-]+)[-\d]*/(r\d+)\r\n'
+    - '(?i)^SIP/2\.0 403 Non-self Request-URI\r\n(?:[^\r\n]+\r\n)*?Server: Epygi Quadro SIP User Agent/v([\w._-]+) \(QUADRO-([^\)]*)\)\r\n'
