@@ -1,15 +1,14 @@
 id: sip
 info:
-  name: BT HomeHub
+  name: Nokia N86 phone SIP
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
   metadata:
-    device_type: VoIP phone
+    device_type: phone
     fallback:
     - get-request
     rarity: 5
-    version: $1
 tcp:
 - name: sipoptions
   inputs:
@@ -21,4 +20,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 500 Server Internal Error\r\n(?:[^\r\n]+\r\n)*?User-Agent: BT Home Hub (\d+)\r\n'
+    - '^SIP/2\.0 404 Not Found\r\nVia: SIP/2\.0/TCP nm;branch=foo;received=[\d.]+\r\nTo: <sip:nm2@nm2>;tag=\w+\r\nFrom: <sip:nm@nm>;tag=root\r\nCall-ID: 50000\r\nCSeq: 42 OPTIONS\r\nContent-Length: 0\r\n\r\n$'

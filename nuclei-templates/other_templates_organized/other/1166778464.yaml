@@ -5,7 +5,7 @@ info:
   tags: detect,tech,sieve,service
   severity: info
   metadata:
-    info: included w/cyrus imap
+    operating_system: Mac OS X $2
     product: cyrus_imap_server
     rarity: 0
     vendor: cmu
@@ -21,4 +21,4 @@ tcp:
   - name: sieve
     type: regex
     regex:
-    - ^\"IMPLEMENTATION\" \"Cyrus timsieved v(\d[-.\w]+)\"\r\n
+    - ^\"IMPLEMENTATION\" \"Cyrus timsieved v([\w_.]+)-OS X ([^"]+)\"\r\n

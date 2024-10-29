@@ -1,13 +1,14 @@
 id: tftp
 info:
-  name: SolarWinds Free tftpd
+  name: TFTP Server SP
   author: nmap,cn-kali-team
   tags: detect,tech,tftp,service
   severity: info
   metadata:
-    product: tftp_server
+    operating_system: Windows
+    product: tftp_server_sp
     rarity: 5
-    vendor: solarwinds
+    vendor: tftp
     verified: true
 tcp:
 - name: dnsstatus-request
@@ -20,4 +21,4 @@ tcp:
   - name: tftp
     type: regex
     regex:
-    - '^\0\x05\0\x04Unknown operatation code: 0 received from [\d.]+:\d+\0'
+    - ^\0\x05\0\x05Unknown transfer ID\0
