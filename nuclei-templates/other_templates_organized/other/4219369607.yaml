@@ -1,13 +1,16 @@
 id: pop3-proxy
 info:
-  name: JanaServer pop3 proxy
+  name: WinProxy pop3 proxy
   author: nmap,cn-kali-team
   tags: detect,tech,pop3-proxy,service
   severity: info
   metadata:
-    hostname: $1
+    info: IP forbidden
     operating_system: Windows
+    product: winproxy
     rarity: 0
+    vendor: bluecoat
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +21,4 @@ tcp:
   - name: pop3-proxy
     type: regex
     regex:
-    - ^\+OK Jana-Server POP3 ready <[\w.]+@([-\w_.]+)>\r\n
+    - ^-ERR 403 The requested host is forbidden by WinProxy\.  See your network administrator\.\n
