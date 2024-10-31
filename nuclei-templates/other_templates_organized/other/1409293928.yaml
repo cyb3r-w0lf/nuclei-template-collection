@@ -1,12 +1,10 @@
 id: irc
 info:
-  name: ConferenceRoom ircd
+  name: Dancer ircd
   author: nmap,cn-kali-team
   tags: detect,tech,irc,service
   severity: info
   metadata:
-    hostname: $1
-    info: Spanish
     rarity: 0
 tcp:
 - name: 'null'
@@ -18,4 +16,4 @@ tcp:
   - name: irc
     type: regex
     regex:
-    - ^:([\w._-]+) 451 \* HELP :No te has registrado\r\n
+    - ^NOTICE AUTH :\*\*\* Looking up your hostname\.\.\.\r\nNOTICE AUTH :\*\*\* Checking ident\r\nNOTICE AUTH :\*\*\* Got ident response\r\nNOTICE AUTH :\*\*\* Found your hostname\r\n

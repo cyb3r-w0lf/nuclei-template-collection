@@ -11,16 +11,17 @@ dns:
   - name: "{{FQDN}}"
     type: CNAME
 
-    matchers:
-      - type: word
-        words:
-          - "ghost.io"
+    extractors:
+      - type: dsl
+        name: cname
         internal: true
-
+        dsl:
+            - cname
+        
 http:
   - method: GET
     path:
-      - "{{BaseURL}}"
+      - "{{BaseURL}}?ref={{cname}}"
 
     matchers:
       - type: word
