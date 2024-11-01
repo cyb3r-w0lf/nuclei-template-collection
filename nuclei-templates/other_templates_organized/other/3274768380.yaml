@@ -16,4 +16,4 @@ tcp:
   - name: donkey
     type: regex
     regex:
-    - ^\xff\xfd\x1f[\r\n* ]+Welcome to MLdonkey          \r\n
+    - (?i)^.*\0\0\0\x06\0Donkey\x01\x0c\0\./donkey\.ini\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0

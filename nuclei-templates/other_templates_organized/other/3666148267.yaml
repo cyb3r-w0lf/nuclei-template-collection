@@ -1,17 +1,14 @@
 id: rtsp
 info:
-  name: Wowza Streaming Engine rtspd
+  name: Freebox rtspd
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
   metadata:
+    device_type: media device
     fallback:
     - get-request
-    product: wowza_streaming_engine
     rarity: 5
-    vendor: wowza
-    verified: true
-    version: $1 build $2
 tcp:
 - name: rtsprequest
   inputs:
@@ -23,4 +20,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '^RTSP/1\.0 200 OK\r\nCSeq: 0\r\nServer: Wowza Streaming Engine ([\d.]+) build ?(\d+)\r\nCache-Control: no-cache\r\nPublic: DESCRIBE, SETUP, TEARDOWN, PLAY, PAUSE, OPTIONS, ANNOUNCE, RECORD, GET_PARAMETER\r\n'
+    - '^RTSP/1\.0 200 OK\r\nPublic: OPTIONS, ANNOUNCE, SETUP, RECORD, SET_PARAMETER, GET_PARAMETER, FLUSH, TEARDOWN, POST\r\n\r\n'
