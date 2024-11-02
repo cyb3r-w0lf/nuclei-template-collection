@@ -1,11 +1,11 @@
 id: tftp
 info:
-  name: Microsoft Windows Deployment Services tftpd
+  name: Zoom X5 ADSL modem tftpd
   author: nmap,cn-kali-team
   tags: detect,tech,tftp,service
   severity: info
   metadata:
-    operating_system: Windows
+    device_type: broadband router
     rarity: 5
 tcp:
 - name: dnsstatus-request
@@ -18,4 +18,4 @@ tcp:
   - name: tftp
     type: regex
     regex:
-    - ^\0\x05\0\x04Illegal operation error\.\0$
+    - '^\0\x05\0\x04Error: Illegal TFTP Operation\0\0\0\0\0'

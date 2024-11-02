@@ -18,4 +18,4 @@ tcp:
   - name: sip-proxy
     type: regex
     regex:
-    - '^SIP/2\.0 400 Bad Request - [A-Z] - 16007\r\nVia: SIP/2\.0/UDP nm;branch=foo;rport=\d+;received=[\d.]+\r\nFrom: <sip:nm@nm>;tag=root\r\nTo: <sip:nm2@nm2>;tag=\d+\r\nCall-ID: 50000\r\nCSeq: 42 OPTIONS\r\nContent-Length: 0\r\n\r\n'
+    - ^SIP/2\.0 400 Bad Request - [A-Z] - 16007\r\nv:SIP/2\.0/UDP nm;branch=foo;rport=\d+;received=[\d.]+\r\nf:<sip:nm@nm>;tag=root\r\nt:<sip:nm2@nm2>;tag=\d+\r\ni:50000\r\nCSeq:42 OPTIONS\r\nl:0\r\n\r\n

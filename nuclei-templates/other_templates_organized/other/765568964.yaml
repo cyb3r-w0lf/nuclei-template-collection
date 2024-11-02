@@ -5,6 +5,7 @@ info:
   tags: detect,tech,donkey,service
   severity: info
   metadata:
+    info: chrooted
     rarity: 0
 tcp:
 - name: 'null'
@@ -16,4 +17,4 @@ tcp:
   - name: donkey
     type: regex
     regex:
-    - ^\xff\xfd\x1f[\r\n* ]+Welcome to MLdonkey          \r\n
+    - ^\xff\xfd\x1f\n\n\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\n\n                         Welcome to MLdonkey chrooted
