@@ -1,0 +1,26 @@
+id: azure-blob-core-detect
+
+info:
+  name: Azure Blob Core Service - Detect
+  author: ProjectDiscoveryAI
+  severity: info
+  description: |
+    This template detects the presence of 'blob.core.windows.net' in the response body, indicating potential references to Azure Blob Storage.
+  metadata:
+    max-request: 1
+    verified: true
+    shodan-query: html:"blob.core.windows.net"
+  tags: azur,blob,detect
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    matchers:
+      - type: word
+        part: response
+        words:
+          - "blob.core.windows.net"
+
+# digest: 490a0046304402202522c2494ec0ed4cd9755833d155cff0e6d91f255f48b6c6055524213299b48302203ee105724a6613e90aada04e8304574c9b944969384bfb8595d3577fdcef96ec:922c64590222798bb761d5b6d8e72950

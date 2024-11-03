@@ -1,11 +1,12 @@
 id: backdoor
 info:
-  name: netcat -e
+  name: Linux.Flooder.SS C&C server
   author: nmap,cn-kali-team
   tags: detect,tech,backdoor,service
   severity: info
   metadata:
-    info: misconfigured
+    info: '**MALWARE**'
+    operating_system: Linux
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +18,4 @@ tcp:
   - name: backdoor
     type: regex
     regex:
-    - '^exec .* failed : No such file or directory\n$'
+    - ^!\* LOLNOGTFO\nDUP\n
