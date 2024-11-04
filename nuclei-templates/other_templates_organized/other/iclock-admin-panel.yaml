@@ -22,7 +22,6 @@ http:
     stop-at-first-match: true
     host-redirects: true
     max-redirects: 2
-
     matchers-condition: and
     matchers:
       - type: word
@@ -42,4 +41,3 @@ http:
         group: 1
         regex:
           - '<span style="float:right">\(v([0-9.-]+)\)</span>'
-# digest: 4b0a00483046022100d1b1a5ead4abcb0c21ecd1e09fa99ef102f7b2d4b804c7e1bb7baa22aeff9cf3022100acb12a9010d272e08215657ca09d343fdf9f6615fa715eaf98eced91da4918fd:922c64590222798bb761d5b6d8e72950

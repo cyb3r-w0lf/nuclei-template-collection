@@ -1,15 +1,12 @@
 id: nntp
 info:
-  name: INN NNTPd
+  name: NNTPCache
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    info: unauthorized
-    product: inn
+    info: Access denied
     rarity: 0
-    vendor: isc
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +17,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^502 You have no permission to talk\.  Goodbye.\r\n$
+    - ^502 access denied <[-\w_.]+@[-\w_.]+>, you do not have connect permissions in the nntpcache\.access file\.\r\n

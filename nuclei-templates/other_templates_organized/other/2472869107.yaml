@@ -1,13 +1,16 @@
 id: pop3-proxy
 info:
-  name: Avast! anti-virus pop3 proxy
+  name: AVG pop3 proxy
   author: nmap,cn-kali-team
   tags: detect,tech,pop3-proxy,service
   severity: info
   metadata:
-    info: cannot connect to $1
     operating_system: Windows
+    product: anti-virus
     rarity: 0
+    vendor: avg
+    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +21,4 @@ tcp:
   - name: pop3-proxy
     type: regex
     regex:
-    - ^-ERR Cannot connect to POP server ([\w._-]+) \([^)]*\), connect error \d+\r\n
+    - ^\+OK AVG POP3 Proxy Server <[\w.]+@[-\w_.]+> ([\d/.]+) \[[\d/.]+\]\r\n

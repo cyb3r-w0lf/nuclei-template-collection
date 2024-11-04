@@ -21,8 +21,9 @@ tcp:
       - data: "USER anonymous\r\nPASS anonymous\r\n"
 
     host:
+      - "{{Host}}:21"
       - "{{Hostname}}"
-    port: 21
+
     matchers:
       - type: word
         words:

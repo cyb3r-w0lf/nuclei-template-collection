@@ -23,7 +23,6 @@ http:
     stop-at-first-match: true
     host-redirects: true
     max-redirects: 2
-
     matchers-condition: and
     matchers:
       - type: word
@@ -34,4 +33,3 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a0047304502205280f7e80f7cd112fd90f499629e688adf5831c5408da8e57edddffdce716c5c022100c694f21475291dd4cc63e5a4dcac5471b6e42434dc0eeb32d2bd0a322bbec82d:922c64590222798bb761d5b6d8e72950

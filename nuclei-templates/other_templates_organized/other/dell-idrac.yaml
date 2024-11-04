@@ -21,7 +21,6 @@ http:
       - '{{BaseURL}}/login.html'
 
     stop-at-first-match: true
-
     matchers-condition: and
     matchers:
       - type: word
@@ -34,4 +33,3 @@ http:
       - type: status
         status:
           - 200
-# digest: 490a0046304402202bf3ea14a9c4138e2fb9a81688d600b8a79899eba950245fdcb458e3f8650f30022010fd51f875040c70b57cf8744e4a3fdb13ac80c3c0e4ff60eb1f3ec1c1217ff6:922c64590222798bb761d5b6d8e72950
