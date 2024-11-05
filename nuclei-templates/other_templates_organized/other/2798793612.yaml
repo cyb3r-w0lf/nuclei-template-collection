@@ -1,13 +1,14 @@
 id: irc
 info:
-  name: ircu ircd
+  name: Hybrid ircd
   author: nmap,cn-kali-team
   tags: detect,tech,irc,service
   severity: info
   metadata:
-    product: ircu
+    hostname: $1
+    product: ircd-hybrid
     rarity: 0
-    vendor: undernet
+    vendor: ircd-hybrid
     verified: true
 tcp:
 - name: 'null'
@@ -19,4 +20,4 @@ tcp:
   - name: irc
     type: regex
     regex:
-    - ^ERROR..Your host is trying to \(re\)connect too fast -- throttled\r\n
+    - ^:([-\w_.]+) NOTICE \* :\*\*\* Looking up your hostname\r\n

@@ -1,17 +1,13 @@
 id: smtp
 info:
-  name: MDaemon smtpd
+  name: Microsoft ESMTP
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
     hostname: $1
-    info: MSA support
     operating_system: Windows
-    product: mdaemon
     rarity: 0
-    vendor: altn
-    verified: true
     version: $2
 tcp:
 - name: 'null'
@@ -23,4 +19,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220[ -]([-\w_.]+) ESMTP MSA MDaemon ([\d.]+);
+    - '^220 \[?([-.+\w]+)\]? Microsoft ESMTP MAIL Service, Version: ([-\w.]+) ready'

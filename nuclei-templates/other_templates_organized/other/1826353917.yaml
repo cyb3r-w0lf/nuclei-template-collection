@@ -1,20 +1,21 @@
 id: printer
 info:
-  name: LPRng
+  name: print server
   author: nmap,cn-kali-team
   tags: detect,tech,printer,service
   severity: info
   metadata:
-    info: Not authorized
-    rarity: 0
+    device_type: print server
+    rarity: 6
 tcp:
-- name: 'null'
+- name: lpdstring
   inputs:
-  - data: ''
+  - data: \x01default\n
   host:
   - '{{Hostname}}'
+  port: 515,2947,3333,32211,19350
   extractors:
   - name: printer
     type: regex
     regex:
-    - ^\x01no connect permissions\n$
+    - ^Printer default not found \([\w_]+\)\.\n

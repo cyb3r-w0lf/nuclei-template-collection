@@ -1,13 +1,13 @@
 id: sieve
 info:
-  name: Citadel timsieved
+  name: Cyrus timsieved Murder
   author: nmap,cn-kali-team
   tags: detect,tech,sieve,service
   severity: info
   metadata:
-    product: ux
+    product: cyrus_imap_server
     rarity: 0
-    vendor: citadel
+    vendor: cmu
     verified: true
     version: $1
 tcp:
@@ -20,4 +20,4 @@ tcp:
   - name: sieve
     type: regex
     regex:
-    - ^\"IMPLEMENTATION\" \"CITADEL Sieve ([\d.]+)\"\r\n
+    - ^\"IMPLEMENTATION\" \"Cyrus timsieved \(Murder\) v([-.\w]+)\"\r\n

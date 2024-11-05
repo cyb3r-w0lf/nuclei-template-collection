@@ -1,5 +1,4 @@
 id: elfinder-version
-
 info:
   name: elFinder version extractor
   author: idealphase
@@ -8,13 +7,11 @@ info:
   reference:
     - https://github.com/Studio-42/elFinder/
   tags: tech,elfinder,oss
-
 requests:
   - method: GET
     path:
       - "{{BaseURL}}/js/elfinder.min.js"
       - "{{BaseURL}}/js/elFinder.version.js"
-
     matchers-condition: and
     matchers:
       - type: word
@@ -23,11 +20,9 @@ requests:
           - "elFinder - file manager for web"
           - "elFinder.prototype.version ="
         condition: or
-
       - type: status
         status:
           - 200
-
     extractors:
       - type: regex
         group: 1

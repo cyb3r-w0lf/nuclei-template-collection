@@ -5,17 +5,16 @@ info:
   author: Shiva (Strobes Security)
   severity: info
   description: Eclipse BIRT (Business Intelligence Reporting Tool) detected
-  classification:
-    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0.0
-    cwe-id: CWE-200
   reference:
     - https://eclipse.github.io/birt-website/
+  classification:
+    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
+    cwe-id: CWE-200
   metadata:
-    max-request: 2
-    verified: true
-    shodan-query: title:"Eclipse BIRT Home"
     google-query: intitle:"Eclipse BIRT Home"
+    max-request: 2
+    shodan-query: title:"Eclipse BIRT Home"
+    verified: true
   tags: panel,eclipsebirt,detect
 
 http:
@@ -27,6 +26,7 @@ http:
     host-redirects: true
     max-redirects: 2
     stop-at-first-match: true
+
     matchers-condition: and
     matchers:
       - type: word
@@ -46,3 +46,4 @@ http:
         group: 1
         regex:
           - 'Viewer Version : ([0-9.-]+)'
+# digest: 4a0a0047304502206245bc78ee75415dfd659cfe848aeffb147c107c515c672794a3d32d3ed066a702210089b4aff343e511b47a04ddfb558b1d2d911a5665bffe7775d3bd10587059c5e8:922c64590222798bb761d5b6d8e72950

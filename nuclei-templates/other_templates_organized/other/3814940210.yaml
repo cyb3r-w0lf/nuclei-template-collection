@@ -1,16 +1,14 @@
 id: lmtp
 info:
-  name: Dovecot lmtpd
+  name: Zimbra lmtpd
   author: nmap,cn-kali-team
   tags: detect,tech,lmtp,service
   severity: info
   metadata:
     hostname: $1
-    info: Ubuntu
-    operating_system: Linux
-    product: dovecot
+    product: zimbra_collaboration_suite
     rarity: 0
-    vendor: dovecot
+    vendor: zimbra
     verified: true
 tcp:
 - name: 'null'
@@ -22,4 +20,4 @@ tcp:
   - name: lmtp
     type: regex
     regex:
-    - ^220 ([\w.-]+) Dovecot \(Ubuntu\) ready\.\r\n
+    - ^220 ([\w._-]+) Zimbra LMTP ready\r\n
