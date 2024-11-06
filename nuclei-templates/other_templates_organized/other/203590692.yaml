@@ -1,12 +1,16 @@
 id: textui
 info:
-  name: Satel INT-TSI keypad telnetd
+  name: Nomad Digital Charger command interface
   author: nmap,cn-kali-team
   tags: detect,tech,textui,service
   severity: info
   metadata:
-    device_type: security-misc
+    info: build $2
+    product: charger
     rarity: 0
+    vendor: nomad_digital
+    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +21,4 @@ tcp:
   - name: textui
     type: regex
     regex:
-    - ^l\0o\0g\0i\0n\0 \0a\0s\0:\0 \0
+    - ^This is the command interface for nd-charger \(version ([\d.]+) build ([\d.-]+)\)\.\r\nReady\.\.\. Type "help" for a list of available commands\.\r\nOK\(0\)\r\n\r\n

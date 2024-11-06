@@ -21,4 +21,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-OpenSSH_([\w._-]+-hpn)\r?\n
+    - ^SSH-([\d.]+)-OpenSSH_([\w._-]+)-chrootssh\n
