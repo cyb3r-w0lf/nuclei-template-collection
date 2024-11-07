@@ -1,6 +1,6 @@
 id: ftp-proxy
 info:
-  name: Secure Computing Sidewinder firewall ftp proxy
+  name: Proxy602 ftp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
@@ -17,4 +17,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^220-Firewall ftp proxy\.  You must login to the proxy first\.\r\n220 Use   proxy-user:auth-method@destination\.\r\n
+    - ^220 Proxy602 Gateway ready, enter user@host\[:port\]\r\n

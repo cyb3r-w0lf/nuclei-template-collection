@@ -21,43 +21,44 @@
 | CVE-2017 | 406 |
 | CVE-2018 | 452 |
 | CVE-2019 | 526 |
-| CVE-2020 | 608 |
-| CVE-2021 | 1746 |
-| CVE-2022 | 2479 |
-| CVE-2023 | 4809 |
-| CVE-2024 | 6187 |
-| Other | 26195 |
+| CVE-2020 | 609 |
+| CVE-2021 | 1747 |
+| CVE-2022 | 2478 |
+| CVE-2023 | 4811 |
+| CVE-2024 | 6204 |
+| Other | 26199 |
 ## Quantity changes in recent days
-|2024-10-31 | 2024-11-01 | 2024-11-02 | 2024-11-03 | 2024-11-04 | 2024-11-05 | 2024-11-06|
+|2024-11-01 | 2024-11-02 | 2024-11-03 | 2024-11-04 | 2024-11-05 | 2024-11-06 | 2024-11-07|
 |--- | ------ | ------ | ------ | ------ | ------ | ---|
-|45094 | 45231 | 45354 | 45365 | 45300 | 45370 | 45388|
+|45231 | 45354 | 45365 | 45300 | 45370 | 45388 | 45412|
 ## Recently added files
 | templates name | 
 | --- |
-| CVE-2024-10319.yaml |
-| CVE-2024-10329.yaml |
-| CVE-2024-10114.yaml |
-| CVE-2024-10263.yaml |
-| CVE-2024-10687.yaml |
-| CVE-2024-9657.yaml |
-| CVE-2024-9667.yaml |
-| CVE-2024-10711.yaml |
-| CVE-2024-7429.yaml |
-| CVE-2024-9178.yaml |
-| CVE-2024-9878.yaml |
-| CVE-2024-10097.yaml |
-| CVE-2024-9867.yaml |
-| CVE-2024-9443.yaml |
-| CVE-2024-10482.yaml |
-| CVE-2024-10340.yaml |
-| CVE-2019-0192.yaml |
-| 1789446501.yaml |
-| media-library-tools.yaml |
-| loginizer-security.yaml |
-| 3663223266.yaml |
-| 1645725924.yaml |
-| 985465336.yaml |
-| ultimate-shortcodes-creator.yaml |
-| 4042321090.yaml |
-| 450408967.yaml |
-| basticom-framework.yaml |
+| CVE-2024-10084.yaml |
+| CVE-2024-8615.yaml |
+| CVE-2024-10028.yaml |
+| CVE-2024-8614.yaml |
+| CVE-2024-9946.yaml |
+| CVE-2024-6626.yaml |
+| CVE-2024-10535.yaml |
+| CVE-2024-10186.yaml |
+| CVE-2024-8963.yaml |
+| CVE-2024-10020.yaml |
+| CVE-2024-10715.yaml |
+| CVE-2024-9307.yaml |
+| CVE-2024-10647.yaml |
+| CVE-2024-10168.yaml |
+| CVE-2024-10543.yaml |
+| CVE-2024-8323.yaml |
+| condition-flow-extractors.yaml |
+| 42346587.yaml |
+| video-wc-gallery.yaml |
+| 1878945041.yaml |
+| 492232521.yaml |
+| mfolio-lite.yaml |
+| 3262519786.yaml |
+| dlink-850l-info-leak.yaml |
+| 229990882.yaml |
+| 784215412.yaml |
+| 2980655094.yaml |
+| errors.yaml |

@@ -1,12 +1,10 @@
 id: nntp
 info:
-  name: Microsoft NNTP Service
+  name: nntp//rss nntpd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    info: Spanish
-    operating_system: Windows
     rarity: 0
     version: $1
 tcp:
@@ -19,4 +17,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - '^200 Servicio NNTP ([\w._-]+) Version: [\w._-]+ Posting Allowed \r\n'
+    - ^200 nntp//rss v([\d.]+) news server ready\r\n

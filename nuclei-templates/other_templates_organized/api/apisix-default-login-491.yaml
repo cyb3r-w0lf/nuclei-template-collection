@@ -1,4 +1,5 @@
 id: apisix-default-login
+
 info:
   name: Apache Apisix Default Login
   author: pdteam
@@ -8,6 +9,7 @@ info:
     shodan-query: title:"Apache APISIX Dashboard"
     fofa-query: title="Apache APISIX Dashboard"
     product: https://apisix.apache.org
+
 requests:
   - raw:
       - |
@@ -18,17 +20,20 @@ requests:
         Content-Type: application/json;charset=UTF-8
 
         {"username":"{{user}}","password":"{{pass}}"}
+
     attack: pitchfork
     payloads:
       user:
         - admin
       pass:
         - admin
+
     matchers-condition: and
     matchers:
       - type: status
         status:
           - 200
+
       - type: word
         words:
           - '"data"'
