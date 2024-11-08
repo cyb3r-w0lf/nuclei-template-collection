@@ -1,10 +1,11 @@
 id: ldap
 info:
-  name: OctetString VDE directory service
+  name: Anonymous bind OK
   author: nmap,cn-kali-team
   tags: detect,tech,ldap,service
   severity: info
   metadata:
+    info: Anonymous bind OK
     rarity: 6
 tcp:
 - name: ldapbind-req
@@ -17,4 +18,4 @@ tcp:
   - name: ldap
     type: regex
     regex:
-    - ^0\x0e\x02\x01\x01a\t\n\x01\0\x04\0\x04\0\x87\0$
+    - ^0\x0c\x02\x01\x01a\x07\n\x01\0\x04\0\x04\0

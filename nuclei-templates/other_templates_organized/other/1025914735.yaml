@@ -1,12 +1,15 @@
 id: ftp-proxy
 info:
-  name: Proxy Suite ftp proxy
+  name: WinProxy FTP proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
   metadata:
-    hostname: $1
+    operating_system: Windows
+    product: winproxy
     rarity: 0
+    vendor: bluecoat
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +20,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^220 Welcome to ([-\w_.]+) Ftp Proxy Service\.\r\n
+    - ^220 WinProxy FTP Gateway ready, enter username@host\[:port\]\r\n

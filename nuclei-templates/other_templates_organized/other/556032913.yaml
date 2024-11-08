@@ -1,12 +1,15 @@
 id: nntp
 info:
-  name: NNTPCache
+  name: InterNetNews (INN)
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
     hostname: $1
+    product: inn
     rarity: 0
+    vendor: isc
+    verified: true
     version: $2
 tcp:
 - name: 'null'
@@ -18,4 +21,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^20\d ([\w.-_]+) NNTPCache server V([\d.]+) \[see www\.nntpcache\.org\]
+    - ^20. ([\w._-]+) InterNetNews NNRP server INN ([\w._-]+) ready \((?:posting ok|no posting)\)\.?\r\n

@@ -5,18 +5,16 @@ info:
   tags: detect,tech,openvpn,service
   severity: info
   metadata:
-    product: openvpn
-    rarity: 0
-    vendor: openvpn
-    verified: true
+    rarity: 9
 tcp:
-- name: 'null'
+- name: open-vpn
   inputs:
-  - data: ''
+  - data: \0\x0e87\xa5&\x08\xa2\x1b\xa0\xb1\0\0\0\0\0
   host:
   - '{{Hostname}}'
+  port: 1194,443,500
   extractors:
   - name: openvpn
     type: regex
     regex:
-    - (?i)^\0\*@.*\0\0\0\0\0
+    - ^\0\x1a@........\x01\0\0\0\x007\xa5&\x08\xa2\x1b\xa0\xb1\0\0\0\0$

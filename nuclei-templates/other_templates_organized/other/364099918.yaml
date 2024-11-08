@@ -1,10 +1,11 @@
 id: pop3-proxy
 info:
-  name: Reivernet captive portal pop3 proxy
+  name: Spampal pop3 proxy
   author: nmap,cn-kali-team
   tags: detect,tech,pop3-proxy,service
   severity: info
   metadata:
+    operating_system: Windows
     rarity: 0
 tcp:
 - name: 'null'
@@ -16,4 +17,4 @@ tcp:
   - name: pop3-proxy
     type: regex
     regex:
-    - ^-ERR Not Enrolled\r\rPlease open your internet browser and accept the terms and conditions of use for this service\.\r\n
+    - ^\+OK POP3 \(Spampal\) server ready \(USER command must include mailserver name\)\r\n
