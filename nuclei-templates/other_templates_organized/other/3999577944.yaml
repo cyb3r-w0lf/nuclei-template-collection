@@ -1,13 +1,16 @@
 id: smtp-proxy
 info:
-  name: BitDefender anti-virus mail gateway
+  name: Trustwave Secure Email Gateway
   author: nmap,cn-kali-team
   tags: detect,tech,smtp-proxy,service
   severity: info
   metadata:
     hostname: $1
-    operating_system: Windows
+    product: secure_email_gateway
     rarity: 0
+    vendor: trustwave
+    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +21,4 @@ tcp:
   - name: smtp-proxy
     type: regex
     regex:
-    - ^220 ([-\w_.]+) ESMTP BitDefender Proxy\r\n
+    - ^220 ([\w.-]+) ESMTP Trustwave SEG \(v([\d.]+)\) Ready\r\n

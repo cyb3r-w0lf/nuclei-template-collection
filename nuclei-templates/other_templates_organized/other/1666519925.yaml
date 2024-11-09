@@ -5,6 +5,7 @@ info:
   tags: detect,tech,donkey,service
   severity: info
   metadata:
+    info: IP disallowed
     rarity: 0
 tcp:
 - name: 'null'
@@ -16,4 +17,4 @@ tcp:
   - name: donkey
     type: regex
     regex:
-    - '^\xff\xfd\x1fWelcome to MLdonkey, visit http://mldonkey\.dyndns\.info for new Versions\n\x1b\[34mWelcome on mldonkey command-line\x1b\[2;37;0m\n\nUse \x1b\[31m\?\x1b\[2;37;0m for help\n\n\x1b\[7mMLdonkey command-line:\x1b\[2;37;0m\n> '
+    - ^Telnet connection from [\d.]+ rejected \(see allowed_ips setting\)\n

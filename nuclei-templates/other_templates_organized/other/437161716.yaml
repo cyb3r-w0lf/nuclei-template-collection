@@ -1,11 +1,15 @@
 id: ftp-proxy
 info:
-  name: Sidewinder FTP proxy
+  name: McAfee Web Gateway ftp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
   metadata:
+    product: web_gateway
     rarity: 0
+    vendor: mcafee
+    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -16,4 +20,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - (?i)^220-\r\x0a220-Sidewinder ftp proxy
+    - ^220 McAfee Web Gateway ([\d.]+ (?:- )?build:? \d+)\r\n

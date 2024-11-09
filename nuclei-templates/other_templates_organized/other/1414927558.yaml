@@ -1,11 +1,11 @@
 id: tftp
 info:
-  name: Plan 9 tftpd
+  name: Brother printer tftpd
   author: nmap,cn-kali-team
   tags: detect,tech,tftp,service
   severity: info
   metadata:
-    operating_system: Plan 9
+    device_type: printer
     rarity: 5
 tcp:
 - name: dnsstatus-request
@@ -18,4 +18,4 @@ tcp:
   - name: tftp
     type: regex
     regex:
-    - ^\0\x05\0\x04Illegal TFTP operation\0
+    - ^\0\x05\0\x04illegal \(unrecognized\) tftp operation\0$

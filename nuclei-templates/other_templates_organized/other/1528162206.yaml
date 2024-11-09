@@ -1,13 +1,14 @@
 id: sieve
 info:
-  name: Citadel timsieved
+  name: Cyrus timsieved
   author: nmap,cn-kali-team
   tags: detect,tech,sieve,service
   severity: info
   metadata:
-    product: ux
+    operating_system: Mac OS X $2
+    product: cyrus_imap_server
     rarity: 0
-    vendor: citadel
+    vendor: cmu
     verified: true
     version: $1
 tcp:
@@ -20,4 +21,4 @@ tcp:
   - name: sieve
     type: regex
     regex:
-    - ^\"IMPLEMENTATION\" \"CITADEL Sieve ([\d.]+)\"\r\n
+    - ^\"IMPLEMENTATION\" \"Cyrus timsieved v([\w_.]+)-OS X ([^"]+)\"\r\n
