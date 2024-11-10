@@ -1,15 +1,12 @@
 id: pop3pw
 info:
-  name: CommuniGate Pro pop3 password change daemon
+  name: Qualcomm poppassd
   author: nmap,cn-kali-team
   tags: detect,tech,pop3pw,service
   severity: info
   metadata:
-    product: communigate_pro
+    info: Maximum users connected
     rarity: 0
-    vendor: stalker
-    verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +17,4 @@ tcp:
   - name: pop3pw
     type: regex
     regex:
-    - ^200 CommuniGate Pro PWD Server (\d[-.\w]+) ready <
+    - ^550 Login failed - already \d+/\d+ users connected sorry \(use G_CON_PERIP_EXCEPT to bypass\) \(IP=[\d.]+\)\r\n

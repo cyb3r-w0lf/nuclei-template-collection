@@ -1,6 +1,6 @@
 id: honeypot
 info:
-  name: Network Flight Recorder BackOfficer Friendly honeypot
+  name: honeyd cmdexe.pl
   author: nmap,cn-kali-team
   tags: detect,tech,honeypot,service
   severity: info
@@ -16,4 +16,4 @@ tcp:
   - name: honeypot
     type: regex
     regex:
-    - ^503 Service Unavailable\r\n\r\n\0$
+    - ^Microsoft Windows XP \[Version [\d.]+\]\n\(C\) Copyright 1985-\d+ Microsoft Corp\.\n\nC:\\>

@@ -1,14 +1,13 @@
 id: textui
 info:
-  name: Talk2M VPN service management
+  name: Polycom videoconferencing system control port
   author: nmap,cn-kali-team
   tags: detect,tech,textui,service
   severity: info
   metadata:
-    product: talk2m
+    info: 'name: $1; model: $2; serial: $3; timezone: $5'
     rarity: 0
-    vendor: ewon
-    verified: true
+    version: $4
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +18,4 @@ tcp:
   - name: textui
     type: regex
     regex:
-    - ^Welcome to Talk2MVpnService management Interface \r\n$
+    - '^\r\nHi, my name is : *(\w.*)\r\nHere is what I know about myself:\r\nModel: *(\w.*)\r\nSerial Number: *(\w+)\r\nSoftware Version: *([\d.]+)\r\nBuild Information: *\d+\r\nTime In Last Call: *[\d:]+\r\nTotal Time In Calls: *[\d:]+\r\nTotal Calls: *\d+\r\nSNTP Time Service: *\w+ \r\nLocal Time is: .* ([-+]\d\d\d\d)\r\n'
