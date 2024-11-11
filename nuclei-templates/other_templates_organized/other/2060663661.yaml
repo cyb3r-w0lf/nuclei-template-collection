@@ -1,12 +1,13 @@
 id: irc-proxy
 info:
-  name: BNC irc-proxy
+  name: psyBNC
   author: nmap,cn-kali-team
   tags: detect,tech,irc-proxy,service
   severity: info
   metadata:
+    hostname: $1
     rarity: 0
-    version: $1
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +18,4 @@ tcp:
   - name: irc-proxy
     type: regex
     regex:
-    - '^NOTICE AUTH :\*\*\* .*\r\nNOTICE AUTH :\*\*\* \[BNC ([\d.]+) '
+    - ^:.*!psyBNC@([-\w_.]+) NOTICE \* :psyBNC([-\w_.]+)\r\n
