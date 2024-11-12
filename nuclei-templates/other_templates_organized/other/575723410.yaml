@@ -1,17 +1,14 @@
 id: http-proxy
 info:
-  name: Microsoft ISA Server http proxy
+  name: MikroTik HttpProxy
   author: nmap,cn-kali-team
   tags: detect,tech,http-proxy,service
   severity: info
   metadata:
+    device_type: router
     fallback:
     - get-request
-    operating_system: Windows
-    product: isa_server
     rarity: 5
-    vendor: microsoft
-    verified: true
 tcp:
 - name: rtsprequest
   inputs:
@@ -23,4 +20,4 @@ tcp:
   - name: http-proxy
     type: regex
     regex:
-    - ^HTTP/1\.1 400 Bad Request \( The data is invalid\.  \)\r\n
+    - '^HTTP/1\.0 400 Bad Request\r\nContent-Length: 103\r\nConnection: close\r\n\r\n<html><body> <h2>Mikrotik HttpProxy</h2>\n\r<hr>\n\r<h2>\n\rError: 400 Bad Request\r\n\r\n</h2>\n\r</body></html>\n\r$'

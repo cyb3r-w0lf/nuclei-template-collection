@@ -1,11 +1,10 @@
 id: pop3pw
 info:
-  name: SLMail pop3pw
+  name: poppassd
   author: nmap,cn-kali-team
   tags: detect,tech,pop3pw,service
   severity: info
   metadata:
-    operating_system: Windows
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +16,4 @@ tcp:
   - name: pop3pw
     type: regex
     regex:
-    - ^200 hello\r\n
+    - ^200 hello there, who are you\?\r\n

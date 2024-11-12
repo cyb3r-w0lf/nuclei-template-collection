@@ -1,20 +1,19 @@
 id: vnc
 info:
-  name: Apple remote desktop vnc
-  author: nmap,cn-kali-team
-  tags: detect,tech,vnc,service
+  name: vnc
+  author: cn-kali-team
+  tags: detect,tech,vnc
   severity: info
   metadata:
-    operating_system: Mac OS X
-    rarity: 0
-tcp:
-- name: 'null'
-  inputs:
-  - data: ''
-  host:
-  - '{{Hostname}}'
-  extractors:
-  - name: vnc
-    type: regex
-    regex:
-    - ^RFB 003\.88[89]\n$
+    product: vnc
+    vendor: 00_unknown
+    verified: false
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: word
+    words:
+    - <applet code=vncviewer.class archive=vncviewer.jar
+    case-insensitive: true

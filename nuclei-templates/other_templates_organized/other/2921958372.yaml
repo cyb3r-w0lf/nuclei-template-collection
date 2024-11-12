@@ -1,16 +1,16 @@
 id: ssh
 info:
-  name: GlobalScape CuteFTP sshd
+  name: Gravitational Teleport sshd
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    info: sshlib $2; protocol $1
-    operating_system: Windows
-    product: cuteftp
+    info: protocol $1
+    product: teleport
     rarity: 0
-    vendor: globalscape
+    vendor: gravitational
     verified: true
+    version: 2.7.0 or later
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +21,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - '^SSH-([\d.]+)-([\w._-]+) sshlib: GlobalScape\r?\n'
+    - ^SSH-([\d.]+)-Teleport\n

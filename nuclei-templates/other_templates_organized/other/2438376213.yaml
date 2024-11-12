@@ -1,6 +1,6 @@
 id: ftp-proxy
 info:
-  name: AVM KEN! ftp proxy
+  name: Proxy Suite ftp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
@@ -17,4 +17,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^220 ([\w._-]+), KEN! DSL FTP-Gateway\r\n
+    - ^220 Welcome to ([-\w_.]+) Ftp Proxy Service\.\r\n
