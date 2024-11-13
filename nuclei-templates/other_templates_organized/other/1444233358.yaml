@@ -1,11 +1,15 @@
 id: irc
 info:
-  name: Dancer ircd
+  name: ratbox ircd
   author: nmap,cn-kali-team
   tags: detect,tech,irc,service
   severity: info
   metadata:
+    hostname: $1
+    product: ircd-ratbox
     rarity: 0
+    vendor: ratbox
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -16,4 +20,4 @@ tcp:
   - name: irc
     type: regex
     regex:
-    - ^NOTICE AUTH :\*\*\* Looking up your hostname\.\.\.\r\nNOTICE AUTH :\*\*\* Checking ident\r\nNOTICE AUTH :\*\*\*
+    - ^NOTICE AUTH :\*\*\* Processing connection to ([-\w_.]+)\r\n

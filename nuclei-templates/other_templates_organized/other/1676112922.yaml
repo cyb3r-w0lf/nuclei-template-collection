@@ -1,13 +1,14 @@
 id: nntp
 info:
-  name: Microsoft NNTP Service
+  name: Kerio Connect nntpd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    info: Spanish
-    operating_system: Windows
+    product: connect
     rarity: 0
+    vendor: kerio
+    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -19,4 +20,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - '^200 Servicio NNTP ([\w._-]+) Version: [\w._-]+ Posting Allowed \r\n'
+    - ^200 Kerio Connect ([\w._-]+) NNTP server ready\r\n

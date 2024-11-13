@@ -1,12 +1,15 @@
 id: telnet-proxy
 info:
-  name: Ixia ixProxy telnet proxy
+  name: WinProxy telnet proxy
   author: nmap,cn-kali-team
   tags: detect,tech,telnet-proxy,service
   severity: info
   metadata:
+    operating_system: Windows
+    product: winproxy
     rarity: 0
-    version: $1
+    vendor: bluecoat
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +20,4 @@ tcp:
   - name: telnet-proxy
     type: regex
     regex:
-    - '^\xff\xfc\x01\xff\xfd\"ixProxy V([\d.]+), Copyright \(C\) \d+ Ixia Communications\r\nEnter target port ip address as login name \(example: 10\.0\.1\.1\)\r\nlogin:'
+    - ^\r\n\r\nEnter computer name to connect to\.\r\ne\.g\. \"NetCom\.com\"<CR>

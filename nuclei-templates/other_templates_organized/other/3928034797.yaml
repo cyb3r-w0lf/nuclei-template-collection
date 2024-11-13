@@ -1,15 +1,14 @@
 id: sip
 info:
-  name: Epygi Quadro $2 PBX SIP
+  name: Polycom RealPresence Group $1 SIP
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
   metadata:
-    device_type: PBX
     fallback:
     - get-request
     rarity: 5
-    version: $1
+    version: $2
 tcp:
 - name: sipoptions
   inputs:
@@ -21,4 +20,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 403 Non-self Request-URI\r\n(?:[^\r\n]+\r\n)*?Server: Epygi Quadro SIP User Agent/v([\w._-]+) \(QUADRO-([^\)]*)\)\r\n'
+    - (?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?User-Agent:PolycomRealPresenceGroup(\d+)/([\w._-]+)\r\n

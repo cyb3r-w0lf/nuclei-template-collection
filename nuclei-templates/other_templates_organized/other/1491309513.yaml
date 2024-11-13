@@ -5,7 +5,6 @@ info:
   tags: detect,tech,pop3-proxy,service
   severity: info
   metadata:
-    info: cannot connect to $1
     operating_system: Windows
     rarity: 0
 tcp:
@@ -18,4 +17,4 @@ tcp:
   - name: pop3-proxy
     type: regex
     regex:
-    - ^-ERR Cannot connect to POP server ([\w._-]+) \([^)]*\), connect error \d+\r\n
+    - ^\+OK avast! POP3 proxy ready\.\r\n
