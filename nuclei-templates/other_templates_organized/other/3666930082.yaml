@@ -1,17 +1,14 @@
 id: rtsp
 info:
-  name: AirTunes rtspd
+  name: Sanyo VCC-HD2300 webcam rtspd
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
   metadata:
+    device_type: webcam
     fallback:
     - get-request
-    product: airtunes
     rarity: 5
-    vendor: apple
-    verified: true
-    version: $1
 tcp:
 - name: rtsprequest
   inputs:
@@ -23,4 +20,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '^RTSP/1\.0 403 Forbidden\r\nContent-Length: 0\r\nServer: AirTunes/([\d.]+)\r\n\r\n'
+    - '^RTSP/1\.0 400 Bad Request\r\nCSeq: 0\r\n\r\n'

@@ -6,6 +6,7 @@ info:
   severity: info
   metadata:
     device_type: security-misc
+    info: busy
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +18,4 @@ tcp:
   - name: textui
     type: regex
     regex:
-    - ^l\0o\0g\0i\0n\0 \0a\0s\0:\0 \0
+    - ^Cannot accept a new connection
