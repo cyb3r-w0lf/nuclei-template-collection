@@ -1,20 +1,21 @@
 id: printer
 info:
-  name: Helios lpd
+  name: lpsched
   author: nmap,cn-kali-team
   tags: detect,tech,printer,service
   severity: info
   metadata:
-    rarity: 6
+    hostname: $1
+    info: Unauthorized
+    rarity: 0
 tcp:
-- name: lpdstring
+- name: 'null'
   inputs:
-  - data: \x01default\n
+  - data: ''
   host:
   - '{{Hostname}}'
-  port: 515,2947,3333,32211,19350
   extractors:
   - name: printer
     type: regex
     regex:
-    - ^/usr/local/helios/sbin/lpd Printer default doesn't exist! \n$
+    - '^([-\w_.]+): lpsched: Host name for your address \([\d.]+\) unknown\n'

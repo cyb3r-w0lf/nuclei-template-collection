@@ -1,13 +1,13 @@
 id: telnet
 info:
-  name: Moxa $1 telnetd
+  name: Siemens 5940 T1E1 router telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    info: 'MAC: $2; serial: $3'
+    device_type: router
     rarity: 0
-    version: $4
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +18,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\xff\xfb\x01\xff\xfb\x03\xff\xfb\0\xff\xfd\x01\xff\xfd\0\r\0\n\r\0\n-{77}\r\0\nModel name {7}: ([\w-]+)\r\0\nMAC address {6}: ([A-F0-9:]+)\r\0\nSerial No {8}: (\d+)\r\0\nFirmware version : (([\d.]+) Build \d+)\r\0\n'
+    - '^\r\nSiemens 5940 T1E1 \[COMBO\] Router \(5940-001\) v([\w._-]+) Ready\r\n\xff\xfb\x01\xff\xfb\x03\xff\xfd\x01\xff\xfe\x01Username: '

@@ -19,123 +19,143 @@
 | CVE-2015 | 528 |
 | CVE-2016 | 254 |
 | CVE-2017 | 406 |
-| CVE-2018 | 454 |
-| CVE-2019 | 526 |
-| CVE-2020 | 609 |
-| CVE-2021 | 1748 |
-| CVE-2022 | 2481 |
-| CVE-2023 | 4812 |
-| CVE-2024 | 6475 |
-| Other | 26391 |
+| CVE-2018 | 453 |
+| CVE-2019 | 525 |
+| CVE-2020 | 611 |
+| CVE-2021 | 1750 |
+| CVE-2022 | 2478 |
+| CVE-2023 | 4810 |
+| CVE-2024 | 6537 |
+| Other | 26447 |
 ## Quantity changes in recent days
-|2024-11-08 | 2024-11-09 | 2024-11-10 | 2024-11-11 | 2024-11-12 | 2024-11-13 | 2024-11-14|
+|2024-11-09 | 2024-11-10 | 2024-11-11 | 2024-11-12 | 2024-11-13 | 2024-11-14 | 2024-11-15|
 |--- | ------ | ------ | ------ | ------ | ------ | ---|
-|45709 | 45721 | 45770 | 45769 | 45774 | 45786 | 45882|
+|45721 | 45770 | 45769 | 45774 | 45786 | 45882 | 45997|
 ## Recently added files
 | templates name | 
 | --- |
-| CVE-2024-51696.yaml |
-| CVE-2024-51697.yaml |
-| CVE-2024-11028.yaml |
-| CVE-2024-9614.yaml |
-| CVE-2024-10802.yaml |
-| CVE-2024-11143.yaml |
-| CVE-2024-51699.yaml |
-| CVE-2024-11150.yaml |
-| CVE-2024-51780.yaml |
-| CVE-2024-51776.yaml |
-| CVE-2024-9578.yaml |
-| CVE-2024-10882.yaml |
-| CVE-2024-36117.yaml |
-| CVE-2024-10778.yaml |
-| CVE-2024-10853.yaml |
-| CVE-2024-10854.yaml |
-| CVE-2024-51701.yaml |
-| CVE-2024-10828.yaml |
-| CVE-2024-51712.yaml |
-| CVE-2024-10820.yaml |
-| CVE-2024-10577.yaml |
-| CVE-2024-10877.yaml |
-| CVE-2024-9682.yaml |
-| CVE-2024-51787.yaml |
-| CVE-2024-10816.yaml |
-| CVE-2024-9059.yaml |
-| CVE-2024-10531.yaml |
-| CVE-2024-10686.yaml |
-| CVE-2024-10800.yaml |
-| CVE-2024-10629.yaml |
-| CVE-2024-10794.yaml |
-| CVE-2024-51781.yaml |
-| CVE-2024-10887.yaml |
-| CVE-2024-10851.yaml |
-| CVE-2024-51692.yaml |
-| CVE-2024-51778.yaml |
-| CVE-2024-10684.yaml |
-| CVE-2024-51782.yaml |
-| CVE-2024-10717.yaml |
-| CVE-2024-9668.yaml |
-| CVE-2024-8985.yaml |
-| CVE-2024-10530.yaml |
-| CVE-2024-51689.yaml |
-| CVE-2024-10038.yaml |
-| CVE-2024-10593.yaml |
-| CVE-2024-51783.yaml |
-| CVE-2024-10676.yaml |
-| CVE-2024-10529.yaml |
-| CVE-2024-51784.yaml |
-| CVE-2024-8874.yaml |
-| CVE-2024-51708.yaml |
-| CVE-2024-9426.yaml |
-| CVE-2024-50340.yaml |
-| CVE-2024-10852.yaml |
-| CVE-2024-51717.yaml |
-| CVE-2024-51779.yaml |
-| CVE-2024-10174.yaml |
-| CVE-2024-51698.yaml |
-| CVE-2024-51760.yaml |
-| CVE-2024-51695.yaml |
-| CVE-2024-51694.yaml |
-| CVE-2024-51713.yaml |
-| CVE-2024-10850.yaml |
-| mg-post-contributors.yaml |
-| ajax-content-filter.yaml |
-| gpx-viewer.yaml |
-| wp-strava.yaml |
-| doofinder.yaml |
-| razorpay-payment-button-elementor.yaml |
-| eewee-admincustom.yaml |
-| styler-for-ninja-forms-lite.yaml |
-| conversion-helper.yaml |
-| hide-links.yaml |
-| 3124712789.yaml |
-| 3498113000.yaml |
-| dont-break-the-code.yaml |
-| buy-one-click-woocommerce.yaml |
-| master-bar.yaml |
-| 2832694132.yaml |
-| loginplus.yaml |
-| fabrica-reusable-block-instances.yaml |
-| aqua-svg-sprite.yaml |
-| buooy-sticky-header.yaml |
-| ghe-encrypt-saml.yaml |
-| razorpay-payment-button.yaml |
-| 435472831.yaml |
-| multimanager-wp.yaml |
-| twigify.yaml |
-| hq60-fidelity-card.yaml |
-| firework-videos.yaml |
-| content-syndication-toolkit-reader.yaml |
-| daily-image.yaml |
-| 272217595.yaml |
-| narnoo-commerce-manager.yaml |
-| pgwatch2-db-exposure.yaml |
-| lu-radioplayer.yaml |
-| 3848574060.yaml |
-| geotagged-media.yaml |
-| happiness-reports-for-help-scout.yaml |
-| friendstore-for-woocommerce.yaml |
-| 4083453520.yaml |
-| 2188174280.yaml |
-| forms-3rdparty-post-again.yaml |
-| abbs-bing-search.yaml |
-| dashing-memberships.yaml |
+| CVE-2024-51813.yaml |
+| CVE-2024-51928.yaml |
+| CVE-2024-51878.yaml |
+| CVE-2024-51785.yaml |
+| CVE-2024-51762.yaml |
+| CVE-2024-51793.yaml |
+| CVE-2024-51802.yaml |
+| CVE-2024-51789.yaml |
+| CVE-2024-52351.yaml |
+| CVE-2024-51846.yaml |
+| CVE-2024-51908.yaml |
+| CVE-2024-51719.yaml |
+| CVE-2024-51761.yaml |
+| CVE-2024-51703.yaml |
+| CVE-2024-51690.yaml |
+| CVE-2024-51693.yaml |
+| CVE-2024-52348.yaml |
+| CVE-2024-51828.yaml |
+| CVE-2024-51901.yaml |
+| CVE-2024-51807.yaml |
+| CVE-2024-51910.yaml |
+| CVE-2024-51718.yaml |
+| CVE-2024-51799.yaml |
+| CVE-2024-6966.yaml |
+| CVE-2024-51816.yaml |
+| CVE-2024-51851.yaml |
+| CVE-2024-51705.yaml |
+| CVE-2024-51885.yaml |
+| CVE-2024-51710.yaml |
+| CVE-2024-51801.yaml |
+| CVE-2024-51938.yaml |
+| CVE-2024-51707.yaml |
+| CVE-2024-10571.yaml |
+| CVE-2024-51759.yaml |
+| CVE-2024-51763.yaml |
+| CVE-2024-51880.yaml |
+| CVE-2024-51788.yaml |
+| CVE-2024-51691.yaml |
+| CVE-2024-51931.yaml |
+| CVE-2024-51714.yaml |
+| CVE-2024-10962.yaml |
+| CVE-2024-51808.yaml |
+| CVE-2024-51806.yaml |
+| CVE-2024-52353.yaml |
+| CVE-2024-51791.yaml |
+| CVE-2024-51823.yaml |
+| CVE-2024-51825.yaml |
+| CVE-2024-51711.yaml |
+| CVE-2024-51859.yaml |
+| CVE-2024-51881.yaml |
+| CVE-2024-51907.yaml |
+| CVE-2024-51790.yaml |
+| CVE-2024-51706.yaml |
+| CVE-2024-51704.yaml |
+| CVE-2024-51716.yaml |
+| CVE-2024-51826.yaml |
+| CVE-2024-51827.yaml |
+| CVE-2024-51786.yaml |
+| CVE-2024-52349.yaml |
+| CVE-2024-51909.yaml |
+| CVE-2024-51702.yaml |
+| CVE-2024-51709.yaml |
+| CVE-2024-51824.yaml |
+| CVE-2012-5687.yaml |
+| responsive-data-table.yaml |
+| wp-basics.yaml |
+| wp-visual-adverts.yaml |
+| agendapress.yaml |
+| bread-butter.yaml |
+| bitcoin-payments.yaml |
+| colour-smooth-maps.yaml |
+| alert-me.yaml |
+| anant-addons-for-elementor.yaml |
+| beacon-for-helpscout.yaml |
+| 131500407.yaml |
+| team-showcase-ultimate.yaml |
+| awesome-tool-tip.yaml |
+| noveldesign-store-directory.yaml |
+| aa-audio-player.yaml |
+| audiocase.yaml |
+| awesome-fitness-testimonials.yaml |
+| user-password-reset.yaml |
+| saragna-social-stream.yaml |
+| twitter-real-time-search-scrolling.yaml |
+| bebetter-social-icons.yaml |
+| best-bootstrap-widgets-for-elementor.yaml |
+| add-ribbon.yaml |
+| wp-slide-categorywise.yaml |
+| browsing-history.yaml |
+| image-classify.yaml |
+| bg-patriarchia-bu.yaml |
+| simplemodal.yaml |
+| wp-mmenu-lite.yaml |
+| banner-system.yaml |
+| uw-freelancer.yaml |
+| search-order-by-product-sku-for-woocommerce.yaml |
+| wp-js-impress.yaml |
+| truenorth-srcset.yaml |
+| assist24it.yaml |
+| blocks-post-grid.yaml |
+| be-shortcodes.yaml |
+| adventure-bucket-list.yaml |
+| achilles-shortcodes.yaml |
+| azonbox.yaml |
+| bamboo-enquiries.yaml |
+| configure-conference-room.yaml |
+| community-yard-sale.yaml |
+| 1748454769.yaml |
+| 995418355.yaml |
+| 4189758127.yaml |
+| codesnips.yaml |
+| teleadmin.yaml |
+| wphelpful.yaml |
+| brand-my-footer.yaml |
+| wpr-admin-amplify.yaml |
+| svt-simple.yaml |
+| boombox-shortcode.yaml |
+| advanced-video-player-with-analytics.yaml |
+| propertyshift.yaml |
+| christian-science-bible-lesson-subjects.yaml |
+| hb-audio-gallery.yaml |
+| bu-slideshow.yaml |
+| simplistic-seo.yaml |
+| CVE-20200924a(1).yaml |
+| CVE-2021-45096.yaml |
