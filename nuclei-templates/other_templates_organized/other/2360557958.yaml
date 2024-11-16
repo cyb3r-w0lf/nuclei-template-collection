@@ -1,13 +1,13 @@
 id: domain
 info:
-  name: dnscrypt-proxy
+  name: ISC BIND
   author: nmap,cn-kali-team
   tags: detect,tech,domain,service
   severity: info
   metadata:
-    product: dnscrypt-proxy
+    product: bind
     rarity: 1
-    vendor: dnscrypt
+    vendor: isc
     verified: true
 tcp:
 - name: dnsversion-bind-req
@@ -20,4 +20,4 @@ tcp:
   - name: domain
     type: regex
     regex:
-    - ^(?:..)?\0\x06\x81\x84\0\x01\0\0\0\0\0\x01\x07version\x04bind\0\0\x10\0\x03\0\0\)\x06\0\0\0\0\0\0\0
+    - (?i)\x07version\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03.{7}Served by Bind - www\.isc\.org/software/bind

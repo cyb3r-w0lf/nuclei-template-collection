@@ -1,12 +1,14 @@
 id: tftp
 info:
-  name: Zoom X5 ADSL modem tftpd
+  name: HP Intelligent Management Center tftpd
   author: nmap,cn-kali-team
   tags: detect,tech,tftp,service
   severity: info
   metadata:
-    device_type: broadband router
+    product: intelligent_management_center
     rarity: 5
+    vendor: hp
+    verified: true
 tcp:
 - name: dnsstatus-request
   inputs:
@@ -18,4 +20,4 @@ tcp:
   - name: tftp
     type: regex
     regex:
-    - '^\0\x05\0\x04Error: Illegal TFTP Operation\0\0\0\0\0'
+    - ^\0\x05\0\0Not defined, see error message\(if any\)\.\0

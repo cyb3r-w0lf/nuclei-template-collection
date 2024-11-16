@@ -1,11 +1,9 @@
 id: phpinfo-files
-
 info:
   name: phpinfo Disclosure
-  author: pdteam,daffainfo,meme-lord,dhiyaneshDK
+  author: pdteam & daffainfo & meme-lord
   severity: low
-  tags: config,exposure,phpinfo
-
+  tags: config,exposure
 requests:
   - method: GET
     path:
@@ -26,9 +24,6 @@ requests:
       - "{{BaseURL}}/infos.php"
       - "{{BaseURL}}/linusadmin-phpinfo.php"
       - "{{BaseURL}}/php-info.php"
-      - "{{BaseURL}}/dashboard/phpinfo.php"
-
-    stop-at-first-match: true
     matchers-condition: and
     matchers:
       - type: word
@@ -36,11 +31,9 @@ requests:
           - "PHP Extension"
           - "PHP Version"
         condition: and
-
       - type: status
         status:
           - 200
-
     extractors:
       - type: regex
         part: body
