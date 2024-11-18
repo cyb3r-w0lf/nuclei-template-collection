@@ -1,21 +1,19 @@
 id: daytime
 info:
-  name: AIX daytime
+  name: TrueTime nts100
   author: nmap,cn-kali-team
   tags: detect,tech,daytime,service
   severity: info
   metadata:
-    operating_system: AIX
-    rarity: 3
+    rarity: 0
 tcp:
-- name: help
+- name: 'null'
   inputs:
-  - data: help\r\n\r\n
+  - data: ''
   host:
   - '{{Hostname}}'
-  port: 7,13,37,42
   extractors:
   - name: daytime
     type: regex
     regex:
-    - ^\w\w\w \w\w\w \d\d \d\d:\d\d:\d\d \d\d\d\d\r\n$
+    - ^[A-Z][a-z]{2}, [A-Z][a-z]{2} \d{1,2}, 20\d\d, \d\d:\d\d:\d\d-UTC$

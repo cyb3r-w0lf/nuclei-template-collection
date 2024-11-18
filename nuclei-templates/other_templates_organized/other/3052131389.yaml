@@ -1,23 +1,21 @@
 id: tftp
 info:
-  name: HP Intelligent Management Center tftpd
+  name: Windows 10 IoT tftpd
   author: nmap,cn-kali-team
   tags: detect,tech,tftp,service
   severity: info
   metadata:
-    product: intelligent_management_center
-    rarity: 5
-    vendor: hp
-    verified: true
+    operating_system: Windows 10
+    rarity: 6
 tcp:
-- name: dnsstatus-request
+- name: xdmcp
   inputs:
-  - data: \0\0\x10\0\0\0\0\0\0\0\0\0
+  - data: \0\x01\0\x02\0\x01\0
   host:
   - '{{Hostname}}'
-  port: 53,69,135,1761,26198
+  port: '177'
   extractors:
   - name: tftp
     type: regex
     regex:
-    - ^\0\x05\0\0Not defined, see error message\(if any\)\.\0
+    - ^\0\x05\0\x02No such file or directory\0

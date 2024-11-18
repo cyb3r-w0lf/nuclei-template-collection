@@ -17,4 +17,4 @@ tcp:
   - name: crestron-ctp
     type: regex
     regex:
-    - ^\r?\n?[-\w]+ Control Console\r\n\r\n?([-\w_.]+)>
+    - ^[-\w]+ Console\r\n\r\n([-\w]+)>\r\r\n

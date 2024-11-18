@@ -1,6 +1,6 @@
 id: domain
 info:
-  name: Brandon Black gdnsd
+  name: Array SmartDNS
   author: nmap,cn-kali-team
   tags: detect,tech,domain,service
   severity: info
@@ -17,4 +17,4 @@ tcp:
   - name: domain
     type: regex
     regex:
-    - (?i)\x07version\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03.{7}gdnsd$
+    - (?i)\x07version\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03.{7}Array SmartDNS\xc0
