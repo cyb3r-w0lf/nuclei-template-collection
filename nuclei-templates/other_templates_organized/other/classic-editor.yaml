@@ -11,9 +11,8 @@ info:
     wpscan: https://wpscan.com/plugin/classic-editor
   tags: tech,wordpress,wp-plugin,top-100,top-200
 
-http:
+requests:
   - method: GET
-
     path:
       - "{{BaseURL}}/wp-content/plugins/classic-editor/readme.txt"
 

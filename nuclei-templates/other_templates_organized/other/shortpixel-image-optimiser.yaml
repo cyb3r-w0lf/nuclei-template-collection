@@ -11,9 +11,8 @@ info:
     wpscan: https://wpscan.com/plugin/shortpixel-image-optimiser
   tags: tech,wordpress,wp-plugin,top-200
 
-http:
+requests:
   - method: GET
-
     path:
       - "{{BaseURL}}/wp-content/plugins/shortpixel-image-optimiser/readme.txt"
 

@@ -5,11 +5,11 @@ info:
   tags: detect,tech,mongodb,service
   severity: info
   metadata:
+    info: need to login
     product: mongodb
     rarity: 8
     vendor: mongodb
     verified: true
-    version: $1
 tcp:
 - name: mongodb
   inputs:
@@ -21,4 +21,4 @@ tcp:
   - name: mongodb
     type: regex
     regex:
-    - (?i)^.*version.....([\.\d]+)
+    - (?i)^.\0\0\0....:0\0\0\x01\0\0\0\x08\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\x01\0\0\0\+\0\0\0\x02errmsg\0\x0e\0\0\0need to login\0\x01ok\0\0\0\0\0\0\0\0\0\0

@@ -1,21 +1,14 @@
-id: test
+id: "test"
 
 info:
-  name: test
-  author: pdteam
-  severity: info
+  name: "test"
+  author: "pdteam"
+  description: "test"
+  reference: []
+  severity: "info"
+  tags: "test"
 
 http:
-  - raw:
-      - |
-        GET /api/v1/test?id=123 HTTP/1.1
-        Host: {{Hostname}}
-      - |
-        GET HTTP/1.1
-        Host: {{Hostname}}
-    disable-path-automerge: true
-    matchers:
-      - type: status
-        status:
-          - 200
-    
+  - method: "GET"
+    path:
+      - "{{BaseURL}}/"

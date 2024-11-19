@@ -1,21 +1,21 @@
 id: printer
 info:
-  name: Wyse Winterm 1200 LE terminal lpd
+  name: lpsched
   author: nmap,cn-kali-team
   tags: detect,tech,printer,service
   severity: info
   metadata:
-    device_type: terminal
-    rarity: 6
+    hostname: $1
+    info: host denied
+    rarity: 0
 tcp:
-- name: lpdstring
+- name: 'null'
   inputs:
-  - data: \x01default\n
+  - data: ''
   host:
   - '{{Hostname}}'
-  port: 515,2947,3333,32211,19350
   extractors:
   - name: printer
     type: regex
     regex:
-    - ^no queue to check\n\0$
+    - '^([-\w_.]+): lpsched: Your host does not have line printer access\n'

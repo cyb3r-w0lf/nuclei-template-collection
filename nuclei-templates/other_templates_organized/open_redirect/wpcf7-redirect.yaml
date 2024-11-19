@@ -11,9 +11,8 @@ info:
     wpscan: https://wpscan.com/plugin/wpcf7-redirect
   tags: tech,wordpress,wp-plugin,top-200
 
-http:
+requests:
   - method: GET
-
     path:
       - "{{BaseURL}}/wp-content/plugins/wpcf7-redirect/readme.txt"
 
