@@ -1,6 +1,6 @@
 id: http
 info:
-  name: Remote Potato media player
+  name: svea_httpd
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
@@ -17,4 +17,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.1 405 Method Not Allowed\r\nServer: remote-potato-v([\w._-]+)\r\n'
+    - '^\(null\) 400 Bad Request\r\nServer: svea_httpd/([\w._-]+)\r\n'

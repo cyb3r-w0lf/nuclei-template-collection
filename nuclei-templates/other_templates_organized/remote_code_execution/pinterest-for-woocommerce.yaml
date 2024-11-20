@@ -11,8 +11,9 @@ info:
     wpscan: https://wpscan.com/plugin/pinterest-for-woocommerce
   tags: tech,wordpress,wp-plugin,top-200
 
-requests:
+http:
   - method: GET
+
     path:
       - "{{BaseURL}}/wp-content/plugins/pinterest-for-woocommerce/readme.txt"
 
