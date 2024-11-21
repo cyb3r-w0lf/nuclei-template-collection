@@ -1,9 +1,9 @@
 id: public-tomcat-manager
 info:
   name: tomcat manager disclosure
-  author: Ahmed Sherif,geeknik
+  author: Ahmed Sherif & geeknik
   severity: info
-  tags: panel,tomcat,apache
+  tags: panel
 requests:
   - method: GET
     path:
@@ -13,7 +13,7 @@ requests:
     matchers:
       - type: word
         words:
-          - "Apache Tomcat"
+          - Apache Tomcat
       - type: status
         status:
           - 401

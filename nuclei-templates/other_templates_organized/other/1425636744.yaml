@@ -1,12 +1,14 @@
 id: ms-wbt-server
 info:
-  name: Microsoft Terminal Service
+  name: xrdp
   author: nmap,cn-kali-team
   tags: detect,tech,ms-wbt-server,service
   severity: info
   metadata:
-    operating_system: Windows
+    product: xrdp
     rarity: 6
+    vendor: jay_sorg
+    verified: true
 tcp:
 - name: terminal-server
   inputs:
@@ -18,4 +20,4 @@ tcp:
   - name: ms-wbt-server
     type: regex
     regex:
-    - (?i)^\x03\0\0\x0b\x06\xd0\0\0\x12.\0$
+    - ^\x03\0\0\x0b\x06\xd0\0\0\0\0\0

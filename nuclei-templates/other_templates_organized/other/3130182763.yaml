@@ -1,16 +1,12 @@
 id: imap
 info:
-  name: SurgeMail imapd
+  name: Winmail imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    hostname: $1
-    product: surgemail
+    operating_system: Windows
     rarity: 0
-    vendor: netwin
-    verified: true
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +17,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK IMAP ([-\w_.]+) \(Version ([-\w.]+)\)\r\n
+    - ^\* OK IMAP4 ready! [-\w_.]+ Winmail Mail Server MagicWinmail Extend IMAP 101\r\n

@@ -1,10 +1,11 @@
 id: ftp-proxy
 info:
-  name: Java FTP Proxy
+  name: UserGate ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
   metadata:
+    operating_system: Windows
     rarity: 0
 tcp:
 - name: 'null'
@@ -16,4 +17,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - '^220 Java FTP Proxy Server \(usage: USERID=user@site\) ready\.\r\n'
+    - ^220 Hi! Welcome \w+ UserGate

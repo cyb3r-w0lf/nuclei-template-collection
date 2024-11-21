@@ -1,15 +1,12 @@
 id: nntp
 info:
-  name: INN NNTPd
+  name: WendzelNNTPd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    info: unauthorized
-    product: inn
     rarity: 0
-    vendor: isc
-    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +17,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^502 You have no permission to talk\.  Goodbye.\r\n$
+    - ^200 WendzelNNTPd-OSE \(Open Source Edition\) ([\w._-]+) '\w+'  - \([^)]+\) ready \(posting ok\)\.\r\n
