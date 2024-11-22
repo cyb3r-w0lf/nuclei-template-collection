@@ -1,14 +1,12 @@
 id: nntp
 info:
-  name: Netwinsite DNEWS
+  name: Kerio MailServer nntpd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    hostname: $1
-    info: posting OK
     rarity: 0
-    version: $2
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +17,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 ([-.\w]+) DNEWS Version *(\d[-.\w]+).*posting OK \r\n
+    - ^200 +Kerio MailServer ([\w._-]+) +NNTP server ready\r\n

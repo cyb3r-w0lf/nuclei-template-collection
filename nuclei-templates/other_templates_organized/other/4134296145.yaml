@@ -5,10 +5,7 @@ info:
   tags: detect,tech,lmtp,service
   severity: info
   metadata:
-    product: dspam
     rarity: 0
-    vendor: dspam
-    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -20,4 +17,4 @@ tcp:
   - name: lmtp
     type: regex
     regex:
-    - ^220 DSPAM DLMTP ([\w._-]+) Authentication Required\r\n
+    - ^220 DSPAM LMTP ([-\w_.]+) Ready\r\n

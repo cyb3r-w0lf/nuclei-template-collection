@@ -1,6 +1,6 @@
 id: ldap
 info:
-  name: OctetString VDE directory service
+  name: Nortel CallPilot LDAP
   author: nmap,cn-kali-team
   tags: detect,tech,ldap,service
   severity: info
@@ -17,4 +17,4 @@ tcp:
   - name: ldap
     type: regex
     regex:
-    - ^0\x0e\x02\x01\x01a\t\n\x01\0\x04\0\x04\0\x87\0$
+    - ^0\x1a\x02\x01\x01a\x15\n\x01\0\x04\0\x04\x0eanonymous bind

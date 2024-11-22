@@ -1,12 +1,10 @@
 id: smtp
 info:
-  name: Miralix SMTP2SMS Gateway
+  name: Merak Mail Server smptd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    hostname: $1
-    operating_system: Windows
     rarity: 0
 tcp:
 - name: 'null'
@@ -18,4 +16,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([-\w_.]+) Miralix SMSGwSMTP Ready\r\n
+    - ^220 Merak MAILSRV\r\n
