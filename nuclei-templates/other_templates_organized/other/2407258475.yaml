@@ -1,15 +1,11 @@
 id: sieve
 info:
-  name: Cyrus timsieved
+  name: pysieved
   author: nmap,cn-kali-team
   tags: detect,tech,sieve,service
   severity: info
   metadata:
-    operating_system: Mac OS X $2
-    product: cyrus_imap_server
     rarity: 0
-    vendor: cmu
-    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -21,4 +17,4 @@ tcp:
   - name: sieve
     type: regex
     regex:
-    - ^\"IMPLEMENTATION\" \"Cyrus timsieved v([\w_.]+)-OS X ([^"]+)\"\r\n
+    - '^/usr/share/pysieved/plugins/dovecot\.py:27: DeprecationWarning: The popen2 module is deprecated\.  Use the subprocess module\.\n  import popen2\n\"IMPLEMENTATION\" \"pysieved ([\w._+-]+)\"\r\n'

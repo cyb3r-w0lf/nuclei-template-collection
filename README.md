@@ -19,102 +19,150 @@
 | CVE-2015 | 528 |
 | CVE-2016 | 254 |
 | CVE-2017 | 406 |
-| CVE-2018 | 453 |
+| CVE-2018 | 454 |
 | CVE-2019 | 525 |
-| CVE-2020 | 612 |
-| CVE-2021 | 1750 |
-| CVE-2022 | 2484 |
+| CVE-2020 | 610 |
+| CVE-2021 | 1747 |
+| CVE-2022 | 2483 |
 | CVE-2023 | 4812 |
-| CVE-2024 | 6809 |
-| Other | 26627 |
+| CVE-2024 | 6884 |
+| Other | 26681 |
 ## Quantity changes in recent days
-|2024-11-16 | 2024-11-17 | 2024-11-18 | 2024-11-19 | 2024-11-20 | 2024-11-21 | 2024-11-22|
+|2024-11-17 | 2024-11-18 | 2024-11-19 | 2024-11-20 | 2024-11-21 | 2024-11-22 | 2024-11-23|
 |--- | ------ | ------ | ------ | ------ | ------ | ---|
-|46268 | 46317 | 46321 | 46235 | 46351 | 46380 | 46458|
+|46317 | 46321 | 46235 | 46351 | 46380 | 46458 | 46582|
 ## Recently added files
 | templates name | 
 | --- |
-| CVE-2024-9111.yaml |
-| CVE-2024-11365.yaml |
-| CVE-2024-11388.yaml |
-| CVE-2024-10682.yaml |
-| CVE-2024-11412.yaml |
-| CVE-2024-11409.yaml |
-| CVE-2024-10675.yaml |
-| CVE-2024-11438.yaml |
-| CVE-2024-11435.yaml |
-| CVE-2024-9442.yaml |
-| CVE-2024-10796.yaml |
-| CVE-2024-11370.yaml |
-| CVE-2024-11354.yaml |
-| CVE-2024-11334.yaml |
-| CVE-2024-10726.yaml |
-| CVE-2024-11432.yaml |
-| CVE-2024-10164.yaml |
-| CVE-2024-11197.yaml |
-| CVE-2024-11456.yaml |
-| CVE-2024-11416.yaml |
-| CVE-2024-9542.yaml |
-| CVE-2024-11447.yaml |
-| CVE-2024-10172.yaml |
-| CVE-2024-10782.yaml |
-| CVE-2024-9851.yaml |
-| CVE-2024-10528.yaml |
-| CVE-2024-11440.yaml |
-| CVE-2024-10532.yaml |
-| CVE-2024-10623.yaml |
-| CVE-2024-10890.yaml |
-| CVE-2024-10788.yaml |
-| CVE-2024-10522.yaml |
-| CVE-2024-10792.yaml |
-| CVE-2024-10316.yaml |
-| CVE-2024-11385.yaml |
-| CVE-2024-11428.yaml |
-| CVE-2024-11089.yaml |
-| CVE-2024-11424.yaml |
-| CVE-2024-10393.yaml |
-| CVE-2024-11455.yaml |
-| CVE-2024-11414.yaml |
-| CVE-2024-10785.yaml |
-| CVE-2024-10400.yaml |
-| CVE-2024-10671.yaml |
-| CVE-2024-11371.yaml |
-| CVE-2024-10177.yaml |
-| CVE-2024-10696.yaml |
-| CVE-2024-11360.yaml |
-| CVE-2024-11088.yaml |
-| CVE-2024-9371.yaml |
-| CVE-2024-10898.yaml |
-| CVE-2018–14064(1).yaml |
-| include-mastodon-feed.yaml |
-| forumengine.yaml |
-| ultimate-youtube-video-player.yaml |
-| friendly-functions-for-welcart.yaml |
-| pure-css-circle-progress-bar.yaml |
-| stream-status-for-twitch.yaml |
-| recipepress-reloaded.yaml |
-| page-parts.yaml |
-| button-block.yaml |
-| grey-owl-lightbox.yaml |
-| my-contador-wp.yaml |
-| subaccounts-for-woocommerce.yaml |
-| suevafree-essential-kit.yaml |
-| shine-pdf.yaml |
-| 1783847465.yaml |
-| 2906510283.yaml |
-| theme-builder-for-elementor.yaml |
-| salavat-counter.yaml |
-| cf7-email-add-on.yaml |
-| 3979166310.yaml |
-| grid-view-gallery.yaml |
-| 3776385441.yaml |
-| wip-incoming-lite.yaml |
-| tour-operator.yaml |
-| void-visual-whmcs-element.yaml |
-| slick-sitemap.yaml |
-| 3126715955.yaml |
-| 1360526250.yaml |
-| bard-extra.yaml |
-| dino-game.yaml |
-| lazy-load-videos-and-sticky-control.yaml |
-| security-force.yaml |
+| CVE-2024-52372.yaml |
+| CVE-2024-52414.yaml |
+| CVE-2024-52428.yaml |
+| CVE-2024-52427.yaml |
+| CVE-2024-11225.yaml |
+| CVE-2024-52376.yaml |
+| CVE-2024-52381.yaml |
+| CVE-2024-52370.yaml |
+| CVE-2024-52418.yaml |
+| CVE-2024-52382.yaml |
+| CVE-2024-52410.yaml |
+| CVE-2024-52401.yaml |
+| CVE-2024-8735.yaml |
+| CVE-2024-52371.yaml |
+| CVE-2024-52420.yaml |
+| CVE-2024-52412.yaml |
+| CVE-2024-52403.yaml |
+| CVE-2024-52426.yaml |
+| CVE-2024-52404.yaml |
+| CVE-2024-52374.yaml |
+| CVE-2024-52402.yaml |
+| CVE-2024-52423.yaml |
+| CVE-2024-52394.yaml |
+| CVE-2024-52435.yaml |
+| CVE-2024-52424.yaml |
+| CVE-2024-52432.yaml |
+| CVE-2024-52384.yaml |
+| CVE-2024-52377.yaml |
+| CVE-2024-52408.yaml |
+| CVE-2024-52378.yaml |
+| CVE-2024-52413.yaml |
+| CVE-2024-52434.yaml |
+| CVE-2024-52396.yaml |
+| CVE-2024-52400.yaml |
+| CVE-2024-11381.yaml |
+| CVE-2024-10034.yaml |
+| CVE-2024-52373.yaml |
+| CVE-2024-52388.yaml |
+| CVE-2024-11601.yaml |
+| CVE-2024-52399.yaml |
+| CVE-2024-52425.yaml |
+| CVE-2024-52380.yaml |
+| CVE-2024-52392.yaml |
+| CVE-2024-52433.yaml |
+| CVE-2024-52379.yaml |
+| CVE-2024-52409.yaml |
+| CVE-2024-52369.yaml |
+| CVE-2024-52406.yaml |
+| CVE-2024-52375.yaml |
+| CVE-2024-52383.yaml |
+| CVE-2024-52386.yaml |
+| CVE-2024-11355.yaml |
+| CVE-2024-52407.yaml |
+| CVE-2024-52390.yaml |
+| CVE-2024-52430.yaml |
+| CVE-2024-52397.yaml |
+| CVE-2024-10666.yaml |
+| CVE-2024-52421.yaml |
+| CVE-2024-11104.yaml |
+| CVE-2024-52431.yaml |
+| CVE-2024-52387.yaml |
+| CVE-2024-52415.yaml |
+| CVE-2024-52429.yaml |
+| CVE-2024-52405.yaml |
+| CVE-2024-52411.yaml |
+| CVE-2024-52385.yaml |
+| CVE-2024-52395.yaml |
+| CVE-2024-52422.yaml |
+| CVE-2024-52436.yaml |
+| CVE-2024-52419.yaml |
+| CVE-2024-52391.yaml |
+| CVE-2024-52417.yaml |
+| CVE-2024-52389.yaml |
+| CVE-2024-52393.yaml |
+| CVE-2024-52398.yaml |
+| free-wp-booster-by-ads-pro.yaml |
+| cyan-backup.yaml |
+| detect-fix-server.yaml |
+| medma-matix.yaml |
+| datasets-manager-by-arttia-creative.yaml |
+| ai-auto-tool.yaml |
+| cf7-reply-manager.yaml |
+| detect-websocket.yaml |
+| airin-blog.yaml |
+| boat-rental-system.yaml |
+| convert-docx2post.yaml |
+| b-banner-slider.yaml |
+| kineticpay-for-woocommerce.yaml |
+| nix-anti-spam-light.yaml |
+| hacklog-downloadmanager.yaml |
+| xin.yaml |
+| sk-wp-settings-backup.yaml |
+| 839708539.yaml |
+| reconstruction.yaml |
+| do-that-task.yaml |
+| zij-kart.yaml |
+| picsmize.yaml |
+| easy-csv-importer.yaml |
+| basepress-migration-tools.yaml |
+| ai-content-generator.yaml |
+| nopeamedia.yaml |
+| wp-login-customizer.yaml |
+| control-horas.yaml |
+| hebrewdates.yaml |
+| 1002535080.yaml |
+| pie-register-premium.yaml |
+| devexhub-gallery.yaml |
+| 251445498.yaml |
+| 2056284267.yaml |
+| exclusive-content-password-protect.yaml |
+| bitrix-lfi-git.yaml |
+| wp-quick-setup.yaml |
+| personalization-by-flowcraft.yaml |
+| laravel-vite-php-source-disclosure.yaml |
+| hive-support.yaml |
+| lis-video-gallery.yaml |
+| gallerio.yaml |
+| 1964766750.yaml |
+| digipass.yaml |
+| easy-popup-lightbox-maker.yaml |
+| user-management.yaml |
+| wdes-responsive-mobile-menu.yaml |
+| Blind-XXE.yaml |
+| drozd-addons-for-elementor.yaml |
+| writer-helper.yaml |
+| shop-assistant-for-woocommerce-jarvis.yaml |
+| globe-gateway-e4.yaml |
+| disable-admin-notices.yaml |
+| csv-to-html.yaml |
+| 3056871358.yaml |
+| ai-image.yaml |
+| linear.yaml |

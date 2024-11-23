@@ -1,14 +1,12 @@
 id: smtp-proxy
 info:
-  name: Dr.Web SMTP-proxy
+  name: MailStore smtp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,smtp-proxy,service
   severity: info
   metadata:
-    product: smtp-proxy
+    hostname: $1
     rarity: 8
-    vendor: drweb
-    verified: true
 tcp:
 - name: hello
   inputs:
@@ -20,4 +18,4 @@ tcp:
   - name: smtp-proxy
     type: regex
     regex:
-    - ^220 OutgoingFilter SMTP\r\n502 OutgoingFilter Command not implemented\r\n
+    - ^220 MailStore SMTP Proxy Server\r\n250-([\w._-]+)\r\n250-STARTTLS\r\n250 MAILSTORE\r\n

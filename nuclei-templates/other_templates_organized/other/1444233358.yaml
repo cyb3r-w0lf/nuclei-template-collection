@@ -1,14 +1,14 @@
 id: irc
 info:
-  name: ratbox ircd
+  name: BitlBee ircd
   author: nmap,cn-kali-team
   tags: detect,tech,irc,service
   severity: info
   metadata:
     hostname: $1
-    product: ircd-ratbox
+    product: bitlbee
     rarity: 0
-    vendor: ratbox
+    vendor: bitlbee
     verified: true
 tcp:
 - name: 'null'
@@ -20,4 +20,4 @@ tcp:
   - name: irc
     type: regex
     regex:
-    - ^NOTICE AUTH :\*\*\* Processing connection to ([-\w_.]+)\r\n
+    - ^:([\w._-]+) NOTICE \* :BitlBee-IRCd initialized, please go on\r\n

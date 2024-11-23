@@ -1,14 +1,16 @@
 id: ssh
 info:
-  name: ZyXEL ZyWALL sshd
+  name: VanDyke VShell sshd
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    device_type: security-misc
     info: protocol $1
-    operating_system: ZyNOS
+    product: vshell
     rarity: 0
+    vendor: vandyke
+    verified: true
+    version: $SUBST(2,"_",".")
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +21,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-Zyxel SSH server\r?\n
+    - ^SSH-(\d[\d.]+)-VShell_(\d[_\d.]+) VShell\r?\n$
