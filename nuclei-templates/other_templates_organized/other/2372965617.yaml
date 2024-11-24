@@ -5,8 +5,9 @@ info:
   tags: detect,tech,ntp,service
   severity: info
   metadata:
+    info: primary server
     rarity: 5
-    version: v3
+    version: v4
 tcp:
 - name: ntprequest
   inputs:
@@ -18,4 +19,4 @@ tcp:
   - name: ntp
     type: regex
     regex:
-    - (?i)^\x1c[\x01-\x0f]..............................................$
+    - (?i)^[\x24\x64\xa4]\x01..............................................$
