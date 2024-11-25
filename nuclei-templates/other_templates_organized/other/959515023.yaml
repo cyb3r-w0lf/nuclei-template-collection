@@ -1,11 +1,14 @@
 id: sieve
 info:
-  name: Dovecot Pigeonhole sieve
+  name: Citadel timsieved
   author: nmap,cn-kali-team
   tags: detect,tech,sieve,service
   severity: info
   metadata:
+    product: ux
     rarity: 0
+    vendor: citadel
+    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -17,4 +20,4 @@ tcp:
   - name: sieve
     type: regex
     regex:
-    - ^\"IMPLEMENTATION\" \"Dovecot Pigeonhole\"\r\n\"SIEVE\" \"[\w._;-]+(?:\s+[\w._;-]+)*\"\r\n\"NOTIFY\" \"mailto\"\r\n\"SASL\" \"[\w._;-]*(?:\s+[\w._;-]+)*\"\r\n\"STARTTLS\"\r\n\"VERSION\" \"([\w._-]+)\"\r\nOK \"[^"]*\"\r\n$
+    - ^\"IMPLEMENTATION\" \"CITADEL Sieve ([\d.]+)\"\r\n

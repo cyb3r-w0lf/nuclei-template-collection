@@ -1,16 +1,13 @@
 id: pop3
 info:
-  name: IMail pop3d
+  name: MailMax PopMax pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    hostname: $1
-    product: imail
+    operating_system: Windows
     rarity: 0
-    vendor: ipswitch
-    verified: true
-    version: $2
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +18,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK X1 NT-POP3 Server ([-\w.]+) \(IMail ([^)]+)\)\r\n
+    - ^\+OK [-\w_.]+ PopMax version ([\d. ]+) POP3 Mail Server Ready, Willing, and Waiting\r\n
