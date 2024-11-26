@@ -1,13 +1,12 @@
 id: ftp-proxy
 info:
-  name: Generic FTP proxy
+  name: CoolProxy ftp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
   metadata:
-    hostname: $1
+    operating_system: Windows
     rarity: 0
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +17,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^220 ([-\w_.]+) FTP proxy \(Version V([\d.]+)\) ready\.\r\n
+    - ^220 CoolProxy FTP server & firewall\r\n

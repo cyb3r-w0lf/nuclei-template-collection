@@ -6,7 +6,6 @@ info:
   severity: info
   metadata:
     rarity: 0
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +16,4 @@ tcp:
   - name: ixia-unknown
     type: regex
     regex:
-    - (?i)^.*\0\x18Ixia Hardware I/O Server\x13Ixia Communications\x18Ixia Hardware I/O Server\x0b([\d.]+)
+    - ^Enter port cpu supported card port number and hit Enter\. For example \"3 4\"\r\n

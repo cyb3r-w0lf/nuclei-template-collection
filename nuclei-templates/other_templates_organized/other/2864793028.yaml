@@ -1,14 +1,17 @@
 id: pop3
 info:
-  name: Mozilla Thunderbird webmail plugin pop3d
+  name: MDaemon pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    product: thunderbird
+    hostname: $1
+    operating_system: Windows
+    product: mdaemon
     rarity: 0
-    vendor: mozilla
+    vendor: altn
     verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +22,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK POP3 thats cool man\r\n
+    - ^\+OK ([-.\w]+) POP3? MDaemon (\S+) ready <MDAEMON
