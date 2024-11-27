@@ -13,29 +13,13 @@ info:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
     cvss-score: 7.5
     epss-percentile: 0.36659
-    cpe: cpe:2.3:a:gradio_project:gradio:*:*:*:*:python:*:*:*
   metadata:
     verified: true
     max-request: 2
     shodan-query: html:"__gradio_mode__"
-    product: gradio
-    vendor: gradio_project
   tags: cve,cve2024,unauth,gradio,ssrf
 
-flow: http(1) && http(2)
-
 http:
-  - raw:
-      - |
-        GET / HTTP/1.1
-        Host: {{Hostname}}
-
-    matchers:
-      - type: dsl
-        dsl:
-          - 'contains_any(tolower(body), "content=\"gradio", "gradio_mode", "gradio-app", "https://gradio.app")'
-        internal: true
-
   - raw:
       - |
         POST /component_server HTTP/1.1
@@ -71,4 +55,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a004730450220632cf4812e35cb5873b14dfaa6f2c6b0b46f1b066cb37f743893653c7c288364022100e373ac088635bf24e56fc549a461d34f5e6f48c7907a69f07cff242debf4f81e:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a0048304602210084254e5be884aa98296a738a4c7318f5fc3144cd7a242e19dfc57c3e7540a125022100db240aae793f3c25c826a49fe256d4109590d1fd40a2ad08de4d75925b3985f3:922c64590222798bb761d5b6d8e72950

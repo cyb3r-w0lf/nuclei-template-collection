@@ -5,7 +5,7 @@ info:
   tags: detect,tech,mysql,service
   severity: info
   metadata:
-    info: blocked - too many connection errors; Spanish
+    info: unauthorized; Spanish
     product: mysql
     rarity: 0
     vendor: mysql
@@ -20,4 +20,4 @@ tcp:
   - name: mysql
     type: regex
     regex:
-    - (?i)^.\0\0\0...Servidor '[-.\w]+' est\xe1 bloqueado por muchos errores de conexi\xf3n\.  Desbloquear con 'mysqladmin flush-hosts'
+    - ^.\0\0\0...'Host' '[-.\w]+' n\xe3o tem permiss\xe3o para se conectar com este servidor MySQL

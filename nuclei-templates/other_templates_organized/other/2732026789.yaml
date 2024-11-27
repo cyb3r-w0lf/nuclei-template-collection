@@ -5,10 +5,9 @@ info:
   tags: detect,tech,redis,service
   severity: info
   metadata:
-    version: $1
-    rarity: 4
+    rarity: 2
 tcp:
-  - name: redis
+  - name: redis-server
     inputs:
       - data: '*1\r\n$4\r\ninfo\r\n'
     host:
@@ -18,4 +17,4 @@ tcp:
       - name: redis
         type: regex
         regex:
-          - (?i)^\$\d+\r\n(?:#[^\r\n]*\r\n)*redis_version:([.\d]+)\r\n
+          - (?i)-ERR operation not permitted\r\n
