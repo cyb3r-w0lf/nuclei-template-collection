@@ -1,11 +1,10 @@
 id: printer
 info:
-  name: print server
+  name: Helios lpd
   author: nmap,cn-kali-team
   tags: detect,tech,printer,service
   severity: info
   metadata:
-    device_type: print server
     rarity: 6
 tcp:
 - name: lpdstring
@@ -18,4 +17,4 @@ tcp:
   - name: printer
     type: regex
     regex:
-    - ^Printer default not found \([\w_]+\)\.\n
+    - ^/usr/local/helios/sbin/lpd Printer default doesn't exist! \n$
