@@ -1,14 +1,13 @@
 id: telnet
 info:
-  name: Elsa DSL I-10 router telnetd
+  name: ZyXEL DSL modem telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: router
-    info: SN $2
+    device_type: broadband router
+    info: 'model: $1'
     rarity: 0
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +18,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - ^\xff\xfb\x01\r\n\r\n#\r\n\| ELSA LANCOM DSL/I-10 Office\r\n\| Ver\. ([\d.]+) / [\d.]+\r\n\| SN\.  (\d+)\r\n
+    - '^\xff\xfd\x01\xff\xfd!\xff\xfb\x01\xff\xfb\x03(VMG\d+(?:-\w+)?)\r\nLogin: '

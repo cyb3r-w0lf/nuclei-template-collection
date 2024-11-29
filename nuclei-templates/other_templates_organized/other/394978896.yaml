@@ -1,23 +1,23 @@
 id: http-proxy
 info:
-  name: MikroTik HttpProxy
+  name: iPlanet web proxy
   author: nmap,cn-kali-team
   tags: detect,tech,http-proxy,service
   severity: info
   metadata:
-    device_type: router
-    fallback:
-    - get-request
-    rarity: 5
+    product: iplanet_web_server
+    rarity: 0
+    vendor: sun
+    verified: true
+    version: $1
 tcp:
-- name: rtsprequest
+- name: 'null'
   inputs:
-  - data: OPTIONS / RTSP/1.0\r\n\r\n
+  - data: ''
   host:
   - '{{Hostname}}'
-  port: 80,554,3052,3372,5000,7070,8080,10000
   extractors:
   - name: http-proxy
     type: regex
     regex:
-    - '^HTTP/1\.0 400 Bad Request\r\nContent-Length: 103\r\nConnection: close\r\n\r\n<html><body> <h2>Mikrotik HttpProxy</h2>\n\r<hr>\n\r<h2>\n\rError: 400 Bad Request\r\n\r\n</h2>\n\r</body></html>\n\r$'
+    - '(?i)^HTTP/1\.[01] \d\d\d .*\r\n(?:Server|Proxy-agent): iPlanet-Web-Proxy-Server/([\d.]+)\r\n'
