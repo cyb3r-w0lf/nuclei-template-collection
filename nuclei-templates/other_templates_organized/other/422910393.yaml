@@ -1,14 +1,13 @@
 id: irc
 info:
-  name: Hybrid-based ircd
+  name: Bahamut Dalnet ircd
   author: nmap,cn-kali-team
   tags: detect,tech,irc,service
   severity: info
   metadata:
-    product: ircd-hybrid
+    hostname: $1
+    info: derived from DreamForge and Hybrid
     rarity: 0
-    vendor: ircd-hybrid
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +18,4 @@ tcp:
   - name: irc
     type: regex
     regex:
-    - ^NOTICE AUTH :\*\*\* Looking up your hostname\.\.\.\r\nNOTICE AUTH :\*\*\* Checking Ident\r\nNOTICE AUTH :\*\*\* (?:Couldn't look up|Found) your hostname\r\n$
+    - (^:[-.+\w]+) NOTICE AUTH :\*\*\* Looking up your hostname\.\.\.\n:[-.+\w]+ NOTICE AUTH :\*\*\* Checking Ident\n:[-.+\w]+ NOTICE AUTH :\*\*\* Found your hostname\n

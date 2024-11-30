@@ -1,15 +1,13 @@
 id: sip-proxy
 info:
-  name: 3CX PhoneSystem PBX
+  name: Telos Z/IP ONE sipd
   author: nmap,cn-kali-team
   tags: detect,tech,sip-proxy,service
   severity: info
   metadata:
-    device_type: PBX
+    device_type: specialized
     fallback:
     - get-request
-    info: misconfigured
-    operating_system: Windows
     rarity: 5
 tcp:
 - name: sipoptions
@@ -22,4 +20,4 @@ tcp:
   - name: sip-proxy
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 503 Remote end of tunnel is not connected\r\n(?:[^\r\n]+\r\n)*?Warning: \d+ \w+ \"Remote end of the bridge is not connected\"\r\n'
+    - '^SIP/2\.0 200 OK\r\nVia: SIP/2\.0/TCP nm;branch=foo;received=.*\r\nFrom: <sip:nm@nm>;tag=root\r\nTo: <sip:nm2@nm2>;tag=[a-f0-9]{32}\r\nCall-ID: 50000\r\nCSeq: 42 OPTIONS\r\nAllow: INVITE, ACK, BYE, CANCEL, REFER, OPTIONS, INFO, NOTIFY, PRACK, UPDATE\r\nAccept: application/sdp\r\nContent-Type: application/sdp\r\nContent-Length: \d+\r\n\r\n'
