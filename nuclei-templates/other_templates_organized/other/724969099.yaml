@@ -21,4 +21,4 @@ tcp:
   - name: sip-proxy
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?Server: Audiocodes-Sip-Gateway-(MP-[\w._ -]+)/v\.([\w._-]+)\r\n'
+    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?Server: Audiocodes-Sip-Gateway-(Mediant [\w._-]+)/v([\w._-]+)\r\n'

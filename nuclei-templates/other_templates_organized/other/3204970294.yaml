@@ -1,11 +1,11 @@
 id: printer
 info:
-  name: SGI IRIX lprsrv
+  name: Solaris lpd
   author: nmap,cn-kali-team
   tags: detect,tech,printer,service
   severity: info
   metadata:
-    operating_system: IRIX
+    operating_system: Solaris
     rarity: 6
 tcp:
 - name: lpdstring
@@ -18,4 +18,4 @@ tcp:
   - name: printer
     type: regex
     regex:
-    - '^[-.\w]+: lpsched: unknown printer\n$'
+    - '^default: unknown printer\n$'
