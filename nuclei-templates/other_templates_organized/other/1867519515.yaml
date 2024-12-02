@@ -1,12 +1,12 @@
 id: nntp
 info:
-  name: JAMES nntpd
+  name: Microsoft NNTP Service
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    hostname: $1
-    info: posting ok
+    info: refused
+    operating_system: Windows
     rarity: 0
 tcp:
 - name: 'null'
@@ -18,4 +18,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 ([-\w_.]+) NNTP Service Ready, posting permitted\r\n
+    - ^502 Connection refused\r\n
