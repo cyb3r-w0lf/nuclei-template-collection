@@ -1,15 +1,15 @@
 id: ldap
 info:
-  name: UnboundID LDAP SDK
+  name: OpenLDAP
   author: nmap,cn-kali-team
   tags: detect,tech,ldap,service
   severity: info
   metadata:
-    info: access denied
-    product: ldap-sdk
+    product: openldap
     rarity: 6
-    vendor: unboundid
+    vendor: openldap
     verified: true
+    version: 2.1.X
 tcp:
 - name: ldapbind-req
   inputs:
@@ -21,4 +21,4 @@ tcp:
   - name: ldap
     type: regex
     regex:
-    - ^0\x81\xa0\x02\x01\x01a\x81\x9a\n\x011\x04\0\x04\x81\x92The server has been configured to only allow bind operations that result in authenticated connections\.  Anonymous bind operations are not allowed\.
+    - ^02\x02\x01\x01a-\n\x01\x02\x04\0\x04&requested protocol version not allowed$

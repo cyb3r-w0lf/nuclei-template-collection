@@ -1,16 +1,12 @@
 id: nntp
 info:
-  name: INN nntpd
+  name: Typhoon nntpd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    hostname: $1
-    product: inn
     rarity: 0
-    vendor: isc
-    verified: true
-    version: $2
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +17,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 ([-\w_.]+) InterNetNews server INN ([\d.]+) ready\r\n
+    - ^200 Welcome to .* \(Typhoon v([\d.]+)\)\r\n

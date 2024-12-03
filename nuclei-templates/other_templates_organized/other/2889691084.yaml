@@ -1,12 +1,15 @@
 id: ftp-proxy
 info:
-  name: AVM KEN! ftp proxy
+  name: NetApp NetCache ftp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
   metadata:
     hostname: $1
+    product: netcache
     rarity: 0
+    vendor: netapp
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +20,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^220 ([\w._-]+), KEN! DSL FTP-Gateway\r\n
+    - ^220 ([-\w_.]+) \(NetCache\) .*\r\n
