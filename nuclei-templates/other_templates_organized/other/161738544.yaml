@@ -1,21 +1,20 @@
 id: printer
 info:
-  name: Digi IP-to-serial print server lpd
+  name: Helios lpd
   author: nmap,cn-kali-team
   tags: detect,tech,printer,service
   severity: info
   metadata:
-    device_type: print server
-    info: too many connections
-    rarity: 0
+    rarity: 6
 tcp:
-- name: 'null'
+- name: lpdstring
   inputs:
-  - data: ''
+  - data: \x01default\n
   host:
   - '{{Hostname}}'
+  port: 515,2947,3333,32211,19350
   extractors:
   - name: printer
     type: regex
     regex:
-    - ^MAX_INCOMING has been exceeded\r\n
+    - ^/usr/local/helios/sbin/lpd Printer default doesn't exist! \n$

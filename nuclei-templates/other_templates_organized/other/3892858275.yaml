@@ -1,16 +1,13 @@
 id: nntp
 info:
-  name: INN nntpd
+  name: Jana nntpd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    hostname: $1
     info: posting ok
-    product: inn
+    operating_system: Windows
     rarity: 0
-    vendor: isc
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +18,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 ([-\w_.]+) NNRP Service Ready - [-\w_.]+@[-\w_.]+ \(posting ok\)\.\r\n
+    - ^200 Jana news server ready - posting allowed\r\n

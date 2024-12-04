@@ -1,15 +1,11 @@
 id: irc
 info:
-  name: BitlBee ircd
+  name: Dancer ircd
   author: nmap,cn-kali-team
   tags: detect,tech,irc,service
   severity: info
   metadata:
-    hostname: $1
-    product: bitlbee
     rarity: 0
-    vendor: bitlbee
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +16,4 @@ tcp:
   - name: irc
     type: regex
     regex:
-    - ^:([\w._-]+) NOTICE \* :BitlBee-IRCd initialized, please go on\r\n
+    - ^NOTICE AUTH :\*\*\* Looking up your hostname\.\.\.\r\nNOTICE AUTH :\*\*\* Checking ident\r\nNOTICE AUTH :\*\*\* Got ident response\r\nNOTICE AUTH :\*\*\* Found your hostname\r\n
