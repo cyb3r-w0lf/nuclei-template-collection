@@ -1,15 +1,12 @@
 id: ms-wbt-server
 info:
-  name: IBM Sametime Meeting Services
+  name: Microsoft Terminal Service
   author: nmap,cn-kali-team
   tags: detect,tech,ms-wbt-server,service
   severity: info
   metadata:
     operating_system: Windows
-    product: sametime
     rarity: 6
-    vendor: ibm
-    verified: true
 tcp:
 - name: terminal-server
   inputs:
@@ -21,4 +18,4 @@ tcp:
   - name: ms-wbt-server
     type: regex
     regex:
-    - ^\x03\0\0\x0e\t\xd0\0\0\0[\x02\xa1]\0\xc0\x01\n$
+    - (?i)^\x03\0\0\x0b\x06\xd0\0\0\x12.\0$

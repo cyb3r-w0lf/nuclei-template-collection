@@ -1,12 +1,15 @@
 id: ftp-proxy
 info:
-  name: Generic FTP proxy
+  name: AnalogX FTP proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
   metadata:
     hostname: $1
+    product: proxy
     rarity: 0
+    vendor: analogx
+    verified: true
     version: $2
 tcp:
 - name: 'null'
@@ -18,4 +21,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^220 ([-\w_.]+) FTP proxy \(Version V([\d.]+)\) ready\.\r\n
+    - ^220 ([-.+\w]+) FTP AnalogX Proxy (\d[-.\w]+) \(Release\) ready\r\n

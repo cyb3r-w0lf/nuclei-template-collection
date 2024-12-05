@@ -1,13 +1,15 @@
 id: nntp
 info:
-  name: Jana nntpd
+  name: INN NNTPd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    info: posting ok
-    operating_system: Windows
+    info: broken
+    product: inn
     rarity: 0
+    vendor: isc
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +20,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 Jana news server ready - posting allowed\r\n
+    - '^nnrpd: invalid option -- S\nUsage error\.\n'

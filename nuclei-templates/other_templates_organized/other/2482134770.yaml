@@ -1,14 +1,17 @@
 id: afp
 info:
-  name: Novell NetWare AFP
+  name: Netatalk
   author: nmap,cn-kali-team
   tags: detect,tech,afp,service
   severity: info
   metadata:
     info: 'name: $1; protocol 3.1'
-    operating_system: NetWare
+    operating_system: Unix
+    product: netatalk
     rarity: 6
-    version: $2
+    vendor: netatalk
+    verified: true
+    version: '2'
 tcp:
 - name: afp
   inputs:
@@ -20,4 +23,4 @@ tcp:
   - name: afp
     type: regex
     regex:
-    - (?i)^\x01\x03\0\x01\0\0\0\0....\0\0\0\0........\0\xbf.([^\0]+)\0.*\x16Novell NetWare ([0-9.]+)\x06\x0eAFPVersion 1\.1\x0eAFPVersion 2\.0\x0eAFPVersion 2\.1\x06AFP2\.2\x06AFPX03\x06AFP3\.1\x02\x10[^\x16]+\x16
+    - (?i)^\x01\x03\0\x01\0\0\0\0....\0\0\0\0........\x83\x79.([^\0\x01]+)[\0\x01].*\x08Netatalk\x06\x0eAFPVersion 1\.1\x0eAFPVersion 2\.0\x0eAFPVersion 2\.1\x06AFP2\.2\x06AFPX03\x06AFP3\.1
