@@ -1,6 +1,6 @@
 id: pop3-proxy
 info:
-  name: O3SIS UMA pop3 proxy
+  name: HTML2POP3 pop3 proxy
   author: nmap,cn-kali-team
   tags: detect,tech,pop3-proxy,service
   severity: info
@@ -17,4 +17,4 @@ tcp:
   - name: pop3-proxy
     type: regex
     regex:
-    - ^\+OK O3SIS UMA Proxy POP3 Server ([\w._-]+)\r\n
+    - ^\+OK HTML2POP3 server ready \(([\d.]+)\)\r\n

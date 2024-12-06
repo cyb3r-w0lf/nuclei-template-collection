@@ -1,15 +1,13 @@
 id: imap
 info:
-  name: Lotus Domino imapd
+  name: Scalix imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    info: Unable to connect
-    product: lotus_domino
+    hostname: $2
     rarity: 0
-    vendor: ibm
-    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +18,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* BYE Domino IMAP4 Server Unable to authenticate session\.
+    - ^\* OK Scalix IMAP server ([\d.]+) on ([-\w_.]+)\r\n

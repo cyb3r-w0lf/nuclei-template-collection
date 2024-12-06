@@ -1,25 +1,26 @@
 id: http
 info:
-  name: thttpd
+  name: Asterisk PBX httpd
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    device_type: switch
-    info: Asotel Vector 1908 switch http config
-    product: thttpd
-    rarity: 0
-    vendor: acme
+    device_type: PBX
+    fallback:
+    - get-request
+    product: asterisk
+    rarity: 5
+    vendor: digium
     verified: true
-    version: $1
 tcp:
-- name: 'null'
+- name: sipoptions
   inputs:
-  - data: ''
+  - data: 'OPTIONS sip:nm SIP/2.0\r\nVia: SIP/2.0/TCP nm;branch=foo\r\nFrom: <sip:nm@nm>;tag=root\r\nTo: <sip:nm2@nm2>\r\nCall-ID: 50000\r\nCSeq: 42 OPTIONS\r\nMax-Forwards: 70\r\nContent-Length: 0\r\nContact: <sip:nm@nm>\r\nAccept: application/sdp\r\n\r\n'
   host:
   - '{{Hostname}}'
+  port: 406,5060,8081,31337
   extractors:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.0 400 Bad Request\r\nServer: httpd-impacct/([^\r\n]+)\r\nContent-type: text/html\r\n\r\n<HTML><HEAD><TITLE>400 Bad Request</TITLE></HEAD>\n<BODY BGCOLOR=\"#cc9999\"><H2>400 Bad Request</H2>\nYour request has bad syntax or is inherently impossible to satisfy\.\n<HR>\n</HTML>\n$'
+    - '^HTTP/1\.1 302 Moved Temporarily\r\nDate: .*\r\nLocation: https://[\w._-]+sip:nm\r\nConnection: close\r\n\r\n$'
