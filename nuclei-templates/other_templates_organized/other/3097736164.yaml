@@ -5,10 +5,9 @@ info:
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    info: Spanish
+    info: refused
     operating_system: Windows
     rarity: 0
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +18,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - '^200 Servicio NNTP ([\w._-]+) Version: [\w._-]+ Posting Allowed \r\n'
+    - ^502 Connection refused\r\n

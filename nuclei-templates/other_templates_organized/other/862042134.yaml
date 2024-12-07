@@ -6,6 +6,7 @@ info:
   severity: info
   metadata:
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -16,4 +17,4 @@ tcp:
   - name: irc-proxy
     type: regex
     regex:
-    - '^:.*!psyBNC@lam3rz\.de NOTICE \* :'
+    - ^:.*!psyBNC@lam3rz\.de NOTICE \* :psyBNC([-.\w]+)\r\n

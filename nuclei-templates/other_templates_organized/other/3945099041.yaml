@@ -1,14 +1,15 @@
 id: rtsp
 info:
-  name: Sanyo VCC-HD2300 webcam rtspd
+  name: Realserver RTSP
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
   metadata:
-    device_type: webcam
     fallback:
     - get-request
+    operating_system: Windows
     rarity: 5
+    version: $1
 tcp:
 - name: rtsprequest
   inputs:
@@ -20,4 +21,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '^RTSP/1\.0 400 Bad Request\r\nCSeq: 0\r\n\r\n'
+    - '^RTSP/1\.0 200 OK\r\nCSeq: 0\r\nDate: .*\r\nServer: RealServer Version (\d[-.\w]+) \(win32\)\r\n'

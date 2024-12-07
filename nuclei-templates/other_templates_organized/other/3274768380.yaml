@@ -1,12 +1,12 @@
 id: donkey
 info:
-  name: MLDonkey multi-network P2P server control port
+  name: Lugdunum eserver
   author: nmap,cn-kali-team
   tags: detect,tech,donkey,service
   severity: info
   metadata:
-    info: IP disallowed
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +17,4 @@ tcp:
   - name: donkey
     type: regex
     regex:
-    - ^Telnet connection from [\d.]+ rejected \(see allowed_ips setting\)\n
+    - '^HTTP/1\.1 404 Not Found\r\nDate: .*\r\nServer: eserver ([\d.]+)\r\nAccept-Ranges: bytes\r\nContent-Type: text/html\r\nContent-Length: \d+\r\n\r\n<html><head><title>404 File not found - eserver is not a HTTP server</title>'
