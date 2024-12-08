@@ -1,12 +1,15 @@
 id: nntp
 info:
-  name: Kerio MailServer nntpd
+  name: INN NNTPd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
+    info: broken
+    product: inn
     rarity: 0
-    version: $1
+    vendor: isc
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +20,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 +Kerio MailServer ([\w._-]+) +NNTP server ready\r\n
+    - '^nnrpd: invalid option -- S\nUsage error\.\n'

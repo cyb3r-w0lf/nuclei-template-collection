@@ -1,12 +1,16 @@
 id: ssh
 info:
-  name: Foundry Networks switch sshd
+  name: OpenSSH
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    info: 'broken: No host key configured'
+    info: protocol $1
+    product: openssh
     rarity: 0
+    vendor: openbsd
+    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +21,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^\0\0\0\$\0\0\0\0\x01\0\0\0\x1bNo host key is configured!\n\r!\"v
+    - ^SSH-([\d.]+)-OpenSSH_([\w._-]+-CERN\d+)\r?\n

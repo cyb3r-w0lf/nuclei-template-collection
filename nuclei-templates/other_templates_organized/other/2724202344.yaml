@@ -1,16 +1,14 @@
 id: sieve
 info:
-  name: Cyrus timsieved
+  name: Dovecot timsieved
   author: nmap,cn-kali-team
   tags: detect,tech,sieve,service
   severity: info
   metadata:
-    info: included w/cyrus imap
-    product: cyrus_imap_server
+    product: dovecot
     rarity: 0
-    vendor: cmu
+    vendor: dovecot
     verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +19,4 @@ tcp:
   - name: sieve
     type: regex
     regex:
-    - ^\"IMPLEMENTATION\" \"Cyrus timsieved v(\d[-.\w]+)\"\r\n
+    - ^\"IMPLEMENTATION\" \"dovecot\"\r\n
