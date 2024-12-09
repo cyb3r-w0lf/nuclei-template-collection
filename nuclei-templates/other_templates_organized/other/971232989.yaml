@@ -1,14 +1,15 @@
 id: rtsp
 info:
-  name: RogueAmoeba Airfoil rtspd
+  name: Helix DNA Server
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
   metadata:
     fallback:
     - get-request
-    operating_system: Mac OS X
+    operating_system: Windows
     rarity: 5
+    version: $1
 tcp:
 - name: rtsprequest
   inputs:
@@ -20,4 +21,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '^RTSP/1\.0 200 OK\r\nAudio-Jack-Status: connected; type=digital\r\n'
+    - '(?i)^RTSP/1\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?Server: Helix [\w ]*Server Version ([\d.]+) \(win32\)\r\n'

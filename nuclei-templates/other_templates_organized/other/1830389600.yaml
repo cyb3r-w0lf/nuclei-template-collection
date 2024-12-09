@@ -6,9 +6,8 @@ info:
   severity: info
   metadata:
     hostname: $1
-    info: Reverse DNS unauthorized
+    info: IP unauthorized
     rarity: 0
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +18,4 @@ tcp:
   - name: hylafax
     type: regex
     regex:
-    - ^130 Warning, no inverse address mapping for client host name \"[-\w_.]+\"\.\r\n220 ([-\w_.]+) server \(HylaFAX \(tm\) Version ([\d.]+)\) ready\.\r\n
+    - ^130 Warning, client address \"[\d.]+\" is not listed for host name \"([-.\w]+)\"\.\r\n

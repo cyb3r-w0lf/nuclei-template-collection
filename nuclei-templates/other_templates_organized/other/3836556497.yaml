@@ -1,12 +1,11 @@
 id: directconnect
 info:
-  name: Direct Connect P2P
+  name: PtokaX directconnect hub
   author: nmap,cn-kali-team
   tags: detect,tech,directconnect,service
   severity: info
   metadata:
-    info: 'User: $1'
-    operating_system: Windows
+    info: Redirected to $1
     rarity: 0
 tcp:
 - name: 'null'
@@ -18,4 +17,4 @@ tcp:
   - name: directconnect
     type: regex
     regex:
-    - ^\$MyNick ([-.\w]+)|\$Lock
+    - <Hub-Security> You are being redirected to ([\d.]+)\|\$ForceMove [\d.]+\|

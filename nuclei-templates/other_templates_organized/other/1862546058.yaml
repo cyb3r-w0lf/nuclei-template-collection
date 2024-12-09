@@ -1,10 +1,11 @@
 id: ftp-proxy
 info:
-  name: FileCatalyst ftp proxy
+  name: kingate ftp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
   metadata:
+    operating_system: Windows
     rarity: 0
     version: $1
 tcp:
@@ -17,4 +18,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^220 FileCatalyst Server Enterprise v([^\r\n]*)\r\n$
+    - ^220 kingate\(([\w._-]+)-win32\) ftp proxy ready\r\n

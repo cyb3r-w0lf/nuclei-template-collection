@@ -1,12 +1,15 @@
 id: ldap
 info:
-  name: ApacheDS LDAP
+  name: OpenLDAP
   author: nmap,cn-kali-team
   tags: detect,tech,ldap,service
   severity: info
   metadata:
-    info: LDAPv3
+    product: openldap
     rarity: 6
+    vendor: openldap
+    verified: true
+    version: 2.1.X
 tcp:
 - name: ldapbind-req
   inputs:
@@ -18,4 +21,4 @@ tcp:
   - name: ldap
     type: regex
     regex:
-    - ^0&\x02\x01\x01a!\n\x01\x02\x04\0\x04\x1aOnly LDAP v3 is supported\.$
+    - ^02\x02\x01\x01a-\n\x01\x02\x04\0\x04&requested protocol version not allowed$

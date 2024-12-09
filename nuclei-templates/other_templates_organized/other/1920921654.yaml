@@ -1,20 +1,22 @@
 id: honeypot
 info:
-  name: Whiz Kid Technomagic Imaginary telnet honeypot
+  name: Dionaea Honeypot httpd
   author: nmap,cn-kali-team
   tags: detect,tech,honeypot,service
   severity: info
   metadata:
-    operating_system: Windows
-    rarity: 0
+    fallback:
+    - get-request
+    rarity: 5
 tcp:
-- name: 'null'
+- name: sipoptions
   inputs:
-  - data: ''
+  - data: 'OPTIONS sip:nm SIP/2.0\r\nVia: SIP/2.0/TCP nm;branch=foo\r\nFrom: <sip:nm@nm>;tag=root\r\nTo: <sip:nm2@nm2>\r\nCall-ID: 50000\r\nCSeq: 42 OPTIONS\r\nMax-Forwards: 70\r\nContent-Length: 0\r\nContact: <sip:nm@nm>\r\nAccept: application/sdp\r\n\r\n'
   host:
   - '{{Hostname}}'
+  port: 406,5060,8081,31337
   extractors:
   - name: honeypot
     type: regex
     regex:
-    - '^\r\n[-\w_.]+ [\d.]+ - Unauthorized access \x07prohibited under penalty of law\.\r\n\r\nlogin: \xff\xfc\x01'
+    - '^HTTP/1\.0 200 OK\r\nAllow: OPTIONS, GET, HEAD, POST\r\nContent-Length: 0\r\nConnection: close\r\n\r\n'

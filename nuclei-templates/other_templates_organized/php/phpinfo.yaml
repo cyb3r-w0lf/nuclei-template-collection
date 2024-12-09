@@ -3,7 +3,7 @@ info:
   name: phpinfo Disclosure
   author: pdteam,daffainfo,meme-lord,dhiyaneshDK
   severity: low
-  tags: config,exposure,phpinfo
+  tags: config,exposure
 requests:
   - method: GET
     path:
