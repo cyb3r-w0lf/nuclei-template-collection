@@ -4,18 +4,15 @@ info:
   name: Test HTTP Template
   author: pdteam
   severity: info
+  reference: |
+    test case where version warning is shown when env `SHOW_DSL_ERRORS=true` is set
 
-variables:
- a1: "{{to_lower(rand_base(5))}}"
-
-
-requests:
+http:
   - method: GET
     path:
-      - "{{BaseURL}}/?x={{a1}}"
-      - "{{BaseURL}}/?x={{a1}}"
+      - "{{BaseURL}}"
 
-    extractors:
+    matchers:
       - type: dsl
         dsl:
-          - a1
+          - compare_versions("GG", '< 4.8.5')

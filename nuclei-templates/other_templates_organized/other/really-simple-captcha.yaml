@@ -11,9 +11,8 @@ info:
     wpscan: https://wpscan.com/plugin/really-simple-captcha
   tags: tech,wordpress,wp-plugin,top-200
 
-http:
+requests:
   - method: GET
-
     path:
       - "{{BaseURL}}/wp-content/plugins/really-simple-captcha/readme.txt"
 

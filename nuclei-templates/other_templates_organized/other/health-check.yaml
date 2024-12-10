@@ -11,9 +11,8 @@ info:
     wpscan: https://wpscan.com/plugin/health-check
   tags: tech,wordpress,wp-plugin,top-200
 
-http:
+requests:
   - method: GET
-
     path:
       - "{{BaseURL}}/wp-content/plugins/health-check/readme.txt"
 

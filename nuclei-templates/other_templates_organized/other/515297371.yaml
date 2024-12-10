@@ -22,4 +22,4 @@ tcp:
   - name: sip-proxy
     type: regex
     regex:
-    - '^SIP/2\.0 503 Service Unavailable\r\nDate: .*\r\nWarning: \d+ \"Routing failed: ccbid=\d+ tcpindex=\d+ socket=nm:\d+''\r\nFrom: <sip:nm@nm>;tag=root\r\nContent-Length: 0\r\nTo: <sip:nm2@nm2>;tag=\d+\r\nCall-ID: 50000\r\nVia: SIP/2\.0/TCP nm;branch=foo;received=[\d.]+\r\nCSeq: 42 OPTIONS\r\n\r\n'
+    - '^SIP/2\.0 503 Service Unavailable\r\nVia: SIP/2\.0/TCP nm;branch=foo;received=[\d.]+\r\nFrom: <sip:nm@nm>;tag=root\r\nTo: <sip:nm2@nm2>;tag=\w+\r\nDate: .*?\r\nCall-ID: 50000\r\nCSeq: 42 OPTIONS\r\nWarning: \d+ [\w._-]+ \"Unable to find a device handler for the request received on port \d+ from [\d.]+\"\r\nContent-Length: 0\r\n\r\n'

@@ -1,16 +1,16 @@
 id: nntp
 info:
-  name: InterNetNews (INN)
+  name: INN nntpd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
     hostname: $1
+    info: posting ok
     product: inn
     rarity: 0
     vendor: isc
     verified: true
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +21,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^20. ([\w._-]+) InterNetNews NNRP server INN ([\w._-]+) ready \((?:posting ok|no posting)\)\.?\r\n
+    - ^200 ([-\w_.]+) NNRP Service Ready - [-\w_.]+@[-\w_.]+ \(posting ok\)\.\r\n

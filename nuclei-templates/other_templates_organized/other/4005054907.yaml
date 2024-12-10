@@ -1,12 +1,11 @@
 id: smtp
 info:
-  name: Smap
+  name: Netasq Mfiltro spam detection smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
     hostname: $1
-    info: from firewall toolkit
     rarity: 0
 tcp:
 - name: 'null'
@@ -18,4 +17,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([-.+\w]+) SMTP/smap Ready\.\r\n
+    - ^220 ([\w._-]+) mfiltro ESMTP server ready\r\n

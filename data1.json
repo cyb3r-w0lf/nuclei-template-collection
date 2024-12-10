@@ -57410,5 +57410,13 @@
     "975445134.yaml": "2024-12-09 02:46:02",
     "815383761.yaml": "2024-12-09 02:46:02",
     "wp-health.yaml": "2024-12-09 02:46:02",
-    "path-xss.yaml": "2024-12-09 02:46:02"
+    "path-xss.yaml": "2024-12-09 02:46:02",
+    "exposed-pki-cert.yaml": "2024-12-10 02:44:58",
+    "sqs-deadletter-disabled.yaml": "2024-12-10 02:44:58",
+    "3348832564.yaml": "2024-12-10 02:44:58",
+    "issabel-pbx.yaml": "2024-12-10 02:44:58",
+    "sqs-encryption-disabled.yaml": "2024-12-10 02:44:58",
+    "elb-delete-protection-disabled.yaml": "2024-12-10 02:44:58",
+    "sqs-queue-exposed.yaml": "2024-12-10 02:44:58",
+    "CVE-2023-37599.yaml": "2024-12-10 02:44:58"
 }

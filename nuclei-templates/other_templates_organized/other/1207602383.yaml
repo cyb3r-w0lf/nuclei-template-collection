@@ -1,12 +1,13 @@
 id: ftp
 info:
-  name: FRITZ!Box Fon WLAN $1 WAP ftpd
+  name: Tornado vxWorks ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: WAP
+    operating_system: VxWorks
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 FRITZ!Box Fon WLAN (\d+) FTP server ready\.\r\n
+    - ^220 Tornado-vxWorks \(VxWorks([\d.]+)\) FTP server ready\r\n
