@@ -1,6 +1,6 @@
 id: sip
 info:
-  name: Aladino SIP phone
+  name: Cisco 7940 IP Phone
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
@@ -9,7 +9,6 @@ info:
     fallback:
     - get-request
     rarity: 5
-    version: $1
 tcp:
 - name: sipoptions
   inputs:
@@ -21,4 +20,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 500 Server Internal Error\r\n(?:[^\r\n]+\r\n)*?User-Agent: Thomson Inventel / HW_V[\w._-]+ / FW_V[\w._-]+ / SW_V([\w._-]+)\r\n'
+    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?To: <sip:nm2@nm2>;tag=[0-9a-f-]+\r\n(?:[^\r\n]+\r\n)*?Allow: INVITE,ACK,CANCEL,BYE,OPTIONS,REFER,INFO,NOTIFY,PRACK,MESSAGE\r\n(?:[^\r\n]+\r\n)*?Supported: replaces,timer,100rel\r\nAccept: application/sdp\r\n'
