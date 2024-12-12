@@ -1,13 +1,14 @@
 id: smtp-proxy
 info:
-  name: eXpurgate smtp proxy
+  name: CCProxy smtp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,smtp-proxy,service
   severity: info
   metadata:
-    hostname: $1
+    info: Unregistered
+    operating_system: Windows
     rarity: 0
-    version: $2
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +19,4 @@ tcp:
   - name: smtp-proxy
     type: regex
     regex:
-    - ^220 ([-\w_.]+) ESMTP - eXpurgate ([\d.]+) \(
+    - ^220 CCProxy ([\d.]+) SMTP Service Ready\(Unregistered\)\r\n

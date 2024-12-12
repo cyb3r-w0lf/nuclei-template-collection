@@ -11,8 +11,9 @@ info:
     wpscan: https://wpscan.com/plugin/wpvivid-backuprestore
   tags: tech,wordpress,wp-plugin,top-200
 
-requests:
+http:
   - method: GET
+
     path:
       - "{{BaseURL}}/wp-content/plugins/wpvivid-backuprestore/readme.txt"
 

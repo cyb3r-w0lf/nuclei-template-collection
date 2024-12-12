@@ -1,17 +1,14 @@
 id: domain
 info:
-  name: ISC BIND
+  name: Synology DNS Server
   author: nmap,cn-kali-team
   tags: detect,tech,domain,service
   severity: info
   metadata:
-    info: Raspbian Linux
-    operating_system: Linux
-    product: bind
+    product: dns
     rarity: 1
-    vendor: isc
+    vendor: synology
     verified: true
-    version: $1
 tcp:
 - name: dnsversion-bind-req
   inputs:
@@ -23,4 +20,4 @@ tcp:
   - name: domain
     type: regex
     regex:
-    - (?i)\x07version\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03.{7}(?:BIND )?(\d[-\w.+~]*?)-Raspbian
+    - (?i)\x07version\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03.{7}DNSServer\xc0\x0c

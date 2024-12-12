@@ -1,14 +1,11 @@
 id: wordpress-accessible-wpconfig
 info:
-  name: WordPress wp-config Detection
+  name: WordPress accessible wp-config
   author: Kiblyn11,zomsop82,madrobot,geeknik,daffainfo,r12w4n
-  severity: medium
-  description: WordPress `wp-config` was discovered. This file is remotely accessible and its content available for reading.
-  classification:
-    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
-    cvss-score: 5.3
-    cwe-id: CWE-200
+  severity: high
+  description: The remote WordPress installation has the `wp-config` file remotely accessible and its content available for reading.
   tags: wordpress,backup
+
 requests:
   - method: GET
     path:
@@ -32,6 +29,7 @@ requests:
       - '{{BaseURL}}/wp-config.php.orig'
       - '{{BaseURL}}/wp-config.php.original'
       - '{{BaseURL}}/_wpeprivate/config.json'
+
     stop-at-first-match: true
     matchers-condition: and
     matchers:
@@ -41,8 +39,7 @@ requests:
           - "DB_PASSWORD"
         part: body
         condition: and
+
       - type: status
         status:
           - 200
-
-# Enhanced by mp on 2022/04/12

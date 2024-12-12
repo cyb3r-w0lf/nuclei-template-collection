@@ -9,10 +9,11 @@ info:
   metadata:
     plugin_namespace: backwpup
     wpscan: https://wpscan.com/plugin/backwpup
-  tags: tech,wordpress,wp-plugin,top-100,top-200
+  tags: tech,wordpress,wp-plugin,top-200
 
-requests:
+http:
   - method: GET
+
     path:
       - "{{BaseURL}}/wp-content/plugins/backwpup/readme.txt"
 
