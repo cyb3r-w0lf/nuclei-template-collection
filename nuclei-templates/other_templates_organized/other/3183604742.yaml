@@ -1,14 +1,17 @@
 id: rtsp
 info:
-  name: Amino AmiNET set-top box rtspd
+  name: Wowza Streaming Engine rtspd
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
   metadata:
-    device_type: media device
     fallback:
     - get-request
+    product: wowza_streaming_engine
     rarity: 5
+    vendor: wowza
+    verified: true
+    version: $1 build $2
 tcp:
 - name: rtsprequest
   inputs:
@@ -20,4 +23,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '(?i)^RTSP/1\.0 200 OK 200\r\n(?:[^\r\n]+\r\n)*?Server: Amino streamer\r\n'
+    - '^RTSP/1\.0 200 OK\r\nSupported: play\.basic, con\.persistent\r\nCseq: 0\r\nServer: Wowza Streaming Engine ([\w._-]+) build(\d+)\r\nPublic: DESCRIBE, SETUP, TEARDOWN, PLAY, PAUSE, OPTIONS, ANNOUNCE, RECORD, GET_PARAMETER\r\nCache-Control: no-cache\r\n\r\n$'

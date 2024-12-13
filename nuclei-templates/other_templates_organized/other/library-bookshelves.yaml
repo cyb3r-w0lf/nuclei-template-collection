@@ -1,4 +1,4 @@
-id: library-bookshelves
+id: library-bookshelves-b9f00e87ba727d33b0fd385c18b20221
 
 info:
   name: >
@@ -9,7 +9,7 @@ info:
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5d615acb-2960-4296-b212-0feaed2af8e2?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/253dcecb-b88d-423c-8e74-1d59581e2893?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

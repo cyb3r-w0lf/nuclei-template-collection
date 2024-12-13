@@ -1,15 +1,15 @@
-id: library-management-system
+id: library-management-system-d7b9d52555266e02d4cc1156be8c7e1c
 
 info:
   name: >
-    Library Management System <= 3.0.0 - Authenticated (Admin+) SQL Injection
+    Library Management System <= 3.0.0 - Authenticated (Subscriber+) SQL Injection
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ee792903-3b55-4f1d-bba1-59ea3f1826a1?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0b4cb873-77b7-44f9-820c-38e5d43393f3?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

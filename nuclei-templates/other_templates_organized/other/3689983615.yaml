@@ -1,12 +1,10 @@
 id: pop3pw
 info:
-  name: Mercury/32 poppass service
+  name: poppassd
   author: nmap,cn-kali-team
   tags: detect,tech,pop3pw,service
   severity: info
   metadata:
-    hostname: $1
-    operating_system: Windows
     rarity: 0
 tcp:
 - name: 'null'
@@ -18,4 +16,4 @@ tcp:
   - name: pop3pw
     type: regex
     regex:
-    - ^200 ([-.+\w]+) MercuryW PopPass server ready\.\r\n
+    - ^200 hello there, who are you\?\r\n
