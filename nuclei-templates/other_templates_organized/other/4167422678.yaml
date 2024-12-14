@@ -1,14 +1,14 @@
 id: pop3
 info:
-  name: SCO pop3d
+  name: Dovecot pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    hostname: $1
-    operating_system: SCO UNIX
+    product: dovecot
     rarity: 0
-    version: $2
+    vendor: dovecot
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +19,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK ([-\w_.]+) POP3 ([-\w_.()]+) w/IMAP client at
+    - ^\+OK Pop3 ready\.\r\n

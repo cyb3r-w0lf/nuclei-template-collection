@@ -1,11 +1,12 @@
 id: smtp
 info:
-  name: LavaSoftware ShareMailPro smtpd
+  name: IBM MVS smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    operating_system: Windows
+    hostname: $1
+    operating_system: MVS
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +18,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ShareMailPro SMTP Server Ready \r\n
+    - ^220 ([-\w_.]+) running IBM MVS SMTP CS V2R10 on .*\r\n

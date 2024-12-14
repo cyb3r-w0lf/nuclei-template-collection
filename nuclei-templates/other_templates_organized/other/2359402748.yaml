@@ -1,6 +1,6 @@
 id: imap-proxy
 info:
-  name: AVG anti-virus IMAP proxy
+  name: Avast! anti-virus IMAP proxy
   author: nmap,cn-kali-team
   tags: detect,tech,imap-proxy,service
   severity: info
@@ -18,4 +18,4 @@ tcp:
   - name: imap-proxy
     type: regex
     regex:
-    - ^ BYE concurrent connection limit in AVG exceeded\(pass:\d+, processes:([\w._-]+)\[\d+\]\)\r\n
+    - ^\* BYE concurrent connection limit in avast! exceeded\(pass:\d+, processes:([\w._-]+)\[\d+\]\)\r\n

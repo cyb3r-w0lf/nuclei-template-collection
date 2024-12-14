@@ -1,6 +1,6 @@
 id: mysql
 info:
-  name: MySQL instance manager
+  name: MySQL
   author: nmap,cn-kali-team
   tags: detect,tech,mysql,service
   severity: info
@@ -9,7 +9,6 @@ info:
     rarity: 0
     vendor: mysql
     verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +19,4 @@ tcp:
   - name: mysql
     type: regex
     regex:
-    - ^.\0\0\0\x0a(0[\w._-]+)\0
+    - (?i)^.\0\0\0\xffj\x04'[\d.]+' .* MySQL
