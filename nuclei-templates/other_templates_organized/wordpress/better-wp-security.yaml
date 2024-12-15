@@ -1,7 +1,7 @@
 id: wordpress-better-wp-security
 
 info:
-  name: Solid Security – Password, Two Factor Authentication, and Brute Force Protection Detection
+  name: iThemes Security Detection
   author: ricardomaia
   severity: info
   reference:
@@ -11,9 +11,8 @@ info:
     wpscan: https://wpscan.com/plugin/better-wp-security
   tags: tech,wordpress,wp-plugin,top-100,top-200
 
-http:
+requests:
   - method: GET
-
     path:
       - "{{BaseURL}}/wp-content/plugins/better-wp-security/readme.txt"
 

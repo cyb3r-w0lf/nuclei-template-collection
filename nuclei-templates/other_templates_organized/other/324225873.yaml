@@ -1,15 +1,14 @@
 id: domain
 info:
-  name: Check Point Meta IP ISC BIND
+  name: PowerDNS Recursor
   author: nmap,cn-kali-team
   tags: detect,tech,domain,service
   severity: info
   metadata:
-    product: bind
+    product: recursor
     rarity: 1
-    vendor: isc
+    vendor: powerdns
     verified: true
-    version: $1 build $2
 tcp:
 - name: dnsversion-bind-req
   inputs:
@@ -21,4 +20,4 @@ tcp:
   - name: domain
     type: regex
     regex:
-    - n\x04bind\0\0\x10\0\x03\x07VERSION\x04BIND\0\0\x10\0\x03.{7}Meta IP DNS - BIND V([\d.]+)-REL \(Build (\d+)\)
+    - (?i)\x07version\x04bind\0\0\x10\0[\x01\x03]\xc0\x0c\0\x10\0[\x01\x03].{7}PowerDNS Recursor$

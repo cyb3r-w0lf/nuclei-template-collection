@@ -1,12 +1,17 @@
 id: http
 info:
-  name: Apple launchd_debug httpd
+  name: Allegro RomPager
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    operating_system: Mac OS X
+    device_type: remote management
+    info: Dell DRAC config
+    product: rompager
     rarity: 0
+    vendor: allegro
+    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +22,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.0 200 OK\r\nContent-Type: text/html\r\n\r\n<html>\n<body>\n<ul><li>\n<i>[^<]+</i>\n<ul><li>\n<i>Nice</i>\n<ul><li>\nNumber: \d+</li></ul>\n<i>ProgramArguments</i>\n<ol>\n<li>String: [^<]+</li>\n'
+    - '^HTTP/1\.1 200 OK\r\nContent-Type: text/html\r\nCache-Control: no-cache\r\nExpires: Thu, 26 Oct 1995 00:00:00 GMT\r\nTransfer-Encoding: chunked\r\nServer: Allegro-Software-RomPager/([\d.]+)\r\n\r\n'

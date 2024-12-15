@@ -1,11 +1,10 @@
 id: ftp-proxy
 info:
-  name: kingate ftp proxy
+  name: Cleo VLProxy ftp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
   metadata:
-    operating_system: Windows
     rarity: 0
     version: $1
 tcp:
@@ -18,4 +17,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^220 kingate\(([\w._-]+)-win32\) ftp proxy ready\r\n
+    - ^220 Cleo VLProxy/([\w._-]+) FTP server ready\.\r\n$

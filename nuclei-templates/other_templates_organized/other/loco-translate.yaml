@@ -11,9 +11,8 @@ info:
     wpscan: https://wpscan.com/plugin/loco-translate
   tags: tech,wordpress,wp-plugin,top-100,top-200
 
-http:
+requests:
   - method: GET
-
     path:
       - "{{BaseURL}}/wp-content/plugins/loco-translate/readme.txt"
 

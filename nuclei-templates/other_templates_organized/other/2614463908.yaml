@@ -1,17 +1,15 @@
 id: nntp
 info:
-  name: Cyrus nntpd
+  name: InterNetNews (INN)
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    hostname: $1
-    info: posting ok
-    product: cyrus_imap_server
+    info: HDD full
+    product: inn
     rarity: 0
-    vendor: cmu
+    vendor: isc
     verified: true
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -22,4 +20,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 ([\w._-]+) Cyrus NNTP v([\w._-]+) server ready, posting allowed\r\n
+    - ^400 No space left on device writing SMstore file -- throttling\r\n

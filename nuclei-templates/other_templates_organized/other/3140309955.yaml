@@ -1,20 +1,22 @@
 id: openvpn
 info:
-  name: SoftEther VPN OpenVPN Clone Function
+  name: OpenVPN
   author: nmap,cn-kali-team
   tags: detect,tech,openvpn,service
   severity: info
   metadata:
-    rarity: 5
+    product: openvpn
+    rarity: 0
+    vendor: openvpn
+    verified: true
 tcp:
-- name: citrix
+- name: 'null'
   inputs:
-  - data: \x1e\0\x01\x30\x02\xfd\xa8\xe3\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0
+  - data: ''
   host:
   - '{{Hostname}}'
-  port: '1604'
   extractors:
   - name: openvpn
     type: regex
     regex:
-    - ^\.\x83&SU\xe3_\xd5V\x01\0\0\0\0\0\x010\x02\xfd\xa8\xe3\0
+    - ^\0<\xaa\xc5\r\^\xf7\x1b\xd1\xe1a/\xe8\x17P\x9dOb\xbb\x93\x87\xe0\xf3v\x81K\xa4!\xe6\xc7\x01\x977u5A\xd1M\x1b;\xc7\xcb\x87\xb5\x87\xf3~\xc8w\xef\xd3\x87eA\0\^\xbf\xc5\x93i\xf6\x87$

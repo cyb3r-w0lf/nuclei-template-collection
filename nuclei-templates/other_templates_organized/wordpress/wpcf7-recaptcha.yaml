@@ -11,9 +11,8 @@ info:
     wpscan: https://wpscan.com/plugin/wpcf7-recaptcha
   tags: tech,wordpress,wp-plugin,top-200
 
-http:
+requests:
   - method: GET
-
     path:
       - "{{BaseURL}}/wp-content/plugins/wpcf7-recaptcha/readme.txt"
 

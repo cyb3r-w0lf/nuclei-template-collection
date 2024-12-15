@@ -11,9 +11,8 @@ info:
     wpscan: https://wpscan.com/plugin/contact-form-cfdb7
   tags: tech,wordpress,wp-plugin,top-200
 
-http:
+requests:
   - method: GET
-
     path:
       - "{{BaseURL}}/wp-content/plugins/contact-form-cfdb7/readme.txt"
 
