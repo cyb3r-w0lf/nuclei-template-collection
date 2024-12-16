@@ -1,17 +1,14 @@
 id: domain
 info:
-  name: Microsoft DNS
+  name: dnsmasq
   author: nmap,cn-kali-team
   tags: detect,tech,domain,service
   severity: info
   metadata:
-    info: Windows Server 2003 SP2
-    operating_system: Windows
-    product: dns
+    product: dnsmasq
     rarity: 1
-    vendor: microsoft
+    vendor: thekelleys
     verified: true
-    version: $1
 tcp:
 - name: dnsversion-bind-req
   inputs:
@@ -23,4 +20,4 @@ tcp:
   - name: domain
     type: regex
     regex:
-    - (?i)\x07version\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0[\x01\x03].{7}Microsoft DNS (5\.2\.3790.+)
+    - ^(?:..)?\0\x06\x81\x83\0\x01\0\0\0\0\0\0\x07version\x04bind\0\0\x10\0\x03

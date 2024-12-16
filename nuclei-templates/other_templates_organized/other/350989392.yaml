@@ -1,11 +1,11 @@
 id: vnc
 info:
-  name: RealVNC Enterprise Edition
+  name: RealVNC Personal
   author: nmap,cn-kali-team
   tags: detect,tech,vnc,service
   severity: info
   metadata:
-    info: protocol 3.$1
+    info: protocol 4.0
     product: realvnc
     rarity: 0
     vendor: realvnc
@@ -20,4 +20,4 @@ tcp:
   - name: vnc
     type: regex
     regex:
-    - '^RFB 003\.00(\d)\n\0\0\0\0\0\0\0:Unable to open license file: No such file or directory \(2\)'
+    - ^RFB 004\.000\n

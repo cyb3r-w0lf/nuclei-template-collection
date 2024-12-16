@@ -1,7 +1,7 @@
 id: wordpress-wp-google-maps
 
 info:
-  name: WP Go Maps (Google Maps, Map Block, and more!) Detection
+  name: WP Go Maps (formerly WP Google Maps) Detection
   author: ricardomaia
   severity: info
   reference:
@@ -11,8 +11,9 @@ info:
     wpscan: https://wpscan.com/plugin/wp-google-maps
   tags: tech,wordpress,wp-plugin,top-200
 
-requests:
+http:
   - method: GET
+
     path:
       - "{{BaseURL}}/wp-content/plugins/wp-google-maps/readme.txt"
 

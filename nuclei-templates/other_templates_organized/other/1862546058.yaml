@@ -1,6 +1,6 @@
 id: ftp-proxy
 info:
-  name: Cleo VLProxy ftp proxy
+  name: Zscaler ftp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
@@ -17,4 +17,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^220 Cleo VLProxy/([\w._-]+) FTP server ready\.\r\n$
+    - '^220 Zscaler/([\d.]+): USER expected \(Unix syntax\)\r\n'
