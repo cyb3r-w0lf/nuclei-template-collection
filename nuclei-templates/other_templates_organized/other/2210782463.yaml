@@ -1,6 +1,6 @@
 id: ftp-proxy
 info:
-  name: CCProxy ftp proxy
+  name: JanaServer ftp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
@@ -17,4 +17,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - '^220-CCProxy FTP Service\r\n220-you need to input userid@site as login name\.\r\n220 Example: user anonymous@ftp\.netscape\.com\r\n'
+    - ^220 Ftp service of Jana-Server ready\r\n

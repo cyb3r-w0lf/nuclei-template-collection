@@ -1,23 +1,21 @@
 id: smtp-proxy
 info:
-  name: PineApp Mail-SeCure smtp proxy
+  name: Avast! anti-virus smtp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,smtp-proxy,service
   severity: info
   metadata:
-    product: mail-secure
-    rarity: 8
-    vendor: pineapp
-    verified: true
+    info: connection limit exceeded by $1
+    operating_system: Windows
+    rarity: 0
 tcp:
-- name: hello
+- name: 'null'
   inputs:
-  - data: EHLO\r\n
+  - data: ''
   host:
   - '{{Hostname}}'
-  port: 25,587,3025
   extractors:
   - name: smtp-proxy
     type: regex
     regex:
-    - ^220 Ready to receive mail -=- ESMTP\r\n250-Ready to receive mail -=-\r\n250-AUTH LOGIN PLAIN\r\n250-AUTH=LOGIN PLAIN\r\n250-PIPELINING\r\n250 8BITMIME\r\n
+    - ^421 concurrent connection limit in avast! exceeded\(pass:0, processes:([\w._-]+)\[\d+\]\)\r\n
