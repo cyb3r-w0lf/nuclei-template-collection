@@ -1,15 +1,17 @@
 id: imap
 info:
-  name: Novell GroupWise imapd
+  name: Netscape Messaging Server Imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    operating_system: Unix
-    product: groupwise
+    hostname: $1
+    info: built $3
+    product: messaging_server
     rarity: 0
-    vendor: novell
+    vendor: netscape
     verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +22,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK \[CAPABILITY IMAP4rev1 .*\] GroupWise Server Ready\r\n
+    - ^\* OK ([-.\w]+) IMAP4 service \(Netscape Messaging Server (\d[-.\w ]+) \(built ([\w ]+)\)\)\r\n

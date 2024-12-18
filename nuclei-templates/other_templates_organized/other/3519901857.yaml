@@ -1,11 +1,11 @@
 id: http
 info:
-  name: Trend Micro OfficeScan Antivirus http config
+  name: BSkyB router
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    operating_system: Windows
+    device_type: broadband router
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +17,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.0 400 Bad Request\r\nServer: OfficeScan Client\r\nContent-Type: text/plain\r\nAccept-Ranges: bytes\r\nContent-Length: 4\r\n\r\nFail'
+    - '^HTTP/1\.1 400 Bad Request\r\nServer: sky_router\r\n'

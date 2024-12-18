@@ -1,12 +1,16 @@
 id: nntp
 info:
-  name: nntp//rss nntpd
+  name: INN nntpd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
+    hostname: $1
+    product: inn
     rarity: 0
-    version: $1
+    vendor: isc
+    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +21,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 nntp//rss v([\d.]+) news server ready\r\n
+    - ^200 ([-\w_.]+) InterNetNews server INN ([\d.]+) ready\r\n

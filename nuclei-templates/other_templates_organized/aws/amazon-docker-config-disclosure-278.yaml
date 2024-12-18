@@ -14,4 +14,4 @@ requests:
         words:
           - 'AWSEBDockerrunVersion'
           - 'containerDefinitions'
-        condition: and
+        condition: and 

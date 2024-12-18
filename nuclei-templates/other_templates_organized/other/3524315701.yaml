@@ -1,11 +1,11 @@
 id: daytime
 info:
-  name: Sun Solaris daytime
+  name: Windows small service daytime
   author: nmap,cn-kali-team
   tags: detect,tech,daytime,service
   severity: info
   metadata:
-    operating_system: Solaris
+    operating_system: Windows
     rarity: 3
 tcp:
 - name: help
@@ -18,4 +18,4 @@ tcp:
   - name: daytime
     type: regex
     regex:
-    - ^[A-Z][a-z]{2} [A-Z][a-z]{2} +\d{1,2} +\d\d:\d\d:\d\d (?:19|20)\d\d\n\r$
+    - ^\d{1,2}:\d\d:\d\d [AP]M \d{1,2}/\d\d/\d{4}\n$

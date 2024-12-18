@@ -1,15 +1,15 @@
 id: pop3pw
 info:
-  name: CommuniGate Pro pop3 password change daemon
+  name: Mercur pop3pw
   author: nmap,cn-kali-team
   tags: detect,tech,pop3pw,service
   severity: info
   metadata:
-    product: communigate_pro
+    operating_system: Windows
+    product: mercur
     rarity: 0
-    vendor: stalker
+    vendor: atrium
     verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +20,4 @@ tcp:
   - name: pop3pw
     type: regex
     regex:
-    - ^200 CommuniGate Pro PWD Server (\d[-.\w]+) ready <
+    - ^200 MERCUR Password service for Windows NT ready\r\n

@@ -1,14 +1,13 @@
 id: ftp-proxy
 info:
-  name: NetApp NetCache ftp proxy
+  name: Squid ftp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
   metadata:
-    hostname: $1
-    product: netcache
+    product: squid
     rarity: 0
-    vendor: netapp
+    vendor: squid-cache
     verified: true
 tcp:
 - name: 'null'
@@ -20,4 +19,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^220 ([-\w_.]+) \(NetCache\) .*\r\n
+    - ^220 server ready - login please\r\n
