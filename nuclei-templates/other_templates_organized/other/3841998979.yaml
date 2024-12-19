@@ -1,16 +1,13 @@
 id: nntp
 info:
-  name: Symantec Enterprise Firewall nntpd
+  name: Leafnode nntpd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    device_type: firewall
-    info: unauthorized
-    product: enterprise_firewall
+    hostname: $2
     rarity: 0
-    vendor: symantec
-    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +18,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^201 NNTP server ready \(no posting\)\r\n502 No permission\r\n
+    - ^200 Leafnode NNTP daemon, version ([\w.]+) at ([-\w_.]+) \r\n

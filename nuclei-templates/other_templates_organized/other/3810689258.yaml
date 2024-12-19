@@ -1,21 +1,21 @@
 id: printer
 info:
-  name: Linux lpd
+  name: SGI IRIX lprsrv
   author: nmap,cn-kali-team
   tags: detect,tech,printer,service
   severity: info
   metadata:
-    info: client IP must resolve
-    operating_system: Linux
-    rarity: 0
+    operating_system: IRIX
+    rarity: 6
 tcp:
-- name: 'null'
+- name: lpdstring
   inputs:
-  - data: ''
+  - data: \x01default\n
   host:
   - '{{Hostname}}'
+  port: 515,2947,3333,32211,19350
   extractors:
   - name: printer
     type: regex
     regex:
-    - '^lpd: Host name for your address \(\d+\.\d+\.\d+\.\d+\) unknown\n$'
+    - '^[-.\w]+: lpsched: unknown printer\n$'

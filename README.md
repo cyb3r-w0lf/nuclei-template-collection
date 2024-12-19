@@ -20,51 +20,86 @@
 | CVE-2016 | 257 |
 | CVE-2017 | 410 |
 | CVE-2018 | 524 |
-| CVE-2019 | 761 |
-| CVE-2020 | 1096 |
+| CVE-2019 | 762 |
+| CVE-2020 | 1097 |
 | CVE-2021 | 2205 |
-| CVE-2022 | 2965 |
-| CVE-2023 | 5143 |
-| CVE-2024 | 7640 |
-| Other | 27227 |
+| CVE-2022 | 2962 |
+| CVE-2023 | 5140 |
+| CVE-2024 | 7664 |
+| Other | 27258 |
 ## Quantity changes in recent days
-|2024-12-12 | 2024-12-13 | 2024-12-14 | 2024-12-15 | 2024-12-16 | 2024-12-17 | 2024-12-18|
+|2024-12-13 | 2024-12-14 | 2024-12-15 | 2024-12-16 | 2024-12-17 | 2024-12-18 | 2024-12-19|
 |--- | ------ | ------ | ------ | ------ | ------ | ---|
-|49498 | 49642 | 49883 | 49864 | 49966 | 49970 | 50008|
+|49642 | 49883 | 49864 | 49966 | 49970 | 50008 | 50059|
 ## Recently added files
 | templates name | 
 | --- |
-| CVE-2024-8326.yaml |
-| CVE-2024-12220.yaml |
-| CVE-2024-12024.yaml |
-| CVE-2024-11294.yaml |
-| CVE-2024-11900.yaml |
-| CVE-2024-12601.yaml |
-| CVE-2024-12127.yaml |
-| CVE-2024-11902.yaml |
-| CVE-2024-11280.yaml |
-| CVE-2024-12239.yaml |
-| CVE-2024-10356.yaml |
-| CVE-2024-9624.yaml |
-| CVE-2024-12395.yaml |
-| CVE-2024-12219.yaml |
-| CVE-2024-12443.yaml |
-| CVE-2024-12469.yaml |
-| CVE-2024-11906.yaml |
-| CVE-2024-24116.yaml |
-| CVE-2024-11905.yaml |
-| CVE-2024-9654.yaml |
-| CVE-2024-12293.yaml |
-| sikshya.yaml |
-| 258493409.yaml |
-| 3703076743.yaml |
-| support-x.yaml |
-| slope-widgets.yaml |
-| wc-sms.yaml |
-| woo-additional-fees-on-checkout-wordpress.yaml |
-| portfolio-pro.yaml |
-| tpg-get-posts.yaml |
-| 2986808626.yaml |
-| stop-registration-spam.yaml |
-| 2063348670.yaml |
-| wp-base-booking-of-appointments-services-and-events.yaml |
+| CVE-2024-12250.yaml |
+| CVE-2024-12513.yaml |
+| CVE-2024-11748.yaml |
+| CVE-2024-11912.yaml |
+| CVE-2024-12449.yaml |
+| CVE-2024-11291.yaml |
+| CVE-2024-11926.yaml |
+| CVE-2024-12025.yaml |
+| CVE-2024-12259.yaml |
+| CVE-2024-12432.yaml |
+| CVE-2024-12596.yaml |
+| CVE-2024-11881.yaml |
+| CVE-2024-11254.yaml |
+| CVE-2024-12061.yaml |
+| CVE-2024-12287.yaml |
+| CVE-2024-11295.yaml |
+| CVE-2024-11439.yaml |
+| CVE-2024-12500.yaml |
+| CVE-2024-12454.yaml |
+| CVE-2024-12340.yaml |
+| CVE-2024-12554.yaml |
+| biagiotti-membership.yaml |
+| scheduled-vulnscan-disabled.yaml |
+| password-policy-num-unconfigured.yaml |
+| 518361276.yaml |
+| log-duration-disabled.yaml |
+| security-notification-disabled.yaml |
+| 1650962111.yaml |
+| 2076818617.yaml |
+| mysql-audit-disabled.yaml |
+| password-policy-lowercase-unconfigured.yaml |
+| log-connections-disabled.yaml |
+| unrestricted-ssh-access.yaml |
+| multi-region-logging-disabled.yaml |
+| os-patches-outdated.yaml |
+| postgresql-audit-disabled.yaml |
+| animation-addons-for-elementor.yaml |
+| encryption-intransit-disabled.yaml |
+| scancircle.yaml |
+| agency-toolkit.yaml |
+| collapsing-categories.yaml |
+| password-policy-expiration-unconfigured.yaml |
+| 2211225533.yaml |
+| 3997275162.yaml |
+| unattached-disk-encryption-disabled.yaml |
+| password-policy-reuse-enabled.yaml |
+| vpc-flow-disabled.yaml |
+| unattached-vminstance-encryption-disabled.yaml |
+| custom-ram-policy-admin-priv.yaml |
+| video-share-vod.yaml |
+| password-policy-symbol-unconfigured.yaml |
+| rds-audit-disabled.yaml |
+| mfa-console-password-disabled.yaml |
+| max-password-retry-disabled.yaml |
+| unrestricted-rdp-access.yaml |
+| philantro.yaml |
+| taeggie-feed.yaml |
+| transparent-encryption-disabled.yaml |
+| accept-authorize-net-payments-using-contact-form-7.yaml |
+| password-policy-length-unconfigured.yaml |
+| mssql-audit-disabled.yaml |
+| password-policy-uppercase-unconfigured.yaml |
+| lanling-oa-thirdImSyncForKKWebService-fileread.yaml |
+| 756363317.yaml |
+| 3764991913.yaml |
+| easy-waveform-player.yaml |
+| aliyun-code-env.yaml |
+| log-disconnections-disabled.yaml |
+| security-plan-disabled.yaml |

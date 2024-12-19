@@ -5,7 +5,7 @@ info:
   tags: detect,tech,shell,service
   severity: info
   metadata:
-    info: Kerberos disabled
+    info: Kerberos broken
     operating_system: HP-UX
     rarity: 0
 tcp:
@@ -18,4 +18,4 @@ tcp:
   - name: shell
     type: regex
     regex:
-    - '^\x01remshd: Kerberos Authentication not enabled\.\n'
+    - '^\x01remshd: Error! Kerberos authentication failed'
