@@ -21,85 +21,54 @@
 | CVE-2017 | 410 |
 | CVE-2018 | 524 |
 | CVE-2019 | 762 |
-| CVE-2020 | 1097 |
-| CVE-2021 | 2205 |
+| CVE-2020 | 1095 |
+| CVE-2021 | 2203 |
 | CVE-2022 | 2962 |
-| CVE-2023 | 5140 |
-| CVE-2024 | 7664 |
-| Other | 27258 |
+| CVE-2023 | 5143 |
+| CVE-2024 | 7682 |
+| Other | 27275 |
 ## Quantity changes in recent days
-|2024-12-13 | 2024-12-14 | 2024-12-15 | 2024-12-16 | 2024-12-17 | 2024-12-18 | 2024-12-19|
+|2024-12-14 | 2024-12-15 | 2024-12-16 | 2024-12-17 | 2024-12-18 | 2024-12-19 | 2024-12-20|
 |--- | ------ | ------ | ------ | ------ | ------ | ---|
-|49642 | 49883 | 49864 | 49966 | 49970 | 50008 | 50059|
+|49883 | 49864 | 49966 | 49970 | 50008 | 50059 | 50093|
 ## Recently added files
 | templates name | 
 | --- |
-| CVE-2024-12250.yaml |
-| CVE-2024-12513.yaml |
-| CVE-2024-11748.yaml |
-| CVE-2024-11912.yaml |
-| CVE-2024-12449.yaml |
-| CVE-2024-11291.yaml |
-| CVE-2024-11926.yaml |
-| CVE-2024-12025.yaml |
-| CVE-2024-12259.yaml |
-| CVE-2024-12432.yaml |
-| CVE-2024-12596.yaml |
-| CVE-2024-11881.yaml |
-| CVE-2024-11254.yaml |
-| CVE-2024-12061.yaml |
-| CVE-2024-12287.yaml |
-| CVE-2024-11295.yaml |
-| CVE-2024-11439.yaml |
-| CVE-2024-12500.yaml |
-| CVE-2024-12454.yaml |
-| CVE-2024-12340.yaml |
-| CVE-2024-12554.yaml |
-| biagiotti-membership.yaml |
-| scheduled-vulnscan-disabled.yaml |
-| password-policy-num-unconfigured.yaml |
-| 518361276.yaml |
-| log-duration-disabled.yaml |
-| security-notification-disabled.yaml |
-| 1650962111.yaml |
-| 2076818617.yaml |
-| mysql-audit-disabled.yaml |
-| password-policy-lowercase-unconfigured.yaml |
-| log-connections-disabled.yaml |
-| unrestricted-ssh-access.yaml |
-| multi-region-logging-disabled.yaml |
-| os-patches-outdated.yaml |
-| postgresql-audit-disabled.yaml |
-| animation-addons-for-elementor.yaml |
-| encryption-intransit-disabled.yaml |
-| scancircle.yaml |
-| agency-toolkit.yaml |
-| collapsing-categories.yaml |
-| password-policy-expiration-unconfigured.yaml |
-| 2211225533.yaml |
-| 3997275162.yaml |
-| unattached-disk-encryption-disabled.yaml |
-| password-policy-reuse-enabled.yaml |
-| vpc-flow-disabled.yaml |
-| unattached-vminstance-encryption-disabled.yaml |
-| custom-ram-policy-admin-priv.yaml |
-| video-share-vod.yaml |
-| password-policy-symbol-unconfigured.yaml |
-| rds-audit-disabled.yaml |
-| mfa-console-password-disabled.yaml |
-| max-password-retry-disabled.yaml |
-| unrestricted-rdp-access.yaml |
-| philantro.yaml |
-| taeggie-feed.yaml |
-| transparent-encryption-disabled.yaml |
-| accept-authorize-net-payments-using-contact-form-7.yaml |
-| password-policy-length-unconfigured.yaml |
-| mssql-audit-disabled.yaml |
-| password-policy-uppercase-unconfigured.yaml |
-| lanling-oa-thirdImSyncForKKWebService-fileread.yaml |
-| 756363317.yaml |
-| 3764991913.yaml |
-| easy-waveform-player.yaml |
-| aliyun-code-env.yaml |
-| log-disconnections-disabled.yaml |
-| security-plan-disabled.yaml |
+| CVE-2024-54245.yaml |
+| CVE-2024-11740.yaml |
+| CVE-2024-10548.yaml |
+| CVE-2024-12626.yaml |
+| CVE-2024-54243.yaml |
+| CVE-2024-12121.yaml |
+| CVE-2024-43234.yaml |
+| CVE-2024-54242.yaml |
+| CVE-2024-12560.yaml |
+| CVE-2024-12331.yaml |
+| CVE-2024-54240.yaml |
+| CVE-2024-54244.yaml |
+| CVE-2024-54267.yaml |
+| CVE-2024-11768.yaml |
+| CVE-2024-54261.yaml |
+| CVE-2024-54262.yaml |
+| CVE-2024-11356.yaml |
+| CVE-2024-54268.yaml |
+| grip.yaml |
+| virtual-hdm-for-taxservice-am.yaml |
+| 1014176159.yaml |
+| 1486555649.yaml |
+| one-paze.yaml |
+| easy-replace.yaml |
+| wp-config-exposer.yaml |
+| blaze-online-eparcel-for-woocommerce.yaml |
+| import-export-for-woocommerce.yaml |
+| gaga-lite.yaml |
+| clients.yaml |
+| tourmaster.yaml |
+| 1152085621.yaml |
+| 4102372555.yaml |
+| 2372397425.yaml |
+| 2495453925.yaml |
+| simple-notification.yaml |
+| 3420767611.yaml |
+| echoza.yaml |
+| 3350018653.yaml |

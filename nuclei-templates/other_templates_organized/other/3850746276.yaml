@@ -5,7 +5,7 @@ info:
   tags: detect,tech,sieve,service
   severity: info
   metadata:
-    info: Debian
+    info: Red Hat
     operating_system: Linux
     product: cyrus_imap_server
     rarity: 0
@@ -22,4 +22,4 @@ tcp:
   - name: sieve
     type: regex
     regex:
-    - ^\"IMPLEMENTATION\" \"Cyrus timsieved v([\w._-]+-Debian[- ][\w._+-]+)\"\r\n
+    - ^\"IMPLEMENTATION\" \"Cyrus timsieved v([\w._-]+-Red Hat[- ][\w._+-]+)\"\r\n

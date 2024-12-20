@@ -1,16 +1,12 @@
 id: vnc
 info:
-  name: RealVNC Enterprise
+  name: ATEN KVM-over-IP VNC
   author: nmap,cn-kali-team
   tags: detect,tech,vnc,service
   severity: info
   metadata:
-    info: protocol 5.0
-    product: realvnc
+    device_type: remote management
     rarity: 0
-    vendor: realvnc
-    verified: true
-    version: 5.3 or later
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +17,4 @@ tcp:
   - name: vnc
     type: regex
     regex:
-    - ^RFB 005\.000\n
+    - ^RFB 009\.123\n

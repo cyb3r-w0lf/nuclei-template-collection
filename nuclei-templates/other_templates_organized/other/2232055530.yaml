@@ -1,12 +1,13 @@
 id: pop3pw
 info:
-  name: Qualcomm poppassd
+  name: poppassd
   author: nmap,cn-kali-team
   tags: detect,tech,pop3pw,service
   severity: info
   metadata:
-    info: Maximum users connected
+    hostname: $1
     rarity: 0
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +18,4 @@ tcp:
   - name: pop3pw
     type: regex
     regex:
-    - ^550 Login failed - already \d+/\d+ users connected sorry \(use G_CON_PERIP_EXCEPT to bypass\) \(IP=[\d.]+\)\r\n
+    - '^200 ([-._\w]+) poppassd v?([-._\w]+) '
