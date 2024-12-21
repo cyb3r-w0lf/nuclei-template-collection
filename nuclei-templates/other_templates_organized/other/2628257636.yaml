@@ -1,15 +1,11 @@
 id: vnc
 info:
-  name: Microsoft Virtual Server remote control
+  name: BRemote VNC
   author: nmap,cn-kali-team
   tags: detect,tech,vnc,service
   severity: info
   metadata:
-    operating_system: Windows
-    product: virtual_server
     rarity: 0
-    vendor: microsoft
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +16,4 @@ tcp:
   - name: vnc
     type: regex
     regex:
-    - ^RFB 103\.006\n
+    - ^RFB 240\.6\n\0\x02$

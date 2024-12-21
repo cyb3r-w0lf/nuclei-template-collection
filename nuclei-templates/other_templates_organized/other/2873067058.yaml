@@ -1,22 +1,23 @@
 id: smtp-proxy
 info:
-  name: SonicWALL Email Security Appliance smtp proxy
+  name: XMail smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp-proxy,service
   severity: info
   metadata:
-    device_type: proxy server
-    hostname: $1
-    rarity: 8
+    info: 'IBM Lotus Protector; time zone: $1'
+    product: lotus_protector_for_mail_security
+    rarity: 0
+    vendor: ibm
+    verified: true
 tcp:
-- name: hello
+- name: 'null'
   inputs:
-  - data: EHLO\r\n
+  - data: ''
   host:
   - '{{Hostname}}'
-  port: 25,587,3025
   extractors:
   - name: smtp-proxy
     type: regex
     regex:
-    - ^220 ([\w._-]+) ESMTP [\w._-]+\r\n501 5\.5\.2 HELO requires domain address\r\n
+    - ^220 XMail ESMTP service ready; [SMTWF][uoehra][neduit], \d\d [JFMASOND][aepueco][nbrylgptvc] \d\d\d\d \d\d:\d\d:\d\d ([-+]\d\d\d\d)\r\n

@@ -1,10 +1,11 @@
 id: login
 info:
-  name: OpenBSD or Solaris rlogind
+  name: Ataman ATRLS rlogind
   author: nmap,cn-kali-team
   tags: detect,tech,login,service
   severity: info
   metadata:
+    operating_system: Windows
     rarity: 0
 tcp:
 - name: 'null'
@@ -16,4 +17,4 @@ tcp:
   - name: login
     type: regex
     regex:
-    - '^\x01rlogind: Permission denied\.\r\n'
+    - ^A connection was attempted on an illegal port\.\r\n

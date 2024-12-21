@@ -1,15 +1,15 @@
-id: i-plant-a-tree-f0ef914a2b1a1c5ea05a62accc9a7947
+id: i-plant-a-tree-9037d2f782aa39afc63ea01e1e11265d
 
 info:
   name: >
-    I Plant A Tree <= 1.7.3 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    I Plant A Tree <= 1.7.3 - Cross-Site Request Forgery to Stored Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c9d82a7e-abf0-4698-898d-4bbd79d36321?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a0cd4441-7e25-46dd-82ff-91d10b8eacd8?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/i-plant-a-tree/"
     google-query: inurl:"/wp-content/plugins/i-plant-a-tree/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,i-plant-a-tree,low
+  tags: cve,wordpress,wp-plugin,i-plant-a-tree,medium
 
 http:
   - method: GET

@@ -1,16 +1,15 @@
 id: imap
 info:
-  name: Novell NetMail imapd
+  name: Lotus Domino imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    hostname: $1
-    operating_system: Unix
-    product: netmail
+    product: lotus_domino
     rarity: 0
-    vendor: novell
+    vendor: ibm
     verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +20,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - '^\* OK ([-.+\w]+) NetMail IMAP4 Agent server ready '
+    - ^\* OK Domino IMAP4 Server Build V([\w_]+ Beta \w+) ready .*\r\n

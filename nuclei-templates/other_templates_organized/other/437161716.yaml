@@ -1,15 +1,12 @@
 id: ftp-proxy
 info:
-  name: McAfee Web Gateway ftp proxy
+  name: JanaServer ftp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
   metadata:
-    product: web_gateway
+    operating_system: Windows
     rarity: 0
-    vendor: mcafee
-    verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +17,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^220 McAfee Web Gateway ([\d.]+ (?:- )?build:? \d+)\r\n
+    - ^220 FTP Gateway at Jana Server ready\r\n
