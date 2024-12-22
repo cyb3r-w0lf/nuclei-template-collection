@@ -1,13 +1,12 @@
 id: pop3-proxy
 info:
-  name: Trend Micro IMSS virus scanning POP3 proxy
+  name: O3SIS UMA pop3 proxy
   author: nmap,cn-kali-team
   tags: detect,tech,pop3-proxy,service
   severity: info
   metadata:
-    hostname: $1
-    operating_system: Windows
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +17,4 @@ tcp:
   - name: pop3-proxy
     type: regex
     regex:
-    - ^\+OK TrendMicro IMSS POP3 Proxy at ([\w._-]+)\r\n
+    - ^\+OK O3SIS UMA Proxy POP3 Server ([\w._-]+)\r\n

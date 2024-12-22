@@ -1,11 +1,10 @@
 id: adobe-crossdomain
 info:
-  name: Adobe cross-domain policy
+  name: Facebook cross-domain policy
   author: nmap,cn-kali-team
   tags: detect,tech,adobe-crossdomain,service
   severity: info
   metadata:
-    info: 'domain: $1; ports: $2'
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +16,4 @@ tcp:
   - name: adobe-crossdomain
     type: regex
     regex:
-    - (?i)^<cross-domain-policy>[ \n]*<allow-access-from domain=\"([^\"]*)\" to-ports=\"([^\"]*)\" */>[ \n]*</cross-domain-policy>$
+    - ^<\?xml version="1\.0"\?>\r\n<!DOCTYPE cross-domain-policy SYSTEM "http://www\.adobe\.com/xml/dtds/cross-domain-policy\.dtd">\r\n<cross-domain-policy>\r\n <site-control permitted-cross-domain-policies="master-only"/>\r\n <allow-access-from domain="www\.facebook\.com" to-ports="443" />\r\n</cross-domain-policy>\r\n

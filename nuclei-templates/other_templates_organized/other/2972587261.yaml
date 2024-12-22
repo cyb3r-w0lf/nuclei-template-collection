@@ -1,23 +1,20 @@
 id: shell
 info:
-  name: Ricoh rshd
+  name: OS/2 rshd
   author: nmap,cn-kali-team
   tags: detect,tech,shell,service
   severity: info
   metadata:
-    device_type: printer
-    fallback:
-    - dnsstatus-request
-    rarity: 7
+    operating_system: OS/2
+    rarity: 0
 tcp:
-- name: dnsstatus-request-tcp
+- name: 'null'
   inputs:
-  - data: \0\x0C\0\0\x10\0\0\0\0\0\0\0\0\0
+  - data: ''
   host:
   - '{{Hostname}}'
-  port: 53,513,514,6050,41523
   extractors:
   - name: shell
     type: regex
     regex:
-    - '^\0rsh: \x10: Command not supported\n'
+    - ^\x01Unauthorized request rejected\.\n

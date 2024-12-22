@@ -1,17 +1,15 @@
 id: http
 info:
-  name: CherryPy
+  name: Catwalk
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
+    device_type: printer
     fallback:
     - get-request
-    info: 'Sick Beard PVR; path: $1'
-    product: cherrypy
+    info: Canon imageRUNNER printer http config
     rarity: 5
-    vendor: cherrypy
-    verified: true
 tcp:
 - name: sipoptions
   inputs:
@@ -23,4 +21,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.1 500 Internal Server Error\r\nContent-Length: \d+\r\nContent-Type: text/plain\r\n\r\nTraceback \(most recent call last\):\n  File \"([\w._/-]+/(?:sickbeard|Sick-Beard)/cherrypy)/wsgiserver/__init__\.py\", line \d+, in communicate\n'
+    - '^HTTP/1\.1 500 Internal Server Error\r\nServer: Catwalk\r\n'
