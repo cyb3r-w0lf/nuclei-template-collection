@@ -1,20 +1,21 @@
 id: daytime
 info:
-  name: HP-UX daytime
+  name: Windows small service daytime
   author: nmap,cn-kali-team
   tags: detect,tech,daytime,service
   severity: info
   metadata:
-    operating_system: HP-UX
-    rarity: 0
+    operating_system: Windows
+    rarity: 3
 tcp:
-- name: 'null'
+- name: help
   inputs:
-  - data: ''
+  - data: help\r\n\r\n
   host:
   - '{{Hostname}}'
+  port: 7,13,37,42
   extractors:
   - name: daytime
     type: regex
     regex:
-    - ^[A-Z][a-z]{2} [A-Z][a-z]{2} +\d{1,2} \d\d:\d\d:\d\d [A-Z]+ 20\d\d\r\n$
+    - ^\d{1,2}:\d\d:\d\d [AP]M \d{1,2}/\d\d/\d{4}\n$
