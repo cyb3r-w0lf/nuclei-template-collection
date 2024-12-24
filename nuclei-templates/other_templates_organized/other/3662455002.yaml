@@ -1,24 +1,23 @@
 id: http-proxy
 info:
-  name: Squid
+  name: iPlanet web proxy
   author: nmap,cn-kali-team
   tags: detect,tech,http-proxy,service
   severity: info
   metadata:
-    product: squid
-    rarity: 8
-    vendor: squid-cache
+    product: iplanet_web_server
+    rarity: 0
+    vendor: sun
     verified: true
     version: $1
 tcp:
-- name: nessus-tpv10
+- name: 'null'
   inputs:
-  - data: < NTP/1.0 >\n
+  - data: ''
   host:
   - '{{Hostname}}'
-  port: '1241'
   extractors:
   - name: http-proxy
     type: regex
     regex:
-    - '^HTTP/1\.0 400 Bad Request\r\nServer: squid/([\w._+-]+)\r\n'
+    - '(?i)^HTTP/1\.[01] \d\d\d .*\r\n(?:Server|Proxy-agent): iPlanet-Web-Proxy-Server/([\d.]+)\r\n'
