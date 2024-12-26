@@ -1,23 +1,20 @@
 id: http
 info:
-  name: Huawei HG8245T modem http config
+  name: Motorola NVG589 DSL modem http admin
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
     device_type: broadband router
-    fallback:
-    - get-request
-    rarity: 5
+    rarity: 0
 tcp:
-- name: sipoptions
+- name: 'null'
   inputs:
-  - data: 'OPTIONS sip:nm SIP/2.0\r\nVia: SIP/2.0/TCP nm;branch=foo\r\nFrom: <sip:nm@nm>;tag=root\r\nTo: <sip:nm2@nm2>\r\nCall-ID: 50000\r\nCSeq: 42 OPTIONS\r\nMax-Forwards: 70\r\nContent-Length: 0\r\nContact: <sip:nm@nm>\r\nAccept: application/sdp\r\n\r\n'
+  - data: ''
   host:
   - '{{Hostname}}'
-  port: 406,5060,8081,31337
   extractors:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.1 501 Unimplimented\r\nConnection: close\r\nContent-Length: 0\r\n\r\n'
+    - '^HTTP/1\.1 408 Request Timeout\r\nContent-Type: text/html\r\nConection: close\r\n\r\n<html>\n<head>\n<title>408 Request Timeout</title>\n</head>\n<body>\n<h1>408 Request Timeout</h1>\n</body>\n</html>\n'

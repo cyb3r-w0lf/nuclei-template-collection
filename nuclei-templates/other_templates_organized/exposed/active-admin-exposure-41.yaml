@@ -2,8 +2,9 @@ id: active-admin-exposure
 
 info:
   name: ActiveAdmin Admin Dasboard Exposure
-  author: pd-team
+  author: pdteam
   severity: info
+  tags: panel,activeadmin
 
 requests:
   - method: GET
@@ -14,4 +15,4 @@ requests:
         words:
           - "active_admin_content"
           - "active_admin-"
-        condition: and 
+        condition: and

@@ -1,14 +1,14 @@
 id: irc
 info:
-  name: BitlBee ircd
+  name: UnrealIRCd
   author: nmap,cn-kali-team
   tags: detect,tech,irc,service
   severity: info
   metadata:
     hostname: $1
-    product: bitlbee
+    product: unrealircd
     rarity: 0
-    vendor: bitlbee
+    vendor: unrealircd
     verified: true
 tcp:
 - name: 'null'
@@ -20,4 +20,4 @@ tcp:
   - name: irc
     type: regex
     regex:
-    - ^:([\w._-]+) NOTICE \* :BitlBee-IRCd initialized, please go on\r\n
+    - ^:([-.\w]+) NOTICE AUTH :\*\*\* Looking up your hostname\.\.\.\r\n

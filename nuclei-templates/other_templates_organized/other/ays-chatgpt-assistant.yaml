@@ -1,15 +1,15 @@
-id: ays-chatgpt-assistant-0cb71518e1c7f88690c4e6d069e7291c
+id: ays-chatgpt-assistant
 
 info:
   name: >
-    AI ChatBot with ChatGPT and Content Generator by AYS <= 2.0.9 - Unauthenticated OpenAI Key Exposure
+    AI ChatBot with ChatGPT and Content Generator by AYS <= 2.0.9 - Missing Authorization
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/eb38024c-880d-4d22-b81a-412d46183e1b?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d970e2fa-ba2f-4c0f-8ff4-10041b9c276e?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/ays-chatgpt-assistant/"
     google-query: inurl:"/wp-content/plugins/ays-chatgpt-assistant/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,ays-chatgpt-assistant,low
+  tags: cve,wordpress,wp-plugin,ays-chatgpt-assistant,high
 
 http:
   - method: GET

@@ -1,15 +1,15 @@
-id: ultimate-classified-listings-b7976bb42b77b19343df13562bd4db03
+id: ultimate-classified-listings
 
 info:
   name: >
-    Ultimate Classified Listings <= 1.4 - Authenticated (Subscriber+) Stored Cross-Site Scripting
+    Ultimate Classified Listings <= 1.3 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c506fd52-ec10-48bd-a221-713d6c5951ce?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2e405c91-e382-45d0-b01f-37774beeaf8b?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/ultimate-classified-listings/"
     google-query: inurl:"/wp-content/plugins/ultimate-classified-listings/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,ultimate-classified-listings,low
+  tags: cve,wordpress,wp-plugin,ultimate-classified-listings,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.4')
+          - compare_versions(version, '<= 1.3')

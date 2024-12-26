@@ -1,14 +1,15 @@
 id: ftp
 info:
-  name: Check Point Firewall-1 ftpd
+  name: Cerberus FTP Server
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: firewall
-    product: firewall-1
+    info: Home Edition
+    operating_system: Windows
+    product: ftp_server
     rarity: 0
-    vendor: checkpoint
+    vendor: cerberusftp
     verified: true
 tcp:
 - name: 'null'
@@ -20,4 +21,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - (?i)^220.*Check Point FireWall-1 Secure FTP server running on
+    - ^220-Cerberus FTP Server - Home Edition\r\n220-This is the UNLICENSED Home Edition and may be used for home, personal use only\r\n220-Welcome to Cerberus FTP Server\r\n220 Created by Cerberus, LLC\r\n

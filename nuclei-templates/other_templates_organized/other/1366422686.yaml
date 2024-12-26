@@ -1,14 +1,13 @@
 id: pop3-proxy
 info:
-  name: AnalogX POP3 proxy
+  name: Trend Micro IMSS virus scanning POP3 proxy
   author: nmap,cn-kali-team
   tags: detect,tech,pop3-proxy,service
   severity: info
   metadata:
-    product: proxy
+    hostname: $2
+    operating_system: Windows
     rarity: 0
-    vendor: analogx
-    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -20,4 +19,4 @@ tcp:
   - name: pop3-proxy
     type: regex
     regex:
-    - ^\+OK POP3 AnalogX Proxy (\d[-.\w]+) \(Release\) ready\.\n$
+    - ^\+OK TrendMicro IMSS (\d[-.\w ]+) POP3 Proxy at ([-.\w]+)\r\n

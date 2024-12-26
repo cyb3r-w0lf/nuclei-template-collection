@@ -1,11 +1,10 @@
 id: ldap
 info:
-  name: TLS required
+  name: Cisco LDAP server
   author: nmap,cn-kali-team
   tags: detect,tech,ldap,service
   severity: info
   metadata:
-    info: TLS required
     rarity: 6
 tcp:
 - name: ldapbind-req
@@ -18,4 +17,4 @@ tcp:
   - name: ldap
     type: regex
     regex:
-    - (?i)^0.\x02.*TLS confidentiality required
+    - ^0\x0c\x02\x01\x01a\x07\n\x011\x04\0\x04\0$
