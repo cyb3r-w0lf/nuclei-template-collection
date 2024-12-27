@@ -1,13 +1,15 @@
 id: nntp
 info:
-  name: Microsoft NNTP Service
+  name: INN NNTPd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    info: refused
-    operating_system: Windows
+    info: broken
+    product: inn
     rarity: 0
+    vendor: isc
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +20,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^502 Connection refused\r\n
+    - '^nnrpd: invalid option -- S\nUsage error\.\n'

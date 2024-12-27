@@ -5,9 +5,8 @@ info:
   tags: detect,tech,ntp,service
   severity: info
   metadata:
-    info: secondary server; unsynchronized
     rarity: 5
-    version: v4
+    version: v3
 tcp:
 - name: ntprequest
   inputs:
@@ -19,4 +18,4 @@ tcp:
   - name: ntp
     type: regex
     regex:
-    - (?i)^\xe4[\x01-\x0f]..............................................$
+    - (?i)^\x1c[\x01-\x0f]..............................................$

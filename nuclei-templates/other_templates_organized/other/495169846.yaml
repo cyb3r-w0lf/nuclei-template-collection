@@ -5,9 +5,9 @@ info:
   tags: detect,tech,mysql,service
   severity: info
   metadata:
-    product: mariadb
+    product: mysql
     rarity: 0
-    vendor: mariadb
+    vendor: mysql
     verified: true
     version: $1
 tcp:
@@ -20,4 +20,4 @@ tcp:
   - name: mysql
     type: regex
     regex:
-    - (?i)^.\0\0\0\x0a(5\.[-_~.+:\w]+MariaDB-[-_~.+:\w]+)\0
+    - (?i)^.\0\0\0\x0a(6\.[-_~.+\w]+)\0...\0
