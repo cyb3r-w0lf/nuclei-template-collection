@@ -1,13 +1,12 @@
 id: ftp-proxy
 info:
-  name: Gauntlet FTP proxy
+  name: UserGate ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
   metadata:
-    hostname: $1
+    operating_system: Windows
     rarity: 0
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +17,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^220 ([-.\w]+) FTP proxy \(Version (\d[-.\w]+)\) ready\.\r\n
+    - ^220 Hi! Welcome \w+ UserGate

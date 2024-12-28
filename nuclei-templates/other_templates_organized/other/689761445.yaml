@@ -1,25 +1,23 @@
 id: rtsp
 info:
-  name: Lotus Domino Sametime RTSP
+  name: Helix Mobile Server rtspd
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
   metadata:
     fallback:
     - get-request
-    product: lotus_domino
     rarity: 5
-    vendor: ibm
-    verified: true
+    version: $1
 tcp:
-- name: sipoptions
+- name: rtsprequest
   inputs:
-  - data: 'OPTIONS sip:nm SIP/2.0\r\nVia: SIP/2.0/TCP nm;branch=foo\r\nFrom: <sip:nm@nm>;tag=root\r\nTo: <sip:nm2@nm2>\r\nCall-ID: 50000\r\nCSeq: 42 OPTIONS\r\nMax-Forwards: 70\r\nContent-Length: 0\r\nContact: <sip:nm@nm>\r\nAccept: application/sdp\r\n\r\n'
+  - data: OPTIONS / RTSP/1.0\r\n\r\n
   host:
   - '{{Hostname}}'
-  port: 406,5060,8081,31337
+  port: 80,554,3052,3372,5000,7070,8080,10000
   extractors:
   - name: rtsp
     type: regex
     regex:
-    - '^RTSP/1\.0 405 Method Not Allowed\r\nCSeq: 42\r\n\r\n'
+    - '(?i)^RTSP/1\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?Server: Helix Mobile Server Version ([\w._-]+) \(win32\) \(RealServer compatible\)\r\nPublic: OPTIONS, DESCRIBE, ANNOUNCE, PLAY, PAUSE, SETUP, GET_PARAMETER, SET_PARAMETER, TEARDOWN\r\nTurboPlay: 1\r\nRealChallenge1: [0-9a-f]+\r\nStatsMask: 8\r\n\r\n$'

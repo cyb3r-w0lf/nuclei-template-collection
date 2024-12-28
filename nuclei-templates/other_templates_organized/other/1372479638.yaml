@@ -1,10 +1,11 @@
 id: telnet-proxy
 info:
-  name: Gauntlet telnet proxy
+  name: JanaServer telnet proxy
   author: nmap,cn-kali-team
   tags: detect,tech,telnet-proxy,service
   severity: info
   metadata:
+    info: German
     rarity: 0
 tcp:
 - name: 'null'
@@ -16,4 +17,4 @@ tcp:
   - name: telnet-proxy
     type: regex
     regex:
-    - ^nodnsquery/[\d.]+ is not authorized to use the telnet proxy\r\n
+    - '^Eingabe Servername\[:Port\] : '

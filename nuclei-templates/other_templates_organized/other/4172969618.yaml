@@ -1,16 +1,12 @@
 id: pop3-proxy
 info:
-  name: AVG pop3 proxy
+  name: Spampal pop3 proxy
   author: nmap,cn-kali-team
   tags: detect,tech,pop3-proxy,service
   severity: info
   metadata:
-    info: broken
     operating_system: Windows
-    product: anti-virus
     rarity: 0
-    vendor: avg
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +17,4 @@ tcp:
   - name: pop3-proxy
     type: regex
     regex:
-    - '^-ERR AVG POP3 Proxy Server: Cannot connect to the mail server!\r\n'
+    - ^\+OK POP3 \(Spampal\) server ready \(USER command must include mailserver name\)\r\n

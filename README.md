@@ -23,32 +23,20 @@
 | CVE-2019 | 761 |
 | CVE-2020 | 1097 |
 | CVE-2021 | 2204 |
-| CVE-2022 | 2963 |
-| CVE-2023 | 5143 |
-| CVE-2024 | 7980 |
-| Other | 27510 |
+| CVE-2022 | 2965 |
+| CVE-2023 | 5144 |
+| CVE-2024 | 7986 |
+| Other | 27499 |
 ## Quantity changes in recent days
-|2024-12-21 | 2024-12-22 | 2024-12-23 | 2024-12-24 | 2024-12-25 | 2024-12-26 | 2024-12-27|
+|2024-12-22 | 2024-12-23 | 2024-12-24 | 2024-12-25 | 2024-12-26 | 2024-12-27 | 2024-12-28|
 |--- | ------ | ------ | ------ | ------ | ------ | ---|
-|50490 | 50519 | 50525 | 50558 | 50605 | 50615 | 50629|
+|50519 | 50525 | 50558 | 50605 | 50615 | 50629 | 50627|
 ## Recently added files
 | templates name | 
 | --- |
-| CVE-2024-11972.yaml |
-| CVE-2024-55557.yaml |
-| CVE-2024-42327.yaml |
-| CVE-2024-53376.yaml |
-| 1248645223.yaml |
-| webroot-enumeration.yaml |
-| Swagger.yaml |
-| http-request-smuggling.yaml |
-| 351737917.yaml |
-| 2333942270.yaml |
-| 1138888800.yaml |
-| 3171894034.yaml |
-| 1160329386.yaml |
-| 3134603066.yaml |
-| wp-form-exploit.yaml |
-| dtexploit-authdb-privilege-escalation.yaml |
-| panos-remote-code-execution.yaml |
-| CVE-2023-48788.yaml |
+| 3610859607.yaml |
+| 2525095632.yaml |
+| 2853465355.yaml |
+| 2000167257.yaml |
+| 3448223885.yaml |
+| 4159920440.yaml |

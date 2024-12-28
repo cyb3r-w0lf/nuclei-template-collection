@@ -1,23 +1,28 @@
 id: http
 info:
-  name: Kolibri httpd
+  name: Virata-EmWeb
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    product: kolibri
-    rarity: 0
-    vendor: senkas
+    device_type: printer
+    fallback:
+    - get-request
+    info: HP printer http config
+    product: emweb
+    rarity: 5
+    vendor: virata
     verified: true
-    version: $1
+    version: $SUBST(1,"_",".")
 tcp:
-- name: 'null'
+- name: rtsprequest
   inputs:
-  - data: ''
+  - data: OPTIONS / RTSP/1.0\r\n\r\n
   host:
   - '{{Hostname}}'
+  port: 80,554,3052,3372,5000,7070,8080,10000
   extractors:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.1 400 Bad Request\r\nserver: kolibri-([\w._-]+)\r\ncontent-type: text/plain\r\ncontent-length: 11\r\n\r\nBad Request$'
+    - '^HTTP/1\.1 400 Bad Request\r\nServer: Virata-EmWeb/R([\d_]+)\r\nContent-Length: 0\r\n\r\n400 Bad Request\r\n$'

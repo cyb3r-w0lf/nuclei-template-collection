@@ -8,15 +8,14 @@ info:
   reference: https://example-reference-link
 
 flow: |
-  dns("fetch-ns");
+  dns(1);
   template["nameservers"].forEach(nameserver => {
     set("nameserver",nameserver);
-    dns("probe-ns");
+    dns(2);
   });
-
+  
 dns:
-  - id: "fetch-ns"
-    name: "{{FQDN}}"
+  - name: "{{FQDN}}"
     type: NS
     matchers:
       - type: word
@@ -30,8 +29,7 @@ dns:
         regex:
           - "IN\tNS\t(.+)"
 
-  - id: "probe-ns"
-    name: "{{nameserver}}"
+  - name: "{{nameserver}}"
     type: A
     class: inet
     retries: 3
