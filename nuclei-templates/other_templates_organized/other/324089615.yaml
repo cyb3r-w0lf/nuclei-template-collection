@@ -1,14 +1,13 @@
 id: pop3-proxy
 info:
-  name: Zarafa pop3 proxy
+  name: Symantec PGP Universal Server pop3 proxy
   author: nmap,cn-kali-team
   tags: detect,tech,pop3-proxy,service
   severity: info
   metadata:
-    operating_system: Unix
-    product: zarafa
+    product: pgp_universal_server
     rarity: 0
-    vendor: zarafa
+    vendor: symantec
     verified: true
 tcp:
 - name: 'null'
@@ -20,4 +19,4 @@ tcp:
   - name: pop3-proxy
     type: regex
     regex:
-    - ^\+OK Zarafa POP3 gateway ready\r\n
+    - ^-ERR PGP Universal no pop3 service here\r\n
