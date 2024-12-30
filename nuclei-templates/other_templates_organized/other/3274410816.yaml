@@ -1,12 +1,13 @@
 id: nntp
 info:
-  name: Newscache nntp cache
+  name: Leafnode nntpd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
+    hostname: $1
+    info: misconfigured
     rarity: 0
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +18,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 NewsCache ([-\w_.]+), accepting NNRP commands\r\n
+    - ^\nLeafnode must have a fully-qualified and globally unique domain name,\nnot just \"([-\w_.]+)\"\.\n

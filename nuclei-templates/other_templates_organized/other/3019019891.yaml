@@ -1,14 +1,13 @@
 id: irc
 info:
-  name: UnrealIRCd
+  name: Hybrid ircd
   author: nmap,cn-kali-team
   tags: detect,tech,irc,service
   severity: info
   metadata:
-    hostname: $1
-    product: unrealircd
+    product: ircd-hybrid
     rarity: 0
-    vendor: unrealircd
+    vendor: ircd-hybrid
     verified: true
 tcp:
 - name: 'null'
@@ -20,4 +19,4 @@ tcp:
   - name: irc
     type: regex
     regex:
-    - ^:([-.\w]+) NOTICE AUTH :\*\*\* Looking up your hostname\.\.\.\r\n
+    - ^NOTICE AUTH :\*\*\* Looking up your hostname\.\.\.\r\nNOTICE AUTH :\*\*\* Checking Ident\r\nNOTICE AUTH :\*\*\* Found your hostname\r\nNOTICE AUTH :\*\*\* Got Ident response\r\n

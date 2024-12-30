@@ -1,12 +1,11 @@
 id: backdoor
 info:
-  name: Linux.Flooder.SS C&C server
+  name: Subseven backdoor
   author: nmap,cn-kali-team
   tags: detect,tech,backdoor,service
   severity: info
   metadata:
-    info: '**MALWARE**'
-    operating_system: Linux
+    info: '**BACKDOOR**'
     rarity: 0
 tcp:
 - name: 'null'
@@ -18,4 +17,4 @@ tcp:
   - name: backdoor
     type: regex
     regex:
-    - ^!\* LOLNOGTFO\nDUP\n
+    - ^\r\n\[RPL\]002\r\n$
