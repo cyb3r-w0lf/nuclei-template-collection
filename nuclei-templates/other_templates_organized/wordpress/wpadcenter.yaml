@@ -1,15 +1,15 @@
-id: wpadcenter-dc9e3370282abbe636abfc9ecfc44040
+id: wpadcenter
 
 info:
   name: >
-    WP AdCenter – Ad Manager & Adsense Ads <= 2.5.7 - Authenticated (Contributor+) Stored Cross-Site Scripting via wpadcenter_ad Shortcode
+    WP AdCenter – Ad Manager & Adsense Ads <= 2.5.6 - Authenticated (Contributor+) Stored Cross-Site Scripting via ad_alignment Attribute
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0597a63d-2627-477f-874a-c35b6df7afd5?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ac7f95c7-2159-4327-ba09-da7721f1312e?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.5.7')
+          - compare_versions(version, '<= 2.5.6')
