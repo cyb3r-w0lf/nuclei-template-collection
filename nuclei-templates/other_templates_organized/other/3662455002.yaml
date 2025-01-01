@@ -1,27 +1,24 @@
 id: http-proxy
 info:
-  name: Palo Alto PanWeb httpd
+  name: Squid
   author: nmap,cn-kali-team
   tags: detect,tech,http-proxy,service
   severity: info
   metadata:
-    device_type: proxy server
-    fallback:
-    - get-request
-    product: panweb
-    rarity: 5
-    vendor: paloaltonetworks
+    product: squid
+    rarity: 8
+    vendor: squid-cache
     verified: true
     version: $1
 tcp:
-- name: rtsprequest
+- name: nessus-tpv10
   inputs:
-  - data: OPTIONS / RTSP/1.0\r\n\r\n
+  - data: < NTP/1.0 >\n
   host:
   - '{{Hostname}}'
-  port: 80,554,3052,3372,5000,7070,8080,10000
+  port: '1241'
   extractors:
   - name: http-proxy
     type: regex
     regex:
-    - '(?i)^RTSP/1\.0 400 Bad Request\r\nServer: PanWeb Server/([\w._-]+)\r\n(?:[^\r\n]+\r\n)*?Keep-Alive: timeout=60, max=2000\r\nContent-Type: text/html\r\nContent-length: 130\r\n\r\n<HTML><HEAD><TITLE>Document Error: Bad Request</TITLE>'
+    - '^HTTP/1\.0 400 Bad Request\r\nServer: squid/([\w._+-]+)\r\n'

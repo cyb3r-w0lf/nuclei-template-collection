@@ -1,16 +1,12 @@
 id: pop3
 info:
-  name: UW Imap pop3d
+  name: SocketMail pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    hostname: $1
-    product: imap_toolkit
     rarity: 0
-    vendor: uw
-    verified: true
-    version: $2
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +17,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK POP3 ([-.\w]+) v?(200\d\w?\.[-.\w]+) server ready\r\n
+    - ^\+OK SocketMail v ([-\w_.]+) SocketMail POP3 Server Ready\r\n

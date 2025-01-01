@@ -1,4 +1,5 @@
 id: exposed-nomad
+
 info:
   name: Nomad - Exposed Jobs
   author: pdteam
@@ -10,11 +11,15 @@ info:
     cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N
     cvss-score: 5.3
     cwe-id: CWE-200
-  tags: nomad,devops,hashicorp,panel
-requests:
+  metadata:
+    max-request: 1
+  tags: nomad,devops,hashicorp,panel,misconfig
+
+http:
   - method: GET
     path:
       - "{{BaseURL}}/ui/jobs"
+
     matchers-condition: and
     matchers:
       - type: word
@@ -22,12 +27,14 @@ requests:
           - "Nomad"
           - "nomad-ui"
         condition: and
+
       - type: word
         words:
           - "text/html"
         part: header
+
       - type: status
         status:
           - 200
 
-# Enhanced by mp on 2022/07/15
+# digest: 4a0a00473045022100f321f1db445891677963545c9ef0eb06ce945e3a271fb432686c58229980342f02207cf615ed458a900e85da05f028ef44f6c3762efd742789bb43b27fe71c019a7a:922c64590222798bb761d5b6d8e72950
