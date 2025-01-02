@@ -1,15 +1,12 @@
 id: telnet
 info:
-  name: Actiontec DSL router
+  name: Reincarna/Linux.Wifatch virus
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: router
-    product: busybox
+    info: '**MALWARE**'
     rarity: 0
-    vendor: busybox
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +17,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\xff\xfd\x01\xff\xfd!\xff\xfb\x01\xff\xfb\x03\r\nBusyBox on dslmodem login: '
+    - ^\nREINCARNA / Linux\.Wifatch\n\nYour device has been infected by REINCARNA / Linux\.Wifatch\.\n\n

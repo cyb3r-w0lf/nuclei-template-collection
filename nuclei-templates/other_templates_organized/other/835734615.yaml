@@ -1,15 +1,12 @@
 id: smtp-proxy
 info:
-  name: XMail smtpd
+  name: GData AntiVirenKit MailGateway smtp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,smtp-proxy,service
   severity: info
   metadata:
-    info: 'IBM Lotus Protector; time zone: $1'
-    product: lotus_protector_for_mail_security
+    hostname: $1
     rarity: 0
-    vendor: ibm
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +17,4 @@ tcp:
   - name: smtp-proxy
     type: regex
     regex:
-    - ^220 XMail ESMTP service ready; [SMTWF][uoehra][neduit], \d\d [JFMASOND][aepueco][nbrylgptvc] \d\d\d\d \d\d:\d\d:\d\d ([-+]\d\d\d\d)\r\n
+    - ^220 ([\w._-]+) AVKSMTP Server\r\n

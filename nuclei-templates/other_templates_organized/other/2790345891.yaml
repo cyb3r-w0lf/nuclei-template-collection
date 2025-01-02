@@ -1,14 +1,16 @@
 id: imap
 info:
-  name: SCO imapd
+  name: FirstClass imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    hostname: $1
-    operating_system: SCO UNIX
+    hostname: $2
+    product: firstclass
     rarity: 0
-    version: $2
+    vendor: opentext
+    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +21,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK ([-\w_.]+) IMAP4 Service ([\d.()]+) at .*\r\n
+    - ^\* OK FirstClass IMAP4rev1 server v([\d.]+) at ([-\w_.]+) ready\r\n

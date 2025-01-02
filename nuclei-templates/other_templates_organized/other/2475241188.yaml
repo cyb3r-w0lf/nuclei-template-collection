@@ -1,11 +1,10 @@
 id: honeypot
 info:
-  name: Whiz Kid Technomagic Imaginary telnet honeypot
+  name: Network Flight Recorder BackOfficer Friendly telnet honeypot
   author: nmap,cn-kali-team
   tags: detect,tech,honeypot,service
   severity: info
   metadata:
-    operating_system: Windows
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +16,4 @@ tcp:
   - name: honeypot
     type: regex
     regex:
-    - '^\r\n[-\w_.]+ [\d.]+ - Unauthorized access \x07prohibited under penalty of law\.\r\n\r\nlogin: \xff\xfc\x01'
+    - '^\r\nlogin: \0$'

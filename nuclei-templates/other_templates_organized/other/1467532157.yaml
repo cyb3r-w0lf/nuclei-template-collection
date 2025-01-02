@@ -5,9 +5,7 @@ info:
   tags: detect,tech,pop3pw,service
   severity: info
   metadata:
-    hostname: $1
     rarity: 0
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +16,4 @@ tcp:
   - name: pop3pw
     type: regex
     regex:
-    - '^200 ([-._\w]+) poppassd v?([-._\w]+) '
+    - ^200 hello there, please tell me who you are\r\n
