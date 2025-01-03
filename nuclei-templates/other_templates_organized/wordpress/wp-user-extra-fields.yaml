@@ -1,15 +1,15 @@
-id: wp-user-extra-fields-1b7e978936ffae5eee09198ffcf1e6d4
+id: wp-user-extra-fields-7b3d161465107190630e324bba301995
 
 info:
   name: >
-    WordPress User Extra Fields <= 16.5 - Unauthenticated Arbitrary File Upload
+    WordPress User Extra Fields <= 16.6 - Missing Authorization to Authenticated (Subscriber+) Privilege Escalation
   author: topscoder
-  severity: critical
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6a60e2c3-4597-4b21-ad20-6a00e483fcf1?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a18fa7e6-813d-4b48-bd4e-5232fb8382d1?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-user-extra-fields/"
     google-query: inurl:"/wp-content/plugins/wp-user-extra-fields/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-user-extra-fields,critical
+  tags: cve,wordpress,wp-plugin,wp-user-extra-fields,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 16.5')
+          - compare_versions(version, '<= 16.6')

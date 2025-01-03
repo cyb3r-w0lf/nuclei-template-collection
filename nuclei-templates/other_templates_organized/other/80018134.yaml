@@ -1,6 +1,6 @@
 id: pop3-proxy
 info:
-  name: F-Secure Internet Gateway pop3 proxy
+  name: ISafe pop3 proxy
   author: nmap,cn-kali-team
   tags: detect,tech,pop3-proxy,service
   severity: info
@@ -16,4 +16,4 @@ tcp:
   - name: pop3-proxy
     type: regex
     regex:
-    - ^\+OK F-Secure/fsigk_pop/\d+/[-\w_.]+ starting\.\r\n
+    - ^\+OK \[ISafe POP3 Proxy\] \r\n

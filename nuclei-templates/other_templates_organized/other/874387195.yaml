@@ -1,12 +1,13 @@
 id: smtp-proxy
 info:
-  name: SnertSoft Barricade MX smtp proxy
+  name: McAfee WebShield e1000 smtp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,smtp-proxy,service
   severity: info
   metadata:
-    hostname: $1
+    device_type: security-misc
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +18,4 @@ tcp:
   - name: smtp-proxy
     type: regex
     regex:
-    - '^220-([\w._-]+) ESMTP Welcome to smtpf #\d+ \(\w+\)\r\n220 Copyright 2006, 2011 by SnertSoft\. All rights reserved\.\r\n'
+    - ^220 ([\w._-]+) WebShielde1000/SMTP Ready\.\r\n
