@@ -1,12 +1,14 @@
 id: vnc
 info:
-  name: VNC
+  name: Ultr@VNC
   author: nmap,cn-kali-team
   tags: detect,tech,vnc,service
   severity: info
   metadata:
-    info: unofficial protocol 3.130
+    product: ultravnc
     rarity: 0
+    vendor: ultravnc
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +19,4 @@ tcp:
   - name: vnc
     type: regex
     regex:
-    - ^RFB 003.130\n$
+    - (?i)^.{27}\x16\x20\xe4\xb0\x95\x63\x29\x78\xdb\x6e\x35\x92$

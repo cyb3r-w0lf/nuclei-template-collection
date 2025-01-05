@@ -1,4 +1,4 @@
-id: codeflavors-vimeo-video-post-lite
+id: codeflavors-vimeo-video-post-lite-a596e902eb9da9858c81e56babe93c01
 
 info:
   name: "Vimeotheque <= 2.2.1 - Reflected Cross-Site Scripting via 'view' and 'page'"

@@ -1,14 +1,15 @@
-id: peters-custom-anti-spam-image
+id: peters-custom-anti-spam-image-c4e6a98a28cd167c3560b8421658f891
 
 info:
   name: >
-    Peter’s Custom Anti-Spam <= 3.2.2 - Reflected Cross-Site Scripting
+    Peter’s Custom Anti-Spam <= 3.2.3 - Cross-Site Request Forgery via cas_register_post Function
   author: topscoder
   severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8cea7f17-743a-4dce-bd86-5713ff6d8520?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3c52ca89-4f13-41da-bc10-80d212c6219c?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.2.2')
+          - compare_versions(version, '<= 3.2.3')

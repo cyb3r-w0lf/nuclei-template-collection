@@ -1,14 +1,15 @@
-id: faq-builder-ays
+id: faq-builder-ays-946a1d0bfca4080ecc371fd6428b96d1
 
 info:
   name: >
-    FAQ Builder AYS <= 1.3.5 - Blind SQL Injection
+    FAQ Builder AYS <= 1.7.1 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: critical
+  severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c0a2a379-bd33-4c7d-8b79-e48a2df7e281?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c509345b-441f-474d-ad3a-720801859f86?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/faq-builder-ays/"
     google-query: inurl:"/wp-content/plugins/faq-builder-ays/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,faq-builder-ays,critical
+  tags: cve,wordpress,wp-plugin,faq-builder-ays,medium
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.3.5')
+          - compare_versions(version, '<= 1.7.1')

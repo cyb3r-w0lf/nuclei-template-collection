@@ -1,4 +1,4 @@
-id: smtp-mailing-queue
+id: smtp-mailing-queue-15ed698961200b92fd04c4bfc0e7d42b
 
 info:
   name: "SMTP Mailing Queue <= 1.4.7 - Authenticated (Admin+) Stored Cross-Site Scripting"

@@ -1,14 +1,15 @@
-id: admin-site-enhancements
+id: admin-site-enhancements-7ce7b5fee30c82bebc0bd0014aecc874
 
 info:
   name: >
-    Admin and Site Enhancements (ASE) <= 5.7.1 - Password Protection Mode Security Feature Bypass
+    Admin and Site Enhancements (ASE) <= 7.5.1 - Authenticated Stored Cross-Site Scripting via SVG
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0abad47f-a806-4cdd-a11f-015b997b5e86?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/96e12fa5-eba4-4f69-ae3a-7e460bfa9e5d?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 5.7.1')
+          - compare_versions(version, '<= 7.5.1')

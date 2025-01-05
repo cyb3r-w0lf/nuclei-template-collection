@@ -1,15 +1,15 @@
-id: woo-social-login
+id: woo-social-login-265d0ce1be5a68fefdf97ffcccc112b2
 
 info:
   name: >
-    WooCommerce - Social Login <= 2.6.2 - Unauthenticated PHP Object Injection
+    WooCommerce - Social Login <= 2.7.3 - Missing Authorization to Unauthenticated Privilege Escalation
   author: topscoder
-  severity: critical
+  severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ffd592e6-2ac4-4af4-bfc0-d4f834157d71?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/77ea4ba8-6c13-494a-92e3-12643003635b?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/woo-social-login/"
     google-query: inurl:"/wp-content/plugins/woo-social-login/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,woo-social-login,critical
+  tags: cve,wordpress,wp-plugin,woo-social-login,high
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.6.2')
+          - compare_versions(version, '<= 2.7.3')

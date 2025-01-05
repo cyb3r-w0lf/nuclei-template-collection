@@ -1,17 +1,12 @@
 id: ftp
 info:
-  name: WU-FTPD
+  name: Dell $1 color laser printer ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    hostname: $1
-    operating_system: Unix
-    product: wu_ftpd
+    device_type: printer
     rarity: 0
-    vendor: redhat
-    verified: true
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -22,4 +17,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220-\r\n220 ([-.\w]+) FTP server \(Version ([-.+\w()]+)\) ready\.\r\n$
+    - ^220 Dell ([\w._-]+) Color Laser\r\n

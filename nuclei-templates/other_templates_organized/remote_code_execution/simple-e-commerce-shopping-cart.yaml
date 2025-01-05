@@ -1,14 +1,15 @@
-id: simple-e-commerce-shopping-cart
+id: simple-e-commerce-shopping-cart-25eb00c117ad0f3f64f05ca3b95536bf
 
 info:
   name: >
-    Simple Ecommerce Shopping Cart Plugin- Sell products through Paypal <= 3.1.2 - Cross-Site Request Forgery
+    Simple Ecommerce Shopping Cart Plugin- Sell products through Paypal <= 3.1.2 - Missing Authorization to Authenticated (Subscriber+) Settings Update / Data Access
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bdc946ed-8891-4f97-af7e-2034760eef5b?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1c6a1956-73aa-4ac3-ae1c-ef5f62bad718?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/simple-e-commerce-shopping-cart/"
     google-query: inurl:"/wp-content/plugins/simple-e-commerce-shopping-cart/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,simple-e-commerce-shopping-cart,medium
+  tags: cve,wordpress,wp-plugin,simple-e-commerce-shopping-cart,low
 
 http:
   - method: GET

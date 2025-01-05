@@ -1,15 +1,15 @@
-id: crafthemes-demo-import
+id: crafthemes-demo-import-3d9ed4f73a1e8e89ff28ad42207f57cc
 
 info:
   name: >
-    Crafthemes Demo Import <= 3.1 - Missing Authorization to Arbitrary Plugin Installation
+    Crafthemes Demo Import <= 3.3 - Authenticated (Admin+) Arbitrary File Upload in process_uploaded_files
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0ef8024c-d5e5-4921-a161-01507cb4f2bd?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e44dd0e8-e6e7-4a2d-b9ca-abd1de273092?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/crafthemes-demo-import/"
     google-query: inurl:"/wp-content/plugins/crafthemes-demo-import/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,crafthemes-demo-import,high
+  tags: cve,wordpress,wp-plugin,crafthemes-demo-import,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.1')
+          - compare_versions(version, '<= 3.3')

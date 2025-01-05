@@ -1,15 +1,15 @@
-id: skt-addons-for-elementor
+id: skt-addons-for-elementor-368d3d32c88aa8ae6cb1c0b4e286233a
 
 info:
   name: >
-    SKT Addons for Elementor <= 1.8 - Authenticated (Contributor+) Stored Cross-Site Scripting via Widget Page Title
+    SKT Addons for Elementor <= 2.0 - Authenticated (Contributor+) Stored Cross-Site Scripting via Age Gate and Creative Slider Widgets
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/26c78a0b-63d4-4971-b8d8-a83c975d261b?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/dc8d63ee-4929-4940-bc6a-931524e20272?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.8')
+          - compare_versions(version, '<= 2.0')
