@@ -1,18 +1,15 @@
 id: pop3
 info:
-  name: MDaemon pop3d
+  name: Sun Java System Messaging Multiplexor pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    hostname: $1
-    info: unregistered
-    operating_system: Windows
-    product: mdaemon
+    product: java_system_messaging_server
     rarity: 0
-    vendor: altn
+    vendor: sun
     verified: true
-    version: $2
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -23,4 +20,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK ([-.\w]+) POP3? MDaemon ready using UNREGISTERED SOFTWARE ([\d.]+) <MDAEMON
+    - ^\+OK Messaging Multiplexor \(Sun Java\(tm\) System Messaging Server (\d[-\w_.]+) \(built .*\)\)\r\n

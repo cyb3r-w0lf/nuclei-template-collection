@@ -5,7 +5,7 @@ info:
   tags: detect,tech,distccd,service
   severity: info
   metadata:
-    info: unknown compiler
+    info: $1
     rarity: 8
     version: v1
 tcp:
@@ -19,4 +19,4 @@ tcp:
   - name: distccd
     type: regex
     regex:
-    - ^DONE00000001.*?DOTO00
+    - '^DONE00000001STAT00000000SERR00000000SOUT00000000DOTO.*?GCC: ([^\0]+)'
