@@ -505,3 +505,4 @@ requests:
           - "org\\.hibernate\\.exception\\.SQLGrammarException"
           - "mismatched input '<EOF>'"
           - '<EOF>'
+

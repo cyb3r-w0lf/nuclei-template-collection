@@ -1,12 +1,14 @@
 id: textui
 info:
-  name: Huawei UGW
+  name: Talk2M VPN service management
   author: nmap,cn-kali-team
   tags: detect,tech,textui,service
   severity: info
   metadata:
-    info: 'time zone: $1'
+    product: talk2m
     rarity: 0
+    vendor: ewon
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +19,4 @@ tcp:
   - name: textui
     type: regex
     regex:
-    - ^\+\+\+    UGW-HUAWEI *\d\d\d\d-\d\d-\d\d \d\d:\d\d:\d\d ([A-Z]+)\r\nO&M
+    - ^Welcome to Talk2MVpnService management Interface \r\n$
