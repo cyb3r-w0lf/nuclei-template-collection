@@ -1,15 +1,11 @@
 id: ldap
 info:
-  name: UnboundID LDAP SDK
+  name: Nortel CallPilot LDAP
   author: nmap,cn-kali-team
   tags: detect,tech,ldap,service
   severity: info
   metadata:
-    info: access denied
-    product: ldap-sdk
     rarity: 6
-    vendor: unboundid
-    verified: true
 tcp:
 - name: ldapbind-req
   inputs:
@@ -21,4 +17,4 @@ tcp:
   - name: ldap
     type: regex
     regex:
-    - ^0\x81\xa0\x02\x01\x01a\x81\x9a\n\x011\x04\0\x04\x81\x92The server has been configured to only allow bind operations that result in authenticated connections\.  Anonymous bind operations are not allowed\.
+    - ^0\x1a\x02\x01\x01a\x15\n\x01\0\x04\0\x04\x0eanonymous bind

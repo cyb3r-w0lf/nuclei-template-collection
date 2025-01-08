@@ -1,12 +1,11 @@
 id: finger
 info:
-  name: Cisco fingerd
+  name: Lexmark T642 printer fingerd
   author: nmap,cn-kali-team
   tags: detect,tech,finger,service
   severity: info
   metadata:
-    device_type: router
-    operating_system: IOS
+    device_type: printer
     rarity: 0
 tcp:
 - name: 'null'
@@ -18,4 +17,4 @@ tcp:
   - name: finger
     type: regex
     regex:
-    - \r\n {4}Line {5,8}User {6,8}Host\(s\) {13,18}Idle +Location\r\n
+    - '^\r\nIntegrated port\r\nPrinter Type: Lexmark T642\r\nPrint Job Status:'
