@@ -1,6 +1,6 @@
 id: sip
 info:
-  name: 3CX VoIP PBX
+  name: Asterisk
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
@@ -8,8 +8,11 @@ info:
     device_type: PBX
     fallback:
     - get-request
-    operating_system: Windows
+    product: asterisk
     rarity: 5
+    vendor: digium
+    verified: true
+    version: $1
 tcp:
 - name: sipoptions
   inputs:
@@ -21,4 +24,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?Accept: application/sdp\r\nAccept-Language: en\r\nAllow: INVITE, ACK, CANCEL, OPTIONS, BYE, REGISTER, SUBSCRIBE, NOTIFY, REFER, INFO\r\nSupported: replaces\r\nAllow-Events: presence, message-summary, tunnel-info\r\n'
+    - '(?i)^SIP/2\.0 404 Not Found\r\n(?:[^\r\n]+\r\n)*?Server: Asterisk PBX ([\w._~+-]+)\r\n(?:[^\r\n]+\r\n)*?Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO\r\n'

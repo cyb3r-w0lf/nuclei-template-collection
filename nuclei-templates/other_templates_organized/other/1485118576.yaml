@@ -1,12 +1,14 @@
 id: telnet
 info:
-  name: foobar2000 remote control telnetd
+  name: BusyBox telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    operating_system: Windows
+    product: busybox
     rarity: 0
+    vendor: busybox
+    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -18,4 +20,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - ^\d+\|Connected to foobar2000 Control Server v([\d.]+)
+    - ^\xff\xfd\x01\xff\xfd!\xff\xfb\x01\xff\xfb\x03\r\n\r\nBusyBox v([-\w_.]+) \(

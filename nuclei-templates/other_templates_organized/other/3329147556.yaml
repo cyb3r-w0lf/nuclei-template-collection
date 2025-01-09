@@ -1,13 +1,12 @@
 id: pop3pw
 info:
-  name: poppassd
+  name: ModusMail poppassd
   author: nmap,cn-kali-team
   tags: detect,tech,pop3pw,service
   severity: info
   metadata:
-    hostname: $1
+    operating_system: Windows
     rarity: 0
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +17,4 @@ tcp:
   - name: pop3pw
     type: regex
     regex:
-    - '^200 ([-._\w]+) poppassd v?([-._\w]+) '
+    - ^200 Ok, \"modusMail Mail Management Server ready\" <[\d.]+@\(null\)>\r\n

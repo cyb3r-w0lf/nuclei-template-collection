@@ -1,14 +1,17 @@
 id: domain
 info:
-  name: dnsmasq
+  name: Microsoft DNS
   author: nmap,cn-kali-team
   tags: detect,tech,domain,service
   severity: info
   metadata:
-    product: dnsmasq
+    info: Windows Server 2016
+    operating_system: Windows
+    product: dns
     rarity: 1
-    vendor: thekelleys
+    vendor: microsoft
     verified: true
+    version: $1
 tcp:
 - name: dnsversion-bind-req
   inputs:
@@ -20,4 +23,4 @@ tcp:
   - name: domain
     type: regex
     regex:
-    - \x07version\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03\0\0\0\0\0\x08\x07dnsmasq
+    - (?i)\x07version\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x01.{7}Microsoft DNS (10\.0$)

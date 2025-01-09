@@ -1,14 +1,15 @@
 id: nntp
 info:
-  name: Netwinsite DNEWS
+  name: INN NNTPd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    hostname: $1
-    info: posting OK
+    info: broken
+    product: inn
     rarity: 0
-    version: $2
+    vendor: isc
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +20,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 ([-.\w]+) DNEWS Version *(\d[-.\w]+).*posting OK \r\n
+    - '^nnrpd: invalid option -- S\nUsage error\.\n'
