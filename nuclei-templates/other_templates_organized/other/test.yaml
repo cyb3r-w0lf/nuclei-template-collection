@@ -1,21 +1,17 @@
-id: test
+id: go-integration-test
 
 info:
-  name: test
+  name: Basic Go Integration Test
   author: pdteam
   severity: info
 
-http:
-  - raw:
-      - |
-        GET /api/v1/test?id=123 HTTP/1.1
-        Host: {{Hostname}}
-      - |
-        GET HTTP/1.1
-        Host: {{Hostname}}
-    disable-path-automerge: true
+requests:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+    headers:
+      test: nuclei
     matchers:
-      - type: status
-        status:
-          - 200
-    
+      - type: word
+        words:
+          - "This is test headers matcher text"

@@ -7,11 +7,8 @@ info:
   metadata:
     fallback:
     - get-request
-    product: airtunes
+    operating_system: Mac OS X
     rarity: 5
-    vendor: apple
-    verified: true
-    version: $1
 tcp:
 - name: rtsprequest
   inputs:
@@ -23,4 +20,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '^RTSP/1\.0 200 OK\r\nServer: AirTunes/([\d.]+)\r\nPublic: ANNOUNCE, SETUP, RECORD, PAUSE, FLUSH, TEARDOWN, OPTIONS, GET_PARAMETER, SET_PARAMETER\r\n\r\n'
+    - ^RTSP/1\.0 400 Bad Request\r\n\r\n$

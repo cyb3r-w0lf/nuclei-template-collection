@@ -5,8 +5,9 @@ info:
   tags: detect,tech,distccd,service
   severity: info
   metadata:
-    info: 'broken: compiler $1 doesn''t exist'
+    info: $1
     rarity: 8
+    version: v1
 tcp:
 - name: dist-ccd
   inputs:
@@ -18,4 +19,4 @@ tcp:
   - name: distccd
     type: regex
     regex:
-    - '(?i)^[\w._-]+DONE[\w._-]+ .*ERROR: attempt to use unknown compiler aborted: ([\w._-]+)\n'
+    - '^DONE00000001STAT00000000SERR00000000SOUT00000000DOTO.*?GCC: ([^\0]+)'

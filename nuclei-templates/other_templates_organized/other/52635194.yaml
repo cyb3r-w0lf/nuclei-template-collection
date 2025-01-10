@@ -1,6 +1,6 @@
 id: irc
 info:
-  name: Dancer ircd
+  name: iacd ircd
   author: nmap,cn-kali-team
   tags: detect,tech,irc,service
   severity: info
@@ -16,4 +16,4 @@ tcp:
   - name: irc
     type: regex
     regex:
-    - ^NOTICE AUTH :\*\*\* Looking up your hostname\.\.\.\r\nNOTICE AUTH :\*\*\* Couldn't look up your hostname\r\n
+    - ^PING :42\r\n$

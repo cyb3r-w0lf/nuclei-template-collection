@@ -2,7 +2,7 @@ id:  Upkeep_wordpress
 
 info:
   name: WordPress Plugin Total Upkeep 1.14.9 - Database and Files Backup Download
-  author: medbsq
+  author: nithissh
   severity: high
 #https://www.cvebase.com/cve/2019/16270
 
@@ -26,5 +26,3 @@ requests:
           - 'filepath":"/wp\-content/boldgrid_backup_'
         condition: or
         part: body
-  
-
