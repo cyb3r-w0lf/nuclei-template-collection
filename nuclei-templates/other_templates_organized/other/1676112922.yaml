@@ -1,14 +1,11 @@
 id: nntp
 info:
-  name: Kerio Connect nntpd
+  name: Kerio MailServer nntpd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    product: connect
     rarity: 0
-    vendor: kerio
-    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -20,4 +17,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 Kerio Connect ([\w._-]+) NNTP server ready\r\n
+    - ^200 +Kerio MailServer ([\w._-]+) +NNTP server ready\r\n

@@ -3,9 +3,8 @@ info:
   name: ZooKeeper Unauth Server
   author: pdteam
   severity: high
-  reference:
-    - https://zookeeper.apache.org/security.html
-  tags: network,zookeeper,unauth
+  reference: https://zookeeper.apache.org/security.html
+  tags: network,zookeeper
 network:
   - inputs:
       - data: "envi\r\nquit\r\n"
