@@ -1,15 +1,17 @@
 id: domain
 info:
-  name: Check Point Meta IP ISC BIND
+  name: Microsoft DNS
   author: nmap,cn-kali-team
   tags: detect,tech,domain,service
   severity: info
   metadata:
-    product: bind
+    info: Windows Server 2008 SP2
+    operating_system: Windows
+    product: dns
     rarity: 1
-    vendor: isc
+    vendor: microsoft
     verified: true
-    version: $1 build $2
+    version: $1
 tcp:
 - name: dnsversion-bind-req
   inputs:
@@ -21,4 +23,4 @@ tcp:
   - name: domain
     type: regex
     regex:
-    - n\x04bind\0\0\x10\0\x03\x07VERSION\x04BIND\0\0\x10\0\x03.{7}Meta IP DNS - BIND V([\d.]+)-REL \(Build (\d+)\)
+    - (?i)\x07version\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0[\x01\x03].{7}Microsoft DNS (6\.0\.6002.+)

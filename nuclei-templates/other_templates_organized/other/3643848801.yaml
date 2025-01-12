@@ -1,10 +1,11 @@
 id: imap
 info:
-  name: Binc imapd
+  name: SeattleLab SLMail imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
+    operating_system: Windows
     rarity: 0
 tcp:
 - name: 'null'
@@ -16,4 +17,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK Welcome to Binc IMAP
+    - ^\* OK Welcome to the SLnet IMAP Service\r\n

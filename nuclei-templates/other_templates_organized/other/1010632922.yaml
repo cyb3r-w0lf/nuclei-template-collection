@@ -1,14 +1,12 @@
 id: smtp
 info:
-  name: Microsoft SMTP
+  name: TurboSendmail smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
     hostname: $1
-    operating_system: Windows
     rarity: 0
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +17,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - '^220-([-.+\w]+) Microsoft SMTP MAIL ready at.*Version: ([-\w.]+)\r\n'
+    - ^220[-\s](\S+) \(IntraStore TurboSendmail\) E?SMTP Service ready

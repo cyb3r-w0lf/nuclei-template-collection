@@ -1,13 +1,13 @@
 id: sip
 info:
-  name: Telepathy-SofiaSIP
+  name: MicroSIP sipd
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
   metadata:
     fallback:
     - get-request
-    info: sofia-sip $2
+    operating_system: Windows
     rarity: 5
     version: $1
 tcp:
@@ -21,4 +21,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?User-Agent: Telepathy-SofiaSIP/([\w._-]+) sofia-sip/([\w._-]+)\r\n'
+    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?User-Agent: MicroSIP/([\d.]+)\r\n'
