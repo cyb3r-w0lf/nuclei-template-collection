@@ -20,53 +20,23 @@
 | CVE-2016 | 257 |
 | CVE-2017 | 409 |
 | CVE-2018 | 524 |
-| CVE-2019 | 761 |
-| CVE-2020 | 1096 |
-| CVE-2021 | 2206 |
-| CVE-2022 | 2967 |
-| CVE-2023 | 5149 |
-| CVE-2024 | 8372 |
-| Other | 27696 |
+| CVE-2019 | 762 |
+| CVE-2020 | 1093 |
+| CVE-2021 | 2205 |
+| CVE-2022 | 2965 |
+| CVE-2023 | 5147 |
+| CVE-2024 | 8368 |
+| Other | 27703 |
 ## Quantity changes in recent days
-|2025-01-06 | 2025-01-07 | 2025-01-08 | 2025-01-09 | 2025-01-10 | 2025-01-11 | 2025-01-12|
+|2025-01-07 | 2025-01-08 | 2025-01-09 | 2025-01-10 | 2025-01-11 | 2025-01-12 | 2025-01-13|
 |--- | ------ | ------ | ------ | ------ | ------ | ---|
-|50605 | 50608 | 50789 | 50817 | 51168 | 51184 | 51217|
+|50608 | 50789 | 50817 | 51168 | 51184 | 51217 | 51213|
 ## Recently added files
 | templates name | 
 | --- |
-| unlimited-theme-addons.yaml |
-| 760370456.yaml |
-| clickwhale.yaml |
-| 1628035155.yaml |
-| gatormail-smart-forms.yaml |
-| 658646193.yaml |
-| 46062336.yaml |
-| accordion-slider-lite.yaml |
-| internal-link-shortcode.yaml |
-| grid-accordion-lite.yaml |
-| tcbd-auto-refresher.yaml |
-| 4054726087.yaml |
-| perfect-portal-widgets.yaml |
-| coupon-x-discount-pop-up.yaml |
-| dominion-domain-checker-wpbakery-addon.yaml |
-| 3602355634.yaml |
-| trackserver.yaml |
-| CVE-2024-12404.yaml |
-| CVE-2024-12520.yaml |
-| CVE-2024-11386.yaml |
-| CVE-2024-11915.yaml |
-| CVE-2024-12204.yaml |
-| CVE-2024-11892.yaml |
-| CVE-2024-11874.yaml |
-| CVE-2024-12472.yaml |
-| CVE-2024-12527.yaml |
-| CVE-2024-11758.yaml |
-| CVE-2024-12412.yaml |
-| CVE-2024-11327.yaml |
-| CVE-2024-12116.yaml |
-| CVE-2024-12877.yaml |
-| CVE-2024-12519.yaml |
-| CVE-2024-12505.yaml |
-| CVE-2024-12407.yaml |
-| CVE-2024-12304.yaml |
-| CVE-2024-12627.yaml |
+| 3147919686.yaml |
+| 803986745.yaml |
+| 3580584372.yaml |
+| 1090996290.yaml |
+| 4137703640.yaml |
+| prototest.yaml |

