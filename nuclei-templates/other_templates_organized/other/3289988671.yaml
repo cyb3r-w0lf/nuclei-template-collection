@@ -1,14 +1,14 @@
 id: irc
 info:
-  name: UnrealIRCd
+  name: InspIRCd
   author: nmap,cn-kali-team
   tags: detect,tech,irc,service
   severity: info
   metadata:
-    info: Admin email $1
-    product: unrealircd
+    hostname: $1
+    product: inspircd
     rarity: 0
-    vendor: unrealircd
+    vendor: inspire_ircd
     verified: true
 tcp:
 - name: 'null'
@@ -20,4 +20,4 @@ tcp:
   - name: irc
     type: regex
     regex:
-    - '^ERROR :Closing Link: \[[\d.]+\] \(Throttled: Reconnecting too fast\) -Email (.*) for more information\.'
+    - '^:([-\w_.]+) NOTICE \w+ :\*\*\* .*\r\nERROR :Closing link: \([\w._-]+@[\w._-]+\) \[Z-Lined: Your IP range has been attempting to connect too many times in too short a duration\. Wait a while, and you will be able to connect\.\]\r\n$'

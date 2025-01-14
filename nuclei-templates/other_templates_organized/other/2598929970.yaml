@@ -1,15 +1,16 @@
 id: nntp
 info:
-  name: Kerio Connect nntpd
+  name: Symantec Enterprise Firewall nntpd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    product: connect
+    device_type: firewall
+    info: unauthorized
+    product: enterprise_firewall
     rarity: 0
-    vendor: kerio
+    vendor: symantec
     verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +21,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 Kerio Connect ([\w._-]+) NNTP server ready\r\n
+    - ^201 NNTP server ready \(no posting\)\r\n502 No permission\r\n

@@ -1,15 +1,11 @@
 id: imap
 info:
-  name: Dovecot imapd
+  name: AVM KEN! imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    product: dovecot
     rarity: 0
-    vendor: dovecot
-    verified: true
-    version: 2.0.11
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +16,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK \[CAPABILITY IMAP4rev1 LITERAL\+ SASL-IR LOGIN-REFERRALS ID ENABLE IDLE AUTH=PLAIN AUTH=CRAM-MD5
+    - ^\* OK AVM KEN!4 IMAP Server ready\r\n
