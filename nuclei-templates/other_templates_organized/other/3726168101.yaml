@@ -1,11 +1,10 @@
 id: daytime
 info:
-  name: Microsoft Windows USA daytime
+  name: TrueTime nts100
   author: nmap,cn-kali-team
   tags: detect,tech,daytime,service
   severity: info
   metadata:
-    operating_system: Windows
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +16,4 @@ tcp:
   - name: daytime
     type: regex
     regex:
-    - ^\d+:\d\d:\d\d [AP]M \d+/\d+/(?:19|20)\d\d\n$
+    - ^[A-Z][a-z]{2}, [A-Z][a-z]{2} \d{1,2}, 20\d\d, \d\d:\d\d:\d\d-UTC$

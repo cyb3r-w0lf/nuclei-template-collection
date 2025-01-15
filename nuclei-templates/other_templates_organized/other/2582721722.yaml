@@ -1,19 +1,26 @@
 id: http-proxy
 info:
-  name: unknown transparent proxy
+  name: Microsoft ISA Server http proxy
   author: nmap,cn-kali-team
   tags: detect,tech,http-proxy,service
   severity: info
   metadata:
-    rarity: 0
+    fallback:
+    - get-request
+    operating_system: Windows
+    product: isa_server
+    rarity: 5
+    vendor: microsoft
+    verified: true
 tcp:
-- name: 'null'
+- name: rtsprequest
   inputs:
-  - data: ''
+  - data: OPTIONS / RTSP/1.0\r\n\r\n
   host:
   - '{{Hostname}}'
+  port: 80,554,3052,3372,5000,7070,8080,10000
   extractors:
   - name: http-proxy
     type: regex
     regex:
-    - '^<HEAD><TITLE>Invalid HTTP Request</TITLE></HEAD>\n<BODY BGCOLOR=\"white\" FGCOLOR=\"black\"><H1>Invalid HTTP Request</H1><HR>\n<FONT FACE=\"Helvetica,Arial\"><B>\nDescription: Bad request syntax</B></FONT>\n<HR>\n<!-- default \"Invalid HTTP Request\" response \(400\) -->\n</BODY>\n {400}\0'
+    - ^HTTP/1\.1 400 Bad Request \( The data is invalid\.  \)\r\n
