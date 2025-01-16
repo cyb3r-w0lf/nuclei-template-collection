@@ -17,7 +17,7 @@ info:
 http:
   - raw:
       - |
-        GET /api/imageProxy?url=https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/eb8e32c9393677006c2ea916f2e3010c2bd8e03f/helpers/payloads/retool-xss.svg HTTP/1.1
+        GET /api/imageProxy?url=https://raw.githubusercontent.com/projectdiscovery/nuclei-templates/refs/heads/main/helpers/payloads/retool-xss.svg HTTP/1.1
         Host: {{Hostname}}
 
     matchers-condition: and
@@ -39,4 +39,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100ba07c7c3588fd040369449b1481861063244dd67ad6593b8c5027eda6c065553022100e0ddc7d713fc2ec6f387e8483408a2697510f9023bf23d3ff229fda094b6894a:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100ffe611a8a51600132ff29329ebd8cc8976f60d4f5e2417fd83e7b1c360b29ddc0221008ca6ed892daea66a6726edee134056d427a9758bd1fa6b5f92f1886310e8ab1a:922c64590222798bb761d5b6d8e72950

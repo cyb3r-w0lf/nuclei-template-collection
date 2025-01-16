@@ -1,15 +1,15 @@
-id: shortcode-variables-aa1fb26819ccf3ae3ee0ceeb5685c9ff
+id: shortcode-variables
 
 info:
   name: >
-    Snippet Shortcodes <= 4.1.6 - Authenticated (Subscriber+) Shortcode Deletion
+    Snippet Shortcodes <= 4.1.4 - Cross-Site Request Forgery
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4e6e8f68-6977-478a-b62e-0ec9385eb2af?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/127b20c4-cd7c-4d04-b32f-bcc26beb2c35?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/shortcode-variables/"
     google-query: inurl:"/wp-content/plugins/shortcode-variables/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,shortcode-variables,low
+  tags: cve,wordpress,wp-plugin,shortcode-variables,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.1.6')
+          - compare_versions(version, '<= 4.1.4')

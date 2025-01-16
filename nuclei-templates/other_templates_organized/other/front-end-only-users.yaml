@@ -1,4 +1,4 @@
-id: front-end-only-users-42a6deb31b014ad8ea5c1c5adfffc764
+id: front-end-only-users
 
 info:
   name: "Front End Users <= 3.2.24 - Cross-Site Request Forgery"

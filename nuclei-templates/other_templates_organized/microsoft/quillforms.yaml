@@ -1,15 +1,15 @@
-id: quillforms-ca8ada486579d049d2c2b924b2c36d7a
+id: quillforms-87931692c19cc09000251e4e0c4b4201
 
 info:
   name: >
-    Quill Forms <= 3.7.0 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    Quill Forms | The Best Typeform Alternative | Create Conversational Multi Step Form, Survey, Quiz, Cost Estimation or Donation Form on WordPress <= 3.10.0 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/605b49a9-caa2-4bcd-8849-eb777b03ab01?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d59a4d69-cf51-44c1-90bf-19be04774c27?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.7.0')
+          - compare_versions(version, '<= 3.10.0')

@@ -1,15 +1,15 @@
-id: consulting-elementor-widgets-3da41c0de42dc015ab94c09aacc2ee10
+id: consulting-elementor-widgets
 
 info:
   name: >
-    Consulting Elementor Widgets <= 1.3.0 - Authenticated (Contributor+) Remote Code Execution
+    Consulting Elementor Widgets <= 1.3.0 - Unauthenticated Local File Inclusion
   author: topscoder
-  severity: low
+  severity: critical
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cabb9be3-581a-48d9-afa2-929921eae52d?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ab19f79b-0cf6-4a5d-9e7e-a248728b4566?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/consulting-elementor-widgets/"
     google-query: inurl:"/wp-content/plugins/consulting-elementor-widgets/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,consulting-elementor-widgets,low
+  tags: cve,wordpress,wp-plugin,consulting-elementor-widgets,critical
 
 http:
   - method: GET

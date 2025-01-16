@@ -1,15 +1,15 @@
-id: wp-logs-book-3433cd05f7ae3c5b20b43a7e2d0c6f95
+id: wp-logs-book
 
 info:
   name: >
-    WP Logs Book <= 1.0.1 - Cross-Site Request Forgery to Log Disabling
+    WP Logs Book <= 1.0.1 - Cross-Site Request Forgery to Log Clearing
   author: topscoder
   severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/259e80a0-21e8-4482-89dc-899a08669e91?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/488567cd-b296-402f-9056-667b061950da?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

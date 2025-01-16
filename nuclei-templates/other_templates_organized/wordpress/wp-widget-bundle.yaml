@@ -1,15 +1,15 @@
-id: wp-widget-bundle-b42c8b234fcb190c0bc3198ae1b0183a
+id: wp-widget-bundle
 
 info:
   name: >
-    Widget Bundle <= 2.0.0 - Cross-Site Request Forgery to Widget Disable/Enable
+    Widget Bundle <= 2.0.0 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/735d44ae-8072-48bb-a498-a0f130d1130b?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/49b2e332-4359-4dac-8a9e-1d71f39d509c?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

@@ -1,15 +1,15 @@
-id: zita-site-library-dd46a214e5a5f7cdf90a337015eca9aa
+id: zita-site-library
 
 info:
   name: >
-    Zita Elementor Site Library <= 1.6.1 - Missing Authorization to Authenticated (Subscriber+) Arbitrary File Upload
+    Zita Elementor Site Library <= 1.6.2 - Missing Authorization to Page Creation and Options Modification
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6d9f5901-dc11-4877-b753-deb9c03f4a4e?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/62bc3794-a2c2-4c1a-b1c9-2be6e2526635?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/zita-site-library/"
     google-query: inurl:"/wp-content/plugins/zita-site-library/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,zita-site-library,low
+  tags: cve,wordpress,wp-plugin,zita-site-library,high
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.6.1')
+          - compare_versions(version, '<= 1.6.2')

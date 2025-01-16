@@ -1,15 +1,15 @@
-id: uncanny-automator-pro-b32d3cf057761552e8dd4975af2335d6
+id: uncanny-automator-pro
 
 info:
   name: >
-    Uncanny Automator Pro < 5.3.0.1 - Missing Authorization to Unauthenticated License Setting Reset
+    Uncanny Automator Pro < 5.3.0.1 - Cross-Site Request Forgery to License Setting Reset
   author: topscoder
-  severity: high
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8d9720e0-444a-4611-ab8f-33ad005749d5?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cffb3b61-fefc-4bf8-9904-55a7143aeef1?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/uncanny-automator-pro/"
     google-query: inurl:"/wp-content/plugins/uncanny-automator-pro/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,uncanny-automator-pro,high
+  tags: cve,wordpress,wp-plugin,uncanny-automator-pro,medium
 
 http:
   - method: GET

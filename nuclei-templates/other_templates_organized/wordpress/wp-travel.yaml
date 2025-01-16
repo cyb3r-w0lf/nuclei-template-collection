@@ -1,15 +1,15 @@
-id: wp-travel-96821543f7ef684567c7602a8d3aa78b
+id: wp-travel-b8f7841fb0c32e20017b52871e04e0c5
 
 info:
   name: >
-    WP Travel <= 9.3.1 - Authenticated (Administrator+) Stored Cross-Site Scripting
+    WP Travel – Ultimate Travel Booking System, Tour Management Engine <= 10.0.0 - Authenticated (Subscriber+) SQL Injection
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/af9e9e8e-2a07-477e-b840-8f7dd8883caa?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4e0f38db-84bb-4ba9-9068-40937e78010d?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 9.3.1')
+          - compare_versions(version, '<= 10.0.0')

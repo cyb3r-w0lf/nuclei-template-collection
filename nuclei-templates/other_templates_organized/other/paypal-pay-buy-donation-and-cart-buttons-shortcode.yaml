@@ -1,15 +1,15 @@
-id: paypal-pay-buy-donation-and-cart-buttons-shortcode-055ed7df687e1bb906d206bc5dc26037
+id: paypal-pay-buy-donation-and-cart-buttons-shortcode
 
 info:
   name: >
-    PayPal Pay Now, Buy Now, Donation and Cart Buttons Shortcode <= 1.7 -  Authenticated (Contributor+) Stored Cross-Site Scripting
+    PayPal Pay Now, Buy Now, Donation and Cart Buttons Shortcode <= 1.7 -  Authenticated (Admin+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/fc1d00c2-8b2f-4d6c-bbd3-085ffb495936?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c596c278-4f16-4830-8e6e-5e1392d4d118?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

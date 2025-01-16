@@ -1,13 +1,15 @@
 id: ftp-proxy
 info:
-  name: kingate ftp proxy
+  name: Symantec Enterprise Firewall FTP proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
   metadata:
-    operating_system: Windows
+    device_type: firewall
+    product: enterprise_firewall
     rarity: 0
-    version: $1
+    vendor: symantec
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +20,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^220 kingate\(([\w._-]+)-win32\) ftp proxy ready\r\n
+    - ^220 Secure Gateway FTP server

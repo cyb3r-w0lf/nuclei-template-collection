@@ -1,4 +1,4 @@
-id: wpcodefactory-helper-d41d8cd98f00b204e9800998ecf8427e
+id: wpcodefactory-helper
 
 info:
   name: "WPFactory Helper <= 1.5.2 - Reflected Cross-Site Scripting via item_slug"

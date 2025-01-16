@@ -1,15 +1,15 @@
-id: wpextended-a2b149f2d5703f489bf82b331eacb4d5
+id: wpextended-9cc0ed1823b4c3428683ec68251b280e
 
 info:
   name: >
-    The Ultimate WordPress Toolkit – WP Extended <= 3.0.8 - Directory Traversal to Authenticated (Subscriber+) Arbitrary File Download
+    The Ultimate WordPress Toolkit – WP Extended <= 3.0.11 - Missing Authorization to Authenticated (Subscriber+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0fad1834-0ee1-4542-a5a7-55a32861c81d?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/747d7649-bdf5-46d0-a496-59cb7eac77ac?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.0.8')
+          - compare_versions(version, '<= 3.0.11')

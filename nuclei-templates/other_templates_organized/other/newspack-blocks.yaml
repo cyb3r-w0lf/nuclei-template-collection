@@ -1,15 +1,15 @@
-id: newspack-blocks-632987585a28f1079078ad7c28c33b32
+id: newspack-blocks
 
 info:
   name: >
-    Newspack Blocks <= 3.0.8 - Authenticated (Contributor+) Arbitrary Directory Deletion
+    Newspack Blocks <= 3.0.8 - Unauthenticated Sensitive Information Exposure
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/52105225-1b22-42b9-97b4-a521ced36b01?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/16988713-a4d4-4d6a-bafb-3441ab54f14b?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
