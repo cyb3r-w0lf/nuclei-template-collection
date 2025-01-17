@@ -1,6 +1,6 @@
 id: irc
 info:
-  name: PTlink ircd
+  name: iacd ircd
   author: nmap,cn-kali-team
   tags: detect,tech,irc,service
   severity: info
@@ -16,4 +16,4 @@ tcp:
   - name: irc
     type: regex
     regex:
-    - ^NOTICE AUTH :\*\*\* Hostname lookup disabled, using your numeric IP\r\nNOTICE AUTH :\*\*\* Checking Ident\r\n
+    - ^PING :42\r\n$

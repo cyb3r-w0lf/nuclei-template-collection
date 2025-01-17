@@ -1,14 +1,14 @@
 id: mysql
 info:
-  name: MySQL
+  name: MariaDB
   author: nmap,cn-kali-team
   tags: detect,tech,mysql,service
   severity: info
   metadata:
-    info: unauthorized; Italian
-    product: mysql
+    info: unauthorized
+    product: mariadb
     rarity: 0
-    vendor: mysql
+    vendor: mariadb
     verified: true
 tcp:
 - name: 'null'
@@ -20,4 +20,4 @@ tcp:
   - name: mysql
     type: regex
     regex:
-    - (?i)^.\0\0\0\xff..Al sistema '[-.\w]+' non e` consentita la connessione a questo server MySQL$
+    - (?i)^.\0\0\0\xff..Host .* is not allowed to connect to this MariaDB server$

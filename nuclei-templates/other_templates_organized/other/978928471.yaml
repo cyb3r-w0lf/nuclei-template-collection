@@ -1,12 +1,14 @@
 id: pop3-proxy
 info:
-  name: InterScan VirusWall pop3 proxy
+  name: Symantec PGP Universal Server pop3 proxy
   author: nmap,cn-kali-team
   tags: detect,tech,pop3-proxy,service
   severity: info
   metadata:
-    operating_system: Windows
+    product: pgp_universal_server
     rarity: 0
+    vendor: symantec
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +19,4 @@ tcp:
   - name: pop3-proxy
     type: regex
     regex:
-    - ^\+OK InterScan VirusWall POP3 Proxy\r\n
+    - ^-ERR PGP Universal no pop3 service here\r\n

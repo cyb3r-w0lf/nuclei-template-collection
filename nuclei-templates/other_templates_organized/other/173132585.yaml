@@ -1,19 +1,20 @@
 id: vnc
 info:
-  name: vnc
-  author: cn-kali-team
-  tags: detect,tech,vnc
+  name: VNC
+  author: nmap,cn-kali-team
+  tags: detect,tech,vnc,service
   severity: info
   metadata:
-    product: vnc
-    vendor: 00_unknown
-    verified: false
-http:
-- method: GET
-  path:
-  - '{{BaseURL}}/'
-  matchers:
-  - type: word
-    words:
-    - <applet code=vncviewer.class archive=vncviewer.jar
-    case-insensitive: true
+    info: unofficial protocol 3.130
+    rarity: 0
+tcp:
+- name: 'null'
+  inputs:
+  - data: ''
+  host:
+  - '{{Hostname}}'
+  extractors:
+  - name: vnc
+    type: regex
+    regex:
+    - ^RFB 003.130\n$
