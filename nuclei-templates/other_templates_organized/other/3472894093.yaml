@@ -17,4 +17,4 @@ tcp:
   - name: crestron-ctp
     type: regex
     regex:
-    - '^[-\w]+ Console\r\nWarning: Another console session is open \r\n\r\n([-\w]+)>'
+    - ^\r?\n?[-\w]+ Control Console\r\n\r\n?([-\w_.]+)>

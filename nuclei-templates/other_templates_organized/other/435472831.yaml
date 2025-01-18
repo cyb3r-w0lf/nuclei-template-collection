@@ -1,13 +1,13 @@
 id: nntp
 info:
-  name: Leafnode nntpd
+  name: ArGoSoft nntpd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    hostname: $1
-    info: misconfigured
+    operating_system: Windows
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +18,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^\nLeafnode must have a fully-qualified and globally unique domain name,\nnot just \"([-\w_.]+)\"\.\n
+    - ^200 ArGoSoft News Server for WinNT/2000/XP v ([\d.]+) ready\r\n

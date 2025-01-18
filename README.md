@@ -19,62 +19,48 @@
 | CVE-2015 | 533 |
 | CVE-2016 | 257 |
 | CVE-2017 | 409 |
-| CVE-2018 | 524 |
-| CVE-2019 | 762 |
-| CVE-2020 | 1096 |
-| CVE-2021 | 2206 |
-| CVE-2022 | 2965 |
+| CVE-2018 | 525 |
+| CVE-2019 | 761 |
+| CVE-2020 | 1097 |
+| CVE-2021 | 2204 |
+| CVE-2022 | 2966 |
 | CVE-2023 | 5147 |
-| CVE-2024 | 8433 |
+| CVE-2024 | 8447 |
 | CVE-2025 | 0 |
-| Other | 27842 |
+| Other | 27857 |
 ## Quantity changes in recent days
-|2025-01-11 | 2025-01-12 | 2025-01-13 | 2025-01-14 | 2025-01-15 | 2025-01-16 | 2025-01-17|
+|2025-01-12 | 2025-01-13 | 2025-01-14 | 2025-01-15 | 2025-01-16 | 2025-01-17 | 2025-01-18|
 |--- | ------ | ------ | ------ | ------ | ------ | ---|
-|51184 | 51217 | 51213 | 51219 | 51226 | 51333 | 51421|
+|51217 | 51213 | 51219 | 51226 | 51333 | 51421 | 51450|
 ## Recently added files
 | templates name | 
 | --- |
-| wp-responsive-tabs.yaml |
-| qempo.yaml |
-| aports.yaml |
-| conult.yaml |
-| modins.yaml |
-| 3253343916.yaml |
-| fioxen.yaml |
-| ai-content-generation.yaml |
-| boliin.yaml |
-| gowilds.yaml |
-| 819555879.yaml |
-| 2326788488.yaml |
-| welowe.yaml |
-| halpes.yaml |
-| 1351750423.yaml |
-| orgarium.yaml |
-| ai-for-seo.yaml |
-| lestin.yaml |
-| paroti.yaml |
-| sominx.yaml |
-| constix.yaml |
-| pisole.yaml |
-| zilom.yaml |
-| dwt-listing.yaml |
-| mamp-server-xss.yaml |
-| 2813430170.yaml |
-| tevily.yaml |
-| widgetize-pages-light.yaml |
-| qizon.yaml |
-| fude.yaml |
-| CVE-2024-12427.yaml |
-| CVE-2024-13355.yaml |
-| CVE-2024-51651.yaml |
-| CVE-2024-12614.yaml |
-| CVE-2024-12613.yaml |
-| CVE-2024-12615.yaml |
-| CVE-2024-11452.yaml |
-| CVE-2024-10970.yaml |
-| CVE-2024-43334.yaml |
-| CVE-2024-10789.yaml |
-| CVE-2024-49633.yaml |
-| CVE-2024-49294.yaml |
-| CVE-2024-13387.yaml |
+| open-redirect-9307.yaml |
+| 1084217336.yaml |
+| mybookprogress.yaml |
+| eventer.yaml |
+| rss-icon-widget.yaml |
+| palo-alto-vpn-CVE-2024-0012-check-wt.yaml |
+| moving-users.yaml |
+| glofox-shortcodes.yaml |
+| 3641699874.yaml |
+| 4186762868.yaml |
+| quote-post-type-plugin.yaml |
+| CVE-2024-13377.yaml |
+| CVE-2024-13366.yaml |
+| CVE-2024-47575.yaml |
+| CVE-2024-13398.yaml |
+| CVE-2024-12637.yaml |
+| CVE-2024-13434.yaml |
+| CVE-2024-12203.yaml |
+| CVE-2024-12508.yaml |
+| CVE-2024-12466.yaml |
+| CVE-2024-55591.yaml |
+| CVE-2024-10799.yaml |
+| CVE-2024-13401.yaml |
+| CVE-2024-12370.yaml |
+| CVE-2024-13386.yaml |
+| CVE-2024-13367.yaml |
+| CVE-2024-12598.yaml |
+| CVE-2024-13333.yaml |
+| CVE-2024-13378.yaml |
