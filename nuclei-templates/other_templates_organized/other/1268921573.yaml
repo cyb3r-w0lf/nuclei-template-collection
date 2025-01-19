@@ -1,16 +1,13 @@
 id: http
 info:
-  name: nginx
+  name: Adaptec Storage Manager Agent httpd
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
     fallback:
     - get-request
-    product: nginx
     rarity: 5
-    vendor: igor_sysoev
-    verified: true
 tcp:
 - name: rtsprequest
   inputs:
@@ -22,4 +19,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - ^<head><title>400 Bad Request</title></head>\r\n<h1>400 Bad Request</h1>\r\n\r\n
+    - ^HTTP/1\.1 400 Bad Request\n\n$

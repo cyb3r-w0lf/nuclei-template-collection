@@ -1,11 +1,11 @@
 id: sip
 info:
-  name: AVM $1 SIP
+  name: Grandstream $1 VoIP phone SIP
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
   metadata:
-    device_type: WAP
+    device_type: VoIP phone
     rarity: 5
     version: $2
 tcp:
@@ -19,4 +19,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 404 Not Found\r\n(?:[^\r\n]+\r\n)*?User-Agent: AVM (FRITZ!Box Fon WLAN [\w._ -]+) (?:Annex A )?(?:\(UI\) )?([\w._ -]+ \(\w+ +\d+ +\d+\))'
+    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?User-Agent: Grandstream (IP\d+) ([\w._-]+)\r\n'

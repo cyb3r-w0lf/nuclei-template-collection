@@ -1,15 +1,13 @@
 id: domain
 info:
-  name: Microsoft DNS
+  name: PowerDNS Recursor
   author: nmap,cn-kali-team
   tags: detect,tech,domain,service
   severity: info
   metadata:
-    info: Windows Server 2016
-    operating_system: Windows
-    product: dns
+    product: recursor
     rarity: 1
-    vendor: microsoft
+    vendor: powerdns
     verified: true
     version: $1
 tcp:
@@ -23,4 +21,4 @@ tcp:
   - name: domain
     type: regex
     regex:
-    - (?i)\x07version\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x01.{7}Microsoft DNS (10\.0$)
+    - (?i)\x07version\x04bind\0\0\x10\0[\x01\x03]\xc0\x0c\0\x10\0[\x01\x03].{7}PowerDNS Recursor (\d[\w.-]+)

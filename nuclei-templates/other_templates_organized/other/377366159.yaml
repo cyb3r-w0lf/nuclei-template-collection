@@ -1,15 +1,12 @@
 id: mysql
 info:
-  name: MariaDB
+  name: Drizzle
   author: nmap,cn-kali-team
   tags: detect,tech,mysql,service
   severity: info
   metadata:
-    info: unauthorized
-    product: mariadb
     rarity: 0
-    vendor: mariadb
-    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +17,4 @@ tcp:
   - name: mysql
     type: regex
     regex:
-    - (?i)^.\0\0\0\xff..Host .* is not allowed to connect to this MariaDB server$
+    - (?i)^.\0\0\0\x0a([\w._-]+)\0............\0\x5f\xd3\x2d\x02\0\0\0\0\0\0\0\0\0\0\0\0\0\0............\0$
