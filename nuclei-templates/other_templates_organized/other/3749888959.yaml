@@ -1,14 +1,16 @@
 id: sip
 info:
-  name: Sipek VoIP
+  name: Zoiper VoIP software
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
   metadata:
     fallback:
     - get-request
-    info: on PJSUA
+    product: zoiper
     rarity: 5
+    vendor: securax
+    verified: true
     version: $1
 tcp:
 - name: sipoptions
@@ -21,4 +23,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?User-Agent: Sipek on PJSUA v([\w._-]+)/win32\r\n'
+    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?User-Agent: Zoiper (rev\.\d+)\r\n'

@@ -5,7 +5,6 @@ info:
   tags: detect,tech,iscsi,service
   severity: info
   metadata:
-    info: Alcohol Edition
     operating_system: Windows
     rarity: 0
     version: $1 build $2
@@ -19,4 +18,4 @@ tcp:
   - name: iscsi
     type: regex
     regex:
-    - ^\x1b\[2JStarWind iSCSI Target v([\w._-]+) \(Build (0x\w+), Win32, Alcohol Edition\)\r\n
+    - ^\x1b\[2JStarWind iSCSI SAN Software v([\w._-]+) \(Build (\d+), Win32\)\r\nCopyright \(c\) StarWind Software \d+-\d+\. All rights reserved\.\r\n\r\n\r\n$
