@@ -1,15 +1,14 @@
 id: pop3
 info:
-  name: Dovecot pop3d
+  name: Eudora Worldmail pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    hostname: $1
-    product: dovecot
+    hostname: $2
+    operating_system: Windows
     rarity: 0
-    vendor: dovecot
-    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +19,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK [Dd]ovecot ready\. ?<.*@([-\w_.]+)>\r\n
+    - ^\+OK POP3 server ready \(Worldmail ([\d.]+)\) <[\w.]+@([-\w_.]+)>\r\n

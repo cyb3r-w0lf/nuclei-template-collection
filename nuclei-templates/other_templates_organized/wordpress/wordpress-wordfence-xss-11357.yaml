@@ -17,7 +17,6 @@ requests:
         words:
           - "'>\"<svg/onload=confirm('test')>"
         part: body
-
       - type: word
         words:
           - "text/html"
