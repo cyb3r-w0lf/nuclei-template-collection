@@ -5,6 +5,7 @@ info:
   tags: detect,tech,mysql,service
   severity: info
   metadata:
+    info: blocked - too many connection errors
     product: mysql
     rarity: 0
     vendor: mysql
@@ -19,4 +20,4 @@ tcp:
   - name: mysql
     type: regex
     regex:
-    - (?i)^.\0\0\0\xffj\x04'[\d.]+' .* MySQL
+    - (?i)^.\0\0\0\xff..Host .* is blocked because of many connection errors

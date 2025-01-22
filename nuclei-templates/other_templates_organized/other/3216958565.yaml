@@ -1,12 +1,11 @@
 id: backdoor
 info:
-  name: Gaobot backdoor
+  name: Subseven backdoor
   author: nmap,cn-kali-team
   tags: detect,tech,backdoor,service
   severity: info
   metadata:
     info: '**BACKDOOR**'
-    operating_system: Windows
     rarity: 0
 tcp:
 - name: 'null'
@@ -18,4 +17,4 @@ tcp:
   - name: backdoor
     type: regex
     regex:
-    - ^220 Bot Server \(Win32\)\r\n$
+    - ^\r\n\[RPL\]002\r\n$
