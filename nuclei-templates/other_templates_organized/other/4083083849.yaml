@@ -1,13 +1,15 @@
 id: nntp
 info:
-  name: ArGoSoft nntpd
+  name: InterNetNews (INN)
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    operating_system: Windows
+    info: HDD full
+    product: inn
     rarity: 0
-    version: $1
+    vendor: isc
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +20,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 ArGoSoft News Server for WinNT/2000/XP v ([\d.]+) ready\r\n
+    - ^400 No space left on device writing SMstore file -- throttling\r\n

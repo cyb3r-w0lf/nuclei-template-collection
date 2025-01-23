@@ -1,14 +1,12 @@
 id: pop3
 info:
-  name: Sun Java System Messaging Multiplexor pop3d
+  name: K9 pop3d from keir.net
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    product: java_system_messaging_server
+    operating_system: Windows
     rarity: 0
-    vendor: sun
-    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -20,4 +18,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK Messaging Multiplexor \(Sun Java\(tm\) System Messaging Server (\d[-\w_.]+) \(built .*\)\)\r\n
+    - ^\+OK K9 - ([\d.]+) - http://keir\.net ready <[\w.]+>\r\n

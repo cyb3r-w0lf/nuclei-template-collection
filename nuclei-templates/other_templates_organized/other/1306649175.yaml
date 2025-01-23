@@ -1,22 +1,23 @@
 id: http
 info:
-  name: Trend Micro OfficeScan Antivirus http config
+  name: Dreambox httpd
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
+    device_type: media device
     fallback:
     - get-request
-    rarity: 9
+    rarity: 5
 tcp:
-- name: office-scan
+- name: rtsprequest
   inputs:
-  - data: GET /?CAVIT HTTP/1.1\r\n\r\n
+  - data: OPTIONS / RTSP/1.0\r\n\r\n
   host:
   - '{{Hostname}}'
-  port: '12345'
+  port: 80,554,3052,3372,5000,7070,8080,10000
   extractors:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1.0 \d\d\d .*\r\nServer: OfficeScan Client'
+    - (?i)^HTTP/1\.1 406 Not Acceptable\r\n.*<blockquote>\n<TABLE border=0 cellPadding=1 width=\"80%\">\n<TR><TD>\n<FONT face=\"Helvetica\">\n<big>Request Error \(unsupported_protocol\)</big>\n<BR>\n<BR>\n</FONT>

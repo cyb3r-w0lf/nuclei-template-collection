@@ -1,26 +1,20 @@
 id: domain
 info:
-  name: ISC BIND
+  name: Incapsula WAF DNS
   author: nmap,cn-kali-team
   tags: detect,tech,domain,service
   severity: info
   metadata:
-    info: Mac OS X
-    operating_system: Mac OS X
-    product: bind
-    rarity: 1
-    vendor: isc
-    verified: true
-    version: $1
+    rarity: 5
 tcp:
-- name: dnsversion-bind-req
+- name: dnsstatus-request
   inputs:
-  - data: \0\x06\x01\0\0\x01\0\0\0\0\0\0\x07version\x04bind\0\0\x10\0\x03
+  - data: \0\0\x10\0\0\0\0\0\0\0\0\0
   host:
   - '{{Hostname}}'
-  port: 53,1967,2967,26198
+  port: 53,69,135,1761,26198
   extractors:
   - name: domain
     type: regex
     regex:
-    - (?i)\x07version\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03.{7}([89][.\d]+-APPLE(?:-[SPW]\d+)?)
+    - (?i)^.{4,6}\x84\0\0\x01\0\x01\0\0\0\0[^\0]+\0\0\x01\0\x01[^\0]+\0\0\x01\0\x01\0\0\0\x1e\0\x04....$
