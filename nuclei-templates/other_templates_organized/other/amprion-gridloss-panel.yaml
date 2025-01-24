@@ -9,9 +9,10 @@ info:
   reference:
     - https://www.amprion.net/index-2.html
   metadata:
-    max-request: 1
     verified: true
+    max-request: 1
   tags: panel,amprion,login,detect
+
 http:
   - method: GET
     path:
@@ -30,4 +31,4 @@ http:
         group: 1
         regex:
           - '"envTitle":"([A-Z0-9a-z]+)"'
-# digest: 4a0a0047304502204392a65022d7ce48d4f84ab1110cccde1b8861c5179c36c92af33872bb60f695022100b0d9d273907a28033a78aafb11d0fd33963d37f04d7be7712afef0d80de5018b:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100c62e1114e44fdccaa6f12f9611121390808de3cb2e42118fc540cdf039574a640220069110cfeb9992a96527a80c507fa35f212825de288f193ba4c9078d9ac1cc4b:922c64590222798bb761d5b6d8e72950

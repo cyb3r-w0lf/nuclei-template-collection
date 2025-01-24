@@ -6,17 +6,15 @@ info:
   severity: info
 
 variables:
-  a1: "PING"
-  a2: "{{base64('hello')}}"
+  a1: "{{base64('hello')}}"
 
-network:
-  - host: 
-      - "{{Hostname}}"
-    inputs:
-      - data: "{{a1}}"
-    read-size: 8
+headless:
+  - steps:
+      - args:
+          url: "{{BaseURL}}"
+        action: navigate
+      - action: waitload
     matchers:
       - type: word
-        part: data
         words:
-          - "{{a2}}"
+          - "{{a1}}"

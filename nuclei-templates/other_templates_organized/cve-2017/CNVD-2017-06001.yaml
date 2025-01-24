@@ -2,16 +2,15 @@ id: CNVD-2017-06001
 
 info:
   name: Dahua DSS - SQL Injection
-  severity: high
   author: napgh0st,ritikchaddha
+  severity: high
   reference:
     - https://www.cnvd.org.cn/flaw/show/CNVD-2017-06001
   metadata:
-    max-request: 1
     verified: true
-    fofa-query: app="dahua-DSS"
+    max-request: 2
+    fofa-query: "app=\"dahua-DSS\""
   tags: cnvd,cnvd2017,sqli,dahua
-
 variables:
   num: "999999999"
 
@@ -34,4 +33,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100f369f94051bc8ede985360f3de46c645769896645c53b702a5900b5d7ec68dc3022100db0215796305ea641958244a283b9f55498c217c5151e9f5e96da70c5c7144d1:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450221009d15b000d80fc9bdd99bc9d9dbd9bc62a1a3ff51eb40d061131b8df0bf3f9829022065780281ab46274279125e664f9fcec0e82c28bef6470e33242ed62eca372d67:922c64590222798bb761d5b6d8e72950

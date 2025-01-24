@@ -8,9 +8,13 @@ info:
     A Cyber Chef Panel was detected
   reference:
     - https://cyberchef.org
+  classification:
+    cpe: cpe:2.3:a:gchq:cyberchef:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
+    vendor: gchq
+    product: cyberchef
     shodan-query: title:"CyberChef"
   tags: panel,cyberchef,login,detect
 
@@ -34,4 +38,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a00473045022100eeeab550b83b31bc31e069dbc7d7cce471d8989ea66e1b428296670776bee510022063c48214d5a3acd4d45dc0a9a6332f1d1d6af2a34518b2388a9183e83622e986:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450220557541d51fa03f90101911f0d514cfddc473f9da632b0d679bf58128b3dfbcda022100a9a7539084001a19c3287a30529313dc6cc18d79354ab18ed0b0e5cf749f78b8:922c64590222798bb761d5b6d8e72950

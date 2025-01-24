@@ -1,16 +1,12 @@
 id: nntp
 info:
-  name: Microsoft Exchange Internet News Service
+  name: ArGoSoft nntpd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    info: $2
     operating_system: Windows
-    product: exchange_server
     rarity: 0
-    vendor: microsoft
-    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -22,4 +18,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^20[01] Microsoft Exchange Internet News Service Version (\d\.\d\.[\d.]+) \((.*)\)\r\n
+    - ^200 ArGoSoft News Server for WinNT/2000/XP v ([\d.]+) ready\r\n

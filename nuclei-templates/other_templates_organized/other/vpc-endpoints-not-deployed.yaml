@@ -11,8 +11,9 @@ info:
     Implement VPC endpoints for supported AWS services to secure and optimize connectivity within your VPC, minimizing external access risks.
   reference:
     - https://docs.aws.amazon.com/vpc/latest/userguide/vpc-endpoints.html
+  metadata:
+    max-request: 2
   tags: cloud,devops,aws,amazon,vpc,aws-cloud-config
-
 variables:
   region: "us-east-1"
 
@@ -53,4 +54,4 @@ code:
       - type: dsl
         dsl:
           - '"VPC Endpoints Not Deployed in the VPC network " + vpc'
-# digest: 4a0a004730450220305c7cb9ef27a7249c71a3e30664db9f051b0f5438fe8ce42f2024ea91bfa24e022100e5b9e9b019adf2b1fcfd5121540efdbaf0c5fd39072523eacf41b5a50319666e:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402203edd538b4e37cb427dfca2c03d8187bdc1e32f6d9f1a31b46a354aceaadb5d1302203cd03dabc51041551d5f77ab984c38a578a3de71cb100ca85a60cb29f1fca583:922c64590222798bb761d5b6d8e72950

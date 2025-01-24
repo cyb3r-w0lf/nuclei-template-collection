@@ -1,59 +1,49 @@
-id: woo-inpost-97902ed319f08ee51d1d432495693fd7
+id: wordpress-woo-inpost
 
 info:
-  name: >
-    InPost for WooCommerce <= 1.4.0 and InPost PL <= 1.4.4 - Missing Authorization to Unauthenticated Arbitrary File Read and Delete
-  author: topscoder
-  severity: high
-  description: >
-    
+  name: InPost for WooCommerce Detection
+  author: mailler
+  severity: info
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7b57e750-71ec-4c52-999b-6c14a78c3bff?source=api-scan
-  classification:
-    cvss-metrics: 
-    cvss-score: 
-    cve-id: 
+    - https://wordpress.org/plugins/woo-inpost/
   metadata:
-    fofa-query: "wp-content/plugins/woo-inpost/"
-    google-query: inurl:"/wp-content/plugins/woo-inpost/"
-    shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,woo-inpost,high
+    plugin_namespace: woo-inpost
+    wpscan: https://wpscan.com/plugin/woo-inpost
+  tags: tech,wordpress,wp-plugin,top-200
 
 http:
   - method: GET
-    redirects: true
-    max-redirects: 3
     path:
       - "{{BaseURL}}/wp-content/plugins/woo-inpost/readme.txt"
 
+    payloads:
+      last_version: helpers/wordpress/plugins/woo-inpost.txt
+
     extractors:
       - type: regex
-        name: version
         part: body
-        group: 1
         internal: true
+        name: internal_detected_version
+        group: 1
         regex:
-          - "(?mi)Stable tag: ([0-9.]+)"
+          - '(?i)Stable.tag:\s?([\w.]+)'
 
       - type: regex
-        name: version
         part: body
+        name: detected_version
         group: 1
         regex:
-          - "(?mi)Stable tag: ([0-9.]+)"
+          - '(?i)Stable.tag:\s?([\w.]+)'
 
-    matchers-condition: and
+    matchers-condition: or
     matchers:
-      - type: status
-        status:
-          - 200
-
-      - type: word
-        words:
-          - "woo-inpost"
-        part: body
-
       - type: dsl
+        name: "outdated_version"
         dsl:
-          - compare_versions(version, '<= 1.4.0')
+          - compare_versions(internal_detected_version, concat("< ", last_version))
+
+      - type: regex
+        part: body
+        regex:
+          - '(?i)Stable.tag:\s?([\w.]+)'
+# digest: 490a0046304402200ebcf1ea9f56607e28be2ae473a03783e7325d8f9f58eebb793fe79fc05f7728022064f311983d472adffc6d7b763ed06e6f2796e66ee000126ab40a24f83a42a2e3:922c64590222798bb761d5b6d8e72950

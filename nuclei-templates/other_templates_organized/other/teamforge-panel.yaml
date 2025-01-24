@@ -9,10 +9,10 @@ info:
   reference:
     - https://digital.ai/products/teamforge/
   metadata:
-    shodan-query: title:"TeamForge :"
-    fofa-query: title="TeamForge :"
     verified: true
     max-request: 1
+    shodan-query: title:"TeamForge :"
+    fofa-query: title="TeamForge :"
   tags: panel,teamforge,login
 
 http:
@@ -40,4 +40,4 @@ http:
         part: body
         regex:
           - "teamforge(\\d+)"
-# digest: 4b0a00483046022100eafaf68f542e3da6a5f1b773c1feeef158b2441185e3be71c6fcb57e60093517022100ab0a381b8d93304d88deb969b7e289ce04ff71bc91173661685955160fd4dcb4:922c64590222798bb761d5b6d8e72950
+# digest: 490a0046304402202c321fdba0c17a509333a8f3ff26bc242f75958de213c7c893d2e678e6f9797c02206051d59864cad79256f4d4d3198fe1d05c99d7a378097ac24b4bbd05ef02e2f0:922c64590222798bb761d5b6d8e72950

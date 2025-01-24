@@ -12,12 +12,14 @@ info:
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H
     cvss-score: 7.5
+    cpe: cpe:2.3:a:evilmartians:imgproxy:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
     shodan-query: html:"imgproxy"
+    product: imgproxy
+    vendor: evilmartians
   tags: imgproxy,unauth,misconfig
-
 variables:
   img_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/375px-Google_2015_logo.svg.png'
 
@@ -33,4 +35,4 @@ http:
           - 'contains(content_type, "image/png")'
           - '("386116288" == mmh3(base64_py(body)))'
         condition: and
-# digest: 490a0046304402207f4d9df78ca765af9dc185001591fb4b8bd55d95b545a96a8dbba3243c94bc86022062bc7d5358e243a9a43fcca3c3e5e7a9addfa3f57df917e39c3c00fba60c07c4:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100af65fcb564e9bf04aeb44e0e33a63f073c847c89760161ea2bbb8c1736db14f2022065df1ec961c3c778338c31ece08edd64202c9272d93f35594e3cc2750f8ce0ea:922c64590222798bb761d5b6d8e72950

@@ -8,9 +8,13 @@ info:
     Oracle E-Business Suite login panel was detected.
   reference:
     - https://www.oracle.com/applications/ebusiness/
+  classification:
+    cpe: cpe:2.3:a:oracle:e-business_suite:*:*:*:*:*:*:*:*
   metadata:
-    max-request: 1
     verified: true
+    max-request: 1
+    vendor: oracle
+    product: e-business_suite
     shodan-query: http.html:"Oracle UIX"
   tags: panel,oracle,login,detect
 
@@ -21,7 +25,6 @@ http:
 
     redirects: true
     max-redirects: 2
-
     matchers:
       - type: dsl
         dsl:
@@ -35,4 +38,4 @@ http:
         group: 1
         regex:
           - '(?i)/OA_HTML/cabo/oajsLibs/oafcore([A-Z0-9]+).js'
-# digest: 4a0a00473045022039282031436f903368fe6f95110086c3eadc3ce54ed18f742490ac768cf6946b022100dd9c7d19b0484ac641748a2a94286dc023deea5b05eef4c3f2a36e972d5b749d:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450220089fa93cd40629b9d03d8bb5c27c9eb94dbd679320d4527aaf3306e3228333090221009a7221303f60cc697a52d48b3e44d2567f0075756f2b94f05601e752c64d15ee:922c64590222798bb761d5b6d8e72950

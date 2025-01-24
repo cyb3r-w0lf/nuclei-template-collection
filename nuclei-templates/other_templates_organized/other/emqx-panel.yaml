@@ -8,10 +8,14 @@ info:
     EMQX login panel was detected.
   reference:
     - https://www.emqx.io/
+  classification:
+    cpe: cpe:2.3:a:emqx:emqx:*:*:*:*:*:*:*:*
   metadata:
-    max-request: 1
-    shodan-query: http.title:"EMQX Dashboard"
     verified: true
+    max-request: 1
+    vendor: emqx
+    product: emqx
+    shodan-query: http.title:"EMQX Dashboard"
   tags: panel,emqx,login,detect
 
 http:
@@ -32,4 +36,4 @@ http:
         group: 1
         regex:
           - 'but\s+(emqx\-dashboard[0-9a-z\-]+)'
-# digest: 4a0a00473045022100af5e628777d333d4d2b3ea4e980d648dbcba682d1559c07a502b5018bf0438bc02203d9f7bc036fe4115045772c8eb04eba8f994de6b78c000523f715beb795d8852:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a004730450220358f141361dd5f6b4f7a297bd42fc28b5caa43699ebf200d18a955ef8aef0aa60221008017e491dc3b1d1a25fb670dcb9d01272ca3b6f8863689f24201b2077fe2d1b7:922c64590222798bb761d5b6d8e72950

@@ -8,7 +8,7 @@ info:
   reference:
     - https://wpscan.com/vulnerability/9873
     - https://id.wordpress.org/plugins/advanced-access-manager/
-  tags: wordpress,wp-plugin,lfi
+ 
 
 requests:
   - method: GET
