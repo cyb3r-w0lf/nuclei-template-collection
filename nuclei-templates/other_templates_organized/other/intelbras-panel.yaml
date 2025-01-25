@@ -10,13 +10,12 @@ info:
     cvss-score: 0.0
     cwe-id: CWE-200
   metadata:
-    max-request: 1
     verified: true
     shodan-query: http.title:"Intelbras"
     fofa-query: app="Intelbras"
   tags: panel,intelbras
 
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}"

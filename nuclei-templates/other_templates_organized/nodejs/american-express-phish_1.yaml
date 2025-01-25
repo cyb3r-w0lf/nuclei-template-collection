@@ -1,0 +1,35 @@
+id: american-express-phish
+
+info:
+  name: american-express phishing Detection
+  author: rxerium
+  severity: info
+  description: |
+    An american express phishing website was detected
+  reference:
+    - https://www.americanexpress.com
+  metadata:
+    max-request: 1
+  tags: phishing,american-express,osint
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    host-redirects: true
+    max-redirects: 2
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        words:
+          - 'Credit Cards, Rewards, Travel and Business Services | American Express'
+
+      - type: status
+        status:
+          - 200
+
+      - type: dsl
+        dsl:
+          - '!contains(host,"americanexpress.com")'
+# digest: 490a0046304402207c9d58726badbdac0678ddc49c5a8875ccd8df91430fcb9d1a7fcd9b35877b120220222fdc3b5f59ad961203a6028b199245e8a6655244150054720f515bb440bac9:922c64590222798bb761d5b6d8e72950

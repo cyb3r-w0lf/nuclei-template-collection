@@ -3,7 +3,7 @@ info:
   name: PHP Debug bar
   author: dhiyaneshDk
   severity: high
-  tags: debug,logs,exposure
+ 
 
 requests:
   - method: GET

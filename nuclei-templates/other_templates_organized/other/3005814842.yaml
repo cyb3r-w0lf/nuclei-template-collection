@@ -19,4 +19,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^220 Frox transparent ftp proxy\. Login with username\[@host\[:port\]\]\r\n
+    - ^220 Frox transparent ftp proxy\. Login with username\r\n

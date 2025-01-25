@@ -1,18 +1,14 @@
 id: sip
 info:
-  name: Asterisk
+  name: Nokia N86 phone SIP
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
   metadata:
-    device_type: PBX
+    device_type: phone
     fallback:
     - get-request
-    product: asterisk
     rarity: 5
-    vendor: digium
-    verified: true
-    version: $1
 tcp:
 - name: sipoptions
   inputs:
@@ -24,4 +20,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 404 Not Found\r\n(?:[^\r\n]+\r\n)*?Server: Asterisk PBX ([\w._~+-]+)\r\n(?:[^\r\n]+\r\n)*?Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO\r\n'
+    - '^SIP/2\.0 404 Not Found\r\nVia: SIP/2\.0/TCP nm;branch=foo;received=[\d.]+\r\nTo: <sip:nm2@nm2>;tag=\w+\r\nFrom: <sip:nm@nm>;tag=root\r\nCall-ID: 50000\r\nCSeq: 42 OPTIONS\r\nContent-Length: 0\r\n\r\n$'

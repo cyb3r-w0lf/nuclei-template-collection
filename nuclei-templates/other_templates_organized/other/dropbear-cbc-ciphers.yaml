@@ -14,7 +14,7 @@ info:
     max-request: 2
     verified: true
     shodan-query: 'product:"Dropbear sshd"'
-  tags: network,ssh,dropbear
+  tags: network,ssh,dropbear,detect
 
 tcp:
   - inputs:
@@ -22,7 +22,7 @@ tcp:
 
     host:
       - "{{Hostname}}"
-      - "{{Host}}:22"
+    port: 22
 
     matchers:
       - type: word

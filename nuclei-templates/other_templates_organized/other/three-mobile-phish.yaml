@@ -8,9 +8,8 @@ info:
     A three phishing website was detected
   reference:
     - https://three.co.uk
-  metadata:
-    max-request: 1
   tags: phishing,three,osint
+
 http:
   - method: GET
     path:
@@ -32,4 +31,4 @@ http:
       - type: dsl
         dsl:
           - '!contains(host,"three.co.uk")'
-# digest: 480a0045304302205de6a2fae2945ec195af3b012d5925b7fa7c1080a9ca6c41fe75bfae7918aa36021f023af178bf367b9906aa3de251c9b35c9b73dd220d7c216abf863c2d36d2e4:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502204ecdcc564b2124373f45c1c6855fcae0fa2ff6ae895ca7beadb7cf5afad2ea4e022100e6e4b5b1d28aecbf7a9d3f8b37052d7c944736fa3113308994a7a0bf91d881e9:922c64590222798bb761d5b6d8e72950

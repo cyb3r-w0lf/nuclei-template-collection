@@ -1,5 +1,4 @@
 id: wp-sym404
-
 info:
   name: Wordpress sym404 directory
   author: pussycat0x
@@ -11,19 +10,16 @@ info:
     verified: true
     google-dork: inurl:"/wp-includes/sym404/"
   tags: wordpress,listing,wp,exposure
-
 requests:
   - method: GET
     path:
       - "{{BaseURL}}/wp-includes/sym404/root/etc/passwd"
-
     matchers-condition: and
     matchers:
       - type: regex
         part: body
         regex:
           - "root:.*:0:0:"
-
       - type: status
         status:
           - 200

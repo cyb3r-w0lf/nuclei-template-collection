@@ -1,14 +1,15 @@
 id: rtsp
 info:
-  name: Boxee rtspd
+  name: Optelecom-NKF rtspd
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
   metadata:
-    device_type: media device
+    device_type: webcam
     fallback:
     - get-request
     rarity: 5
+    version: $1
 tcp:
 - name: rtsprequest
   inputs:
@@ -20,4 +21,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '^RTSP/1\.0 200 OK\r\nAudio-Jack-Status: connected; type=analog\r\nCSeq: \r\nPublic: ANNOUNCE, SETUP, RECORD, PAUSE, FLUSH, TEARDOWN, OPTIONS, GET_PARAMETER, SET_PARAMETER\r\n\r\n'
+    - '^RTSP/1\.0 400 Bad Request\r\nServer: Optelecom-NKF RTSPServer/([\w._-]+)\r\n\r\n'

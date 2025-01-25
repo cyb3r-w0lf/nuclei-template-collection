@@ -7,13 +7,12 @@ info:
   reference:
     - https://github.com/yahoo/CMAK
   metadata:
-    max-request: 1
     verified: true
     fofa-query: app="Kafka-Manager"
     shodan-query: title:"Kafka-Manager"
   tags: tech,kafka,apache
 
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}"

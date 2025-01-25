@@ -8,12 +8,11 @@ info:
   reference:
     - https://github.com/angular/angular
   metadata:
-    max-request: 1
     verified: true
     shodan-query: html:"ng-version="
   tags: tech,angular
 
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}"
