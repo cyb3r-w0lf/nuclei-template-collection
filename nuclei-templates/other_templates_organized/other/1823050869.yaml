@@ -1,14 +1,15 @@
 id: rtsp
 info:
-  name: Arecont Vision surveillance camera rtspd
+  name: Apple AirTunes rtspd
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
   metadata:
-    device_type: webcam
     fallback:
     - get-request
+    info: bandwidth maxed out
     rarity: 5
+    version: $1
 tcp:
 - name: rtsprequest
   inputs:
@@ -20,4 +21,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '^RTSP/1\.0 401 Unauthorized\r\nCSeq: 0\r\nWWW-Authenticate: Basic realm=\"Arecont Vision\"\r\n\r\n'
+    - '^RTSP/1\.0 453 Not Enough Bandwidth\r\nServer: AirTunes/([\w._-]+)\r\n\r\n'

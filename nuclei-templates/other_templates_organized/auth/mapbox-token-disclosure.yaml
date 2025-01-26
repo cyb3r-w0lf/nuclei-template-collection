@@ -8,8 +8,7 @@ info:
     - https://docs.gitguardian.com/secrets-detection/detectors/specifics/mapbox_token
     - https://github.com/zricethezav/gitleaks/blob/master/cmd/generate/config/rules/mapbox.go
   metadata:
-    max-request: 1
-    verified: true
+    verified: "true"
   tags: token,exposure,mapbox,disclosure
 
 http:
@@ -18,6 +17,12 @@ http:
       - "{{BaseURL}}"
 
     extractors:
+      - type: regex
+        name: mapbox-public-token
+        part: body
+        regex:
+          - 'pk\.eyJ1Ijoi\w+\.[\w-]*'
+
       - type: regex
         name: mapbox-secret-token
         part: body

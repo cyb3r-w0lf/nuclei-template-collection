@@ -7,8 +7,8 @@ info:
   reference: https://www.exploit-db.com/ghdb/7959
   metadata:
     verified: true
-    google-dork: intitle:"index of" "docker-cloud.yml"
-  tags: exposure,cloud,devops,docker
+    google-query: intitle:"index of" "docker-cloud.yml"
+  tags: exposure,cloud,devops,docker,files
 
 requests:
   - method: GET
@@ -17,10 +17,11 @@ requests:
 
     matchers-condition: and
     matchers:
-      - type: word
-        words:
-          - 'image:'
-          - 'ports:'
+
+      - type: regex
+        regex:
+          - '(?m)^  image:'
+          - '(?m)^  ports:'
         condition: and
 
       - type: word
@@ -29,7 +30,7 @@ requests:
           - "application/json"
           - "text/html"
         negative: true
-        condition: and
+        condition: or
 
       - type: status
         status:

@@ -1,11 +1,14 @@
 id: sieve
 info:
-  name: pysieved
+  name: Citadel timsieved
   author: nmap,cn-kali-team
   tags: detect,tech,sieve,service
   severity: info
   metadata:
+    product: ux
     rarity: 0
+    vendor: citadel
+    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -17,4 +20,4 @@ tcp:
   - name: sieve
     type: regex
     regex:
-    - '^/usr/share/pysieved/plugins/dovecot\.py:27: DeprecationWarning: The popen2 module is deprecated\.  Use the subprocess module\.\n  import popen2\n\"IMPLEMENTATION\" \"pysieved ([\w._+-]+)\"\r\n'
+    - ^\"IMPLEMENTATION\" \"CITADEL Sieve ([\d.]+)\"\r\n

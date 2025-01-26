@@ -4,11 +4,11 @@ info:
   name: GitList Disclosure
   author: dhiyaneshDK
   severity: low
-  metadata:
-    shodan-query: title:"GitList"
   tags: gitlist,misconfig
+  metadata:
+    shodan-query: 'title:"GitList"'
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'

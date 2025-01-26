@@ -1,0 +1,35 @@
+id: thunderbird-phish
+
+info:
+  name: thunderbird phishing Detection
+  author: rxerium
+  severity: info
+  description: |
+    A thunderbird phishing website was detected
+  reference:
+    - https://thunderbird.net
+  metadata:
+    max-request: 1
+  tags: phishing,thunderbird,osint
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}"
+
+    host-redirects: true
+    max-redirects: 2
+
+    matchers-condition: and
+    matchers:
+      - type: word
+        words:
+          - 'Thunderbird — Free Your Inbox. — Thunderbird'
+
+      - type: status
+        status:
+          - 200
+
+      - type: dsl
+        dsl:
+          - '!contains(host,"thunderbird.net")'
+# digest: 490a00463044022069a9314b3c6506b9eaee26e5eb0db5ffe92c16ee8b789ae545f1a029170384de02201f8f33837e54744acae51a0275860650fe6dc7a31493b7c0c3cb489e8bc1d4f3:922c64590222798bb761d5b6d8e72950

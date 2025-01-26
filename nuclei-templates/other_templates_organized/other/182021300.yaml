@@ -1,14 +1,13 @@
 id: ldap
 info:
-  name: OpenLDAP
+  name: PGP Corp. PGP Keyserver
   author: nmap,cn-kali-team
   tags: detect,tech,ldap,service
   severity: info
   metadata:
-    info: access denied
-    product: openldap
+    product: keyserver
     rarity: 6
-    vendor: openldap
+    vendor: pgp
     verified: true
 tcp:
 - name: ldapbind-req
@@ -21,4 +20,4 @@ tcp:
   - name: ldap
     type: regex
     regex:
-    - ^0%\x02\x01\x01a \n\x010\x04\0\x04\x19anonymous bind disallowed$
+    - '^0\x17\x02\x01\x01a\x12\n\x01\0\x04\0\x04\x0bPGPError #0$'
