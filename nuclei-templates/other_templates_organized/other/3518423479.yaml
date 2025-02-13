@@ -1,18 +1,11 @@
 id: pop3
 info:
-  name: MDaemon pop3d
+  name: Internet Rex Pop3 server
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    hostname: $1
-    info: unregistered
-    operating_system: Windows
-    product: mdaemon
     rarity: 0
-    vendor: altn
-    verified: true
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -23,4 +16,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK ([-.\w]+) POP3? MDaemon ready using UNREGISTERED SOFTWARE ([\d.]+) <MDAEMON
+    - ^\+OK Internet Rex POP3 server ready <

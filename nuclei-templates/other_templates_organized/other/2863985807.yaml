@@ -1,14 +1,17 @@
 id: smtp
 info:
-  name: Windows NT SMTP Server smtpd
+  name: IMail smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    hostname: $1
+    info: Storage full
     operating_system: Windows
+    product: imail
     rarity: 0
-    version: $2
+    vendor: ipswitch
+    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +22,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([-\w_.]+) WindowsNT SMTP Server v([\w/.]+) ESMTP ready at .*\r\n
+    - ^421  Insufficient System Storage\.\(IMail ([\d.]+)\)\r\n

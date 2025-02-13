@@ -1,13 +1,12 @@
 id: smtp
 info:
-  name: WinWebMail smtpd
+  name: IronPort appliance mail rejector
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    operating_system: Windows
+    hostname: $1
     rarity: 0
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +17,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ESMTP on WinWebMail \[([\d.]+)\] ready\.  http://www\.winwebmail
+    - ^554-([-.+\w]+)\.us\r\n554 Access denied\r\n$

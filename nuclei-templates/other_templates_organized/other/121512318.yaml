@@ -1,17 +1,12 @@
 id: http
 info:
-  name: Allegro RomPager
+  name: LG LW5700 TV HDCP server
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    device_type: remote management
-    info: Dell DRAC config
-    product: rompager
+    operating_system: Linux
     rarity: 0
-    vendor: allegro
-    verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -22,4 +17,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.1 200 OK\r\nContent-Type: text/html\r\nCache-Control: no-cache\r\nExpires: Thu, 26 Oct 1995 00:00:00 GMT\r\nTransfer-Encoding: chunked\r\nServer: Allegro-Software-RomPager/([\d.]+)\r\n\r\n'
+    - '(?i)^HTTP/1\.1 500 Internal Server Error\r\n(?:[^\r\n]+\r\n)*?Server: LG HDCP Server\r\n.*<envelope><HDCPError>500</HDCPError><HDCPErrorDetail>Internal Server Error</HDCPErrorDetail></envelope>$'

@@ -1,14 +1,16 @@
 id: ftp
 info:
-  name: Stupid-FTPd
+  name: Oracle Enterprise XML DB ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    product: stupid-ftpd
+    hostname: $1
+    product: database_server
     rarity: 0
-    vendor: cinek
+    vendor: oracle
     verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +21,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 Welcome to Stupid-FTPd server\.\r\n
+    - (?i)^(?:220-.*\r\n)?220 ([-\w_.]+) FTP Server \(Oracle XML DB/Oracle9i Enterprise Edition Release ([\d.]+) - Production\) ready\.\r\n

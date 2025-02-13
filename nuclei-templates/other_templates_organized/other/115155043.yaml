@@ -1,15 +1,14 @@
 id: ftp
 info:
-  name: WarFTPd
+  name: Praim thin terminal ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    product: warftpd
+    device_type: terminal
+    info: 'model: $1'
     rarity: 0
-    vendor: jgaa
-    verified: true
-    version: $1
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +19,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - (?i)^220-.*\r\n(?:220-|)    WarFTPd (\d[-.\w]+) \([\w ]+\) Ready\r\n
+    - ^220 Praim Srl, ([\w._-]+) Ftp Server \(Version ([\w._-]+) \[[\w :]+\]\)\.\r\n

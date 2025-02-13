@@ -1,16 +1,14 @@
 id: imap
 info:
-  name: FirstClass imapd
+  name: CommuniGate Pro imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    hostname: $2
-    product: firstclass
+    product: communigate_pro
     rarity: 0
-    vendor: opentext
+    vendor: stalker
     verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +19,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK FirstClass IMAP4rev1 server v([\d.]+) at ([-\w_.]+) ready\r\n
+    - ^\* OK CommuniGate Pro IMAP Server ready\r\n

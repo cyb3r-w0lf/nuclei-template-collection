@@ -1,15 +1,14 @@
-id: webpushr-web-push-notifications-97aff786dad2ac67b854ef8deff8de71
+id: webpushr-web-push-notifications
 
 info:
   name: >
-    Webpushr <= 4.34.0 - Missing Authorization to Unauthenticated Stored Cross-Site Scripting
+    Webpushr <= 4.34.0 - Cross-Site Request Forgery to Local File Inclusion via menu
   author: topscoder
-  severity: high
+  severity: medium
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7e092d67-ab81-4366-824c-cfb240ba3042?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e140973b-d37c-45bf-aed2-9223bd812957?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/webpushr-web-push-notifications/"
     google-query: inurl:"/wp-content/plugins/webpushr-web-push-notifications/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,webpushr-web-push-notifications,high
+  tags: cve,wordpress,wp-plugin,webpushr-web-push-notifications,medium
 
 http:
   - method: GET

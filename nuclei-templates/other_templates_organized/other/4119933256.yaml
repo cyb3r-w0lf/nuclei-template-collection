@@ -1,15 +1,12 @@
 id: smtp
 info:
-  name: XMail SMTP server
+  name: MasqMail smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
     hostname: $1
-    product: xmail
     rarity: 0
-    vendor: davide_libenzi
-    verified: true
     version: $2
 tcp:
 - name: 'null'
@@ -21,4 +18,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([-\w_.]+) <1\d+\.\d+@[-\w_.]+> \[XMail (\d[-.\w]+) ESMTP Server\] service ready
+    - ^220 ([-.+\w]+) MasqMail (\d[-.\w]+) ESMTP\r\n

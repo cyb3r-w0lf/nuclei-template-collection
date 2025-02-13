@@ -1,10 +1,11 @@
 id: imap-proxy
 info:
-  name: imap proxy
+  name: Avast! anti-virus imap proxy
   author: nmap,cn-kali-team
   tags: detect,tech,imap-proxy,service
   severity: info
   metadata:
+    operating_system: Windows
     rarity: 0
 tcp:
 - name: 'null'
@@ -16,4 +17,4 @@ tcp:
   - name: imap-proxy
     type: regex
     regex:
-    - ^\* OK IMAP4 proxy ready\r\n
+    - ^\* OK avast! IMAP Proxy\r\n

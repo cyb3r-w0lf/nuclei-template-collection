@@ -1,15 +1,14 @@
-id: wp-compress-image-optimizer-75ef117f5dba668df1d7e57cbd1ef8c2
+id: wp-compress-image-optimizer
 
 info:
   name: >
-    WP Compress – Instant Performance & Speed Optimization <= 6.30.03 - Reflected Cross-Site Scripting via custom_server Parameter
+    WP Compress – Image Optimizer [All-In-One] <= 6.10.35 - Cross-Site Request Forgery
   author: topscoder
   severity: medium
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/09c04863-a454-4f05-9403-aff39dbccd43?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/81fd6ec4-9cff-4604-8b7f-5b8683096c34?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 6.30.03')
+          - compare_versions(version, '<= 6.10.35')

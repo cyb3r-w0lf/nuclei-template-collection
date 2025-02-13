@@ -1,13 +1,14 @@
 id: ftp
 info:
-  name: vsftpd
+  name: Bftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    product: vsftpd
+    hostname: $2
+    product: bftpd
     rarity: 0
-    vendor: vsftpd
+    vendor: jesse_smith
     verified: true
     version: $1
 tcp:
@@ -20,4 +21,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 vsFTPd (.*) ready\.\.\.\r\n
+    - (?i)^220.*bftpd ([\d.]+) at ([-\w_.]+) ready\.?\r\n

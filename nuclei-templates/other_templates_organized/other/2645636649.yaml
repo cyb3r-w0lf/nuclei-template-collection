@@ -1,14 +1,13 @@
 id: ftp
 info:
-  name: Konica Minolta printer ftpd
+  name: Cisco 3000 series VPN ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: printer
-    hostname: $1
+    device_type: security-misc
+    operating_system: IOS
     rarity: 0
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 ([-\w_.]+) FTP server \(KONICA FTPD version ([\d.]+)\) ready\.\r\n
+    - ^220 Session will be terminated after 600 seconds of inactivity\.\r\n

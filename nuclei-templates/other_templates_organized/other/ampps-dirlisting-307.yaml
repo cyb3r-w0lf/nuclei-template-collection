@@ -6,7 +6,7 @@ info:
   severity: info
   tags: panel,ampps,softaculous,misconfig
 
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}/client/"

@@ -1,14 +1,14 @@
 id: sip
 info:
-  name: PJSIP pjsua sipd
+  name: Kamailio
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
   metadata:
     fallback:
     - get-request
-    info: 'arch: $3'
-    operating_system: Windows $2
+    info: x86_64
+    operating_system: Linux
     rarity: 5
     version: $1
 tcp:
@@ -22,4 +22,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?User-Agent: PJSUA v([\d.]+) win32-([\d.]+)/(ix[\w_]+)'
+    - '(?i)^SIP/2\.0 403 Not relaying\r\n(?:[^\r\n]+\r\n)*?Server: kamailio \(([\w._-]+) \(x86_64/linux\)\)\r\n'

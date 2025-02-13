@@ -1,11 +1,11 @@
 id: pop3
 info:
-  name: TMSOFT pop3d
+  name: vm-pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    operating_system: Windows
+    info: derived from gnu-pop3d
     rarity: 0
     version: $1
 tcp:
@@ -18,4 +18,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK TMSOFT POP3 Server v([\w._-]+) ready <\w+>\r\n
+    - ^\+OK POP3 Welcome to vm-pop3d (\d[-.\w]+)

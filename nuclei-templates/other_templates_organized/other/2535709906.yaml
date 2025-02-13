@@ -1,12 +1,12 @@
 id: smtp
 info:
-  name: LiteMail smtpd
+  name: Coremail smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    operating_system: Windows
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +17,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 LiteMail SMTP Server Ready\.\r\n
+    - ^220 Coremail SMTP\(Anti Spam\) System \(\w+\[(\d+)\]\)\r\n

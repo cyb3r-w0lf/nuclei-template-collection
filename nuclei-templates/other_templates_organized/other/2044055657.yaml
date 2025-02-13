@@ -1,15 +1,12 @@
 id: ftp
 info:
-  name: Wing FTP Server
+  name: Toshiba CTX PBX ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    product: wing_ftp_server
+    device_type: PBX
     rarity: 0
-    vendor: wingftp
-    verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +17,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 Wing FTP Server ([\w._-]+) ready\.\.\.\r\n
+    - ^220 Welcome to This FTP Server\. Service ready for new user\.\r\n214-The following commands are recognised:\r\nUSER\r\nPASS\r\nCWD\r\nQUIT\r\nTYPE\r\nPORT\r\nRETR\r\nSTOR\r\nSTOU\r\nAPPE\r\nRNFR\r\nRNTO\r\nABOR\r\nDELE\r\nCDUP\r\nRMD\r\nMKD\r\nPWD\r\nLIST\r\nNLST\r\nHELP\r\nNOOP\r\nXCUP\r\nXCWD\r\nXPWD\r\nXRMD\r\nXMKD\r\n214 List End\.\r\n

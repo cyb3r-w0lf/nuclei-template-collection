@@ -1,11 +1,12 @@
 id: pop3
 info:
-  name: IdeaPop3Server pop3d
+  name: Merak Mail server pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
     hostname: $1
+    operating_system: Windows
     rarity: 0
     version: $2
 tcp:
@@ -18,4 +19,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK ([-\w_.]+)\s+IdeaPop3Server ([^\s]+) ready\.\r\n
+    - '^\+OK ([-.+\w]+) Merak (\d[-.\w]+) POP3 '

@@ -1,14 +1,12 @@
 id: ftp
 info:
-  name: Konica Minolta printer ftpd
+  name: Xerox Phaser $1 printer ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
     device_type: printer
-    hostname: $1
     rarity: 0
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +17,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 ([-\w_.]+) FTP server \(KONICA FTPD version ([\d.]+)\) ready\.\r\n
+    - ^220 Xerox Phaser (\w+)\r\n

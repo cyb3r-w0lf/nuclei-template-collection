@@ -1,16 +1,15 @@
 id: ftp
 info:
-  name: Microsoft IIS ftpd
+  name: CrushFTP
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    info: IP address rejected
-    operating_system: Windows
-    product: internet_information_services
+    product: crushftp
     rarity: 0
-    vendor: microsoft
+    vendor: crushftp
     verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +20,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^530 Connection refused, unknown IP address\.\r\n$
+    - ^220-Welcome to CrushFTP([\w._-]+)!\r\n220 CrushFTP Server Ready\.\r\n

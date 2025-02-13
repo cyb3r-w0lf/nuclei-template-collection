@@ -1,13 +1,13 @@
 id: textui
 info:
-  name: TeamSpeak 3 ServerQuery
+  name: Talk2M VPN service management
   author: nmap,cn-kali-team
   tags: detect,tech,textui,service
   severity: info
   metadata:
-    product: teamspeak3
+    product: talk2m
     rarity: 0
-    vendor: teamspeak
+    vendor: ewon
     verified: true
 tcp:
 - name: 'null'
@@ -19,4 +19,4 @@ tcp:
   - name: textui
     type: regex
     regex:
-    - ^TS3\n\r
+    - ^Welcome to Talk2MVpnService management Interface \r\n$

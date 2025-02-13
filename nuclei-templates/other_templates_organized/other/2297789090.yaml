@@ -1,12 +1,13 @@
 id: ftp
 info:
-  name: Rumpus ftpd
+  name: tnftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    operating_system: Mac OS X
+    hostname: $1
     rarity: 0
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220-Welcome To Rumpus!\r\n220 Service ready for new user\r\n
+    - ^220 ([-\w_.]+) FTP server \(tnftpd ([\w._+-]+)\) ready\.\r\n

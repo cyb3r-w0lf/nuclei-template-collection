@@ -1,13 +1,14 @@
 id: pop3
 info:
-  name: Dovecot pop3d
+  name: Zimbra pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    product: dovecot
+    hostname: $1
+    product: zimbra_collaboration_suite
     rarity: 0
-    vendor: dovecot
+    vendor: zimbra
     verified: true
 tcp:
 - name: 'null'
@@ -19,4 +20,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK Pop3 ready\.\r\n
+    - ^\+OK ([\w._-]+) (?:POP3 Service )?Zimbra POP3 server ready\r\n

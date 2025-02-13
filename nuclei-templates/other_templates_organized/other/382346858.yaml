@@ -1,16 +1,16 @@
 id: ssh
 info:
-  name: Apache Mina sshd
+  name: OpenSSH
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
+    device_type: terminal server
     info: protocol $1
-    product: sshd
+    product: openssh
     rarity: 0
-    vendor: apache
+    vendor: openbsd
     verified: true
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +21,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-SSHD-CORE-([\w._-]+)\r\n
+    - ^SSH-([\d.]+)-OpenSSH\r?\n$

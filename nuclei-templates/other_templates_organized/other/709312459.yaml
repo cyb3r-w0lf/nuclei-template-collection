@@ -5,6 +5,7 @@ info:
   tags: detect,tech,bprd,service
   severity: info
   metadata:
+    info: refused
     product: netbackup
     rarity: 0
     vendor: symantec
@@ -19,4 +20,4 @@ tcp:
   - name: bprd
     type: regex
     regex:
-    - (?i)^\0\0\0.EXIT[ _]STATUS \d+$
+    - '^gethostbyaddr: [\w ]+\n$'

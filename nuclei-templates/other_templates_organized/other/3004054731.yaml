@@ -1,14 +1,14 @@
 id: ssh
 info:
-  name: Huawei VRP sshd
+  name: HP Comware switch sshd
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    device_type: router
     info: protocol $1
-    operating_system: VRP $2
+    operating_system: Comware
     rarity: 0
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +19,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-VRP-([\d.]+)\r?\n
+    - ^SSH-([\d.]+)-Comware-([\d.]+)\r?\n

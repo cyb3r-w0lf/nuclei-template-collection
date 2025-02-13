@@ -1,14 +1,12 @@
 id: ftp-proxy
 info:
-  name: Frox ftp proxy
+  name: Proxy602 ftp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
   metadata:
-    product: frox
+    device_type: firewall
     rarity: 0
-    vendor: james_hollingshead
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +17,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^501 Proxy unable to contact ftp server\r\n
+    - ^220 Proxy602 Gateway ready, enter user@host\[:port\]\r\n

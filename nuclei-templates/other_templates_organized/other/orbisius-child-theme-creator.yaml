@@ -1,15 +1,14 @@
-id: orbisius-child-theme-creator-1d94c3bfff1d6337734ac40350f728ec
+id: orbisius-child-theme-creator
 
 info:
   name: >
-    Child Theme Creator by Orbisius <= 1.5.5 - Missing Authorization to Authenticated (Subscriber+) Cloud Snippet Update/Delete
+    Child Theme Creator by Orbisius <= 1.2.7 - Arbitrary File Write
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/dd0eb569-b526-48bd-8198-ff883860e040?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/70ce4450-e38b-422e-a171-09f428dfe0d8?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.5.5')
+          - compare_versions(version, '< 1.2.8')

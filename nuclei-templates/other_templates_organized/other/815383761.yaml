@@ -1,21 +1,25 @@
 id: smtp
 info:
-  name: Konica Minolta bizhub 350 printer smtpd
+  name: Lotus Domino smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    device_type: printer
-    rarity: 8
+    hostname: $1
+    info: Italian
+    product: lotus_domino
+    rarity: 0
+    vendor: ibm
+    verified: true
+    version: $2
 tcp:
-- name: hello
+- name: 'null'
   inputs:
-  - data: EHLO\r\n
+  - data: ''
   host:
   - '{{Hostname}}'
-  port: 25,587,3025
   extractors:
   - name: smtp
     type: regex
     regex:
-    - ^220 \r\n501 \r\n
+    - ^220 ([-.\w]+) ESMTP Service \(Lotus Domino Versione ([\w._ -]+)\) ready

@@ -1,12 +1,16 @@
 id: ssh
 info:
-  name: lancom sshd
+  name: OpenSSH
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    info: protocol $1
+    info: protocol $1; HPN-SSH patch $3
+    product: openssh
     rarity: 0
+    vendor: openbsd
+    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +21,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-lancom\r?\n
+    - ^SSH-([\d.]+)-OpenSSH_([\w._-]+)[-_]hpn(\w+) *(?:\"\")?\r?\n

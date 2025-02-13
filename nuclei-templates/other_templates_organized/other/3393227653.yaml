@@ -1,15 +1,15 @@
 id: ftp
 info:
-  name: Cerberus FTP Server
+  name: ProFTPD
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    info: Home Edition
-    operating_system: Windows
-    product: ftp_server
+    hostname: $1
+    operating_system: Unix
+    product: proftpd
     rarity: 0
-    vendor: cerberusftp
+    vendor: proftpd
     verified: true
 tcp:
 - name: 'null'
@@ -21,4 +21,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220-Cerberus FTP Server - Home Edition\r\n220-This is the UNLICENSED Home Edition and may be used for home, personal use only\r\n220-Welcome to Cerberus FTP Server\r\n220 Created by Cerberus, LLC\r\n
+    - ^220 ([-\w_.]+) FTP server ready\r\n

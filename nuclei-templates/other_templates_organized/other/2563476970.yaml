@@ -1,15 +1,12 @@
 id: smtp
 info:
-  name: XMail smtpd
+  name: Matrix SMTP Mail Server
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    info: server busy
-    product: xmail
+    info: on Matrix $2
     rarity: 0
-    vendor: davide_libenzi
-    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -21,4 +18,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^421 \[XMail (\d[\w._-]+) ESMTP Server\] - Server too busy, retry later\r\n
+    - ^220 Matrix SMTP Mail Server v([\w.]+) on <MATRIX_([\w]+)> Simple Mail Transfer Service Ready\r\n

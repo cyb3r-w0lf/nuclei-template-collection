@@ -1,21 +1,23 @@
 id: smtp
 info:
-  name: Hamster smtpd
+  name: Lotus Notes smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    info: Access denied
-    operating_system: Windows
-    rarity: 0
+    product: lotus_notes
+    rarity: 8
+    vendor: ibm
+    verified: true
 tcp:
-- name: 'null'
+- name: hello
   inputs:
-  - data: ''
+  - data: EHLO\r\n
   host:
   - '{{Hostname}}'
+  port: 25,587,3025
   extractors:
   - name: smtp
     type: regex
     regex:
-    - ^500 Permission denied - closing connection\.\r\n
+    - ^220 Hello [A-Z][a-z]{2}, .*\r\n501 Command \"EHLO\" requires an argument\r\n

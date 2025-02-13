@@ -1,12 +1,11 @@
 id: telnet
 info:
-  name: ZyXEL $2 telnetd
+  name: Huawei $1 DSLAM telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
     rarity: 0
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +16,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\xff\xfd\x01\xff\xfd\x1f\xff\xfb\x01\xff\xfb\x03\r\r\nmsm V([\d.]+\(ABFR\.\d+\)C\d+) ([A-Z]+\d+)\r\n\r\r\n\r\r\n[A-Z]+\d+ login: '
+    - '^\xff\xfb\x01\xff\xfb\x03\r\n\r\n\r\n  Huawei (MA\w+) Multi-service Access Module\.\r\n  Copyright\(C\) \d\d\d\d-\d\d\d\d by Huawei Technologies Co\., Ltd\.\r\n\r\n>>User name:'

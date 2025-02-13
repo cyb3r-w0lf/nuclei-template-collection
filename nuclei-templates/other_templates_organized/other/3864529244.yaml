@@ -1,13 +1,13 @@
 id: ftp
 info:
-  name: Canon $1 FTP Print Server
+  name: Texas Imperial Software WFTPD
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: print server
+    operating_system: Windows
     rarity: 0
-    version: $2
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 Canon ([\w._-]+) FTP Print Server V([\w._-]+) .* ready\.\r\n
+    - ^220 WFTPD (\d[-.\w]+) service \(by Texas Imperial Software\) ready for new user\r\n

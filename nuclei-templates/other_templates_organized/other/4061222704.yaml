@@ -1,25 +1,21 @@
 id: smtp
 info:
-  name: Axigen smtpd
+  name: hMailServer smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    hostname: $1
-    info: 'alt hostname: $2'
-    product: axigen_mail_server
-    rarity: 8
-    vendor: gecad
-    verified: true
+    operating_system: Windows
+    rarity: 0
+    version: $1
 tcp:
-- name: hello
+- name: 'null'
   inputs:
-  - data: EHLO\r\n
+  - data: ''
   host:
   - '{{Hostname}}'
-  port: 25,587,3025
   extractors:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([\w._-]+) Mail ESMTP ready\r\n250-([\w._-]+) Axigen ESMTP hello\r\n
+    - ^220 \(SMTP\) hMailServer ([\d.]+) - Up since .*\r\n

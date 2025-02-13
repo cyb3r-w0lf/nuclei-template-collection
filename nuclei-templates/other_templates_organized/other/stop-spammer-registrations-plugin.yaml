@@ -1,15 +1,14 @@
-id: stop-spammer-registrations-plugin-71ca481c5b0e8d2afcdc566f0e342170
+id: stop-spammer-registrations-plugin
 
 info:
   name: >
-    Stop Spammers Security | Block Spam Users, Comments, Forms <= 2024.4 - Cross-Site Request Forgery (CSRF) via sfs_process
+    Stop Spammers Security <= 2022.5 - Unauthenticated PHP Object Injection
   author: topscoder
-  severity: medium
+  severity: critical
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1998cadb-2eb3-4819-aa7c-59e4f777c7f8?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6065ad75-1685-4f1d-9ba9-d4c8ec840521?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/stop-spammer-registrations-plugin/"
     google-query: inurl:"/wp-content/plugins/stop-spammer-registrations-plugin/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,stop-spammer-registrations-plugin,medium
+  tags: cve,wordpress,wp-plugin,stop-spammer-registrations-plugin,critical
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2024.4')
+          - compare_versions(version, '<= 2022.5')

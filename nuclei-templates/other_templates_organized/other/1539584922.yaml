@@ -1,15 +1,13 @@
 id: ssh
 info:
-  name: Cerberus FTP Server sshd
+  name: BlueArc sshd
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    info: protocol $1; FIPS
-    product: ftp_server
+    device_type: storage-misc
+    info: protocol $1
     rarity: 0
-    vendor: cerberusftp
-    verified: true
     version: $2
 tcp:
 - name: 'null'
@@ -21,4 +19,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-CerberusFTPServer_([\w._-]+) FIPS\r\n
+    - ^SSH-([\d.]+)-BlueArcSSH_([\d.]+)\r?\n

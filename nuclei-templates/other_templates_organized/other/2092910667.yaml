@@ -1,13 +1,15 @@
 id: imap
 info:
-  name: GNU mailutils imapd
+  name: Microsoft Exchange 2000 imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    product: mailutils
+    info: German
+    operating_system: Windows
+    product: exchange_server
     rarity: 0
-    vendor: gnu
+    vendor: microsoft
     verified: true
     version: $1
 tcp:
@@ -20,4 +22,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK IMAP4rev1 GNU mailutils ([\w.]+)\r\n
+    - ^\* OK Der Microsoft Exchange Server \(IMAP4rev1, Version (\d[-.\w]+) \([-.\w]+\)\) steht zur Verf\xfcgung\.\r\n

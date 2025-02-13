@@ -1,10 +1,11 @@
 id: telnet
 info:
-  name: ATmega32 Telnet-to-RS232
+  name: Nut/OS Demo telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
+    operating_system: Nut/OS
     rarity: 0
 tcp:
 - name: 'null'
@@ -16,4 +17,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - ^Start Telnet Server:\r\n
+    - ^Welcome to NutOS Telnet\.\r\n----------------------------\r\n

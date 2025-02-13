@@ -1,12 +1,15 @@
 id: ftp
 info:
-  name: Novonyx ftpd
+  name: Microsoft ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    operating_system: NetWare
+    operating_system: Windows
+    product: ftp_service
     rarity: 0
+    vendor: microsoft
+    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -18,4 +21,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220-  Novonyx FTP Server for NetWare, v([\d.]+) \(
+    - ^220.*Microsoft FTP Service \(Version (\d[^)]+)

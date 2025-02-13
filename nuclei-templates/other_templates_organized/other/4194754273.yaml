@@ -1,12 +1,14 @@
 id: smtp-proxy
 info:
-  name: ESET NOD32 anti-virus smtp proxy
+  name: CCProxy smtp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,smtp-proxy,service
   severity: info
   metadata:
-    hostname: $1
+    info: Unregistered
+    operating_system: Windows
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +19,4 @@ tcp:
   - name: smtp-proxy
     type: regex
     regex:
-    - ^220 ([-\w_.]+) ESMTP Service ready\r\n
+    - ^220 CCProxy ([\d.]+) SMTP Service Ready\(Unregistered\)\r\n

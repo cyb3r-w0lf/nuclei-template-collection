@@ -1,22 +1,20 @@
 id: http
 info:
-  name: Adaptec Storage Manager Agent httpd
+  name: BSkyB router
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    fallback:
-    - get-request
-    rarity: 5
+    device_type: broadband router
+    rarity: 0
 tcp:
-- name: rtsprequest
+- name: 'null'
   inputs:
-  - data: OPTIONS / RTSP/1.0\r\n\r\n
+  - data: ''
   host:
   - '{{Hostname}}'
-  port: 80,554,3052,3372,5000,7070,8080,10000
   extractors:
   - name: http
     type: regex
     regex:
-    - ^HTTP/1\.1 400 Bad Request\n\n$
+    - '^HTTP/1\.1 400 Bad Request\r\nServer: sky_router\r\n'

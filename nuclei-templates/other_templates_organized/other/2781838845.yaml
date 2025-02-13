@@ -1,14 +1,17 @@
 id: smtp
 info:
-  name: ArGoSoft Mail Server Pro
+  name: XMail SMTP server
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    info: $2
-    operating_system: Windows
+    hostname: $1
+    info: on $3
+    product: xmail
     rarity: 0
-    version: $1
+    vendor: davide_libenzi
+    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +22,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ArGoSoft Mail Server Pro for WinNT/2000/XP, Version ([-.\w]+) \(([-.\w]+)\)\r\n
+    - '^220 <1\d+\.\d+@([-.\w]+)> \[XMail (\d[-.\w]+) \(([-./\w]+)\) ESMTP Server\] service ready; '

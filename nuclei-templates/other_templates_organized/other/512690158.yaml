@@ -1,16 +1,17 @@
 id: sip
 info:
-  name: Polycom SoundStation $1
+  name: Microsoft Skype for Business SIP
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
   metadata:
-    device_type: VoIP phone
     fallback:
     - get-request
-    info: 'MAC: $3'
+    product: skype_for_business
     rarity: 5
-    version: $2
+    vendor: microsoft
+    verified: true
+    version: '2015'
 tcp:
 - name: sipoptions
   inputs:
@@ -22,4 +23,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?User-Agent: PolycomSoundStationIP-SSIP_(\d+)-UA/([\d.]+)_(\w+)\r\n'
+    - '^SIP/2\.0 504 Server time-out\r\nms-user-logon-data: RemoteUser\r\nFrom: <sip:nm@nm>;tag=root\r\nTo: <sip:nm2@nm2>;tag=\w+\r\nCall-ID: 50000\r\nCSeq: 42 OPTIONS\r\nVia: SIP/2\.0/TCP nm;branch=foo\r\nServer: RTC/6\.0\r\nContent-Length: 0\r\n\r\n'

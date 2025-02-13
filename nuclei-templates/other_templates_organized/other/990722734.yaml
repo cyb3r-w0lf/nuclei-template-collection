@@ -1,21 +1,21 @@
 id: printer
 info:
-  name: Wyse Winterm 1200 LE terminal lpd
+  name: BSD lpd
   author: nmap,cn-kali-team
   tags: detect,tech,printer,service
   severity: info
   metadata:
-    device_type: terminal
-    rarity: 6
+    hostname: $1
+    info: Unauthorized host
+    rarity: 0
 tcp:
-- name: lpdstring
+- name: 'null'
   inputs:
-  - data: \x01default\n
+  - data: ''
   host:
   - '{{Hostname}}'
-  port: 515,2947,3333,32211,19350
   extractors:
   - name: printer
     type: regex
     regex:
-    - ^no queue to check\n\0$
+    - '^lpd \[@([-.\w]+)\]: Print-services are not available to your host \([-.\w]+\)\.\n'

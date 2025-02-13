@@ -1,11 +1,12 @@
 id: pop3
 info:
-  name: AppleMailServer pop3d
+  name: ArGoSoft Pro
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
     hostname: $1
+    operating_system: Windows
     rarity: 0
     version: $2
 tcp:
@@ -18,4 +19,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK AppleMailServer (\d[-.\w]+) POP3 server at ([-.\w]+) ready <\d
+    - ^\+OK ([-\w.]+) ArGoSoft Mail Server Pro for WinNT/2000/XP, Version [\d.]+ \(([\d.]+)\)\r\n

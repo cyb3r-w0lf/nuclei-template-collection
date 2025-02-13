@@ -1,15 +1,15 @@
-id: fat-event-lite-84e1eac9a5e3332b2f974370751532e0
+id: fat-event-lite-ec6dcbb42c043a3321ef47dc3d9885a9
 
 info:
   name: >
-    FAT Event Lite <= 1.1 - Unauthenticated Local File Inclusion
+    FAT Event Lite <= 1.1 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
-  severity: critical
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ca868ec4-9d28-4edd-b31c-a8546f9ced9e?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/11807042-be3c-4780-bb47-ecc54aead5f2?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/fat-event-lite/"
     google-query: inurl:"/wp-content/plugins/fat-event-lite/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,fat-event-lite,critical
+  tags: cve,wordpress,wp-plugin,fat-event-lite,low
 
 http:
   - method: GET

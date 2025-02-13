@@ -1,4 +1,4 @@
-id: postgres-default-logins
+id: postgres-weak-credentials
 
 info:
   name: Postgres - Default Logins
@@ -9,8 +9,7 @@ info:
   metadata:
     max-request: 9
     shodan-query: port:5432
-  tags: js,postgresql,default-login,network
-
+  tags: js,postgres,default-login,network
 javascript:
   - pre-condition: |
       var m = require("nuclei/postgres");
@@ -42,4 +41,5 @@ javascript:
           - "response == true"
           - "success == true"
         condition: and
-# digest: 4a0a004730450220428eb992430b1171dc1957a0ffd41590749e97e389cf6efb9ce90cfb473be162022100ea4e5f97ec736da63034cef4275cb6fbba9aa0225f52db54eaaf987c81b9206e:922c64590222798bb761d5b6d8e72950
+
+# digest: 4a0a0047304502202e75d9178dfa0197feba12f8588d262c268c11aeb2fc7af23f20eaecc5f989c5022100e6b7021e9704f22b1831667f86ebf552b7b41e66918d4ac82a9b083721f4cd97:922c64590222798bb761d5b6d8e72950

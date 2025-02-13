@@ -1,15 +1,14 @@
-id: file-manager-advanced-0925916a0e09491b98977b3d06d7ffb7
+id: file-manager-advanced
 
 info:
   name: >
-    Advanced File Manager <= 5.2.8 - Authenticated (Administrator+) Local JavaScript File Inclusion via fma_locale
+    Advanced File Manager <= 5.1 - Authenticated(Administrator+) Arbitrary File and Folder Access
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5b783cc6-d79d-43ef-948a-a1953d383ca3?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ceba35c3-16b0-4366-b33c-603bdc2c1006?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 5.2.8')
+          - compare_versions(version, '<= 5.1')

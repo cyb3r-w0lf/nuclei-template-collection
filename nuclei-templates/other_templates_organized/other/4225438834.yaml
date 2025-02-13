@@ -1,14 +1,13 @@
 id: smtp
 info:
-  name: Symantec Messaging Gateway smtpd
+  name: Postfix smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    hostname: $1
-    product: messaging_gateway
+    product: postfix
     rarity: 0
-    vendor: symantec
+    vendor: postfix
     verified: true
 tcp:
 - name: 'null'
@@ -20,4 +19,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([\w._-]+) ESMTP Symantec Messaging Gateway\r\n
+    - ^421 Unexpected log failure, please try later\r\n

@@ -1,24 +1,23 @@
-id: wp-all-import-pro-d085152f4d0b171b0febff1bd9fa0042
+id: wp-all-import-pro
 
 info:
-  name: "WP All Import Pro < 4.1.1 - Reflected Cross Site Scripting"
+  name: >
+    Import any XML or CSV File to WordPress <= 3.2.4 - SQL Injection
   author: topscoder
-  severity: medium
-  description: "The WP All Import Pro plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via an unknown parameter in versions up to, and including, 4.1.0 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
+  severity: critical
+  description: >
+    
   reference:
-    - http://www.wpallimport.com/2015/02/wp-import-4-1-1-mandatory-security-update/
-    - https://www.pritect.net/blog/wp-all-import-vulnerability
-    - https://wpscan.com/vulnerability/49740ee8-ba7d-4a9f-9356-a5f13e753c36
-    - https://www.cybersecurity-help.cz/vdb/SB2019041503
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/52d390e0-95ca-4570-8d4c-f679ee86ffea?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    cvss-score: 6.1
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/wp-all-import-pro/"
     google-query: inurl:"/wp-content/plugins/wp-all-import-pro/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-all-import-pro,medium
+  tags: cve,wordpress,wp-plugin,wp-all-import-pro,critical
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 4.1.1')
+          - compare_versions(version, '<= 4.1.1')

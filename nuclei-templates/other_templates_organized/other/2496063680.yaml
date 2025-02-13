@@ -1,12 +1,16 @@
 id: imap
 info:
-  name: IdeaImapServer imapd
+  name: University of Washington IMAP imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
     hostname: $1
+    info: 'time zone: $3'
+    product: uw_imap
     rarity: 0
+    vendor: uw
+    verified: true
     version: $2
 tcp:
 - name: 'null'
@@ -18,4 +22,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK ([-\w_.]+)\s+IdeaImapServer ([^\s]+) ready\r\n
+    - ^\* OK \[CAPABILITY IMAP4REV1 [^]]+\] \[([\w.-]+)\] IMAP4rev1 (20\w+\.\d+) at [ \w,:]+ ([+-]\d+) \(\w+\)\r\n

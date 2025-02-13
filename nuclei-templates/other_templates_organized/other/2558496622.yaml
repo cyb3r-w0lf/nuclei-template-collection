@@ -1,15 +1,16 @@
 id: ftp-proxy
 info:
-  name: Webshield2 FTP proxy
+  name: AnalogX FTP proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
   metadata:
-    operating_system: Windows
-    product: winproxy
+    hostname: $1
+    product: proxy
     rarity: 0
-    vendor: bluecoat
+    vendor: analogx
     verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +21,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^220 webshield2 FTP proxy ready\.\r\n
+    - ^220 ([-.+\w]+) FTP AnalogX Proxy (\d[-.\w]+) \(Release\) ready\r\n

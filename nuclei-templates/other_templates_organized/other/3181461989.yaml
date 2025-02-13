@@ -1,17 +1,15 @@
 id: rtsp
 info:
-  name: Wowza Streaming Engine rtspd
+  name: Realserver RTSP
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
   metadata:
     fallback:
     - get-request
-    product: wowza_streaming_engine
+    operating_system: Windows
     rarity: 5
-    vendor: wowza
-    verified: true
-    version: $1 build $2
+    version: $1
 tcp:
 - name: rtsprequest
   inputs:
@@ -23,4 +21,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '^RTSP/1\.0 200 OK\r\nSupported: play\.basic, con\.persistent\r\nCseq: 0\r\nServer: Wowza Streaming Engine ([\w._-]+) build(\d+)\r\nPublic: DESCRIBE, SETUP, TEARDOWN, PLAY, PAUSE, OPTIONS, ANNOUNCE, RECORD, GET_PARAMETER\r\nCache-Control: no-cache\r\n\r\n$'
+    - '^RTSP/1\.0 200 OK\r\nCSeq: 0\r\nDate: .*\r\nServer: RealServer Version (\d[-.\w]+) \(win32\)\r\n'

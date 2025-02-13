@@ -14,7 +14,6 @@ info:
     cwe-id: CWE-522
   metadata:
     verified: true
-    max-request: 3
     shodan-query: html:"Tiny File Manager"
   tags: default-login,tiny,filemanager
 
@@ -23,12 +22,14 @@ http:
       - |
         GET / HTTP/1.1
         Host: {{Hostname}}
+
       - |
         POST / HTTP/1.1
         Host: {{Hostname}}
         Content-Type: application/x-www-form-urlencoded
 
         fm_usr={{user}}&fm_pwd={{pass}}&token={{token}}
+
       - |
         GET /?p= HTTP/1.1
         Host: {{Hostname}}
@@ -39,11 +40,11 @@ http:
         - admin
       pass:
         - admin@123
+
     skip-variables-check: true
     host-redirects: true
     max-redirects: 2
     cookie-reuse: true
-
     matchers-condition: and
     matchers:
       - type: word
@@ -65,4 +66,4 @@ http:
           - '([a-f0-9]{64})'
         internal: true
 
-# digest: 490a00463044022042251fddbfaa8f82da270c7eb9b3bc0ffc92bd7638301da0036f0a225f4d857f02203d797fe3c351546bf714438b9fc8d3b50514d981742818fe4133e57548867ece:922c64590222798bb761d5b6d8e72950
+# Enhanced by md on 2023/01/09

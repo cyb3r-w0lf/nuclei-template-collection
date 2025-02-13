@@ -1,15 +1,14 @@
-id: simple-local-avatars-29d212ae35fcdcf9dcf19c948b617581
+id: simple-local-avatars
 
 info:
   name: >
-    Simple Local Avatars <= 2.7.11 - Missing Authorization to Authenticated (Subscriber+) User Cache Clearing
+    http-cache-semantics < 4.1.1 - Regular Expression Denial of Service (ReDoS)
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e2619d50-e295-4e13-91d4-f998b8aa5be4?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f6092987-5f60-42ac-9636-e1e0a2c85147?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.7.11')
+          - compare_versions(version, '<= 2.7.3')

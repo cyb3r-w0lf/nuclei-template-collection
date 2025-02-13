@@ -1,14 +1,13 @@
 id: pop3
 info:
-  name: CommuniGate Pro
+  name: PMDF pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    product: communigate_pro
+    hostname: $2
+    operating_system: OpenVMS
     rarity: 0
-    vendor: stalker
-    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -20,4 +19,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK CommuniGate Pro POP3 Server ([-.\w]+) ready
+    - ^\+OK POP3D\(\*\) Server PMDFV([\w._-]+) at .* <\w+@([\w._-]+)>\r\n

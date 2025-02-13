@@ -1,15 +1,14 @@
-id: wpb-show-core-a920f50b20acb1bca580b45cef9b3589
+id: wpb-show-core
 
 info:
   name: >
-    WPB Show Core <= 2.6 - Reflected Cross-Site Scripting via 'file'
+    WPB Show Core <= 2.2 - Unauthenticated Server Side Request Forgery
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3438426a-c07d-4aeb-8272-2e13b70419a6?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/dec2e656-8936-43e2-b156-e96718fd7ef4?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/wpb-show-core/"
     google-query: inurl:"/wp-content/plugins/wpb-show-core/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wpb-show-core,medium
+  tags: cve,wordpress,wp-plugin,wpb-show-core,low
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.6')
+          - compare_versions(version, '<= 2.2')

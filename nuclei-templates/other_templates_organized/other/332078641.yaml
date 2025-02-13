@@ -1,13 +1,12 @@
 id: imap
 info:
-  name: IdeaImapServer imapd
+  name: Tobit David.fx imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    hostname: $1
     rarity: 0
-    version: $2
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +17,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK ([-\w_.]+)\s+IdeaImapServer ([^\s]+) ready\r\n
+    - ^\* OK IMAP4rev1 David\.fx Mail Access Server MA-([\w._]+ \(\w+\))\r\n

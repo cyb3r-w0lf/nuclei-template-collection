@@ -1,11 +1,10 @@
 id: smtp-proxy
 info:
-  name: BitDefender anti-virus mail gateway
+  name: Trend Micro SMTP Proxy
   author: nmap,cn-kali-team
   tags: detect,tech,smtp-proxy,service
   severity: info
   metadata:
-    hostname: $1
     operating_system: Windows
     rarity: 0
 tcp:
@@ -18,4 +17,4 @@ tcp:
   - name: smtp-proxy
     type: regex
     regex:
-    - ^220 ([-\w_.]+) ESMTP BitDefender Proxy\r\n
+    - ^220-TrendMicro IMSS SMTP proxy\r\n

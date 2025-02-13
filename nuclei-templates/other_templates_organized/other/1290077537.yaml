@@ -1,6 +1,6 @@
 id: imap
 info:
-  name: IdeaImapServer imapd
+  name: Oracle imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
@@ -18,4 +18,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK ([-\w_.]+)\s+IdeaImapServer ([^\s]+) ready\r\n
+    - ^\* OK ([-\w_.]+) Oracle Email Server esimap\t([\d.]+) \t  is ready\r\n

@@ -1,12 +1,13 @@
 id: ftp
 info:
-  name: Maygion IPCamera ftpd
+  name: VxWorks ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: webcam
+    operating_system: VxWorks
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 IPCamera FtpServer\(www\.maygion\.com\),do NOT change firmware unless you know what you are doing!\r\n
+    - ^220 VxWorks \((\d[^)]+)\) FTP server ready

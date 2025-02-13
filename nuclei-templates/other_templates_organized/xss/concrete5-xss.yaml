@@ -1,7 +1,7 @@
 id: concrete-xss
 
 info:
-  author: shifacyclewla,hackergautam
+  author: shifacyclewala,hackergautam
   description: The Concrete CMS < 8.5.2 is vulnerable to Reflected XSS using cID parameter.
   name: Unauthenticated reflected XSS in preview_as_user function
   severity: medium
@@ -27,8 +27,6 @@ requests:
         part: header
         words:
           - "text/html"
-          - "CONCRETE5"
-        condition: and
 
       - type: status
         status:

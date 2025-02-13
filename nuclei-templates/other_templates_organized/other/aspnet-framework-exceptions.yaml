@@ -3,11 +3,11 @@ id: aspnet-framework-exceptions
 info:
   name: ASP.NET Framework Exceptions
   author: Aayush Dhakal
-  severity: info
+  severity: medium
   description: Detects suspicious ASP.NET framework exceptions that could indicate exploitation attempts
   reference:
     - https://docs.microsoft.com/en-us/dotnet/api/system.web.httpexception
-  tags: file,logs,aspnet
+  tags: file, logs, aspnet
 
 file:
   - extensions:
@@ -22,4 +22,3 @@ file:
           - 'InvalidOperationException'
           - 'UnauthorizedAccessException'
           - 'NotFound'
-# digest: 490a0046304402200baf1203ea0cdfd245b3025ef112313d7643e448d0924a9b4995c8c6360312ab022026cff6ff4259eab6fda9611d370852399810cfe41f16df5957483244539020dd:922c64590222798bb761d5b6d8e72950

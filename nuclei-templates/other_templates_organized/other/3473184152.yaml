@@ -1,14 +1,11 @@
 id: pop3-proxy
 info:
-  name: AnalogX POP3 proxy
+  name: O3SIS UMA pop3 proxy
   author: nmap,cn-kali-team
   tags: detect,tech,pop3-proxy,service
   severity: info
   metadata:
-    product: proxy
     rarity: 0
-    vendor: analogx
-    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -20,4 +17,4 @@ tcp:
   - name: pop3-proxy
     type: regex
     regex:
-    - ^\+OK POP3 AnalogX Proxy (\d[-.\w]+) \(Release\) ready\.\n$
+    - ^\+OK O3SIS UMA Proxy POP3 Server ([\w._-]+)\r\n

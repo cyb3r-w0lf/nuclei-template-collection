@@ -1,14 +1,11 @@
 id: pop3
 info:
-  name: CommuniGate Pro
+  name: Teapop pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    product: communigate_pro
     rarity: 0
-    vendor: stalker
-    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -20,4 +17,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK CommuniGate Pro POP3 Server ([-.\w]+) ready
+    - ^\+OK Teapop \[v?(\d[-.\w ]+)\] - Teaspoon stirs around again .*\r\n

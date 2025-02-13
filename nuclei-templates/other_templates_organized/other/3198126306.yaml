@@ -1,12 +1,16 @@
 id: smtp
 info:
-  name: IronPort appliance mail rejector
+  name: Postfix smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
     hostname: $1
+    product: postfix
     rarity: 0
+    vendor: postfix
+    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +21,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^554-([-.+\w]+)\.us\r\n554 Access denied\r\n$
+    - ^220 ([-\w_.]+) ESMTP PostFix ([\d.]+)\r\n

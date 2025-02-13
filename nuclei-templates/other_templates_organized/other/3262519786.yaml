@@ -1,12 +1,11 @@
 id: printer
 info:
-  name: lpsched
+  name: lpd
   author: nmap,cn-kali-team
   tags: detect,tech,printer,service
   severity: info
   metadata:
-    hostname: $1
-    info: Unauthorized
+    info: 'path: $1; error: $2'
     rarity: 0
 tcp:
 - name: 'null'
@@ -18,4 +17,4 @@ tcp:
   - name: printer
     type: regex
     regex:
-    - '^([-\w_.]+): lpsched: Host name for your address \([\d.]+\) unknown\n'
+    - '^([\w._/-]+/lpd): (.*)\n'

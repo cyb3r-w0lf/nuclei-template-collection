@@ -2,8 +2,9 @@ id: amazon-docker-config-disclosure
 
 info:
   name: Dockerrun AWS Configuration Exposure
-  author: pd-team
+  author: pdteam
   severity: medium
+  tags: config,exposure,aws,devops
 
 requests:
   - method: GET
@@ -14,4 +15,4 @@ requests:
         words:
           - 'AWSEBDockerrunVersion'
           - 'containerDefinitions'
-        condition: and 
+        condition: and

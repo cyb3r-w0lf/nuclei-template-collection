@@ -1,6 +1,6 @@
 id: telnet
 info:
-  name: BayStack switch telnetd
+  name: H3C switch telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
@@ -17,4 +17,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - ^\xff\xfb\x01\x1b\[2J\x1b\[58259456;1H\x1b\[0m\x1b\[1;1H \*\*\*\*\*      \*\*\*     \*     \*    \*\*\*\*\*   \*\*\*\*\*\*\*\*\*     \*\*\*       \*\*\*\*\*  \*      \*\x1b\[2;1H
+    - ^\xff\xfb\x01\xff\xfb\x01\xff\xfb\x01\xff\xfb\x03\xff\xfd\x18\xff\xfd\x1f\r\n\*+\r\n\* Copyright \(c\) \d+-\d+ Hangzhou H3C Tech\. Co\., Ltd\. All rights reserved\.  \*\r\n\* Without the owner's prior written consent,

@@ -1,21 +1,21 @@
 id: http
 info:
-  name: Polycom VVX VoIP phone http config
+  name: MiniShare http interface
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    device_type: VoIP phone
-    rarity: 6
+    operating_system: Windows
+    rarity: 0
+    version: $1
 tcp:
-- name: lpdstring
+- name: 'null'
   inputs:
-  - data: \x01default\n
+  - data: ''
   host:
   - '{{Hostname}}'
-  port: 515,2947,3333,32211,19350
   extractors:
   - name: http
     type: regex
     regex:
-    - ^<html><head><title>Error</title></head>\n<body>Your client sent an invalid \x01default request without a\nprotocol version \(assuming HTTP v0\.9\)\.\n<p>The request can not be processed\.</body></html>$
+    - (?i)^HTTP/1\.1 503 Service unavailable\r\n.*<a href=\"http://minishare\.sourceforge\.net/\">MiniShare ([\w._-]+)</a>

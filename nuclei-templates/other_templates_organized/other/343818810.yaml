@@ -1,15 +1,12 @@
 id: ssh
 info:
-  name: McAfee Web Gateway sshd
+  name: Huawei Unified Media Gateway sshd
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    info: protocol $1
-    product: web_gateway
+    info: 'model: $2; protocol $1'
     rarity: 0
-    vendor: mcafee
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +17,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-SSH\r\n
+    - ^SSH-([\d.]+)-HUAWEI-UMG([\d.]+)\r?\n

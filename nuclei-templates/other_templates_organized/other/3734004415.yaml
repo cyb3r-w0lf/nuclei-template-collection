@@ -1,10 +1,12 @@
 id: http
 info:
-  name: Java Anonymous Proxy
+  name: HP Embedded Web Server remote scan service
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
+    device_type: printer
+    info: no scanner found
     rarity: 0
 tcp:
 - name: 'null'
@@ -16,4 +18,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.1 200 OK\r\nContent-type: text/html\r\nExpires: .*\r\nDate: .*\r\nPragma: no-cache\r\nCache-Control: no-cache\r\n\r\n<HTML><TITLE>JAP</TITLE>\n'
+    - '^HTTP/1.0 500\r\nContent-type: text/plain\r\n\r\nNo Scan Capable Devices Found\r\n'

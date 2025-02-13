@@ -1,15 +1,17 @@
 id: pop3
 info:
-  name: Dovecot pop3d
+  name: Novell NetMail pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
     hostname: $1
-    product: dovecot
+    operating_system: Unix
+    product: netmail
     rarity: 0
-    vendor: dovecot
+    vendor: novell
     verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +22,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK Dovecot POP3 at ([\w._-]+) ready\.\r\n
+    - '^\+OK ([-.+\w]+) NetMail POP3 Agent \$Re..sion: ([\d.]+) \$\r\n'

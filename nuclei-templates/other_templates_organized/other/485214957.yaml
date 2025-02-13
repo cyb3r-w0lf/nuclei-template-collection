@@ -1,12 +1,15 @@
 id: telnet
 info:
-  name: LANCOM L-54g Wireless router telnetd
+  name: BusyBox telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: router
+    info: OpenWRT, telnet disabled
+    product: busybox
     rarity: 0
+    vendor: busybox
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +20,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - ^\xff\xfb\x01\xff\xfb\x03\r\n\r\n#\r\n\| LANCOM L-54g Wireless\r\n\|
+    - ^\xff\xfd\x01\xff\xfd\x1f\xff\xfb\x01\xff\xfb\x03Login failed\.\r\n

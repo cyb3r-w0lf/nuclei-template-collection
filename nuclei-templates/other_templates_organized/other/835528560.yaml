@@ -1,6 +1,6 @@
 id: sip
 info:
-  name: BT HomeHub
+  name: Polycom $SUBST(1,"_"," ") SIP
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
@@ -9,6 +9,7 @@ info:
     fallback:
     - get-request
     rarity: 5
+    version: $2
 tcp:
 - name: sipoptions
   inputs:
@@ -20,4 +21,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 500 Server Internal Error\r\n(?:[^\r\n]+\r\n)*?User-Agent: BT Home Hub\r\n'
+    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?User-Agent: (?:Polycom/[\d.]+ )?PolycomVVX-([\w._]+)-UA/([\d.]+)(?:_[\da-f]+)?\r\n'

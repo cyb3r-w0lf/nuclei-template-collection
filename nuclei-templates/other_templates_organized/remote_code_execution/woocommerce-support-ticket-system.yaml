@@ -1,15 +1,15 @@
-id: woocommerce-support-ticket-system-c55b90eb13850c1f21f1569dfb76cac8
+id: woocommerce-support-ticket-system-45e517d478e3edfe5c5afef1ee6c4635
 
 info:
   name: >
-    WooCommerce Support Ticket System <= 17.7 - Authenticated (Subscriber+) Arbitrary File Deletion
+    WooCommerce Support Ticket System <= 17.8 - Missing Authorization to Authenticated (Subscriber+) Arbitrary Post Deletion and Information Exposure
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/eeb2c829-579f-41e2-ad5f-8e4fc125d980?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/72dc919a-c13d-49b4-927d-a0bb837b63dd?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 17.7')
+          - compare_versions(version, '<= 17.8')

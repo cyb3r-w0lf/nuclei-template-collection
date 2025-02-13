@@ -1,15 +1,13 @@
 id: imap
 info:
-  name: Perdition imapd
+  name: Worldmail imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    hostname: $1
-    product: perdition
+    operating_system: Windows
     rarity: 0
-    vendor: horms
-    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +18,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK \[CAPABILITY IMAP4 IMAP4REV1\] perdition ready on ([\w._-]+) [a-f\d]+\r\n
+    - ^\* OK IMAP4 server ready \(Worldmail ([\d.]+)\)\r\n

@@ -1,12 +1,13 @@
 id: http
 info:
-  name: D-Link router http config
+  name: ZTE H220N router http config
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
     device_type: router
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +18,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.0 503 R\r\nContent-Type: text/html\r\n\r\nBusy$'
+    - '^HTTP/1\.1 200 OK\r\nConnection: close\r\nContent-Length: 0\r\nContent-Type: text/xml; charset=\"utf-8\"\r\n\r\nHTTP/1\.0 400 Bad Request\r\nServer: CPE-SERVER/([\w._-]+) Supports only GET\r\n\r\n$'

@@ -1,15 +1,14 @@
-id: peters-login-redirect-daa346b4c4a61a72e3f4108905059906
+id: peters-login-redirect
 
 info:
   name: >
-    LoginWP < 3.0.0.5 - Reflected Cross-Site Scripting via rul_login_url, rul_logout_url Parameter
+    LoginWP <= 2.9.1 - Multiple Cross-Site Request Forgery vulnerabilities
   author: topscoder
   severity: medium
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/64827b61-42ea-454a-b41d-85ce8d6ad866?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/879c0a85-ed94-430c-8e8e-6389294b432b?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 3.0.0.5')
+          - compare_versions(version, '<= 2.9.1')

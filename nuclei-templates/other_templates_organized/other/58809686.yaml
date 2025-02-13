@@ -1,14 +1,16 @@
 id: smtp
 info:
-  name: CPMTA
+  name: MDaemon smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    hostname: $1
-    info: qmail-derived
+    info: Server too busy error
+    operating_system: Windows
+    product: mdaemon
     rarity: 0
-    version: $2
+    vendor: altn
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +21,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([-.+\w]+) ESMTP CPMTA-([-.+\w]+) - NO UCE\r\n
+    - ^421 Sorry, SMTP server too busy right now \(193\); try again later\r\n

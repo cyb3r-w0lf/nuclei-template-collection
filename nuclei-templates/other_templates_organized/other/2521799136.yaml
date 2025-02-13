@@ -1,21 +1,23 @@
 id: smtp
 info:
-  name: Kerio MailServer
+  name: Postfix smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    hostname: $1
-    rarity: 0
-    version: $2
+    product: postfix
+    rarity: 8
+    vendor: postfix
+    verified: true
 tcp:
-- name: 'null'
+- name: hello
   inputs:
-  - data: ''
+  - data: EHLO\r\n
   host:
   - '{{Hostname}}'
+  port: 25,587,3025
   extractors:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([-.\w]+) Kerio MailServer (\d[-.\w]+ patch \d+) ESMTP ready\r\n
+    - '^220 ESMTP Postfix\r\n501 Syntax: EHLO hostname\r\n'

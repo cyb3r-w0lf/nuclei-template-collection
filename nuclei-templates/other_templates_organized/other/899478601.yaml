@@ -1,12 +1,13 @@
 id: telnet
 info:
-  name: D-Link Access Point telnetd
+  name: Extron IPL T S2 telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: router
+    device_type: media device
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +18,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\xff\xfb\x01\r\nD-Link Access Point login: '
+    - ^\r\n\(c\) Copyright 2005, Extron Electronics, IPL T S2, V([\d.]+),

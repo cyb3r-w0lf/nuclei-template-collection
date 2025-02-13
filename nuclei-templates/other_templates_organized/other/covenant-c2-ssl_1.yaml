@@ -9,9 +9,8 @@ info:
   reference: |
     https://twitter.com/MichalKoczwara/status/1548685058403360770
   metadata:
-    max-request: 1
-    shodan-query: ssl:”Covenant” http.component:”Blazor”
     verified: "true"
+    shodan-query: ssl:”Covenant” http.component:”Blazor”
   tags: c2,ir,osint,covenant,ssl
 
 ssl:

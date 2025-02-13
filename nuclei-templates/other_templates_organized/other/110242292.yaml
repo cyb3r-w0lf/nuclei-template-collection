@@ -1,13 +1,13 @@
 id: sip
 info:
-  name: MicroSIP sipd
+  name: Telekom Netphone VoIP phone SIP
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
   metadata:
+    device_type: VoIP phone
     fallback:
     - get-request
-    operating_system: Windows
     rarity: 5
     version: $1
 tcp:
@@ -21,4 +21,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?User-Agent: MicroSIP/([\d.]+)\r\n'
+    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?User-Agent: T-Com-IpPbxSrv/([\w._-]+)\r\n'

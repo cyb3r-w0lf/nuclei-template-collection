@@ -1,6 +1,6 @@
 id: rtsp
 info:
-  name: Sanyo VCC-HD2300 webcam rtspd
+  name: Cisco WVC54GCA webcam rtspd
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
@@ -20,4 +20,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '^RTSP/1\.0 400 Bad Request\r\nCSeq: 0\r\n\r\n'
+    - '^RTSP/1\.0 200 OK\r\nCseq: 0\r\nPublic: OPTIONS,DESCRIBE,SETUP,PLAY,PING,PAUSE,TEARDOWN\r\n\r\n$'

@@ -1,15 +1,13 @@
 id: ftp
 info:
-  name: FileZilla ftpd
+  name: Sambar ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    info: IP blocked
-    operating_system: Windows
-    product: filezilla_server
+    product: sambar_server
     rarity: 0
-    vendor: filezilla-project
+    vendor: sambar
     verified: true
 tcp:
 - name: 'null'
@@ -21,4 +19,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^550 No connections allowed from your IP\r\n
+    - ^220-FTP Server ready\r\n220-Welcome to the Sambar FTP Server\r\r\n

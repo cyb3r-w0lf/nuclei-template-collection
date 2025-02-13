@@ -1,15 +1,12 @@
 id: telnet
 info:
-  name: BusyBox telnetd
+  name: ROTAL RTA1025W WAP telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    info: '**BACKDOOR**; unauthenticated root shell'
-    product: busybox
+    device_type: WAP
     rarity: 0
-    vendor: busybox
-    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -21,4 +18,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\xff\xfd\x01\xff\xfd\x1f\xff\xfd!\xff\xfb\x01\xff\xfb\x03\r\n\r\nBusyBox v([\w._-]+) \([\d.:+-]*\) Built-in shell \(ash\)\r\nEnter ''help'' for a list of built-in commands\.\r\n\r\n# '
+    - '^\xff\xfd\x01\xff\xfd!\xff\xfb\x01\xff\xfb\x03ROTAL Wireless ADSL2\+ Router RTA1025W \r\nSoftware Version: ([\w._-]+)\r\nLogin name: '

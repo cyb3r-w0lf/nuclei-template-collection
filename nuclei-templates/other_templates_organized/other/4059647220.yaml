@@ -1,13 +1,14 @@
 id: ftp
 info:
-  name: Océ ColorWave $1 printer ftpd
+  name: Aironet $2 wireless bridge ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: printer
+    device_type: WAP
+    hostname: $1
     rarity: 0
-    version: $2
+    version: $3
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +19,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 CW([\w._-]+) FTP Service \(Version ([\w._-]+)\)\.\r\n
+    - ^220 ([-\w_.]+) \(Aironet (BR\w+) V([\d.]+)\) ready\r\n

@@ -1,16 +1,16 @@
 id: ssh
 info:
-  name: Gravitational Teleport sshd
+  name: OpenSSH
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
     info: protocol $1
-    product: teleport
+    product: openssh
     rarity: 0
-    vendor: gravitational
+    vendor: openbsd
     verified: true
-    version: 2.7.0 or later
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +21,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-Teleport\n
+    - ^SSH-([\d.]+)-OpenSSH_([\w._-]+-CERN\d+)\r?\n

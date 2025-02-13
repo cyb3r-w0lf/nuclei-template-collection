@@ -1,21 +1,20 @@
 id: printer
 info:
-  name: Microsoft lpd
+  name: lpd
   author: nmap,cn-kali-team
   tags: detect,tech,printer,service
   severity: info
   metadata:
-    operating_system: Windows
-    rarity: 6
+    hostname: $1
+    rarity: 0
 tcp:
-- name: lpdstring
+- name: 'null'
   inputs:
-  - data: \x01default\n
+  - data: ''
   host:
   - '{{Hostname}}'
-  port: 515,2947,3333,32211,19350
   extractors:
   - name: printer
     type: regex
     regex:
-    - ^\x01\x01$
+    - '^([-\w_.]+): lpd: address for your hostname \([\d.]+\) not matched\n'

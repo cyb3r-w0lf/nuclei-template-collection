@@ -1,13 +1,11 @@
 id: ftp
 info:
-  name: DrayTek Vigor ADSL router ftpd
+  name: Lutron HomeWorks ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: broadband router
     rarity: 0
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +16,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 FTP version ([\w.]+)\r\n331 Enter PASS command\r\n$
+    - ^220 Welcome to the HomeWorks Processor\r\n

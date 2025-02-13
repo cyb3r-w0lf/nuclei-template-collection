@@ -1,11 +1,14 @@
 id: imap
 info:
-  name: VisNetic MailServer imapd
+  name: IceWarp imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
+    product: mail_server
     rarity: 0
+    vendor: icewarp
+    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -17,4 +20,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK VisNetic\.MailServer\.v([\w._-]+) IMAP4rev1 .*\r\n
+    - ^\* OK HT Mail Server v([\d.]+) IMAP4rev1 .*\r\n

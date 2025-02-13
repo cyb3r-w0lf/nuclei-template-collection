@@ -1,13 +1,12 @@
 id: pop3
 info:
-  name: RaidenMAILD pop3d
+  name: WinGate pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
     operating_system: Windows
     rarity: 0
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +17,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK Welcome to RaidenMAILD POP3 service v([\d.]+),
+    - ^\+OK WinGate Engine POP3 Gateway ready\r\n

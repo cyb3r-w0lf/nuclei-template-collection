@@ -1,12 +1,14 @@
 id: telnet
 info:
-  name: AXIS Webcam
+  name: Juniper Mobility System Software telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
+    product: mobility_system_software
     rarity: 0
-    version: $1
+    vendor: juniper
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +19,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - ^\xff\xfb\x01\xff\xfb\x03\r\nAXIS (\S+) TELNET
+    - '^\xff\xfb\x01\xff\xfb\x03\r\n\r\nCopyright \(c\) 2002 - \d\d\d\d Juniper Networks, Inc\. All rights reserved\.\r\n\n\r\n\r\n\r\0Username: '

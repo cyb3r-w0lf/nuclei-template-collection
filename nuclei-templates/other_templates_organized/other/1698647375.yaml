@@ -1,6 +1,6 @@
 id: telnet
 info:
-  name: Lantronix Evolution OS telnetd
+  name: Java Object Oriented Telnet Talker
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
@@ -16,4 +16,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - ^\xff\xfb\x03\xff\xfd\x03\xff\xfb\x01>$
+    - ^Please wait \.\.\. Connecting \.\.\.

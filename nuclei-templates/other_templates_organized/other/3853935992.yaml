@@ -1,16 +1,16 @@
 id: pop3
 info:
-  name: Cyrus POP3 Murder
+  name: Microsoft Exchange 2000 pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    hostname: $1
-    product: cyrus_imap_server
+    operating_system: Windows
+    product: exchange_server
     rarity: 0
-    vendor: cmu
+    vendor: microsoft
     verified: true
-    version: $2
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +21,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK  ?([-.\w]+) Cyrus POP3 Murder v(\d[-.\w\+]+) server ready ?\r\n
+    - ^\+OK Microsoft Exchange 2000 POP3 server version (\S+).* ready\.\r\n

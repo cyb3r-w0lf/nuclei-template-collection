@@ -1,15 +1,11 @@
 id: imap
 info:
-  name: Axigen imapd
+  name: Kerio imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    operating_system: Linux
-    product: axigen_mail_server
     rarity: 0
-    vendor: gecad
-    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -21,4 +17,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK Axigen-([\w._-]+) \(Linux/x64\) IMAP4rev1 service is ready\r\n
+    - ^\* OK Kerio MailServer ([\d.]+) IMAP4rev1 server ready\r\n

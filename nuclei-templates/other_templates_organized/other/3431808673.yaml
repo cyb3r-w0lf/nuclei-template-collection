@@ -1,10 +1,11 @@
 id: tftp
 info:
-  name: Enistic zone controller tftpd
+  name: Windows 2003 Server Deployment Service
   author: nmap,cn-kali-team
   tags: detect,tech,tftp,service
   severity: info
   metadata:
+    operating_system: Windows
     rarity: 6
 tcp:
 - name: xdmcp
@@ -17,4 +18,4 @@ tcp:
   - name: tftp
     type: regex
     regex:
-    - ^\0\x05\0\x01File not found\.\0$
+    - ^\0\x05\0\x04Illegal TFTP operation\0

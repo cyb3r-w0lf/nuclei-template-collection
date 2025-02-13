@@ -1,16 +1,16 @@
 id: ssh
 info:
-  name: OpenSSH
+  name: FileCOPA sftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
     info: protocol $1
-    product: openssh
+    operating_system: Windows
+    product: filecopa
     rarity: 0
-    vendor: openbsd
+    vendor: intervations
     verified: true
-    version: $2 NCSA_GSSAPI_20040818 KRB5
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +21,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-OpenSSH_([\w._-]+) NCSA_GSSAPI_20040818 KRB5\r?\n
+    - ^SSH-([\d.]+)-FileCOPA\r\n

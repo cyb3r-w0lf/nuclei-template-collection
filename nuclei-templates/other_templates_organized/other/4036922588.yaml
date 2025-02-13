@@ -1,12 +1,12 @@
 id: smtp
 info:
-  name: Trend Micro InterScan
+  name: smtp4dev
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
+    hostname: $1
     rarity: 0
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +17,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220-InterScan Version (\S+) .*Ready\r\n
+    - ^220 ([\w._-]+) smtp4dev ready\r\n

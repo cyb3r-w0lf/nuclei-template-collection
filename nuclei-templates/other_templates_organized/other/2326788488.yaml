@@ -1,11 +1,10 @@
 id: ftp
 info:
-  name: Mac OS X Server ftpd
+  name: FortiGate Application filtering
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    operating_system: Mac OS X
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +16,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220--------------------------------------------------------------------------------\r\n220-This is the \"Banner\" message for the Mac OS X Server's FTP server process\.\r\n
+    - ^220 Firewall Authentication required before proceeding with service\r\n

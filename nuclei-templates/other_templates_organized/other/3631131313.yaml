@@ -1,16 +1,11 @@
 id: domain
 info:
-  name: ISC BIND
+  name: Nominum Vantio
   author: nmap,cn-kali-team
   tags: detect,tech,domain,service
   severity: info
   metadata:
-    info: Debian Linux 7.0 (Wheezy)
-    operating_system: Linux
-    product: bind
     rarity: 1
-    vendor: isc
-    verified: true
     version: $1
 tcp:
 - name: dnsversion-bind-req
@@ -23,4 +18,4 @@ tcp:
   - name: domain
     type: regex
     regex:
-    - (?i)\x07version\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03.{7}(\d[-\w.+~]*?)-9wheezy\w+-[Dd]ebian
+    - (?i)\x07version\x04bind\0\0\x10\0\x03\xc0\x0c\0\x10\0\x03.{7}Nominum Vantio ([\d\.]+)

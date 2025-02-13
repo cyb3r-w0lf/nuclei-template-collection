@@ -1,12 +1,16 @@
 id: smtp
 info:
-  name: LiteMail smtpd
+  name: FirstClass submission server
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    operating_system: Windows
+    hostname: $1
+    product: firstclass
     rarity: 0
+    vendor: opentext
+    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +21,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 LiteMail SMTP Server Ready\.\r\n
+    - ^220 ([\w.-]+) FirstClass SMTP Submission Server v([\d.]+) ready\r\n

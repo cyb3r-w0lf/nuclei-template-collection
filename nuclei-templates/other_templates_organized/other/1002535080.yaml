@@ -1,21 +1,20 @@
 id: smtp
 info:
-  name: Konica Minolta bizhub 350 printer smtpd
+  name: eSafe mail gateway
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    device_type: printer
-    rarity: 8
+    rarity: 0
+    version: $1
 tcp:
-- name: hello
+- name: 'null'
   inputs:
-  - data: EHLO\r\n
+  - data: ''
   host:
   - '{{Hostname}}'
-  port: 25,587,3025
   extractors:
   - name: smtp
     type: regex
     regex:
-    - ^220 \r\n501 \r\n
+    - ^220 .*?eSafe E?SMTP Service (\d\S+) ready

@@ -1,16 +1,14 @@
 id: sip
 info:
-  name: PJSIP pjsua sipd
+  name: D-Link DVG-5121SP VoIP adapter
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
   metadata:
+    device_type: VoIP adapter
     fallback:
     - get-request
-    info: 'arch: $3'
-    operating_system: Linux $2
     rarity: 5
-    version: $1
 tcp:
 - name: sipoptions
   inputs:
@@ -22,4 +20,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?User-Agent: PJSUA v([\d.]+) Linux-([\d.]+)/(ix[\w_]+)'
+    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?User-Agent: VOIP_Agent_001\r\nAllow: INVITE, ACK, BYE, CANCEL, OPTIONS, SUBSCRIBE, REFER, NOTIFY, UPDATE, MESSAGE, SERVICE, INFO, PING\r\n'

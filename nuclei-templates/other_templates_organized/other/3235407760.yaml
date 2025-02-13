@@ -1,13 +1,12 @@
 id: pop3
 info:
-  name: WinWebMail pop3d
+  name: tpop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    operating_system: Windows
+    hostname: $1
     rarity: 0
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +17,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK POP3 on WinWebMail \[([\d.]+)\] ready\.  http://www\.winwebmail\.com\r\n
+    - ^\+OK <[\da-f]{32}@([-.\w]+)>\r\n

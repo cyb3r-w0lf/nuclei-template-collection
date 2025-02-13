@@ -1,16 +1,13 @@
 id: pop3
 info:
-  name: IceWarp pop3d
+  name: RaidenMAILD pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    hostname: $1
-    product: mail_server
+    operating_system: Windows
     rarity: 0
-    vendor: icewarp
-    verified: true
-    version: $2
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +18,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK ([\w._-]+) IceWarp ([\w._-]+) POP3 \w+, \d+ \w+ \d+ \d+:\d+:\d+ [+-]\d+ <[\w._-]+@[\w._-]+>\r\n
+    - ^\+OK Welcome to RaidenMAILD POP3 service v([\d.]+),

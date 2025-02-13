@@ -1,14 +1,13 @@
 id: http
 info:
-  name: micro_httpd
+  name: Cisco Catalyst http config
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    product: micro_httpd
+    device_type: switch
+    operating_system: IOS
     rarity: 0
-    vendor: acme
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +18,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.1 \d\d\d .*\r\nServer: micro_httpd\r\n'
+    - '^HTTP/1\.0 500 Internal Server Error\r\nDate: .*\r\nContent-type: text/html\r\nExpires: .*\r\n\r\n<H1>500 Internal Server Error</H1>\r\n\r\n\r\n'

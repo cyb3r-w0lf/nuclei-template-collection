@@ -1,12 +1,14 @@
 id: imap
 info:
-  name: SeattleLab SLMail imapd
+  name: Axigen imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    operating_system: Windows
+    product: axigen_mail_server
     rarity: 0
+    vendor: gecad
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +19,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK Welcome to the SLnet IMAP Service\r\n
+    - ^\* OK AXIGEN IMAP4rev1 service is ready\r\n

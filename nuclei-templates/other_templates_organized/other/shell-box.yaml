@@ -9,16 +9,11 @@ info:
   reference:
     - https://github.com/shellinabox/shellinabox
     - https://www.cvedetails.com/vulnerability-list/vendor_id-15771/product_id-33062/Shellinabox-Project-Shellinabox.html
-  classification:
-    cpe: cpe:2.3:a:shellinabox_project:shellinabox:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
-    vendor: shellinabox_project
-    product: shellinabox
     shodan-query: http.favicon.hash:-629968763
-    fofa-query: icon_hash=-629968763
-  tags: shell,emulator,detect,panel,login,shellinabox_project
+  tags: shell,emulator,detect,panel,login
 
 http:
   - method: GET
@@ -37,4 +32,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a004830460221009422473c52434a5f69e9e42babb556db29ce642901e05e3693fbbd34dc8e35d2022100dcbd45d238e075f12f442c88e1a40c8c084608aa242b5a3f599714f039f20edb:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a00483046022100e2dd0f9ecb69473d11fa25fac2d55fb940726a8b6d04be8e754e36eb1df03fa60221008a14793ab842dfa06edaecc6c90ac72ce5989ac9482ffd2a1824f5dffd0cd538:922c64590222798bb761d5b6d8e72950

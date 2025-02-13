@@ -1,12 +1,13 @@
 id: ftp
 info:
-  name: Dell $1 color laser printer ftpd
+  name: FreeFTPd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: printer
+    operating_system: Windows
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 Dell ([\w._-]+) Color Laser\r\n
+    - ^220 Hello, I'm freeFTPd ([\d.]+)\r\n

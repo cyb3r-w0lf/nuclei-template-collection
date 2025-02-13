@@ -1,11 +1,12 @@
 id: ftp
 info:
-  name: Gene6 ftpd
+  name: Android ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
     rarity: 0
+    version: '2.1'
 tcp:
 - name: 'null'
   inputs:
@@ -16,4 +17,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 FTP Server ready\.\.\.\r\n
+    - ^220 FTP Server 2\.1 ready\r\n

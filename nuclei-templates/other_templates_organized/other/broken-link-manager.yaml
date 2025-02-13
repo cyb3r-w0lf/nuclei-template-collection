@@ -1,15 +1,14 @@
-id: broken-link-manager-559c3f64cd318e2379b381cc5b77512e
+id: broken-link-manager
 
 info:
   name: >
-    Broken Link Manager <= 0.6.5 - Authenticated (Admin+) SQL Injection
+    Broken Link Manager < 0.6.0 - Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/05042006-aff6-4ba6-ae67-249dc0dcbb93?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a7982828-bc67-48ee-be80-3203b081e29b?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/broken-link-manager/"
     google-query: inurl:"/wp-content/plugins/broken-link-manager/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,broken-link-manager,low
+  tags: cve,wordpress,wp-plugin,broken-link-manager,high
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 0.6.5')
+          - compare_versions(version, '< 0.6.0')

@@ -1,15 +1,12 @@
 id: nntp
 info:
-  name: InterNetNews (INN)
+  name: Newscache nntp cache
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    info: HDD full
-    product: inn
     rarity: 0
-    vendor: isc
-    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +17,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^400 No space left on device writing SMstore file -- throttling\r\n
+    - ^200 NewsCache ([-\w_.]+), accepting NNRP commands\r\n

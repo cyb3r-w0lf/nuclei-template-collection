@@ -1,6 +1,6 @@
 id: pop3
 info:
-  name: SocketMail pop3d
+  name: DBOX TCL pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
@@ -17,4 +17,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK SocketMail v ([-\w_.]+) SocketMail POP3 Server Ready\r\n
+    - ^\+OK DBOX POP3 Server ([\d.]+) ready\r\n

@@ -1,22 +1,23 @@
-id: wordpress-popular-posts-0d6f6b6d20b1ecba24e8d2669442ed3b
+id: wordpress-popular-posts
 
 info:
-  name: "WordPress Popular Posts <= 5.5.1 - Reflected Cross-Site Scripting"
+  name: >
+    WordPress Popular Posts <= 5.3.3 - Authenticated (Admin+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
-  description: "The WordPress Popular Posts plugin for WordPress is vulnerable to Reflected Cross-Site Scripting due to the use of add_query_arg without appropriate escaping on the URL in versions up to, and including, 5.5.1. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
+  severity: low
+  description: >
+    
   reference:
-    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&new=2748156%40wordpress-popular-posts%2Ftrunk&old=2664002%40wordpress-popular-posts%2Ftrunk&sfp_email=&sfph_mail=
-    - https://wpscan.com/vulnerability/a1113cf4-29ab-4dbd-841d-4e00f24b0b01
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e9012824-7221-4b93-a5fb-65caf7994e92?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    cvss-score: 6.1
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/wordpress-popular-posts/"
     google-query: inurl:"/wp-content/plugins/wordpress-popular-posts/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wordpress-popular-posts,medium
+  tags: cve,wordpress,wp-plugin,wordpress-popular-posts,low
 
 http:
   - method: GET
@@ -54,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 5.5.1')
+          - compare_versions(version, '<= 5.3.3')

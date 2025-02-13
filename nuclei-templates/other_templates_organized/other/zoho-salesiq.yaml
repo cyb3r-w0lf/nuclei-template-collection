@@ -1,15 +1,14 @@
-id: zoho-salesiq-985b0c348c66394b7df8d9fc7256c93e
+id: zoho-salesiq
 
 info:
   name: >
-    Zoho SalesIQ <= 1.0.8 - Cross-Site Request Forgery
+    Zoho SalesIQ <= 1.0.8 - Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: high
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3bf59f44-356c-4d84-add3-72e8905a80f9?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e9fba508-9a18-4c02-8d3a-0bcf990c457d?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/zoho-salesiq/"
     google-query: inurl:"/wp-content/plugins/zoho-salesiq/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,zoho-salesiq,medium
+  tags: cve,wordpress,wp-plugin,zoho-salesiq,high
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.0.8')
+          - compare_versions(version, '< 1.0.9')

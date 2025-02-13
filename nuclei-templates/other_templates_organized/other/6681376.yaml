@@ -1,16 +1,12 @@
 id: ftp
 info:
-  name: ProFTPD
+  name: TwoFTPd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
     operating_system: Unix
-    product: proftpd
     rarity: 0
-    vendor: proftpd
-    verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +17,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 ProFTPD (\d\S+) Server
+    - ^220-TwoFTPd server ready\.\r\n220 Authenticate first\.\r\n

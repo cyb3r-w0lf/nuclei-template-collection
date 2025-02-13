@@ -1,12 +1,17 @@
 id: smtp
 info:
-  name: WebSTAR SMTP server
+  name: Synametrics Xeams smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
     hostname: $1
+    info: build $3
+    product: xeams
     rarity: 0
+    vendor: synametrics
+    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +22,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([-.\w]+) WebSTAR Mail Simple Mail Transfer Service Ready\r\n
+    - '^220 ([\w.-]+) - Xeams SMTP server; Version: ([\d.]+) - build: (\d+); \d\d/\d\d/\d\d \d\d:\d\d [AP]M\r\n'

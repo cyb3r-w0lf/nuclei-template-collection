@@ -1,12 +1,13 @@
 id: rtsp
 info:
-  name: Hikvision DVR rtspd
+  name: RogueAmoeba Airfoil rtspd
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
   metadata:
     fallback:
     - get-request
+    operating_system: Mac OS X
     rarity: 5
 tcp:
 - name: rtsprequest
@@ -19,4 +20,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '^RTSP/1\.0 200 OK\r\nPublic: OPTIONS, DESCRIBE, SETUP, PLAY, TEARDOWN, PAUSE\r\n\r\n$'
+    - '^RTSP/1\.0 200 OK\r\nAudio-Jack-Status: connected; type=digital\r\n'

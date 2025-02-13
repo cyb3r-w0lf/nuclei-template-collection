@@ -1,14 +1,12 @@
 id: smtp
 info:
-  name: ZMailer smtpd
+  name: Trend Micro IMSS smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    hostname: $1
-    operating_system: Unix
+    operating_system: Windows
     rarity: 0
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +17,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - '^220 ([-\w_.]+) ZMailer Server ([\w.]+) #\d+ ESMTP ready at .*\r\n'
+    - ^220 imss-2 ESMTP ready at .*\r\n

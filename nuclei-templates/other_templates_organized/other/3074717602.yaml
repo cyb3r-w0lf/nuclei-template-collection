@@ -1,14 +1,14 @@
 id: ftp
 info:
-  name: TYPSoft ftpd
+  name: FileZilla ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
     operating_system: Windows
-    product: typsoft_ftp_server
+    product: filezilla_server
     rarity: 0
-    vendor: typsoft
+    vendor: filezilla-project
     verified: true
     version: $1
 tcp:
@@ -21,4 +21,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220-TYPSoft FTP Server ([\d.]+) ready\.\.\.\r\n
+    - (?i)^220-.*\r\n220-\r\n220 using FileZilla FileZilla Server version ([^\r\n]+)\r\n

@@ -1,21 +1,23 @@
 id: smtp
 info:
-  name: MailMax smtpd
+  name: Lotus Notes smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    hostname: $1
-    rarity: 0
-    version: $2
+    product: lotus_domino
+    rarity: 8
+    vendor: ibm
+    verified: true
 tcp:
-- name: 'null'
+- name: hello
   inputs:
-  - data: ''
+  - data: EHLO\r\n
   host:
   - '{{Hostname}}'
+  port: 25,587,3025
   extractors:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([-\w_.]+) Mailmax version ([\d. ]+) ESMTP Mail Server Ready \r\n
+    - ^552 Invalid domain name in HELO command \(DLH use case\)\.\r\n

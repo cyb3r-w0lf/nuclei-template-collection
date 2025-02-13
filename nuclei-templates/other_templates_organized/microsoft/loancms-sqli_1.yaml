@@ -14,11 +14,10 @@ info:
     cvss-score: 10.0
     cwe-id: CWE-89
   metadata:
-    max-request: 2
     verified: true
   tags: auth-bypass,cms,packetstorm,edb,loancms,sqli
 
-http:
+requests:
   - raw:
       - |
         POST /ajax.php?action=login HTTP/1.1

@@ -1,15 +1,13 @@
 id: pop3
 info:
-  name: Microsoft Exchange pop3d
+  name: Stalker pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    operating_system: Windows
-    product: exchange_server
+    hostname: $2
+    operating_system: Mac OS
     rarity: 0
-    vendor: microsoft
-    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -21,4 +19,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK Microsoft Exchange POP3 server version (\S+) ready\r\n
+    - ^\+OK Stalker POP3 Server ([\w.]+) at ([-\w_.]+) ready <.*>\r\n

@@ -1,11 +1,12 @@
 id: printer
 info:
-  name: Microsoft lpd
+  name: VSE lpd
   author: nmap,cn-kali-team
   tags: detect,tech,printer,service
   severity: info
   metadata:
-    operating_system: Windows
+    device_type: print server
+    operating_system: z/VSE
     rarity: 6
 tcp:
 - name: lpdstring
@@ -18,4 +19,4 @@ tcp:
   - name: printer
     type: regex
     regex:
-    - ^\x01\x01$
+    - ^VSE Line Printer Daemon has rejected this request\.\0\0

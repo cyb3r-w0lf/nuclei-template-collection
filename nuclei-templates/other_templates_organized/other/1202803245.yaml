@@ -1,16 +1,13 @@
 id: ftp
 info:
-  name: Microsoft IIS ftpd
+  name: vxTarget ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    operating_system: Windows
-    product: internet_information_services
+    info: VxWorks $1
+    operating_system: VxWorks
     rarity: 0
-    vendor: microsoft
-    verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 IIS ([\w._-]+) FTP\r\n
+    - ^220 vxTarget FTP server \(VxWorks ([\d.]+)\) ready\.\r\n

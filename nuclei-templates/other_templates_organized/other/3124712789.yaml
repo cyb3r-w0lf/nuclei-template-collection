@@ -1,14 +1,14 @@
 id: pop3pw
 info:
-  name: Mercur pop3pw
+  name: CommuniGate Pro pop3pw
   author: nmap,cn-kali-team
   tags: detect,tech,pop3pw,service
   severity: info
   metadata:
-    operating_system: Windows
-    product: mercur
+    info: access denied
+    product: communigate_pro
     rarity: 0
-    vendor: atrium
+    vendor: stalker
     verified: true
 tcp:
 - name: 'null'
@@ -20,4 +20,4 @@ tcp:
   - name: pop3pw
     type: regex
     regex:
-    - ^200 MERCUR Password service for Windows NT ready\r\n
+    - ^500 access from your network is denied\r\n$

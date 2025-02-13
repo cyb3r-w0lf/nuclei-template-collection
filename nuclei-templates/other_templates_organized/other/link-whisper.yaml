@@ -1,15 +1,14 @@
-id: link-whisper-590ec79edbfdbabfde5d2bb2c3ab1c04
+id: link-whisper
 
 info:
   name: >
-    Link Whisper Free <= 0.7.1 - Authenticated (Contributor+) PHP Object Injection
+    Link Whisper Free <= 0.6.9
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7d5dd7cd-f96a-48df-a553-be5e59d8290f?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8155585e-c29c-484c-ab2e-371b5723539e?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 0.7.1')
+          - compare_versions(version, '<= 0.6.9')

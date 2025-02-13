@@ -1,16 +1,13 @@
 id: imap
 info:
-  name: Sun Java System Messaging Server imapd
+  name: Eudora Internet Mail Server X imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
     hostname: $1
-    info: $3 bits
-    product: java_system_messaging_server
+    operating_system: Mac OS X
     rarity: 0
-    vendor: sun
-    verified: true
     version: $2
 tcp:
 - name: 'null'
@@ -22,4 +19,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK \[CAPABILITY IMAP4 IMAP4rev1[\w+= -]*\] ([\w._-]+) IMAP4 service \(Sun Java\(tm\) System Messaging Server ([\w._-]+) (\d+)bit \(built .*\)\)\r\n
+    - ^\* OK ([-\w_.]+) running EIMS X ([\w.]+)\r\n

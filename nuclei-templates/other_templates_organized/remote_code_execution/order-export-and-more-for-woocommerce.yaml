@@ -1,15 +1,15 @@
-id: order-export-and-more-for-woocommerce-229e7a7cf1d14530bd6fed684bfc01b3
+id: order-export-and-more-for-woocommerce-92acc057e6ba440a9f2283fc6709f007
 
 info:
   name: >
-    Order Export for WooCommerce <= 3.23 - Unauthenticated Sensitive Information Exposure
+    Order Export for WooCommerce <= 3.24 - Unauthenticated Sensitive Information Exposure Through Unprotected Directory
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0e3f8108-6b1b-4720-a450-e58b1833b608?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/18d6dffd-8df3-4611-ad94-6d806aa7328a?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.23')
+          - compare_versions(version, '<= 3.24')

@@ -1,16 +1,11 @@
 id: ms-sql-s
 info:
-  name: Microsoft SQL Server 2005
+  name: Dionaea honeypot MS-SQL server
   author: nmap,cn-kali-team
   tags: detect,tech,ms-sql-s,service
   severity: info
   metadata:
-    operating_system: Windows
-    product: sql_server
     rarity: 7
-    vendor: microsoft
-    verified: true
-    version: 9.00.3080; SP2+ MS09-062
 tcp:
 - name: ms-sql-s
   inputs:
@@ -22,4 +17,4 @@ tcp:
   - name: ms-sql-s
     type: regex
     regex:
-    - ^\x04\x01\x00\x25\x00\x00\x01\x00\x00\x00\x15\x00\x06\x01\x00\x1b\x00\x01\x02\x00\x1c\x00\x01\x03\x00\x1d\x00\x00\xff\x09\x00\x0c\x08
+    - ^\x04\x01\x00\x2b\x00\x00\x00\x00\x00\x00\x1a\x00\x06\x01\x00\x20\x00\x01\x02\x00\x21\x00\x01\x03\x00\x22\x00\x00\x04\x00\x22\x00\x01\xff\x08\x00\x02\x10\x00\x00\x02\x00\x00

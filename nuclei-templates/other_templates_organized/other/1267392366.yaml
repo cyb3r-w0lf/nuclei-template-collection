@@ -1,14 +1,12 @@
 id: ftp
 info:
-  name: MikroTik router ftpd
+  name: MegaBit Gear ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: router
-    hostname: $1
     rarity: 0
-    version: $2
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +17,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 (.+) FTP server \(MikroTik ([\w._-]+)\) ready\r\n
+    - ^220-MegaBit Gear (\S+).*FTP server ready

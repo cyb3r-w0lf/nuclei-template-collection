@@ -1,15 +1,14 @@
 id: smtp
 info:
-  name: Sendmail
+  name: Lotus Domino smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
     hostname: $1
-    operating_system: IRIX
-    product: sendmail
+    product: lotus_domino
     rarity: 0
-    vendor: sendmail
+    vendor: ibm
     verified: true
     version: $2
 tcp:
@@ -22,4 +21,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - '^220  E?SMTP ([\w._-]+) Sendmail ([\w._-]+)/[\w._-]+ ready at '
+    - ^220 ([-.\w]+) ESMTP Service \(Lotus Domino (\d[-.\w ]+)\) ready at

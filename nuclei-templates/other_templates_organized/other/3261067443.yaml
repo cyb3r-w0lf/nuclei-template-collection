@@ -1,6 +1,6 @@
 id: rtsp
 info:
-  name: Optelecom-NKF rtspd
+  name: Vivotek IP7131 or IP7138 webcam rtspd
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
@@ -9,7 +9,6 @@ info:
     fallback:
     - get-request
     rarity: 5
-    version: $1
 tcp:
 - name: rtsprequest
   inputs:
@@ -21,4 +20,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '^RTSP/1\.0 400 Bad Request\r\nServer: Optelecom-NKF RTSPServer/([\w._-]+)\r\n\r\n'
+    - '^RTSP/1\.0 200 OK\r\nCSeq: -1\r\nDate: .* GMT\r\nPublic: OPTIONS, DESCRIBE, PLAY, SETUP, TEARDOWN\r\n\r\n$'

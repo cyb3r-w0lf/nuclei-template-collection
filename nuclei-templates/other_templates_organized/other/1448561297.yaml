@@ -1,13 +1,17 @@
 id: sip
 info:
-  name: QIP instant messenger SIP
+  name: Asterisk
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
   metadata:
+    device_type: PBX
     fallback:
     - get-request
+    product: asterisk
     rarity: 5
+    vendor: digium
+    verified: true
     version: $1
 tcp:
 - name: sipoptions
@@ -20,4 +24,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?User-Agent: QIP ([\w._ -]+)\r\n'
+    - '(?i)^SIP/2\.0 404 Not Found\r\n(?:[^\r\n]+\r\n)*?Server: Asterisk PBX ([\w._~+-]+)\r\n(?:[^\r\n]+\r\n)*?Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO, PUBLISH\r\n'

@@ -1,17 +1,18 @@
 id: http-proxy
 info:
-  name: Microsoft ISA Server http proxy
+  name: Palo Alto PanWeb httpd
   author: nmap,cn-kali-team
   tags: detect,tech,http-proxy,service
   severity: info
   metadata:
+    device_type: proxy server
     fallback:
     - get-request
-    operating_system: Windows
-    product: isa_server
+    product: panweb
     rarity: 5
-    vendor: microsoft
+    vendor: paloaltonetworks
     verified: true
+    version: $1
 tcp:
 - name: rtsprequest
   inputs:
@@ -23,4 +24,4 @@ tcp:
   - name: http-proxy
     type: regex
     regex:
-    - ^HTTP/1\.1 400 Bad Request \( The data is invalid\.  \)\r\n
+    - '(?i)^RTSP/1\.0 400 Bad Request\r\nServer: PanWeb Server/([\w._-]+)\r\n(?:[^\r\n]+\r\n)*?Keep-Alive: timeout=60, max=2000\r\nContent-Type: text/html\r\nContent-length: 130\r\n\r\n<HTML><HEAD><TITLE>Document Error: Bad Request</TITLE>'

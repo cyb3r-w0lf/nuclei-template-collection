@@ -1,15 +1,16 @@
 id: pop3
 info:
-  name: CommuniGate Pro
+  name: XMail pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    product: communigate_pro
+    hostname: $1
+    product: xmail
     rarity: 0
-    vendor: stalker
+    vendor: davide_libenzi
     verified: true
-    version: $1
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +21,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK CommuniGate Pro POP3 Server ([-.\w]+) ready
+    - '^\+OK <[\d.]+@([-\w_.]+)> \[XMail ([\d.]+) POP3 Server\] service ready; '

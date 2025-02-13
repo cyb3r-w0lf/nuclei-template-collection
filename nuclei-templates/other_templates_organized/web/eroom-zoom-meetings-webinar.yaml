@@ -1,21 +1,23 @@
-id: eroom-zoom-meetings-webinar-f8c9a150f8e5c0021b4329ff44addc63
+id: eroom-zoom-meetings-webinar
 
 info:
-  name: "eRoom – Zoom Meetings & Webinar <= 1.3.7 - Unauthorized Setting Update"
+  name: >
+    eRoom – Zoom Meetings & Webinar <= 1.3.7 - Unauthorized Setting Update
   author: topscoder
-  severity: medium
-  description: "The eRoom – Zoom Meetings & Webinar plugin for WordPress is vulnerable to  unauthorized setting update due to missing capability checks and nonce validation on the `stm_zoom_sync_meetings_webinars` function."
+  severity: low
+  description: >
+    
   reference:
-    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=2704929%40eroom-zoom-meetings-webinar&new=2704929%40eroom-zoom-meetings-webinar&sfp_email=&sfph_mail=
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/89a23d5a-7728-403e-b654-595d92c20b66?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L
-    cvss-score: 5.4
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/eroom-zoom-meetings-webinar/"
     google-query: inurl:"/wp-content/plugins/eroom-zoom-meetings-webinar/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,eroom-zoom-meetings-webinar,medium
+  tags: cve,wordpress,wp-plugin,eroom-zoom-meetings-webinar,low
 
 http:
   - method: GET

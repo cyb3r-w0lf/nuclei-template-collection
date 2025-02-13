@@ -1,15 +1,12 @@
 id: imap
 info:
-  name: Lotus Domino imapd
+  name: SeattleLab SLMail imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    product: lotus_domino
+    operating_system: Windows
     rarity: 0
-    vendor: ibm
-    verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +17,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK Domino IMAP4 Server Build V([\w_]+ Beta \w+) ready .*\r\n
+    - ^\* OK Welcome to the SLnet IMAP Service\r\n

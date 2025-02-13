@@ -1,11 +1,11 @@
 id: telnet
 info:
-  name: Huawei switch telnetd
+  name: MPR-L8 3G mobile router telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: switch
+    device_type: WAP
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +17,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\r\r\nWarning: Telnet is not a secure protocol, and it is recommended to use Stelnet\.\r\n\r\nLogin authentication\r\n\r\n\r\nUsername:\xff\xfb\x01\xff\xfb\x01\xff\xfb\x01\xff\xfb\x03\xff\xfd\x18\xff\xfd\x1f'
+    - '^\xff\xfd\x01\xff\xfd\x1f\xff\xfd!\xff\xfb\x01\xff\xfb\x03Login: '

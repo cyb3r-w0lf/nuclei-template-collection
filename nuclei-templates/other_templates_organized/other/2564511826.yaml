@@ -1,11 +1,11 @@
 id: telnet
 info:
-  name: VSCOM NetCom 113 terminal server telnetd
+  name: Reincarna/Linux.Wifatch virus
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: terminal server
+    info: '**MALWARE**'
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +17,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\xff\xfb\x03\xff\xfb\x01\xff\xfc"Reading data\.\.\.\r\n\r\nPlease choose your terminal type \(1:VT100 2:VT52 \[1\]\): '
+    - ^\nREINCARNA / Linux\.Wifatch\n\nYour device has been infected by REINCARNA / Linux\.Wifatch\.\n\n

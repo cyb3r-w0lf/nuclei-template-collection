@@ -1,21 +1,23 @@
-id: booking-package-d41d8cd98f00b204e9800998ecf8427e
+id: booking-package
 
 info:
-  name: "Booking Package <= 1.5.98 - Authorization Bypass to Arbitrary Password Reset"
+  name: >
+    Booking Package <= 1.6.01 - Reflected Cross-Site Scripting via 'mode'
   author: topscoder
-  severity: critical
-  description: "The Booking Package plugin for WordPress is vulnerable to Authorization Bypass in versions up to, and including 1.5.98 due to missing validation in the 'updateUser' function. This allows unauthenticated attackers to reset the email and password of any user on the site if they know the username. Note that only sites that have an active premium subscription are vulnerable."
+  severity: medium
+  description: >
+    
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/65166432-a877-4070-94c1-cdaf7e5d7586?source=api-prod
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d460cc34-c8b0-453b-9b6b-3bd53137625a?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    cvss-score: 9.8
+    cvss-metrics: 
+    cvss-score: 
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/booking-package/"
     google-query: inurl:"/wp-content/plugins/booking-package/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,booking-package,critical
+  tags: cve,wordpress,wp-plugin,booking-package,medium
 
 http:
   - method: GET
@@ -53,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.5.99')
+          - compare_versions(version, '<= 1.6.01')

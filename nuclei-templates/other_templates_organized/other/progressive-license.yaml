@@ -1,4 +1,4 @@
-id: progressive-license-b5a38dfe3140f50450724606778ff3c7
+id: progressive-license
 
 info:
   name: >
@@ -8,7 +8,6 @@ info:
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/ef8a592a-8100-4347-8407-189ca2867c3b?source=api-scan
   classification:
     cvss-metrics: 

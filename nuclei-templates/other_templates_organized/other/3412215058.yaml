@@ -1,11 +1,14 @@
 id: imap
 info:
-  name: Anonymous Mail Server imapd
+  name: IMail imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
+    product: imail
     rarity: 0
+    vendor: ipswitch
+    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -17,4 +20,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK Anonymous Mail Server v([\d.]+) IMAP4rev1 .*\r\n
+    - ^\* OK IMAP4 Server \(IMail ([-.\w]+)\)

@@ -1,13 +1,15 @@
 id: rtsp
 info:
-  name: Axis 207W Webcam rtspd
+  name: Darwin Streaming Server
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
   metadata:
     fallback:
     - get-request
+    operating_system: FreeBSD
     rarity: 5
+    version: $1
 tcp:
 - name: rtsprequest
   inputs:
@@ -19,4 +21,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '^RTSP/1\.0 \d\d\d .*\r\nPublic: DESCRIBE, GET_PARAMETER, PAUSE, PLAY, SETUP, TEARDOWN\r\n\r\n'
+    - '^RTSP/1\.0 \d\d\d .*\r\nServer: DSS/([\d.]+) \(Build/[\d.]+; Platform/FreeBSD'

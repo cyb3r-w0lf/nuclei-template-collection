@@ -1,20 +1,24 @@
 id: printer
 info:
-  name: AIX lpd
+  name: Cirrato lpd
   author: nmap,cn-kali-team
   tags: detect,tech,printer,service
   severity: info
   metadata:
-    operating_system: AIX
-    rarity: 0
+    info: with PayEx support
+    product: cirrato
+    rarity: 6
+    vendor: cirrato
+    verified: true
 tcp:
-- name: 'null'
+- name: lpdstring
   inputs:
-  - data: ''
+  - data: \x01default\n
   host:
   - '{{Hostname}}'
+  port: 515,2947,3333,32211,19350
   extractors:
   - name: printer
     type: regex
     regex:
-    - ^\d+-201 ill-formed FROM address\.$
+    - ^Cirrato printing service \(with PayEx support\)\0

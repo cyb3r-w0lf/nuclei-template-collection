@@ -1,12 +1,10 @@
 id: ftp
 info:
-  name: Avalaunch XBOX ftpd
+  name: Overbyte Internet Component Suite ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: game console
-    info: Max connections reached
     rarity: 0
 tcp:
 - name: 'null'
@@ -18,4 +16,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^550 no more people, max connections is reached\r\n
+    - ^220-Welcome to my Server\r\n220-\r\n220 ICS FTP Server ready\.\r\n

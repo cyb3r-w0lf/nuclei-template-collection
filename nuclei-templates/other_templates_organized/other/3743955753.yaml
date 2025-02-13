@@ -1,17 +1,12 @@
 id: http
 info:
-  name: Embedthis-Appweb
+  name: D-Link DGS-1500 series switch httpd
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    device_type: printer
-    info: Sharp Open System Architecture
-    product: appweb
+    device_type: switch
     rarity: 0
-    vendor: mbedthis
-    verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -22,4 +17,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.0 503 Service Unavailable\r\nDate: .* GMT\r\nServer: Embedthis-Appweb/([\w._-]+)\r\n'
+    - '^\r\n<HTML>\n<HEAD><TITLE>Error Observed</TITLE></HEAD>\n<BODY BGCOLOR=white>\n<H1>Error Observed</H1>\n<P>Error: 400 Bad Request</BODY></HTML>'

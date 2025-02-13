@@ -1,14 +1,14 @@
 id: sip
 info:
-  name: BT HomeHub
+  name: Mitel SIP phone sipd
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
   metadata:
-    device_type: VoIP phone
     fallback:
     - get-request
     rarity: 5
+    version: $1
 tcp:
 - name: sipoptions
   inputs:
@@ -20,4 +20,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 500 Server Internal Error\r\n(?:[^\r\n]+\r\n)*?User-Agent: BT Home Hub\r\n'
+    - (?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?User-Agent:Mitel-Mitel-SIP-Phone ([\d.]+) [0-9A-F]{12}\r\n

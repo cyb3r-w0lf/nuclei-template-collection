@@ -1,24 +1,23 @@
-id: miniorange-login-with-eve-online-google-facebook-b9a9efa7163eca4958f52e4a2ead0db1
+id: miniorange-login-with-eve-online-google-facebook
 
 info:
   name: >
-    Multiple miniOrange Plugins (Various Version) - Reflected Cross-Site Scripting
+    OAuth Single Sign On – SSO (OAuth Client) <= 6.23.3 - Missing Authorization
   author: topscoder
-  severity: medium
+  severity: high
   description: >
-    Multiple miniorange Plugins for WordPress is vulnerable to Reflected Cross-Site Scripting via the 'appId' parameter due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.
+    
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/44cbaa25-7e91-4b2e-81c4-ba1d7ba02350?source=api-prod
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5d166a77-d57b-4827-96ca-b8eb423861f0?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    cvss-score: 6.1
+    cvss-metrics: 
+    cvss-score: 
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/miniorange-login-with-eve-online-google-facebook/"
     google-query: inurl:"/wp-content/plugins/miniorange-login-with-eve-online-google-facebook/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,miniorange-login-with-eve-online-google-facebook,medium
+  tags: cve,wordpress,wp-plugin,miniorange-login-with-eve-online-google-facebook,high
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 6.20.2')
+          - compare_versions(version, '<= 6.23.3')

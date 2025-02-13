@@ -1,13 +1,12 @@
 id: nntp
 info:
-  name: ArGoSoft nntpd
+  name: inn2 nntpd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    operating_system: Windows
+    info: unauthorized
     rarity: 0
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +17,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 ArGoSoft News Server for WinNT/2000/XP v ([\d.]+) ready\r\n
+    - ^502 Could not get your access name\.  Goodbye\.\r\n

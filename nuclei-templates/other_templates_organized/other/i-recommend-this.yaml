@@ -1,24 +1,23 @@
-id: i-recommend-this-6164e040b1722e0c566e82de7182c23e
+id: i-recommend-this
 
 info:
   name: >
-    I Recommend This < 3.8.2 - Cross-Site Scripting
+    I Recommend This <= 3.7.2 - Authenticated (Subscriber+) SQL Injection via Shortcode
   author: topscoder
-  severity: high
+  severity: low
   description: >
-    The I Recommend This plugin for WordPress is vulnerable to Cross-Site Scripting in versions up to, and including, 3.8.1 due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts that execute in a victim's browser.
+    
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ef888b2e-1fc7-442b-8b67-ebfdcbc76696?source=api-prod
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ca9c10b6-6d32-45c9-beb1-7a5c84d0863d?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:L/I:L/A:N
-    cvss-score: 7.2
+    cvss-metrics: 
+    cvss-score: 
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/i-recommend-this/"
     google-query: inurl:"/wp-content/plugins/i-recommend-this/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,i-recommend-this,high
+  tags: cve,wordpress,wp-plugin,i-recommend-this,low
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 3.8.2')
+          - compare_versions(version, '<= 3.7.2')

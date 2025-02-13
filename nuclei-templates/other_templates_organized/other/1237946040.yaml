@@ -1,16 +1,13 @@
 id: imap
 info:
-  name: Netscape Messaging Server Imapd
+  name: PMDF imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
     hostname: $1
-    info: built $3
-    product: messaging_server
+    operating_system: OpenVMS
     rarity: 0
-    vendor: netscape
-    verified: true
     version: $2
 tcp:
 - name: 'null'
@@ -22,4 +19,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK ([-.\w]+) IMAP4 service \(Netscape Messaging Server (\d[-.\w ]+) \(built ([\w ]+)\)\)\r\n
+    - '^\* OK ([\w._-]+) IMAP4rev1 Server PMDF V([\w._-]+) at '

@@ -1,13 +1,15 @@
 id: telnet
 info:
-  name: Kyocera IB-21E telnetd
+  name: Cisco router telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: print server
+    device_type: router
+    product: telnet
     rarity: 0
-    version: $1
+    vendor: cisco
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +20,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - ^\xff\xfd\x03\xff\xfb\x01\xff\xfb\x03IB-21E Ver ([\d.]+) TELNET server\.\r\0\nCopyright \(C\) 2001-2003 KYOCERA CORPORATION\r\0\n
+    - '^\r\n\r\nUser Access Verification\r\n\r\nUsername: '

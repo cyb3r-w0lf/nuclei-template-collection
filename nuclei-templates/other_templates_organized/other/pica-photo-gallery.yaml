@@ -1,23 +1,23 @@
-id: pica-photo-gallery-c9e56d9ee3464b73437b6b63009bd6e8
+id: pica-photo-gallery
 
 info:
-  name: "PICA Photo Gallery <= 1.0 - SQL Injection"
+  name: >
+    SWFUpload <= 2.2.0.1 - Cross-Site Scripting
   author: topscoder
-  severity: critical
-  description: "The PICA Photo Gallery plugin for WordPress is vulnerable to SQL Injection via the ‘aid’ parameter in versions up to, and including, 1.0 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database."
+  severity: high
+  description: >
+    
   reference:
-    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-pica-photo-gallery-sql-injection-1-0/
-    - https://packetstormsecurity.com/files/141533/WordPress-PICA-Photo-Gallery-1.0-SQL-Injection.html
-    - https://wordpress.org/plugins/pica-photo-gallery/#developers
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d311aab4-fca8-4e83-83cf-c4b8350d7dd1?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    cvss-score: 9.8
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/pica-photo-gallery/"
     google-query: inurl:"/wp-content/plugins/pica-photo-gallery/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,pica-photo-gallery,critical
+  tags: cve,wordpress,wp-plugin,pica-photo-gallery,high
 
 http:
   - method: GET
@@ -55,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.0')
+          - compare_versions(version, '<= *')

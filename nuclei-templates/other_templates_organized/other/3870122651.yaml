@@ -1,11 +1,13 @@
 id: pop3
 info:
-  name: Internet Rex Pop3 server
+  name: VisNetic MailServer pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
+    hostname: $1
     rarity: 0
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -16,4 +18,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK Internet Rex POP3 server ready <
+    - '^\+OK ([-.\w]+) VisNetic.MailServer.v([-.\w]+) POP3 '

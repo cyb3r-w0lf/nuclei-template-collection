@@ -1,12 +1,14 @@
 id: http
 info:
-  name: Motorola NVG589 DSL modem http admin
+  name: udpxy UDP-to-HTTP multicast traffic relay
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    device_type: broadband router
+    product: udpxy
     rarity: 0
+    vendor: pavel_cherenkov
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +19,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.1 408 Request Timeout\r\nContent-Type: text/html\r\nConection: close\r\n\r\n<html>\n<head>\n<title>408 Request Timeout</title>\n</head>\n<body>\n<h1>408 Request Timeout</h1>\n</body>\n</html>\n'
+    - ^HTTP/1\.1 200 OK[ .]\nContent-Type:application/octet-stream\.?\n\n

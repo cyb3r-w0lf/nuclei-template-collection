@@ -1,13 +1,12 @@
 id: pop3
 info:
-  name: Execmail pop3d
+  name: MailSite pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    hostname: $1
     rarity: 0
-    version: $2
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +17,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK ([-.\w]+) Execmail POP3 \((\d[^)]+)\)
+    - ^\+OK MailSite POP3 Server (\S+) Ready <

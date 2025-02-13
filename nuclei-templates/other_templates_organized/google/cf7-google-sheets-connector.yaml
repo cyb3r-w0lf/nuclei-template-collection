@@ -1,15 +1,14 @@
-id: cf7-google-sheets-connector-2a122541825ad7f03dfab35d85f93330
+id: cf7-google-sheets-connector
 
 info:
   name: >
-    CF7 Google Sheets Connector <= 5.0.5 - Unauthenticated Sensitive Information Exposure via Debug Log
+    CF7 Google Sheets Connector <= 5.0.1 - Reflected Cross-Site Scripting via 'code'
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/fad510b7-85f4-4cae-aaf0-eb68a32cf1b4?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1c6b2c4b-5ea5-471d-9114-d2b469b6c59b?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/cf7-google-sheets-connector/"
     google-query: inurl:"/wp-content/plugins/cf7-google-sheets-connector/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,cf7-google-sheets-connector,low
+  tags: cve,wordpress,wp-plugin,cf7-google-sheets-connector,medium
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 5.0.5')
+          - compare_versions(version, '<= 5.0.1')

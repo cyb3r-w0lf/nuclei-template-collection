@@ -1,15 +1,13 @@
 id: irc
 info:
-  name: Hybrid ircd
+  name: ConferenceRoom ircd
   author: nmap,cn-kali-team
   tags: detect,tech,irc,service
   severity: info
   metadata:
     hostname: $1
-    product: ircd-hybrid
+    info: Spanish
     rarity: 0
-    vendor: ircd-hybrid
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +18,4 @@ tcp:
   - name: irc
     type: regex
     regex:
-    - ^:([-\w_.]+) NOTICE \* :\*\*\* Looking up your hostname\r\n
+    - ^:([\w._-]+) 451 \* HELP :No te has registrado\r\n

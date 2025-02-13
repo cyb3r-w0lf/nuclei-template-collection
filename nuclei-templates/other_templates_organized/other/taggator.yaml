@@ -1,19 +1,18 @@
-id: taggator-3732e630abf4e60d3e99b6be8bbcda41
+id: taggator
 
 info:
-  name: "TagGator Plugin < 1.33 - SQL Injection"
+  name: >
+    TagGator Plugin < 1.33 - SQL Injection
   author: topscoder
   severity: critical
-  description: "The TagGator plugin for WordPress is vulnerable to generic SQL Injection via the ‘tagid’ parameter in versions up to, and including, 1.31 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database."
+  description: >
+    
   reference:
-    - https://www.exploit-db.com/exploits/37063
-    - https://web.archive.org/web/20210124020743/https%3A//www.securityfocus.com/bid/52908/info
-    - https://plugins.trac.wordpress.org/changeset/529227
-    - https://plugins.trac.wordpress.org/changeset/530954
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/21e4b1fe-993b-4898-a523-e0a858c30a38?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    cvss-score: 9.8
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/taggator/"
     google-query: inurl:"/wp-content/plugins/taggator/"

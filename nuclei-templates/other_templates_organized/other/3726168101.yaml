@@ -1,6 +1,6 @@
 id: daytime
 info:
-  name: TrueTime nts100
+  name: Tardis 2000 daytime
   author: nmap,cn-kali-team
   tags: detect,tech,daytime,service
   severity: info
@@ -16,4 +16,4 @@ tcp:
   - name: daytime
     type: regex
     regex:
-    - ^[A-Z][a-z]{2}, [A-Z][a-z]{2} \d{1,2}, 20\d\d, \d\d:\d\d:\d\d-UTC$
+    - ^[A-Z][a-z]{2} [A-Z][a-z]{2} +\d{1,2} \d\d:\d\d:\d\d 20\d\d $

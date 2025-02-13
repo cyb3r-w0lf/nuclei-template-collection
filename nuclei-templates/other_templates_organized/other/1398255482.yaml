@@ -1,14 +1,15 @@
 id: pop3
 info:
-  name: Cyrus POP3
+  name: Code-Crafters Ability Mail Server pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
     hostname: $1
-    product: cyrus_imap_server
+    operating_system: Windows
+    product: ability_mail_server
     rarity: 0
-    vendor: cmu
+    vendor: code-crafters
     verified: true
     version: $2
 tcp:
@@ -21,4 +22,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK ([-.\w]+) Cyrus POP3 v(\d[-.\w\+]+) server ready ?\r\n
+    - ^\+OK Welcome to ([-\w_.]+), with Ability Mail Server ([\w._-]+) by Code-Crafters\.\r\n

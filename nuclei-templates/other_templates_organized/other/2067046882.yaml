@@ -1,12 +1,13 @@
 id: ftp
 info:
-  name: Dell $1 color laser printer ftpd
+  name: Axonix SuperCD ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: printer
+    device_type: media device
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 Dell ([\w._-]+) Color Laser\r\n
+    - ^220 Microtest SuperCD-cdserver FTP server \(Version V([\w._-]+)\) ready\.\r\n

@@ -1,11 +1,10 @@
 id: smtp
 info:
-  name: smtp4dev
+  name: Konica Minolta C360 printer smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    hostname: $1
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +16,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([\w._-]+) smtp4dev ready\r\n
+    - ^220 Service ready M052 smtpd\r\n

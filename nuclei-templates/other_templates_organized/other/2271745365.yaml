@@ -1,16 +1,12 @@
 id: ftp
 info:
-  name: Titan ftpd
+  name: GlobalSCAPE Secure FTPd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    info: Evaluation period expired
     operating_system: Windows
-    product: titan_ftp_server
     rarity: 0
-    vendor: southrivertech
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +17,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^421-\+=\+=\+=\+=\+=\+=\+=\+=\+=\+=\+=\+=\+=\+=\+=\+=\+=\+=\+=\+=\+=\+=\+=\+=\+=\+=\+=\+=\+=\+=\+\r\n421-The evaluation period for this Titan FTP Server has expired\.\r\n
+    - ^220 GlobalSCAPE Secure FTP Server\r\n

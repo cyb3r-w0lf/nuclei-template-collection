@@ -1,15 +1,15 @@
 id: pop3-proxy
 info:
-  name: AnalogX POP3 proxy
+  name: Zarafa pop3 proxy
   author: nmap,cn-kali-team
   tags: detect,tech,pop3-proxy,service
   severity: info
   metadata:
-    product: proxy
+    operating_system: Unix
+    product: zarafa
     rarity: 0
-    vendor: analogx
+    vendor: zarafa
     verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +20,4 @@ tcp:
   - name: pop3-proxy
     type: regex
     regex:
-    - ^\+OK POP3 AnalogX Proxy (\d[-.\w]+) \(Release\) ready\.\n$
+    - ^\+OK Zarafa POP3 gateway ready\r\n

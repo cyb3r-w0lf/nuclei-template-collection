@@ -1,13 +1,12 @@
 id: ftp
 info:
-  name: DrayTek Vigor ADSL router ftpd
+  name: Homer ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: broadband router
+    operating_system: Windows
     rarity: 0
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +17,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 FTP version ([\w.]+)\r\n
+    - ^220 Homer Ftp Server\r\n

@@ -1,10 +1,11 @@
 id: ssh
 info:
-  name: SCS sshd
+  name: Seagate GoFlex NAS device sshd
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
+    device_type: storage-misc
     info: protocol $1
     rarity: 0
     version: $2
@@ -18,4 +19,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-(\d+\.\d+\.\d+) SSH Secure Shell
+    - ^SSH-([\d.]+)-OpenSSH_([\w._-]+)-HipServ\n

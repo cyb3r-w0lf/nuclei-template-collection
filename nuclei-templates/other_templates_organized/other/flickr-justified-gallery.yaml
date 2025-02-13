@@ -1,15 +1,14 @@
-id: flickr-justified-gallery-5d2323fc9f53dc55ae6a911e4b137ab0
+id: flickr-justified-gallery
 
 info:
   name: >
-    Flickr Justified Gallery <= 3.5 - Cross-Site Request Forgery via fjgwpp_settings()
+    Flickr Justified Gallery < 3.4.0 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/76a1d39e-8d69-4507-b75c-d376a2122d15?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/43e72eef-4e66-4789-959b-163c9cbea584?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.5')
+          - compare_versions(version, '< 3.4.0')

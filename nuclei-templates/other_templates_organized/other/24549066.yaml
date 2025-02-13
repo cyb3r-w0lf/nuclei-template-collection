@@ -1,16 +1,12 @@
 id: imap
 info:
-  name: DBMail imapd
+  name: TeamXchange imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    info: imapd version may differ from overal dbmail version number
-    product: dbmail
+    hostname: $1
     rarity: 0
-    vendor: paul_j_stevens
-    verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +17,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK dbmail imap \(protocol version 4r1\) server (\d[-.\w]+) ready to run\r\n
+    - ^\* OK TeamXchange IMAP4rev1 server \(([\w._-]+)\) ready\.\r\n

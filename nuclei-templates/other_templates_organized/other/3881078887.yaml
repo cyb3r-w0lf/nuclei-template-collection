@@ -1,13 +1,15 @@
 id: ssh
 info:
-  name: Huawei WAP sshd
+  name: Apache Mina sshd
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    device_type: WAP
     info: protocol $1
+    product: sshd
     rarity: 0
+    vendor: apache
+    verified: true
     version: $2
 tcp:
 - name: 'null'
@@ -19,4 +21,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-HUAWEI-([\d.]+)\r?\n
+    - ^SSH-([\d.]+)-SSHD-CORE-([\w._-]+)\r\n

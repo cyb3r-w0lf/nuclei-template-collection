@@ -1,12 +1,13 @@
 id: ftp
 info:
-  name: ActiveFax ftpd
+  name: HP Tandem NonStop ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
+    hostname: $1
     rarity: 0
-    version: $1 build $2
+    version: $2 $3
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 ActiveFax Version ([\d.]+) \(Build (\d+)\) - .*\r\n
+    - ^220 ([\w._-]+) FTP SERVER T9552G07 \(Version ([\w._-]+) TANDEM ([\w._-]+)\) ready\.\r\n

@@ -1,11 +1,11 @@
 id: sip
 info:
-  name: AVM FRITZ!OS SIP
+  name: NetSapiens SiPBX SIP switch
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
   metadata:
-    device_type: VoIP adapter
+    device_type: switch
     rarity: 5
 tcp:
 - name: sipoptions
@@ -18,4 +18,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 404 Not Found\r\n(?:[^\r\n]+\r\n)*?User-Agent: FRITZ!OS\r\n'
+    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?Server: NetSapiens SiPBx 1-1205c\r\n'

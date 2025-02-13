@@ -1,13 +1,13 @@
 id: ftp
 info:
-  name: Canon VB-C10/VB-C10R webcam ftpd
+  name: Infortrend EonStor DS iSCSI host ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: webcam
+    device_type: storage-misc
+    info: 'model: $1'
     rarity: 0
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220  \(Ver\. ([^)]+)\) [A-Z][a-z]{2} \d+ 20\d+ ready\.\r\n
+    - ^220 IFT DS ([\w-]+) RAID FTP server ready\.\r\n

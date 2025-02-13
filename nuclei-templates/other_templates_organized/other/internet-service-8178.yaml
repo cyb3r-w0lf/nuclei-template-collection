@@ -6,9 +6,9 @@ info:
   severity: low
   reference:
     - https://www.exploit-db.com/ghdb/5948
-  tags: iot,edb
+  tags: iot
 
-http:
+requests:
   - method: GET
     path:
       - '{{BaseURL}}/default.htm'

@@ -1,11 +1,12 @@
 id: ftp
 info:
-  name: Quick 'n Easy ftpd
+  name: Huawei Quidway AR28-09 WAP ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    operating_system: Windows
+    device_type: WAP
+    info: user queue is full
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 Welcome to Quick 'n Easy FTP Server\r\n
+    - ^120 The user queue is full, please try again later\.\r\n

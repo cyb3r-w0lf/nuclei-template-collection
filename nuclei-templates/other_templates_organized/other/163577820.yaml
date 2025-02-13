@@ -1,17 +1,13 @@
 id: ftp
 info:
-  name: ACLogic CesarFTPd
+  name: OEM FTPD $2
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    info: Chinese
-    operating_system: Windows
-    product: cesarftpd
+    device_type: printer
+    info: Epson AcuLaser $1 printer
     rarity: 0
-    vendor: aclogic
-    verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -22,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 CesarFTP ([\w.]+) \xb7\xfe\xce\xf1\xc6\xf7\xbb\xb6\xd3\xad !\r\n
+    - ^220 AL-(\w+)-[0-9A-F]+ FTP server \(OEM FTPD version ([\d.]+)\) ready\.\r\n

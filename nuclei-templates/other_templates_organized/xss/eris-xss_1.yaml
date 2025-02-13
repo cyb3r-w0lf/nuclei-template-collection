@@ -13,11 +13,10 @@ info:
     cvss-score: 7.2
     cwe-id: CWE-79
   metadata:
-    max-request: 1
     verified: true
   tags: cve,cve2022,xss,eris
 
-http:
+requests:
   - raw:
       - |
         POST /index.php?q=result&searchfor=advancesearch HTTP/1.1

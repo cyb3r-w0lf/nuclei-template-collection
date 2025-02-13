@@ -1,11 +1,11 @@
 id: http
 info:
-  name: Dreambox httpd
+  name: Cisco Wireless LAN Controller httpd
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    device_type: media device
+    device_type: remote management
     fallback:
     - get-request
     rarity: 5
@@ -20,4 +20,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - (?i)^HTTP/1\.1 406 Not Acceptable\r\n.*<blockquote>\n<TABLE border=0 cellPadding=1 width=\"80%\">\n<TR><TD>\n<FONT face=\"Helvetica\">\n<big>Request Error \(unsupported_protocol\)</big>\n<BR>\n<BR>\n</FONT>
+    - '^HTTP/1\.1 400 Bad Request\r\nDate: .*\r\nContent-Length: 0\r\n\r\n400 Bad Request\r\n'

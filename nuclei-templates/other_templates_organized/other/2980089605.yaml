@@ -1,11 +1,11 @@
 id: telnet
 info:
-  name: APC network management card telnetd
+  name: Sagem router telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: power-device
+    device_type: router
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +17,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\xff\xfb\x01\n\rUser Name : $'
+    - '^\xff\xfb\x01\xff\xfb\x03\xff\xfb\0\xff\xfd\0login: '

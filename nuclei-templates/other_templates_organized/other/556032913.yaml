@@ -1,12 +1,11 @@
 id: nntp
 info:
-  name: INN nntpd
+  name: InterNetNews (INN)
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    hostname: $1
-    info: posting ok
+    info: HDD full
     product: inn
     rarity: 0
     vendor: isc
@@ -21,4 +20,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 ([-\w_.]+) NNRP Service Ready - [-\w_.]+@[-\w_.]+ \(posting ok\)\.\r\n
+    - ^400 No space left on device writing SMstore file -- throttling\r\n

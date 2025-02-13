@@ -1,14 +1,12 @@
 id: irc
 info:
-  name: ircu ircd
+  name: BitlBee IRCd
   author: nmap,cn-kali-team
   tags: detect,tech,irc,service
   severity: info
   metadata:
-    product: ircu
+    hostname: $1
     rarity: 0
-    vendor: undernet
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +17,4 @@ tcp:
   - name: irc
     type: regex
     regex:
-    - ^NOTICE AUTH :\*\*\* Looking up your hostname\r\nNOTICE AUTH :\*\*\* Checking Ident\r\nNOTICE AUTH :\*\*\* Found your hostname\r\n
+    - (^:[-.:\w]+) NOTICE (?:AUTH|\*) :BitlBee-IRCd initialized, please go on\r\n

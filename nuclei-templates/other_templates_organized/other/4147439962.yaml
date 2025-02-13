@@ -1,13 +1,13 @@
 id: rtsp
 info:
-  name: Apple AirTunes rtspd
+  name: Vivotek FD8134V webcam rtspd
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
   metadata:
+    device_type: webcam
     fallback:
     - get-request
-    operating_system: Mac OS X
     rarity: 5
 tcp:
 - name: rtsprequest
@@ -20,4 +20,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - ^RTSP/1\.0 400 Bad Request\r\n\r\n$
+    - '^RTSP/1\.0 200 OK\r\nCSeq: -1\r\nDate: .* GMT\r\nPublic: OPTIONS, DESCRIBE, PLAY, SETUP, GET_PARAMETER, SET_PARAMETER, TEARDOWN\r\n\r\n'

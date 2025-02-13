@@ -1,6 +1,6 @@
 id: nntp
 info:
-  name: Kerio MailServer nntpd
+  name: Typhoon nntpd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
@@ -17,4 +17,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 +Kerio MailServer ([\w._-]+) +NNTP server ready\r\n
+    - ^200 Welcome to .* \(Typhoon v([\d.]+)\)\r\n

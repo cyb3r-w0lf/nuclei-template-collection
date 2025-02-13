@@ -5,7 +5,6 @@ info:
   tags: detect,tech,daytime,service
   severity: info
   metadata:
-    info: New Zealand style
     operating_system: Windows
     rarity: 0
 tcp:
@@ -18,4 +17,4 @@ tcp:
   - name: daytime
     type: regex
     regex:
-    - ^[01]\d:\d\d:\d\d [AP]M [0-3]\d/[01]\d/0\d\n$
+    - ^[A-Z][a-z]+day, [A-Z][a-z]+ \d{1,2}, (?:19|20)\d\d \d{1,2}:\d\d:\d\d\n\0$

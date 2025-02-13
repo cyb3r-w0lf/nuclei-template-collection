@@ -1,13 +1,12 @@
 id: ftp-proxy
 info:
-  name: kingate ftp proxy
+  name: AVM KEN! ftp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
   metadata:
-    operating_system: Windows
+    hostname: $1
     rarity: 0
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +17,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^220 kingate\(([\w._-]+)-win32\) ftp proxy ready\r\n
+    - ^220 ([\w._-]+), KEN! FTP-Gateway\r\n

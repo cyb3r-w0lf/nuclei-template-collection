@@ -1,15 +1,15 @@
 id: ftp
 info:
-  name: Groupcall Xporter ftpd
+  name: Serv-U ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    product: xporter
+    operating_system: Windows
+    product: serv-u
     rarity: 0
-    vendor: groupcall
+    vendor: serv-u
     verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +20,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^200 Groupcall Xporter - ([\d.]+)\r\n
+    - ^220-Serv-U FTP Server for Winsock\r\n

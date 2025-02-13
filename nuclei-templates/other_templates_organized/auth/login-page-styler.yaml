@@ -1,15 +1,14 @@
-id: login-page-styler-dc3ea66c280c2d9f4da2e9aee2ea73f8
+id: login-page-styler
 
 info:
   name: >
-    ALL In One Custom Login Page <= 7.1.1 - Missing Authorization to Authenticated (Subscriber+)Privilege Escalation
+    Login Page Styler <= 6.2 - Authenticated (Administrator+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8e50c519-7d79-4270-92e8-75e54bb08cff?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4d70cd0a-5c30-4a9b-81e8-e465d1e8f2b0?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 7.1.1')
+          - compare_versions(version, '<= 6.2')

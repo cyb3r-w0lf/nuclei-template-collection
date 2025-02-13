@@ -1,11 +1,11 @@
 id: telnet
 info:
-  name: Mitel 3300 PBX controller ftpd
+  name: AVM FRITZ!Box 7170 telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: PBX
+    device_type: WAP
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +17,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - ^220 FTP server \(ver 1\.0\) ready\.\r\n$
+    - '^\xff\xfd\x01\xff\xfd\x1f\xff\xfd\x21\xff\xfb\x01\xff\xfb\x03Fritz!Box web password: '

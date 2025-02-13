@@ -1,24 +1,22 @@
 id: smtp
 info:
-  name: Sendmail
+  name: Rustock smtp backdoor
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    info: broken
-    product: sendmail
-    rarity: 0
-    vendor: sendmail
-    verified: true
-    version: $1
+    info: '**BACKDOOR**'
+    operating_system: Windows
+    rarity: 8
 tcp:
-- name: 'null'
+- name: hello
   inputs:
-  - data: ''
+  - data: EHLO\r\n
   host:
   - '{{Hostname}}'
+  port: 25,587,3025
   extractors:
   - name: smtp
     type: regex
     regex:
-    - ^220 ;; ESMTP connection timed out; no servers could be reached Sendmail ([-\w_.]+)/
+    - ^220 ESMTP service ready\r\n250\x20ok\r\n

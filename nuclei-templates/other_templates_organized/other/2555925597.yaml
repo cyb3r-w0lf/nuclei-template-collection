@@ -1,14 +1,13 @@
 id: pop3
 info:
-  name: Microsoft Exchange pop3d
+  name: CommuniGate Pro
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    operating_system: Windows
-    product: exchange_server
+    product: communigate_pro
     rarity: 0
-    vendor: microsoft
+    vendor: stalker
     verified: true
     version: $1
 tcp:
@@ -21,4 +20,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK Microsoft Exchange POP3 server version (\S+) ready\r\n
+    - ^\+OK CommuniGate Pro POP3 Server ([-.\w]+) ready

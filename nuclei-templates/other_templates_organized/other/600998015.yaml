@@ -1,11 +1,11 @@
 id: telnet
 info:
-  name: HP JetDirect telnetd
+  name: Pirelli NetGate VOIP v2 broadband router telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: printer
+    device_type: broadband router
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +17,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\xff\xfc\x01\r\nHP JetDirect\r\n\r\nPassword: '
+    - ^\xff\xfd\x18\xff\xfb\x01\xff\xfb\x03$

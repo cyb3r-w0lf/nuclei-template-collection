@@ -1,12 +1,12 @@
 id: telnet
 info:
-  name: D-Link DVA-G3170i telnetd
+  name: Rapture-based MUD telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: broadband router
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +17,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\xff\xfd\x01\xff\xfd!\xff\xfb\x01\xff\xfb\x03login as: '
+    - ^Rapture Runtime Environment v([\d.]+) -- \(c\) \d+ -- Iron Realms Entertainment\r\n

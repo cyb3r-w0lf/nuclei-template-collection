@@ -5,8 +5,10 @@ info:
   author: Manas_Harsh
   severity: info
   tags: wordpress
+  metadata:
+    max-request: 4
 
-requests:
+http:
   - method: GET
     path:
       - "{{BaseURL}}/wp-content/uploads/"

@@ -1,22 +1,23 @@
-id: hide_my_wp-f649d830fc49b43421362ea317ab99d9
+id: hide_my_wp
 
 info:
-  name: "Hide My WP <= 4.53 - Cross-Site Scripting"
+  name: >
+    Hide My WP <= 6.2.3 - SQL Injection
   author: topscoder
-  severity: medium
-  description: "The Hide My WP plugin for WordPress is vulnerable to Cross-Site Scripting in versions up to, and including, 4.53 due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts that execute in a victim's browser."
+  severity: critical
+  description: >
+    
   reference:
-    - https://codecanyon.net/item/hide-my-wp-no-one-can-know-you-use-wordpress/4177158
-    - https://patchstack.com/database/vulnerability/hide_my_wp/wordpress-hide-my-wp-plugin-4-53-cross-site-scripting
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/04383919-dae0-4865-b0ff-88049f8cd4db?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    cvss-score: 6.1
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/hide_my_wp/"
     google-query: inurl:"/wp-content/plugins/hide_my_wp/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,hide_my_wp,medium
+  tags: cve,wordpress,wp-plugin,hide_my_wp,critical
 
 http:
   - method: GET
@@ -54,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 4.54')
+          - compare_versions(version, '<= 6.2.3')

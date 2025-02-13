@@ -1,13 +1,11 @@
 id: ftp
 info:
-  name: ArGoSoft ftpd
+  name: NetWare NWFTPD
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    operating_system: Windows
     rarity: 0
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +16,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220.ArGoSoft FTP Server, Version [\d.]+ \(([\d.]+)\)\r\n
+    - ^220 Service Ready for new User\r\n$

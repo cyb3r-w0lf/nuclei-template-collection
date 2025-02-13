@@ -1,10 +1,11 @@
 id: pop3
 info:
-  name: mySHN pop3d
+  name: PMDF pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
+    operating_system: OpenVMS
     rarity: 0
     version: $1
 tcp:
@@ -17,4 +18,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK mySHN server v([\d.]+) ready\r\n
+    - ^\+OK POP3D\(\*\) Server PMDFV([\w._-]+) at .* \(APOP disabled\)\r\n

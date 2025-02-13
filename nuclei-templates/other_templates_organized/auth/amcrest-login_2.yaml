@@ -3,21 +3,21 @@ id: amcrest-login
 info:
   name: Amcrest Login
   author: DhiyaneshDK
-  description: An Amcrest LDAP user login was discovered.
   severity: info
+  description: An Amcrest LDAP user login was discovered.
   reference:
     - https://www.exploit-db.com/ghdb/7273
-  metadata:
-    shodan-query: html:"amcrest"
-    google-dork: intext:"amcrest" "LDAP User"
-  tags: panel,camera,amcrest
   classification:
-    cvss-metrics: CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:N
-    cvss-score: 0.0
-    cve-id:
     cwe-id: CWE-200
+  metadata:
+    max-request: 1
+    vendor: amcrest
+    product: ip2m-853ew
+    shodan-query: html:"amcrest"
+    google-query: intext:"amcrest" "LDAP User"
+  tags: panel,camera,amcrest,edb
 
-requests:
+http:
   - method: GET
     path:
       - '{{BaseURL}}'
@@ -33,5 +33,4 @@ requests:
       - type: status
         status:
           - 200
-
-# Enhanced by mp on 2022/03/16
+# digest: 490a00463044022003b35dd4bd7ae0a4bd3db5a61093f27088725f9f577594dd92ff95214ec3bd9702203cb2b4470c6efac85edbede00124e232d444eeef2a7f70b11b78b1a0208aba24:922c64590222798bb761d5b6d8e72950

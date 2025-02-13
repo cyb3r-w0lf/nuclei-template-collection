@@ -1,11 +1,11 @@
 id: printer
 info:
-  name: Wyse Winterm 1200 LE terminal lpd
+  name: print server
   author: nmap,cn-kali-team
   tags: detect,tech,printer,service
   severity: info
   metadata:
-    device_type: terminal
+    device_type: print server
     rarity: 6
 tcp:
 - name: lpdstring
@@ -18,4 +18,4 @@ tcp:
   - name: printer
     type: regex
     regex:
-    - ^no queue to check\n\0$
+    - ^Printer default not found \([\w_]+\)\.\n

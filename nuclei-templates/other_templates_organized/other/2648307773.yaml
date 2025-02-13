@@ -1,13 +1,13 @@
 id: telnet
 info:
-  name: Star Micronics $1 printer ftpd
+  name: Neuf Box telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: printer
-    info: 'MAC: $2'
+    info: hardware $1
     rarity: 0
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +18,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\xff\xfb\x03\xff\xfb\x01\xff\xfe\x01\r\n\r\nWelcome to TSP100LAN TELNET Utility\.\r\nCopyright\(C\) \d\d\d\d Star Micronics co\., Ltd\.\r\n\r\n<< Connected Device >>\r\n   Device Model : (TSP[\w._-]+) \(.*\)\r\n   MAC Address  : ([0-9A-F:]+)\r\n\r\nlogin: '
+    - '^\xff\xfd\x01\xff\xfd\x1f\xff\xfb\x01\xff\xfb\x03\[(NB4-[\w-]+)\]\[NB4-MAIN-R([\w._-]+)\]\[NB4-ADSL-\w+\]\r\nLost login: '

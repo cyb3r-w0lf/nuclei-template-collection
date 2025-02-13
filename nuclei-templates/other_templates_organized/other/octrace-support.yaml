@@ -1,15 +1,15 @@
-id: octrace-support-50019c4aa902b7e99b8b3852c04ce029
+id: octrace-support-dfbc671a5e42f7fce6218cae2384bb5a
 
 info:
   name: >
-    WordPress HelpDesk & Support Ticket System Plugin – Octrace Support <= 1.2.7 - Reflected Cross-Site Scripting
+    WordPress HelpDesk & Support Ticket System Plugin – Octrace Support <= 1.2.7 - Authenticated (Administrator+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b4ad6f96-22a3-420c-9ccb-a7b118fa2810?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0f83e62e-0a6f-4d95-93c4-552d59245552?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/octrace-support/"
     google-query: inurl:"/wp-content/plugins/octrace-support/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,octrace-support,medium
+  tags: cve,wordpress,wp-plugin,octrace-support,low
 
 http:
   - method: GET

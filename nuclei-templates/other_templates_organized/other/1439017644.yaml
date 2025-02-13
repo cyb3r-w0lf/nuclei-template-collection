@@ -1,13 +1,12 @@
 id: smtp
 info:
-  name: InterMail smtpd
+  name: Merak Mail Server smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    hostname: $1
+    operating_system: Windows
     rarity: 0
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +17,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ?(\S+) ESMTP server \(InterMail v(\S+)
+    - ^220[ -]\]-:\^:-\[ ESMTP \]-:\^:-\[; .*\r\n

@@ -1,15 +1,12 @@
 id: ftp-proxy
 info:
-  name: Symantec Enterprise Firewall FTP proxy
+  name: Proxy Suite ftp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
   metadata:
-    device_type: firewall
-    product: enterprise_firewall
+    hostname: $1
     rarity: 0
-    vendor: symantec
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +17,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^220 Secure Gateway FTP server
+    - ^220 Welcome to ([-\w_.]+) Ftp Proxy Service\.\r\n

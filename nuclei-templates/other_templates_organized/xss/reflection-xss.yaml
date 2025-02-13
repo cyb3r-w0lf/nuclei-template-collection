@@ -10,22 +10,16 @@ variables:
   first: "{{rand_int(10000, 99999)}}"
 
 http:
-  - method: GET
-    path:
-      - "{{BaseURL}}"
+  - pre-condition:
+      - type: dsl
+        dsl:
+          - 'method == "GET"'
 
     payloads:
       reflection:
         - "'\"><{{first}}"
-        - "<img src=x onerror=alert({{first}})>"
-        - "<script>alert({{first}})</script>"
-        - "'><ScRiPt>alert({{first}})</sCrIpT>"
-        - "</script><ScRiPt>alert({{first}})</sCrIpT>"
-        - "</script><script>alert({{first}})</script>"
-        - "<body onload=alert({{first}})>"
-        - "<marquee><img src=x onerror=confirm({{first}})></marquee>"
-        - "'><img%20src=xxx:x%20\x20onerror=javascript:alert({{first}})>"
-        - "\u0022\u003cimg\u0020src\u003dx\u0020onerror\u003d\u0022confirm(document.domain)\u0022\u003e"
+        - "'\"`//><{{first}}"
+    
 
     fuzzing:
       - part: query
@@ -34,7 +28,7 @@ http:
         fuzz:
           - "{{reflection}}"
 
-    stop-at-first-match: true
+    stop-at-first-match: false
     matchers-condition: and
     matchers:
       - type: word
@@ -46,3 +40,4 @@ http:
         part: header
         words:
           - "text/html"
+# digest: 4a0a0047304502205a9aa38841e7308e5d1bf21526d6ae14c3ea4b5b00def0f0f0b95501c0df237d022100ca9a3145f00b6278b60ccc0cb44b525a7bfcf2f86ead8664c33c0ce345a623ea:922c64590222798bb761d5b6d8e72950

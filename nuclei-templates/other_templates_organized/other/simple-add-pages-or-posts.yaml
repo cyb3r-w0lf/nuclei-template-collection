@@ -1,15 +1,14 @@
-id: simple-add-pages-or-posts-a746afd5ee01b468bab704ff4b44cf59
+id: simple-add-pages-or-posts
 
 info:
   name: >
-    Simple add pages or posts <= 2.0.0 - Cross-Site Request Forgery to Reflected Cross-Site Scripting
+    Simple add pages or posts < 1.7 - Cross-Site Request Forgery
   author: topscoder
   severity: medium
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/506f101c-ffec-415d-92dc-99cb7384af95?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e3e340b8-4eed-4622-b7c4-73d5bafb7e8e?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.0.0')
+          - compare_versions(version, '< 1.7')

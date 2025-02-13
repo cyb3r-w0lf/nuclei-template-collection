@@ -1,15 +1,15 @@
 id: sieve
 info:
-  name: Citadel timsieved
+  name: Cyrus timsieved
   author: nmap,cn-kali-team
   tags: detect,tech,sieve,service
   severity: info
   metadata:
-    product: ux
+    info: included w/cyrus imap
+    product: cyrus_imap_server
     rarity: 0
-    vendor: citadel
+    vendor: cmu
     verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +20,4 @@ tcp:
   - name: sieve
     type: regex
     regex:
-    - ^\"IMPLEMENTATION\" \"CITADEL Sieve ([\d.]+)\"\r\n
+    - '^NO Fatal error: Error initializing actions\r\n$'

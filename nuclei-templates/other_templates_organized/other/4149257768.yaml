@@ -1,15 +1,16 @@
 id: sip
 info:
-  name: Aladino SIP phone
+  name: FreeSwitch sipd
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
   metadata:
-    device_type: VoIP phone
     fallback:
     - get-request
+    product: freeswitch
     rarity: 5
-    version: $1
+    vendor: freeswitch
+    verified: true
 tcp:
 - name: sipoptions
   inputs:
@@ -21,4 +22,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 500 Server Internal Error\r\n(?:[^\r\n]+\r\n)*?User-Agent: Thomson Inventel / HW_V[\w._-]+ / FW_V[\w._-]+ / SW_V([\w._-]+)\r\n'
+    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?User-Agent: FreeSwitch\r\n'

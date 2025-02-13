@@ -1,12 +1,13 @@
 id: telnet
 info:
-  name: Philips Strand Light Palette telnetd
+  name: AMX DXLink HDMI receiver telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
     device_type: media device
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +18,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^Horizon Control Remote Connection\r\nCopyright 2006-2009 Horizon Control Inc\. All Rights Reserved\r\n    local commands: echo, noecho, prompt, noprompt, help, exit\r\n<tab><enter> at the start of a line will re-run the previous command\r\nHC>'
+    - ^\xff\xfb\x01\r\nWelcome to DXLINK-HDMI-RX v([\w._-]+) Copyright AMX LLC \d\d\d\d\r\n\r\n>

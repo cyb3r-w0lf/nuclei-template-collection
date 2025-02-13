@@ -1,12 +1,16 @@
 id: ssh
 info:
-  name: Axway SecureTransport sshd
+  name: GlobalScape CuteFTP sshd
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    info: protocol $1
+    info: sshlib $2; protocol $1
+    operating_system: Windows
+    product: cuteftp
     rarity: 0
+    vendor: globalscape
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +21,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-SSHD\r\n
+    - ^SSH-([\d.]+)-([\w.-]+)_sshlib GlobalSCAPE\r\n

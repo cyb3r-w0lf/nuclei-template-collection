@@ -1,17 +1,11 @@
 id: pop3
 info:
-  name: Microsoft Exchange 2003 pop3d
+  name: ArGoSoft Mail Server pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    hostname: $2
-    info: Spanish
-    operating_system: Windows
-    product: exchange_server
     rarity: 0
-    vendor: microsoft
-    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -23,4 +17,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK Servidor POP3 de Microsoft Exchange Server 2003 versi\xf3n ([\d.]+) \(([\w._-]+)\) listo\.\r\n
+    - ^\+OK ArGoSoft Mail Server, Version [-.\w]+ \(([-.\w]+)\)\r\n$

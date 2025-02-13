@@ -1,12 +1,14 @@
 id: ftp-proxy
 info:
-  name: Pi-Soft SpoonProxy ftp proxy
+  name: McAfee Web Gateway ftp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
   metadata:
-    operating_system: Windows
+    product: web_gateway
     rarity: 0
+    vendor: mcafee
+    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -18,4 +20,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^220-Welcome to SpoonProxy V([\w._-]+) by Pi-Soft Consulting, LLC\r\n
+    - ^220 McAfee Web Gateway ([\d.]+ (?:- )?build:? \d+)\r\n

@@ -1,21 +1,24 @@
 id: smtp
 info:
-  name: Tunix firewall smtpd
+  name: Postfix smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    device_type: firewall
     hostname: $1
-    rarity: 0
+    product: postfix
+    rarity: 8
+    vendor: postfix
+    verified: true
 tcp:
-- name: 'null'
+- name: hello
   inputs:
-  - data: ''
+  - data: EHLO\r\n
   host:
   - '{{Hostname}}'
+  port: 25,587,3025
   extractors:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([-\w_.]+) SMTP Ready 12\.\r\n
+    - '^220 ([\w._-]+)  ESMTP\r\n501 Syntax: EHLO hostname\r\n'

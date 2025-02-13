@@ -1,14 +1,14 @@
 id: imap
 info:
-  name: UW imapd
+  name: Zoho Mail imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
     hostname: $1
-    product: imap_toolkit
+    product: mail
     rarity: 0
-    vendor: uw
+    vendor: zohocorp
     verified: true
     version: $2
 tcp:
@@ -21,4 +21,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - '^\* OK \[CAPABILITY .*\] ([-.\w]+) IMAP4rev1 (20[\w.]+) at '
+    - ^\* OK ([\w.-]+) IMAP4 Server \(Zoho Mail IMAP4rev1 Server version ([\d.]+)\)\r\n

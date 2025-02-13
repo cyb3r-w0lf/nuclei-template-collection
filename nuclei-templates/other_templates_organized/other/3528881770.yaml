@@ -1,15 +1,17 @@
 id: ssh
 info:
-  name: Apache Mina sshd
+  name: OpenSSH
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    info: Atlassian Bitbucket; protocol $1
-    product: sshd
+    info: protocol $1
+    operating_system: Linux
+    product: openssh
     rarity: 0
-    vendor: apache
+    vendor: openbsd
     verified: true
+    version: $2 Debian $3
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +22,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-SSHD-UNKNOWN\r\n
+    - ^SSH-([\d.]+)-OpenSSH_([\w._-]+)[ -]{1,2}Debian[ -_]([^\r\n]+)\r?\n

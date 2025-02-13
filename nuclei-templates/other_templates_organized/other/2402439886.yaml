@@ -1,28 +1,21 @@
 id: http
 info:
-  name: Allegro RomPager
+  name: Glucose WeatherPop Advanced httpd
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    device_type: power-device
-    fallback:
-    - get-request
-    info: APC http config
-    product: rompager
-    rarity: 5
-    vendor: allegro
-    verified: true
+    operating_system: Mac OS X
+    rarity: 0
     version: $1
 tcp:
-- name: rtsprequest
+- name: 'null'
   inputs:
-  - data: OPTIONS / RTSP/1.0\r\n\r\n
+  - data: ''
   host:
   - '{{Hostname}}'
-  port: 80,554,3052,3372,5000,7070,8080,10000
   extractors:
   - name: http
     type: regex
     regex:
-    - '(?i)^HTTP/1\.1 403 Forbidden\r\nContent-Type: text/html\r\nServer: Allegro-Software-RomPager/([\d.]+).*This object on the APC Management Web Server is protected and requires a secure socket connection\.'
+    - '^HTTP/1\.1 \d\d\d .*\r\nContent-Type: text/plain\r\nServer: WPA/([-\w_.]+)\r\n\r\n'

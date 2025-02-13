@@ -1,13 +1,14 @@
 id: vnc
 info:
-  name: Ultr@VNC Repeater
+  name: Microsoft Virtual Server remote control
   author: nmap,cn-kali-team
   tags: detect,tech,vnc,service
   severity: info
   metadata:
-    product: repeater
+    operating_system: Windows
+    product: virtual_server
     rarity: 0
-    vendor: ultravnc
+    vendor: microsoft
     verified: true
 tcp:
 - name: 'null'
@@ -19,4 +20,4 @@ tcp:
   - name: vnc
     type: regex
     regex:
-    - ^RFB 000\.000\n$
+    - ^RFB 103\.006\n

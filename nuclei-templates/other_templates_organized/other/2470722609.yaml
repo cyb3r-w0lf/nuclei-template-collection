@@ -1,17 +1,14 @@
 id: http
 info:
-  name: Asterisk PBX httpd
+  name: Opera Unite httpd
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    device_type: PBX
     fallback:
     - get-request
-    product: asterisk
     rarity: 5
-    vendor: digium
-    verified: true
+    version: $1
 tcp:
 - name: sipoptions
   inputs:
@@ -23,4 +20,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.1 302 Moved Temporarily\r\nDate: .*\r\nLocation: https://[\w._-]+sip:nm\r\nConnection: close\r\n\r\n$'
+    - '(?i)^HTTP/1\.0 404 Resource not found\r\nServer: Opera/([\w._-]+)\r\n(?:[^\r\n]+\r\n)*?Set-Cookie: unite-session-id=[0-9a-f]+; Max-Age=2073600; path=/\r\n'

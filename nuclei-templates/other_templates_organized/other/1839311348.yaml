@@ -1,13 +1,14 @@
 id: pop3
 info:
-  name: LSMTP pop3d
+  name: Dovecot pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    hostname: $2
+    product: dovecot
     rarity: 0
-    version: $1
+    vendor: dovecot
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +19,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK POP3 server ready \(LSMTP v([\w.]+)\) <[\w.]+@([-\w_.]+)>\r\n
+    - ^\+OK Dovecot ready -

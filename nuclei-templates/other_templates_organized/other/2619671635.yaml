@@ -1,11 +1,18 @@
 id: pop3
 info:
-  name: Internet Rex Pop3 server
+  name: Cyrus pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
+    hostname: $1
+    info: Debian
+    operating_system: Linux
+    product: cyrus_imap_server
     rarity: 0
+    vendor: cmu
+    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -16,4 +23,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK Internet Rex POP3 server ready <
+    - ^\+OK ([-\w_.]+) Cyrus POP3 v(\S+?)[-_]?Debian\S+ server ready

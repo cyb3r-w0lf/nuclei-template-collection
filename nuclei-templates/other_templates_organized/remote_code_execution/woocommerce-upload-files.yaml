@@ -1,15 +1,14 @@
-id: woocommerce-upload-files-61046bcdc8b6ff327339eaeb32ec8503
+id: woocommerce-upload-files
 
 info:
   name: >
-    WooCommerce Upload Files <= 84.3 - Unauthenticated Arbitrary File Upload
+    WooCommerce Upload Files <= 59.3 - Arbitrary File Upload
   author: topscoder
   severity: critical
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b9371b37-53c5-4a4f-a500-c6d58d4d3c5a?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e353a269-c7f5-4b6a-9f9e-be459ead0335?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 84.3')
+          - compare_versions(version, '< 59.4')

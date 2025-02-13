@@ -1,25 +1,24 @@
 id: smtp
 info:
-  name: Novell NetWare GroupWise Internet Agent smtpd
+  name: XMail SMTP server
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
     hostname: $1
-    operating_system: NetWare
-    product: groupwise
-    rarity: 8
-    vendor: novell
+    product: xmail
+    rarity: 0
+    vendor: davide_libenzi
     verified: true
+    version: $2
 tcp:
-- name: hello
+- name: 'null'
   inputs:
-  - data: EHLO\r\n
+  - data: ''
   host:
   - '{{Hostname}}'
-  port: 25,587,3025
   extractors:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([\w_.-]+) Ready\r\n250-.*\r\n250-AUTH LOGIN\r\n(?:250-8BITMIME\r\n)?250-SIZE\r\n250 DSN\r\n
+    - '^220 <1\d+\.\d+@([-.\w]+)> \[XMail (\d[-.\w]+) ESMTP Server\] service ready; '

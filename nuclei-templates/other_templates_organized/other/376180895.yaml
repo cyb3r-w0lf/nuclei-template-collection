@@ -1,13 +1,12 @@
 id: smtp
 info:
-  name: SCO smtpd
+  name: fssmtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    info: Unknown host
-    operating_system: SCO UNIX
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +17,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^421 [-\w_.]+ - Your name, '\[[-\w_.]+\]', is unknown to me\.\r\n
+    - ^220 \S+ \S+ ESMTP receiver fssmtpd(\d+) ready

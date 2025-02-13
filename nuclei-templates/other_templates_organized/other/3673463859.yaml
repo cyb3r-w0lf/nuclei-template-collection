@@ -1,14 +1,14 @@
 id: http
 info:
-  name: Embedded HTTP Server
+  name: Dreambox httpd
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
+    device_type: media device
     fallback:
     - get-request
     rarity: 5
-    version: $1
 tcp:
 - name: rtsprequest
   inputs:
@@ -20,4 +20,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^RTSP/1\.0 501 Not Implemented\r\nServer: Embedded HTTP Server ([\d.]+)\r\n'
+    - (?i)^HTTP/1\.1 406 Not Acceptable\r\n.*<blockquote>\n<TABLE border=0 cellPadding=1 width=\"80%\">\n<TR><TD>\n<FONT face=\"Helvetica\">\n<big>Request Error \(unsupported_protocol\)</big>\n<BR>\n<BR>\n</FONT>

@@ -1,11 +1,11 @@
 id: telnet
 info:
-  name: Dell PowerConnect switch telnetd
+  name: Funkwerk IP50 VoIP phone telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: switch
+    device_type: VoIP phone
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +17,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\xff\xfd\x03\xff\xfb\x03\xff\xfd\x01\xff\xfb\x01\d\d-\w+-\d+ \d\d:\d\d:\d\d %MSCM-I-NEWTERM: New TELNET connection from (?:[\d.]+)\r\r\nPassword:'
+    - '^\n\rIP phone -122M : CLI\n\rLogin : '

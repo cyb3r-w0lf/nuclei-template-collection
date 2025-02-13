@@ -1,10 +1,11 @@
 id: ftp
 info:
-  name: NET Disk/NetStore ftpd
+  name: Lexmark Optra LaserPrinter ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
+    device_type: printer
     rarity: 0
 tcp:
 - name: 'null'
@@ -16,4 +17,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 NET Disk FTP Server ready\.\r\n
+    - '^220 FTP server: Lexmark Optra LaserPrinter ready\r\n'

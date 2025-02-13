@@ -1,15 +1,15 @@
-id: automate-hub-free-by-sperse-io-798b2fa8a5ae27cd98dfe90ff670155b
+id: automate-hub-free-by-sperse-io-655f2a09e5817a8daa75f563f98ccff1
 
 info:
   name: >
-    Automate Hub Free by Sperse.IO <= 1.7.0 - Reflected Cross-Site Scripting
+    Automate Hub Free by Sperse.IO <= 1.7.0 - Cross-Site Request Forgery to Activation Status Update
   author: topscoder
   severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a143eb71-d039-441b-871e-d1c5cefb0529?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f6d90ca3-dc24-4634-9f98-83a909e3e093?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

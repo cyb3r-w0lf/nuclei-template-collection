@@ -1,14 +1,13 @@
 id: imap
 info:
-  name: Microsoft Exchange 2007 imapd
+  name: Dovecot imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    operating_system: Windows
-    product: exchange_server
+    product: dovecot
     rarity: 0
-    vendor: microsoft
+    vendor: dovecot
     verified: true
 tcp:
 - name: 'null'
@@ -20,4 +19,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK Microsoft Exchange Server 2007 IMAP4 service ready\r\n
+    - ^\* OK [Dd]ovecot ready\.\r\n

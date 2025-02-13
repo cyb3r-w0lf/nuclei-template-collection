@@ -1,15 +1,18 @@
 id: pop3
 info:
-  name: GNU Mailutils pop3d
+  name: MDaemon pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
     hostname: $1
-    product: mailutils
+    info: unregistered
+    operating_system: Windows
+    product: mdaemon
     rarity: 0
-    vendor: gnu
+    vendor: altn
     verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +23,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK POP3 Ready <\d{3,6}\.1[012]\d{8}@(\w+)>\r\n
+    - ^\+OK ([-.\w]+) POP3? MDaemon ready using UNREGISTERED SOFTWARE ([\d.]+) <MDAEMON

@@ -1,12 +1,15 @@
 id: http
 info:
-  name: D-Link DGS-1500 series switch httpd
+  name: httpd_gargoyle
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    device_type: switch
+    device_type: WAP
+    info: Gargoyle WAP firmware
+    operating_system: Linux
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +20,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^\r\n<HTML>\n<HEAD><TITLE>Error Observed</TITLE></HEAD>\n<BODY BGCOLOR=white>\n<H1>Error Observed</H1>\n<P>Error: 400 Bad Request</BODY></HTML>'
+    - '^\(null\) 400 Bad Request\r\nServer: httpd_gargoyle/([\w._ -]+)\r\n'

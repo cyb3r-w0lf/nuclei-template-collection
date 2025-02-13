@@ -1,15 +1,14 @@
-id: catch-breadcrumb-a7a5f188db22152bb1ed50eec4e719ef
+id: catch-breadcrumb
 
 info:
   name: >
-    Catch Breadcrumb <= 1.5.4 - Reflected Cross-Site Scripting
+    CatchThemes Plugins (Various Versions) - Missing Authorization
   author: topscoder
-  severity: medium
+  severity: high
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b4983c2f-f9f6-4bd9-9c38-0ad3756f92b6?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ba5656b9-615d-4764-974a-301d3dd748e8?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/catch-breadcrumb/"
     google-query: inurl:"/wp-content/plugins/catch-breadcrumb/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,catch-breadcrumb,medium
+  tags: cve,wordpress,wp-plugin,catch-breadcrumb,high
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 1.5.5')
+          - compare_versions(version, '< 1.7')

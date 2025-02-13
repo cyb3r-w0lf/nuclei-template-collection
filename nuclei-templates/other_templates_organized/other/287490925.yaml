@@ -1,17 +1,12 @@
 id: smtp
 info:
-  name: Sendmail
+  name: Trend Micro ESMTP
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    hostname: $1
-    operating_system: Unix
-    product: sendmail
     rarity: 0
-    vendor: sendmail
-    verified: true
-    version: $2
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -22,4 +17,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220[\s-](\S+) E?SMTP Sendmail (\d[^; ]+)
+    - ^220 Trend Micro ESMTP ([-.+\w]+) ready\.\r\n$

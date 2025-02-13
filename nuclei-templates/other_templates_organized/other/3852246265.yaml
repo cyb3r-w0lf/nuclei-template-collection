@@ -1,14 +1,14 @@
 id: http
 info:
-  name: Embedded HTTP Server
+  name: Mitel SIP DEC VoIP phone http config
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
+    device_type: VoIP phone
     fallback:
     - get-request
     rarity: 5
-    version: $1
 tcp:
 - name: rtsprequest
   inputs:
@@ -20,4 +20,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^RTSP/1\.0 501 Not Implemented\r\nServer: Embedded HTTP Server ([\d.]+)\r\n'
+    - '^HTTP/1\.1 505 HTTP Version Not Supported\r\nContent-Type: text/html\r\nContent-Length: 166\r\n\r\n<html><head><title>505 HTTP Version Not Supported</title></head><body><h1>HTTP Version Not Supported</h1><p>HTTP versions 1\.0 and 1\.1 are supported\.</p></body></html>'

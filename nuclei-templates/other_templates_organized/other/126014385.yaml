@@ -1,14 +1,12 @@
 id: ftp
 info:
-  name: BlackMoon ftpd
+  name: Konica Minolta Di3510 Copier ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    info: Free edition
-    operating_system: Windows
+    device_type: printer
     rarity: 0
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +17,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 BlackMoon FTP Server Version ([\d.]+ Release \d+) - Build \d+\. Free Edition\. Service Ready\r\n
+    - ^220 copier2FTP server ready\.\r\n

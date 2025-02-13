@@ -1,16 +1,12 @@
 id: ftp
 info:
-  name: Serv-U ftpd
+  name: D-Link $1 webcam ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    operating_system: Windows
-    product: serv-u
+    device_type: webcam
     rarity: 0
-    vendor: serv-u
-    verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +17,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - '^220[ -]Serv-U FTP[ -]Server v([\w._-]+) '
+    - ^220 Welcome to (DCS-\w+) FTP Server\r\n$

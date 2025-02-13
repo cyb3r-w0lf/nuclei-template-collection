@@ -1,15 +1,15 @@
-id: jobify-154ee28b27ba884cafabb0cee7cb059c
+id: jobify-a40140dbf1ab4c4594af160668bda9e8
 
 info:
   name: >
-    Jobify - Job Board WordPress Theme <= 4.2.3 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    Jobify - Job Board WordPress Theme <= 4.2.7 - Missing Authorization to Unauthenticated Server-Side Request Forgery, Arbitrary Image Upload, and Image Generation
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7054dda8-4be4-4680-8d14-20e52e225e63?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/393811e4-71dd-4359-80fa-5a3d146439bb?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/themes/jobify/"
     google-query: inurl:"/wp-content/themes/jobify/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-theme,jobify,low
+  tags: cve,wordpress,wp-theme,jobify,high
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.2.3')
+          - compare_versions(version, '<= 4.2.7')

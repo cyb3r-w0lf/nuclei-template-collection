@@ -1,23 +1,23 @@
 id: smtp-proxy
 info:
-  name: SpamFilter for ISP smtpd
+  name: Dr.Web SMTP-proxy
   author: nmap,cn-kali-team
   tags: detect,tech,smtp-proxy,service
   severity: info
   metadata:
-    hostname: $1
-    info: Unregistered
-    operating_system: Windows
-    rarity: 0
-    version: $2
+    product: smtp-proxy
+    rarity: 8
+    vendor: drweb
+    verified: true
 tcp:
-- name: 'null'
+- name: hello
   inputs:
-  - data: ''
+  - data: EHLO\r\n
   host:
   - '{{Hostname}}'
+  port: 25,587,3025
   extractors:
   - name: smtp-proxy
     type: regex
     regex:
-    - ^220 ([-\w_.]+) Welcome SpamFilter for ISP SMTP Server v([\d.]+) - Unlicensed Evaluation Copy\r\n
+    - ^220 OutgoingFilter SMTP\r\n502 OutgoingFilter Command not implemented\r\n

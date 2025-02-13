@@ -1,15 +1,15 @@
-id: responsive-block-editor-addons-cb81193d1b4184fab4fc973bfc5493ba
+id: responsive-block-editor-addons-2b2009760dde63fee09d198c5d3608f8
 
 info:
   name: >
-    Responsive Blocks – WordPress Gutenberg Blocks <= 1.8.8 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    Responsive Blocks – WordPress Gutenberg Blocks <= 1.9.9 - Authenticated (Contributor+) Stored Cross-Site Scripting via section_tag Parameter
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1c894de0-2ea7-4002-9c26-0e3e59744a5e?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1c0e5c85-72c3-4f09-aade-ec5a82b9cc41?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.8.8')
+          - compare_versions(version, '<= 1.9.9')

@@ -1,13 +1,11 @@
 id: ftp
 info:
-  name: Intermec PM4i printer ftpd
+  name: Nepenthes HoneyTrap fake vulnerable ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: printer
     rarity: 0
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +16,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 EasyCoder FTP Server v\.([\d.]+) ready\.\r\n
+    - ^220 ---freeFTPd 1\.0---warFTPd 1\.65---\r\n

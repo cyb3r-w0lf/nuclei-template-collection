@@ -1,16 +1,13 @@
 id: smtp
 info:
-  name: Sendmail
+  name: DeskNow smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    info: broken
-    product: sendmail
+    hostname: $1
     rarity: 0
-    vendor: sendmail
-    verified: true
-    version: $1
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +18,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ;; ESMTP connection timed out; no servers could be reached Sendmail ([-\w_.]+)/
+    - ^220 ([-\w_.]+) SMTP Server \(DeskNow SMTP Server ([\d.]+)\) ready .*\r\n

@@ -1,16 +1,16 @@
 id: ssh
 info:
-  name: AsyncSSH sshd
+  name: Ice Cold Apps SSH Server (com.icecoldapps.sshserver)
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    info: protocol $1
-    product: asyncssh
+    info: 'protocol $1; name: $2'
+    operating_system: Android
+    product: ssh_server
     rarity: 0
-    vendor: ron_frederick
+    vendor: ice_cold_apps
     verified: true
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +21,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-AsyncSSH_(\d[\w.-]+)\r\n
+    - (?i)^SSH-([\d.]+)-SSH Server - ([^\r\n]+)\r\n\0\0...\x14

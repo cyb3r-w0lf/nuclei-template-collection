@@ -1,22 +1,23 @@
-id: ultimate-reviews-354bec386ccdc087196b34d6084c3322
+id: ultimate-reviews
 
 info:
-  name: "Ultimate Reviews < 2.1.33 - PHP Object Injection"
+  name: >
+    Ultimate Reviews <= 3.0.15 - Authenticated Stored Cross-Site Scripting
   author: topscoder
-  severity: critical
-  description: "The Ultimate Reviews plugin for WordPress is vulnerable to PHP Object Injection in versions up to, and including, 2.1.32 via deserialization of untrusted input in several vulnerable functions. This allows unauthenticated attackers to inject a PHP Object. No POP chain is present in the vulnerable plugin."
+  severity: low
+  description: >
+    
   reference:
-    - https://blog.nintechnet.com/wordpress-ultimate-reviews-plugin-fixed-insecure-deserialization-vulnerability/
-    - https://plugins.trac.wordpress.org/changeset/2409141
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2e889182-f02f-4b6b-bb98-357fadae3dc1?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    cvss-score: 9.8
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/ultimate-reviews/"
     google-query: inurl:"/wp-content/plugins/ultimate-reviews/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,ultimate-reviews,critical
+  tags: cve,wordpress,wp-plugin,ultimate-reviews,low
 
 http:
   - method: GET
@@ -54,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 2.1.33')
+          - compare_versions(version, '<= 3.0.15')

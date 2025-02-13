@@ -1,11 +1,11 @@
 id: printer
 info:
-  name: Microsoft lpd
+  name: Wyse Winterm 1200 LE terminal lpd
   author: nmap,cn-kali-team
   tags: detect,tech,printer,service
   severity: info
   metadata:
-    operating_system: Windows
+    device_type: terminal
     rarity: 6
 tcp:
 - name: lpdstring
@@ -18,4 +18,4 @@ tcp:
   - name: printer
     type: regex
     regex:
-    - ^\x01\x01$
+    - ^no queue to check\n\0$

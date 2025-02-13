@@ -1,24 +1,23 @@
-id: wp-email-users-289661a853f5c6a90db71e769a757128
+id: wp-email-users
 
 info:
-  name: "WP Email Users <= 1.4.4 - SQL Injection"
+  name: >
+    WP Email Users <= 1.7.6 - SQL Injection
   author: topscoder
-  severity: high
-  description: "The WP Email Users plugin for WordPress is vulnerable to  SQL Injection via the ‘filetitle’ parameter in versions up to, and including, 1.4.4 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for authenticated attackers with subscriber-level permissions to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database."
+  severity: critical
+  description: >
+    
   reference:
-    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-wp-email-users-sql-injection-1-4-3/
-    - https://www.exploit-db.com/exploits/41180
-    - https://lenonleite.com.br/en/2017/01/17/english-wp-email-users-1-4-1-plugin-wordpress-sql-injection/
-    - https://plugins.trac.wordpress.org/changeset?sfp_email=&sfph_mail=&reponame=&old=1594747%40wp-email-users&new=1594747%40wp-email-users&sfp_email=&sfph_mail=
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f7ad9f8c-9b76-4b3e-987c-ed99beeb2937?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H
-    cvss-score: 8.8
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/wp-email-users/"
     google-query: inurl:"/wp-content/plugins/wp-email-users/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-email-users,high
+  tags: cve,wordpress,wp-plugin,wp-email-users,critical
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.4.4')
+          - compare_versions(version, '<= 1.7.6')

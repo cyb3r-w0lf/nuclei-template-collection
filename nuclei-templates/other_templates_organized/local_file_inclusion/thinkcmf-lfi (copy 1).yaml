@@ -2,7 +2,7 @@ id: thinkcmf-lfi
 
 info:
   name: ThinkCMF LFI
-  author: nithissh
+  author: pikpikcu
   severity: high
   reference: https://www.freebuf.com/vuls/217586.html
   tags: thinkcmf,lfi

@@ -1,11 +1,13 @@
 id: nntp
 info:
-  name: Freenet Message System nntpd
+  name: Leafnode nntpd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
+    hostname: $2
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -16,4 +18,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 Service available, posting allowed\r\n
+    - ^200 Leafnode NNTP daemon, version ([\w.]+) at ([-\w_.]+) \r\n

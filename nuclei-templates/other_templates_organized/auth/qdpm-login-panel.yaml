@@ -4,15 +4,10 @@ info:
   name: qdPM Login Panel
   author: theamanrawat
   severity: info
-  classification:
-    cpe: cpe:2.3:a:qdpm:qdpm:*:*:*:*:*:*:*:*
   metadata:
     verified: "true"
     max-request: 2
-    vendor: qdpm
-    product: qdpm
     shodan-query: http.favicon.hash:762074255
-    fofa-query: icon_hash=762074255
   tags: panel,qdpm,login
 
 http:
@@ -40,4 +35,5 @@ http:
       - type: status
         status:
           - 200
-# digest: 4b0a00483046022100ddad44402cb4dd03c2939e9b21d3db3a670f8880e08577ae9631146a6cca8711022100e858e55a6b6ae41d8c63c668ab523a80d2dbd690d86715e22be87c0146dbb043:922c64590222798bb761d5b6d8e72950
+
+# digest: 4b0a00483046022100838af98ce018e688512a61ba41900ff80c40c70016811cd5ffb8338edb0306b8022100fcde0142ec8975c217064cf4887d89bf1897e0c7c9da5f59a0c12d4cb45a48c4:922c64590222798bb761d5b6d8e72950

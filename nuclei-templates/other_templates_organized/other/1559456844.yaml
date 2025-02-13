@@ -1,16 +1,15 @@
 id: nntp
 info:
-  name: INN nntpd
+  name: INN NNTPd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
-    hostname: $1
+    info: broken
     product: inn
     rarity: 0
     vendor: isc
     verified: true
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +20,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 ([-\w_.]+) InterNetNews server INN ([\d.]+) ready\r\n
+    - '^nnrpd: invalid option -- S\nUsage error\.\n'

@@ -1,11 +1,15 @@
 id: irc
 info:
-  name: ratbox, charybdis, or ircd-seven ircd
+  name: InspIRCd
   author: nmap,cn-kali-team
   tags: detect,tech,irc,service
   severity: info
   metadata:
+    hostname: $1
+    product: inspircd
     rarity: 0
+    vendor: inspire_ircd
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -16,4 +20,4 @@ tcp:
   - name: irc
     type: regex
     regex:
-    - ^ERROR :Reconnecting too fast, throttled\.\r\n$
+    - '^:([-\w_.]+) NOTICE \w+ :\*\*\* .*\r\nERROR :Closing link: \([\w._-]+@[\w._-]+\) \[Z-Lined: Your IP range has been attempting to connect too many times in too short a duration\. Wait a while, and you will be able to connect\.\]\r\n$'

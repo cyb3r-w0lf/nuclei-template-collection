@@ -1,13 +1,13 @@
 id: telnet
 info:
-  name: ZyXEL ZXDSL $1 ADSL modem telnetd
+  name: E-tech VPAD01 telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: broadband router
+    device_type: VoIP adapter
     rarity: 0
-    version: $2
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +18,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\xff\xfd\x01\xff\xfd!\xff\xfb\x01\xff\xfb\x03                ===========================\r\n                  Welcome to ZXDSL  ([\w._-]+)\r\n                ===========================\r\n\r\nZTE Inc\., Software Release ZXDSL 831CIIV([\w._-]+)\r\n\r\nLogin name: '
+    - '^\xff\xfb\x01VPAD01 V([\d.]+) settings\r\nPassword:'

@@ -1,12 +1,11 @@
 id: backdoor
 info:
-  name: ProRat trojan
+  name: Subseven backdoor
   author: nmap,cn-kali-team
   tags: detect,tech,backdoor,service
   severity: info
   metadata:
     info: '**BACKDOOR**'
-    operating_system: Windows
     rarity: 0
 tcp:
 - name: 'null'
@@ -18,4 +17,4 @@ tcp:
   - name: backdoor
     type: regex
     regex:
-    - ^Sifre_EDIT$
+    - ^\r\n\[RPL\]002\r\n$

@@ -1,13 +1,14 @@
 id: ssh
 info:
-  name: SrSshServer
+  name: ZyXEL ZyWALL sshd
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    info: sshlib $2; protocol $1
+    device_type: security-misc
+    info: protocol $1
+    operating_system: ZyNOS
     rarity: 0
-    version: $3
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +19,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - '^SSH-([\d.]+)-([\w._-]+) sshlib: sshlibSrSshServer ([\w._-]+)\r\n'
+    - ^SSH-([\d.]+)-Zyxel SSH server\r?\n

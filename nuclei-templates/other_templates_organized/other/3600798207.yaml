@@ -1,13 +1,12 @@
 id: telnet
 info:
-  name: D-Link DVG-series VoIP gateway telnetd
+  name: Check Point firewall telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: VoIP adapter
+    device_type: firewall
     rarity: 0
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +17,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\xff\xfd\x01\xff\xfd!\xff\xfb\x01\xff\xfb\x03\r\r\n\r\n<< Command Line Interface V ([\w._-]+) >>\r\n\r\nUser: '
+    - ^\xff\xfc\x01\xff\xfb\x01\xff\xfb\x03\xff\xfd\x18\xff\xfb\x18\xff\xfd\x1f\xff\xfb\x1f\xff\xfb\"\xff\xfb\x05\r\nCLI access not allowed until the SCC is active\.\r\n\r\n

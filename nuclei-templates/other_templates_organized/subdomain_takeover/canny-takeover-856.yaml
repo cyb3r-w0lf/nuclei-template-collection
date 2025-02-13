@@ -1,24 +1,15 @@
 id: canny-takeover
-
 info:
-  name: Canny Takeover Detection
-  author: pdteam
+  name: canny takeover detection
+  author: pdcommunity
   severity: high
-  reference:
-    - https://github.com/EdOverflow/can-i-take-over-xyz/issues/114
   tags: takeover
-
+  reference: https://github.com/EdOverflow/can-i-take-over-xyz
 requests:
   - method: GET
     path:
       - "{{BaseURL}}"
-
-    matchers-condition: and
     matchers:
-      - type: dsl
-        dsl:
-          - Host != ip
-
       - type: word
         words:
           - 'Company Not Found'

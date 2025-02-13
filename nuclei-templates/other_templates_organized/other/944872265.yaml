@@ -1,13 +1,12 @@
 id: telnet
 info:
-  name: Avaya Ethernet Routing Switch $1 telnetd
+  name: HP JetDirect telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: switch
+    device_type: printer
     rarity: 0
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +17,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - ^\xff\xfb\x01\r\r\n\*+\r\n\r\* Copyright \(c\) 2010 Avaya, Inc\. +\r\n\r\* All Rights Reserved +\r\n\r\* Ethernet Routing Switch ([\w._-]+) +\r\n\r\* Software Release ([\w._-]+)
+    - '^\xff\xfc\x01\r\nHP JetDirect\r\n\r\nPassword: '

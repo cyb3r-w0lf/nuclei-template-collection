@@ -1,16 +1,13 @@
 id: rtsp
 info:
-  name: Gordian httpd
+  name: Avtech MPEG4 DVR control rtspd
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
   metadata:
-    device_type: webcam
     fallback:
     - get-request
-    info: IQinVision IQeye3 webcam rtspd
     rarity: 5
-    version: $1
 tcp:
 - name: rtsprequest
   inputs:
@@ -22,4 +19,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '(?i)^RTSP/1\.0 200 OK\r\nServer: Gordian Embedded([\d\.]+)\r\n(?:[^\r\n]+\r\n)*?Public: OPTIONS, DESCRIBE, SETUP, PLAY, TEARDOWN\r\n'
+    - '^RTSP/1\.0 200 OK\r\nPublic: DESCRIBE, SETUP, TEARDOWN, PLAY, PAUSE, SET_PARAMETER\r\n\r\n$'

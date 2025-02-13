@@ -1,15 +1,12 @@
 id: imap
 info:
-  name: Zimbra imapd
+  name: WebSTAR imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    hostname: $1
-    product: zimbra_collaboration_suite
+    operating_system: Mac OS X
     rarity: 0
-    vendor: zimbra
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +17,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK ([-\w_.]+) Zimbra IMAP4rev1 server ready\r\n
+    - ^\* OK WebSTAR Mail ready\r\n

@@ -1,12 +1,17 @@
 id: http
 info:
-  name: TP-LINK Smart Plug fake_httpd
+  name: Embedthis-Appweb
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    device_type: power-misc
+    device_type: printer
+    info: Sharp Open System Architecture
+    product: appweb
     rarity: 0
+    vendor: mbedthis
+    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +22,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.1 200 OK\r\nServer: TP-LINK SmartPlug\r\nConnection: close\r\nContent-Length: 5\r\nContent-Type: text/html\r\n\r\n\.\.\.\r\n'
+    - '^HTTP/1\.0 503 Service Unavailable\r\nDate: .* GMT\r\nServer: Embedthis-Appweb/([\w._-]+)\r\n'

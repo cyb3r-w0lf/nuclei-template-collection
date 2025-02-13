@@ -1,11 +1,14 @@
 id: telnet
 info:
-  name: PostX IP Receiver telnetd
+  name: Efficient router telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
+    device_type: router
+    info: Model $1 - $2
     rarity: 0
+    version: $3
 tcp:
 - name: 'null'
   inputs:
@@ -16,4 +19,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - ^\r\nICTNET>
+    - '^\r\nEfficient ([-.\w ]+) Router \(([-.\d/]+)\) v(\d[-.\w]+) Ready\r\n\xff\xfb\x01\xff\xfb\x03\xff\xfd\x01\xff\xfe\x01Login: '

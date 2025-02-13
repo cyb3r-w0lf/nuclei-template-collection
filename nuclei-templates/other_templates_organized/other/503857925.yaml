@@ -1,13 +1,14 @@
 id: ftp
 info:
-  name: OEM FTPD $1
+  name: ProFTPD
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: print server
-    info: Epson StylusPhoto750
+    product: proftpd
     rarity: 0
+    vendor: proftpd
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +19,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 StylusPhoto750-[0-9A-F]+ FTP server \(OEM FTPD version ([\d.]+)\) ready\.\r\n
+    - '^ - error: no valid servers configured\n - Fatal: error processing configuration file ''/etc/proftpd/proftpd\.conf''\n$'

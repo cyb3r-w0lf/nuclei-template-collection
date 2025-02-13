@@ -1,13 +1,14 @@
 id: irc
 info:
-  name: Hybrid-based ircd
+  name: ratbox ircd
   author: nmap,cn-kali-team
   tags: detect,tech,irc,service
   severity: info
   metadata:
-    product: ircd-hybrid
+    hostname: $1
+    product: ircd-ratbox
     rarity: 0
-    vendor: ircd-hybrid
+    vendor: ratbox
     verified: true
 tcp:
 - name: 'null'
@@ -19,4 +20,4 @@ tcp:
   - name: irc
     type: regex
     regex:
-    - ^NOTICE AUTH :\*\*\* Looking up your hostname\.\.\.\r\nNOTICE AUTH :\*\*\* Checking Ident\r\nNOTICE AUTH :\*\*\* (?:Couldn't look up|Found) your hostname\r\nNOTICE AUTH :\*\*\* (?:No|Got) Ident response\r\n$
+    - ^NOTICE AUTH :\*\*\* Processing connection to ([-\w_.]+)\r\n

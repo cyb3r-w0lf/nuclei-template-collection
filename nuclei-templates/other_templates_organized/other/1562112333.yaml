@@ -5,6 +5,7 @@ info:
   tags: detect,tech,irc,service
   severity: info
   metadata:
+    info: Admin email $1
     product: unrealircd
     rarity: 0
     vendor: unrealircd
@@ -19,4 +20,4 @@ tcp:
   - name: irc
     type: regex
     regex:
-    - '^ERROR :Closing Link: \[[\d.]+\] \(Too many unknown connections from your IP\)\r\n'
+    - '^ERROR :Closing Link: \[[\d.]+\] \(Throttled: Reconnecting too fast\) -Email (.*) for more information\.'

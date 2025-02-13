@@ -1,14 +1,15 @@
 id: ssh
 info:
-  name: Moxa sshd
+  name: libwrap'd OpenSSH
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    device_type: specialized
-    info: protocol $1
+    info: Access denied
+    product: openssh
     rarity: 0
-    version: $2
+    vendor: openbsd
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +20,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-moxa_([\d.]+)\r\n
+    - ^Access to service sshd from [-\w_.]+@[-\w_.]+ has been denied\.\r\n

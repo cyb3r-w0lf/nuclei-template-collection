@@ -1,14 +1,15 @@
 id: imap
 info:
-  name: Dovecot imapd
+  name: Kerio Connect imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    product: dovecot
+    product: connect
     rarity: 0
-    vendor: dovecot
+    vendor: kerio
     verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +20,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK [Dd]ovecot ready\.\r\n
+    - ^\* OK Kerio Connect ([\w._ -]+) IMAP4rev1 server ready\r\n

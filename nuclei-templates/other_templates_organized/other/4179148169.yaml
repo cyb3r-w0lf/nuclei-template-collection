@@ -1,23 +1,23 @@
 id: http
 info:
-  name: Embedded HTTP Server
+  name: CrushFTP web interface
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    fallback:
-    - get-request
-    rarity: 5
-    version: $1
+    info: IP banned
+    product: crushftp
+    rarity: 0
+    vendor: crushftp
+    verified: true
 tcp:
-- name: rtsprequest
+- name: 'null'
   inputs:
-  - data: OPTIONS / RTSP/1.0\r\n\r\n
+  - data: ''
   host:
   - '{{Hostname}}'
-  port: 80,554,3052,3372,5000,7070,8080,10000
   extractors:
   - name: http
     type: regex
     regex:
-    - '^RTSP/1\.0 501 Not Implemented\r\nServer: Embedded HTTP Server ([\d.]+)\r\n'
+    - '^HTTP/1\.1 200 BANNED\r\nContent-Length: \d+\r\n\r\nYour IP is banned, no further requests will be processed from this IP \([\d.]+\)\.\r\n'

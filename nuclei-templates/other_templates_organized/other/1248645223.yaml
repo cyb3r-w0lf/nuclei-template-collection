@@ -1,12 +1,16 @@
 id: imap
 info:
-  name: hMailServer imapd
+  name: IceWarp imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    operating_system: Windows
+    info: time zone $3
+    operating_system: Linux
+    product: mail_server
     rarity: 0
+    vendor: icewarp
+    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -18,4 +22,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK IMAPrev1 Service Ready - hMailServer ([\w.-]+)\r\n
+    - ^\* OK IceWarp ([\w._-]+) RHEL(\d+) x64 IMAP4rev1 .* ([-+]\d+)\r\n

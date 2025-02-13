@@ -1,18 +1,15 @@
 id: ftp
 info:
-  name: OpenBSD ftpd
+  name: Symantec Raptor Firewall ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    hostname: $1
-    info: Linux port $3
-    operating_system: Linux
-    product: ftpd
+    device_type: firewall
+    product: raptor_firewall
     rarity: 0
-    vendor: openbsd
+    vendor: symantec
     verified: true
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -23,4 +20,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 ([-.\w]+) FTP server \(Version (\S+)/OpenBSD/Linux-ftpd-([-.\w]+)\) ready.\r\n$
+    - ^421 You are not permitted to make this connection\.\r\n

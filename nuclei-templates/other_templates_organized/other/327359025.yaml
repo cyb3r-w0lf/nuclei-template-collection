@@ -1,16 +1,11 @@
 id: smtp
 info:
-  name: IceWarp smtpd
+  name: Nemesis smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    hostname: $1
-    product: mail_server
     rarity: 0
-    vendor: icewarp
-    verified: true
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +16,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([\w._-]+) SMTP IceWarp ([\w._-]+);
+    - ^220 Welcome to Nemesis ESMTP server on \S+

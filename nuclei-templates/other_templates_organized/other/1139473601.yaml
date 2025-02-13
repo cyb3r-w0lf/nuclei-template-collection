@@ -1,6 +1,6 @@
 id: pop3
 info:
-  name: Dovecot MUA pop3d
+  name: Dovecot pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
@@ -19,4 +19,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK dovecot MUA ready\r\n
+    - \+OK E-mail server ready\.\r\n

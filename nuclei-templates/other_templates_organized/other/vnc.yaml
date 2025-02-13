@@ -1,23 +1,19 @@
 id: vnc
 info:
-  name: RealVNC Enterprise
-  author: nmap,cn-kali-team
-  tags: detect,tech,vnc,service
+  name: vnc
+  author: cn-kali-team
+  tags: detect,tech,vnc
   severity: info
   metadata:
-    info: protocol 4.1
-    product: realvnc
-    rarity: 0
-    vendor: realvnc
-    verified: true
-tcp:
-- name: 'null'
-  inputs:
-  - data: ''
-  host:
-  - '{{Hostname}}'
-  extractors:
-  - name: vnc
-    type: regex
-    regex:
-    - ^RFB 004\.001\n
+    product: vnc
+    vendor: 00_unknown
+    verified: false
+http:
+- method: GET
+  path:
+  - '{{BaseURL}}/'
+  matchers:
+  - type: word
+    words:
+    - <applet code=vncviewer.class archive=vncviewer.jar
+    case-insensitive: true

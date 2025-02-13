@@ -1,11 +1,14 @@
 id: sieve
 info:
-  name: pysieved
+  name: DBMail timsieved
   author: nmap,cn-kali-team
   tags: detect,tech,sieve,service
   severity: info
   metadata:
+    product: dbmail
     rarity: 0
+    vendor: paul_j_stevens
+    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -17,4 +20,4 @@ tcp:
   - name: sieve
     type: regex
     regex:
-    - '^/usr/share/pysieved/plugins/dovecot\.py:27: DeprecationWarning: The popen2 module is deprecated\.  Use the subprocess module\.\n  import popen2\n\"IMPLEMENTATION\" \"pysieved ([\w._+-]+)\"\r\n'
+    - ^\"IMPLEMENTATION\" \"DBMail timsieved ([\w._-]+)\"\r\n

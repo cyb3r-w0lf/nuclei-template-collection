@@ -1,19 +1,14 @@
 id: sip
 info:
-  name: RingCentral Softphone
+  name: BT HomeHub
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
   metadata:
+    device_type: VoIP phone
     fallback:
     - get-request
-    info: 'arch: $3-bit; OS Version $4'
-    operating_system: $2
-    product: softphone
     rarity: 5
-    vendor: ringcentral
-    verified: true
-    version: $1
 tcp:
 - name: sipoptions
   inputs:
@@ -25,4 +20,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?User-Agent: Softphone/([\d.]+) \(RingCentral(?: \(\d+\))?; (Windows \w+) \((\d\d) bits\)/([\d.]+); revision: \d+\)\r\n'
+    - '(?i)^SIP/2\.0 500 Server Internal Error\r\n(?:[^\r\n]+\r\n)*?User-Agent: BT Home Hub\r\n'

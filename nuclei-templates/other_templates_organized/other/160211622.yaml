@@ -1,13 +1,13 @@
 id: ftp
 info:
-  name: Intermec PM4i printer ftpd
+  name: Ricoh Aficio $1 printer ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
     device_type: printer
     rarity: 0
-    version: $1
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 EasyCoder FTP Server v\.([\d.]+) ready\.\r\n
+    - ^220 RICOH Aficio ([\w ._+-]+?) FTP server \(([-\w_.]+)\) ready\.\r\n

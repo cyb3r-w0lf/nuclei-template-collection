@@ -1,12 +1,11 @@
 id: pop3
 info:
-  name: Mercury/32 pop3d
+  name: BVRP Software SLMAIL pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
     hostname: $1
-    operating_system: Windows
     rarity: 0
 tcp:
 - name: 'null'
@@ -18,4 +17,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK <\d{6,10}\.\d{4,6}@([-.+\w]+)>, POP3 server ready\.\r\n
+    - ^\+OK POP3 server ([-\w_.]+) ready <[\d.]+@[-\w_.]+>\r\n

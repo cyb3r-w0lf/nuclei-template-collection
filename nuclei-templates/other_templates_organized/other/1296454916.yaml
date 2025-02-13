@@ -1,17 +1,17 @@
 id: rtsp
 info:
-  name: VLC rtspd
+  name: Wowza Streaming Engine rtspd
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
   metadata:
     fallback:
     - get-request
-    product: vlc_media_player
+    product: wowza_streaming_engine
     rarity: 5
-    vendor: videolan
+    vendor: wowza
     verified: true
-    version: $1
+    version: $1 build $2
 tcp:
 - name: rtsprequest
   inputs:
@@ -23,4 +23,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '^RTSP/1\.0 200 OK\r\nServer: VLC/([\w._-]+)\r\nContent-Length: 0\r\nPublic: DESCRIBE,SETUP,TEARDOWN,PLAY,PAUSE,GET_PARAMETER\r\n\r\n'
+    - '^RTSP/1\.0 200 OK\r\nSupported: play\.basic, con\.persistent\r\nCseq: 0\r\nServer: Wowza Streaming Engine ([\w._-]+) build(\d+)\r\nPublic: DESCRIBE, SETUP, TEARDOWN, PLAY, PAUSE, OPTIONS, ANNOUNCE, RECORD, GET_PARAMETER\r\nCache-Control: no-cache\r\n\r\n$'

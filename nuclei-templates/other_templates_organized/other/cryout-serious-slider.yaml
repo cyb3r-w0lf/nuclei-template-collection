@@ -1,15 +1,14 @@
-id: cryout-serious-slider-a1bed9d88908c46e7542e25a1ecea457
+id: cryout-serious-slider
 
 info:
   name: >
-    Serious Slider <= 1.2.4 - Authenticated (Editor+) Stored Cross-Site Scripting
+    Serious Slider <= 1.2.4 - Cross-Site Request Forgery
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9d21191c-32ef-4de6-8e95-ad66779e42f9?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/41aeb465-48c2-48db-90ea-186ceeac6753?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/cryout-serious-slider/"
     google-query: inurl:"/wp-content/plugins/cryout-serious-slider/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,cryout-serious-slider,low
+  tags: cve,wordpress,wp-plugin,cryout-serious-slider,medium
 
 http:
   - method: GET

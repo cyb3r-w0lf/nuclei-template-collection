@@ -1,6 +1,6 @@
 id: smtp
 info:
-  name: Merak Mail Server smptd
+  name: INDY smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
@@ -16,4 +16,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 Merak MAILSRV\r\n
+    - ^220 Welcome to the INDY SMTP Server\r\n$

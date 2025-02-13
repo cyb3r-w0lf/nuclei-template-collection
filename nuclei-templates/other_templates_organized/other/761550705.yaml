@@ -1,17 +1,12 @@
 id: ssh
 info:
-  name: Bitvise WinSSHD
+  name: SSHTools J2SSH
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    info: sshlib $2; protocol $1
-    operating_system: Windows
-    product: winsshd
+    info: protocol $1
     rarity: 0
-    vendor: bitvise
-    verified: true
-    version: $3
 tcp:
 - name: 'null'
   inputs:
@@ -22,4 +17,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - '^SSH-([\d.]+)-(\d[-.\w]+) sshlib: WinSSHD (\d[-.\w]+)\r?\n'
+    - ^SSH-([\d.]+)-http://www\.sshtools\.com J2SSH \[SERVER\]\r\n

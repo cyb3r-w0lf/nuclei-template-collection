@@ -1,15 +1,14 @@
 id: domain
 info:
-  name: PowerDNS Recursor
+  name: PowerDNS
   author: nmap,cn-kali-team
   tags: detect,tech,domain,service
   severity: info
   metadata:
-    product: recursor
+    product: powerdns
     rarity: 1
     vendor: powerdns
     verified: true
-    version: $1
 tcp:
 - name: dnsversion-bind-req
   inputs:
@@ -21,4 +20,4 @@ tcp:
   - name: domain
     type: regex
     regex:
-    - (?i)\x07version\x04bind\0\0\x10\0[\x01\x03]\xc0\x0c\0\x10\0[\x01\x03].{7}PowerDNS Recursor (\d[\w.-]+)
+    - ^(?:..)?\0\x06\x85\x02\0\x01\0\0\0\0\0\0\x07version\x04bind\0\0\x10\0\x03

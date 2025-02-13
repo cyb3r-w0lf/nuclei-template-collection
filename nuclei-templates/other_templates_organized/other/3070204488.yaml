@@ -1,12 +1,17 @@
 id: smtp
 info:
-  name: AntiVir MailGate smtpd
+  name: Postfix smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    hostname: $1
+    hostname: $2
+    info: $1
+    product: postfix
     rarity: 0
+    vendor: postfix
+    verified: true
+    version: $3
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +22,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([-\w_.]+) AntiVir MailGate\r\n
+    - ^220 (.*) ([\w._-]+) ESMTP Postfix \(([\w._-]+)\)\r\n

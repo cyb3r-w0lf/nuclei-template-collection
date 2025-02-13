@@ -1,11 +1,12 @@
 id: pop3-proxy
 info:
-  name: ISafe pop3 proxy
+  name: FreePOPs pop3 proxy
   author: nmap,cn-kali-team
   tags: detect,tech,pop3-proxy,service
   severity: info
   metadata:
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -16,4 +17,4 @@ tcp:
   - name: pop3-proxy
     type: regex
     regex:
-    - ^\+OK \[ISafe POP3 Proxy\] \r\n
+    - ^\+OK FreePOPs/([\d.]+) pop3 server ready\r\n

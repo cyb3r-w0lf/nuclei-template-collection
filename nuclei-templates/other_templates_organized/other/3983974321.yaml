@@ -1,14 +1,17 @@
 id: nntp
 info:
-  name: Diablo NNTP service
+  name: Cyrus nntpd
   author: nmap,cn-kali-team
   tags: detect,tech,nntp,service
   severity: info
   metadata:
     hostname: $1
-    info: 'Admin: $2'
+    info: posting ok
+    product: cyrus_imap_server
     rarity: 0
-    version: $3
+    vendor: cmu
+    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +22,4 @@ tcp:
   - name: nntp
     type: regex
     regex:
-    - ^200 ([-.\w]+) NNTP Service Ready - ([-.\w]+@[-.\w]+) \(DIABLO (\d[-.\w ]+)\)\r\n
+    - ^200 ([\w._-]+) Cyrus NNTP v([\w._-]+) server ready, posting allowed\r\n

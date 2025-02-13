@@ -1,15 +1,14 @@
-id: woo-pdf-invoice-builder-b3d98dd124afa7dc460f57d96fd05347
+id: woo-pdf-invoice-builder
 
 info:
   name: >
-    PDF Builder for WooCommerce. Create invoices,packing slips and more <= 1.2.136 - Reflected Cross-Site Scripting
+    WooCommerce PDF Invoice Builder <= 1.2.101 - Cross-Site Request Forgery
   author: topscoder
   severity: medium
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5f21a86b-52f4-4563-afce-32f1949ce5a1?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/652367a0-fca2-4313-8217-d8811ada0ab5?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.2.136')
+          - compare_versions(version, '<= 1.2.101')

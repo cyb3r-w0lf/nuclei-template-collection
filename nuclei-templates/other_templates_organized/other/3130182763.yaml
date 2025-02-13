@@ -1,12 +1,15 @@
 id: imap
 info:
-  name: Winmail imapd
+  name: Lotus Domino imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    operating_system: Windows
+    info: SSL-only; imaps on port $1
+    product: lotus_domino
     rarity: 0
+    vendor: ibm
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +20,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK IMAP4 ready! [-\w_.]+ Winmail Mail Server MagicWinmail Extend IMAP 101\r\n
+    - ^\* BYE Domino IMAP4 Server Configured for SSL Connections only\. Please reconnect using SSL Port (\d+), .*\r\n

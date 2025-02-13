@@ -1,13 +1,12 @@
 id: telnet
 info:
-  name: Redline $1 WAP telnetd
+  name: Sony PCS-$1 telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: WAP
+    device_type: media device
     rarity: 0
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +17,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - ^\xff\xfb\x01([\w._-]+) Ver\. ([\w._-]+) \(c\) Copyright \d+-\d+ Redline Communications Inc\.\r\n\r\nUsername:\0
+    - '^\xff\xfc\x01PCS-(\w+) Telnet2? Server\r\nlogin: '

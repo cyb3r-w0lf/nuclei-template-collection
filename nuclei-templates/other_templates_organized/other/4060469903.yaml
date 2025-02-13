@@ -1,21 +1,21 @@
 id: daytime
 info:
-  name: Microsoft Windows daytime
+  name: Windows small service daytime
   author: nmap,cn-kali-team
   tags: detect,tech,daytime,service
   severity: info
   metadata:
-    info: New Zealand style
     operating_system: Windows
-    rarity: 0
+    rarity: 3
 tcp:
-- name: 'null'
+- name: help
   inputs:
-  - data: ''
+  - data: help\r\n\r\n
   host:
   - '{{Hostname}}'
+  port: 7,13,37,42
   extractors:
   - name: daytime
     type: regex
     regex:
-    - ^[01]\d:\d\d:\d\d [AP]M [0-3]\d/[01]\d/0\d\n$
+    - ^\d{1,2}:\d\d:\d\d [AP]M \d{1,2}/\d\d/\d{4}\n$

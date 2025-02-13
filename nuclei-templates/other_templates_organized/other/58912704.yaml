@@ -1,6 +1,6 @@
 id: imap
 info:
-  name: DavMail imapd
+  name: Anonymous Mail Server imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
@@ -17,4 +17,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK \[CAPABILITY IMAP4REV1 AUTH=LOGIN[\w._ -]+\] IMAP4rev1 DavMail ([\w._-]+) server ready\r\n
+    - ^\* OK Anonymous Mail Server v([\d.]+) IMAP4rev1 .*\r\n

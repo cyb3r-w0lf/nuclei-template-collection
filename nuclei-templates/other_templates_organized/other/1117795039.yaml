@@ -1,14 +1,14 @@
 id: imap
 info:
-  name: UW imapd
+  name: Cyrus imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
     hostname: $1
-    product: imap_toolkit
+    product: cyrus_imap_server
     rarity: 0
-    vendor: uw
+    vendor: cmu
     verified: true
     version: $2
 tcp:
@@ -21,4 +21,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - '^\* OK \[CAPABILITY .*\] ([-.\w]+) IMAP4rev1 (20[\w.]+) at '
+    - ^\* OK \[CAPABILITY IMAP4rev1 [^]]*\] ([-.\w]+) Cyrus IMAP (\d[\w.-]+) server ready\r\n

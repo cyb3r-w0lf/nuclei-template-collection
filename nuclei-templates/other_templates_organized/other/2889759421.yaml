@@ -1,13 +1,16 @@
 id: pop3
 info:
-  name: Kerio MailServer POP3 Server
+  name: SurgeMail pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    hostname: $3
+    hostname: $1
+    product: surgemail
     rarity: 0
-    version: $1 patch $2
+    vendor: netwin
+    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +21,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK Kerio MailServer (\d[-.\w]+) patch ([\d.]+) POP3 server ready <[\d.]+@([-\w_.]+)>\r\n
+    - ^\+OK POP3 ([-\w_.]+) \(Version ([-\w.]+)\) http://surgemail\.com\r\n

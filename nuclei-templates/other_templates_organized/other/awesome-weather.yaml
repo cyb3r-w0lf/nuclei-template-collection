@@ -1,15 +1,14 @@
-id: awesome-weather-7e4d9f223fa6f08895e45780b963ee10
+id: awesome-weather
 
 info:
   name: >
-    Awesome Weather Widget <= 3.0.2 - Authenticated (Contributor+) Stored Cross-Site Scripting via Shortcode
+    Awesome Weather Widget <= 3.0.2 - Reflected Cross-site Scripting via id Parameter
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3bf77988-370b-437f-83a0-18a147e3e087?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1d261e25-7355-4220-882c-f3266c64252a?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

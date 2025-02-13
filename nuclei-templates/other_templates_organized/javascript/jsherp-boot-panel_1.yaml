@@ -1,14 +1,14 @@
 id: jsherp-boot-panel
 
 info:
-  name: JshERP Boot Panel - Detect
+  name: jshERP-boot - Panel
   author: DhiyaneshDk
   severity: info
   metadata:
     max-request: 1
     verified: true
-    shodan-query: http.favicon.hash:-1298131932
-  tags: panel,jsherp,login,detect
+    shodan-query: -1298131932
+  tags: jsherp,login,panel
 
 http:
   - method: GET
@@ -22,7 +22,7 @@ http:
         words:
           - 'jshERP-boot'
           - 'ERP系统'
-        condition: or
+        condition: and
 
       - type: status
         status:

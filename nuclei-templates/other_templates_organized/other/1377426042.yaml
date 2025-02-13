@@ -1,10 +1,11 @@
 id: vnc
 info:
-  name: BRemote VNC
+  name: ATEN KVM-over-IP VNC
   author: nmap,cn-kali-team
   tags: detect,tech,vnc,service
   severity: info
   metadata:
+    device_type: remote management
     rarity: 0
 tcp:
 - name: 'null'
@@ -16,4 +17,4 @@ tcp:
   - name: vnc
     type: regex
     regex:
-    - ^RFB 240\.6\n\0\x02$
+    - ^RFB 009\.123\n

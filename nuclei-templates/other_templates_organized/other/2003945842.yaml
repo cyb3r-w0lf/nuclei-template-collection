@@ -1,13 +1,14 @@
 id: pop3-proxy
 info:
-  name: MailMarshal pop3d
+  name: Symantec PGP Universal Server pop3 proxy
   author: nmap,cn-kali-team
   tags: detect,tech,pop3-proxy,service
   severity: info
   metadata:
-    hostname: $2
+    product: pgp_universal_server
     rarity: 0
-    version: $1
+    vendor: symantec
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +19,4 @@ tcp:
   - name: pop3-proxy
     type: regex
     regex:
-    - ^\+OK MailMarshal\(([\d.]+)\) POP3 server ready <[\d.]+@([-\w_.]+)>\r\n
+    - ^-ERR PGP Universal no pop3 service here\r\n

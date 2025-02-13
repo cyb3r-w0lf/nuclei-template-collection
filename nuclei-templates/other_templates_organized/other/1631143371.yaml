@@ -1,16 +1,13 @@
 id: ssh
 info:
-  name: Bitvise WinSSHD
+  name: Dell PowerConnect sshd
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    info: sshlib $2; protocol $1; server version hidden
-    operating_system: Windows
-    product: winsshd
+    device_type: power-device
+    info: protocol 1.5
     rarity: 0
-    vendor: bitvise
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +18,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - '^SSH-([\d.]+)-(\d[-.\w]+) sshlib: WinSSHD\r?\n'
+    - ^SSH-1\.5-SSH\.0\.1\r?\n

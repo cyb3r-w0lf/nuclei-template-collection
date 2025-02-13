@@ -1,22 +1,21 @@
 id: http
 info:
-  name: EMC Navisphere CIM Object Manager httpd
+  name: Motion Camera httpd
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    fallback:
-    - get-request
-    rarity: 5
+    device_type: webcam
+    rarity: 0
+    version: $1
 tcp:
-- name: rtsprequest
+- name: 'null'
   inputs:
-  - data: OPTIONS / RTSP/1.0\r\n\r\n
+  - data: ''
   host:
   - '{{Hostname}}'
-  port: 80,554,3052,3372,5000,7070,8080,10000
   extractors:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.1 505 HTTP Version Not Supported\r\nContent-Length: 0\r\n\r\n'
+    - '^HTTP/1\.[01] 200 OK\r\nServer: Motion/([\d.]+)\r\n'

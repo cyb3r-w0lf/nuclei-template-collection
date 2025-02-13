@@ -1,15 +1,14 @@
-id: profilegrid-user-profiles-groups-and-communities-b91d65f28b2fb7356c80c77b92d9e0ea
+id: profilegrid-user-profiles-groups-and-communities
 
 info:
   name: >
-    ProfileGrid – User Profiles, Groups and Communities <= 5.9.3.6 - Missing Authorization to Authenticated (Subscriber+) Arbitrary User Meta Deletion
+    ProfileGrid  <= 5.6.6 - Missing Authorization
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a0e5fcfa-ebc9-45f6-9cbc-c9e3540baa6f?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/71fb1cef-6e01-4bd7-b0bc-5d21295f119a?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/profilegrid-user-profiles-groups-and-communities/"
     google-query: inurl:"/wp-content/plugins/profilegrid-user-profiles-groups-and-communities/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,profilegrid-user-profiles-groups-and-communities,low
+  tags: cve,wordpress,wp-plugin,profilegrid-user-profiles-groups-and-communities,high
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 5.9.3.6')
+          - compare_versions(version, '<= 5.6.6')

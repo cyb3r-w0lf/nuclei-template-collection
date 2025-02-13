@@ -1,15 +1,14 @@
-id: xpinner-lite-8befe0a294dee1a7a5258c9a58a9267a
+id: xpinner-lite
 
 info:
   name: >
-    xPinner Lite <= 2.2 - Cross-Site Request Forgery
+    XPinner Lite <= 2.2 - Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: high
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7392fcb8-f125-4a1e-bb33-5614aeacb4cc?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a01cdc31-3cab-43b0-a5ef-75fb11eeb621?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/xpinner-lite/"
     google-query: inurl:"/wp-content/plugins/xpinner-lite/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,xpinner-lite,medium
+  tags: cve,wordpress,wp-plugin,xpinner-lite,high
 
 http:
   - method: GET

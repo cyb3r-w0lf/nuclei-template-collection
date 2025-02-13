@@ -11,10 +11,8 @@ info:
     cvss-score: 0.0
     cwe-id: CWE-668
   tags: sicom,mgrng,panel
-  metadata:
-    max-request: 1
 
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}/~sicom/mgrng/LoginForm.php"

@@ -1,14 +1,17 @@
 id: ssh
 info:
-  name: SCS sshd
+  name: OpenSSH
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
     info: protocol $1
-    operating_system: Tru64 UNIX
+    operating_system: Linux
+    product: openssh
     rarity: 0
-    version: $2
+    vendor: openbsd
+    verified: true
+    version: $2 Raspbian $3
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +22,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-([\d.]+) SSH Secure Shell Tru64 UNIX\r?\n
+    - ^SSH-([\d.]+)-OpenSSH_([\w._-]+) Raspbian-([^\r\n]+)\r?\n

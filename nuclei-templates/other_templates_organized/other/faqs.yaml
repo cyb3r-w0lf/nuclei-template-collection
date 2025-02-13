@@ -1,15 +1,15 @@
-id: faqs-d22784e1833acefcacf0ad25c4ae4e98
+id: faqs-c0355ca772249b6189a0afd4e117b72d
 
 info:
   name: >
-    FAQs <= 1.0.2 - Reflected Cross-Site Scripting
+    FAQs <= 1.0.2 - Authenticated (Subscriber+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/92c8ce3d-a9a1-41ba-a8f8-e4d821108a6d?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ad6b8346-6bc1-4d6b-9d4f-9b25fbe3962f?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/faqs/"
     google-query: inurl:"/wp-content/plugins/faqs/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,faqs,medium
+  tags: cve,wordpress,wp-plugin,faqs,low
 
 http:
   - method: GET

@@ -1,22 +1,23 @@
-id: newsletter-manager-a33148599d0543f2aac796b4f67316c4
+id: newsletter-manager
 
 info:
-  name: "Newsletter Manager <= 1.5.1 - Insecure Deserialization"
+  name: >
+    Newsletter Manager <= 1.4 - Open Redirect
   author: topscoder
-  severity: critical
-  description: "The Newsletter Manager plugin for WordPress is vulnerable to insecure deserialization in versions up to, and including, 1.5.1. This is due to unsanitized input from the 'customFieldsDetails' parameter being passed through a deserialization function. This potentially makes it possible for unauthenticated attackers to inject a serialized PHP object."
+  severity: medium
+  description: >
+    The Newsletter Manager plugin for WordPress is vulnerable to Open Redirect in versions up to, and including, 1.4. This is due to improper validation of the 'appurl' parameter. This makes it possible for unauthenticated attackers to redirect traffic to a potentially malicious arbitrary website.
   reference:
-    - https://blog.nintechnet.com/insecure-deserialization-vulnerability-in-wordpress-newsletter-manager-plugin-unpatched/
-    - https://wpscan.com/vulnerability/b82124b1-e5e1-4f1e-9513-90474fd3f066
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cd8389f1-b70d-4d1a-bb25-e219c9099313?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    cvss-score: 9.8
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/newsletter-manager/"
     google-query: inurl:"/wp-content/plugins/newsletter-manager/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,newsletter-manager,critical
+  tags: cve,wordpress,wp-plugin,newsletter-manager,medium
 
 http:
   - method: GET
@@ -54,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.5.1')
+          - compare_versions(version, '<= 1.4')

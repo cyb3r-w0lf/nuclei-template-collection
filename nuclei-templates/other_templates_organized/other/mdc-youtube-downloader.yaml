@@ -1,15 +1,14 @@
-id: mdc-youtube-downloader-02be162ee04b5514e0a717cd892ed40f
+id: mdc-youtube-downloader
 
 info:
   name: >
-    MDC YouTube Downloader <= 3.0.0 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    MDC YouTube Downloader < 2.1.1 - Directory Traversal
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2e627cf8-057b-4f1d-b3db-cea8ee63b947?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/793e650c-27f7-4eff-9922-8e01ba24e96d?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.0.0')
+          - compare_versions(version, '< 2.1.1')

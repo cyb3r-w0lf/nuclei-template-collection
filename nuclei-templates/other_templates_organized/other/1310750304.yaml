@@ -1,16 +1,16 @@
 id: ssh
 info:
-  name: FoxT BoKS sshd
+  name: OpenSSH
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
     info: protocol $1
-    product: boks
+    product: openssh
     rarity: 0
-    vendor: fox_technologies
+    vendor: openbsd
     verified: true
-    version: $2
+    version: $2+CAN-2004-0175
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +21,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-BoKS_SSH_([\d.]+)\r\n
+    - ^SSH-([\d.]+)-OpenSSH_([\w._-]+)\+CAN-2004-0175\r?\n

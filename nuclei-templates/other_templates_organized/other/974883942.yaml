@@ -1,18 +1,12 @@
 id: telnet
 info:
-  name: BusyBox telnetd
+  name: Huawei STC router telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: WAP
-    info: OpenWrt Kamikaze $2; no password
-    operating_system: Linux
-    product: busybox
+    device_type: broadband router
     rarity: 0
-    vendor: busybox
-    verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -23,4 +17,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - (?i)^\xff\xfd\x01\xff\xfd(?:|\x1f|\x1f\xff\xfd)\x21\xff\xfb\x01\xff\xfb\x03 === IMPORTANT ============================\r\n  Use 'passwd' to set your login password\r\n  this will disable telnet and enable SSH\r\n ------------------------------------------\r\n\r\n\r\nBusyBox v([\w._-]+) \(.*\) [Bb]uilt-in shell \(ash\)\r\n.*\r\n KAMIKAZE \(([\w._-]+)\)
+    - '^\xff\xfb\x01\xff\xfb\x03\xff\xfb\x18\n\rWelcome Visiting Huawei  Home Gateway\n\rCopyright by Huawei Technologies Co\., Ltd\.\n\rLogin:'

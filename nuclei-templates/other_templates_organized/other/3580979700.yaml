@@ -1,13 +1,12 @@
 id: telnet
 info:
-  name: IRIX telnetd
+  name: 3Com 7760 WAP telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    operating_system: IRIX
+    device_type: WAP
     rarity: 0
-    version: 6.X
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +17,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - ^\xff\xfd\x18\xff\xfd \xff\xfd#\xff\xfd\$
+    - '^\xff\xfb\x01\r\n3Com Access Point 7760 login: '

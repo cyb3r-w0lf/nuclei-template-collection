@@ -1,15 +1,14 @@
-id: swift-framework-30d3f5776ed35230993fad52196a3d03
+id: swift-framework
 
 info:
   name: >
-    Swift Framework <= 2.7.31 - Authenticated (Contributor+) Stored Cross-Site Scripting via Shortcodes
+    Swift Framework <= 2.7.31 - Missing Authorization to Unauthenticated Arbitrary Content Update
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/57103f8e-0874-4e56-8571-254607ada21c?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/855055d5-362e-4a92-9e9d-97eab328dcc3?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

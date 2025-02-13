@@ -1,13 +1,15 @@
 id: ftp
 info:
-  name: Avalaunch ftpd
+  name: pyftpdlib
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: game console
-    info: XBox
+    product: pyftpdlib
     rarity: 0
+    vendor: giampaolo_rodola
+    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +20,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 The Avalaunch FTP system -- enter user name\r\n
+    - ^220 pyftpdlib (\d[\w._-]*) based ftpd ready\.\r\n

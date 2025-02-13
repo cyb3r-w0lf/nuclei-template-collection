@@ -1,16 +1,14 @@
 id: ftp
 info:
-  name: Cognex In-Sight ftpd
+  name: Axway SecureTransport ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: webcam
-    hostname: $3
-    info: 'component: $1'
-    product: in-sight
+    hostname: $1
+    product: securetransport
     rarity: 0
-    vendor: cognex
+    vendor: axway
     verified: true
     version: $2
 tcp:
@@ -23,4 +21,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 In-Sight \(R\) ([\w._-]+) Release ([\d.]+) \(\d+\) ready \(([\w._-]+)\)\.\r\n
+    - ^220 ([-/.+\w]+) FTP server \(SecureTransport (\d[-.\w]+)\) ready\.    \r\n

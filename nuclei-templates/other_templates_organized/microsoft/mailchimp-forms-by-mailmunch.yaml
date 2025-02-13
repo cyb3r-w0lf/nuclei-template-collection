@@ -1,15 +1,14 @@
-id: mailchimp-forms-by-mailmunch-6e4ff05d05ce8095ac3893db543402e6
+id: mailchimp-forms-by-mailmunch
 
 info:
   name: >
-    MailChimp Forms by MailMunch <= 3.2.2 - Authenticated (Contributor+) Stored Cross-Site Scripting via Shortcode
+    MailChimp Forms by MailMunch <= 3.1.4 - Missing Authorization via multiple AJAX actions
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ac87819d-0ba3-4c30-ae35-e933f7e250a4?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/18dd1b86-3206-4cd7-a20b-33240c139aa5?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/mailchimp-forms-by-mailmunch/"
     google-query: inurl:"/wp-content/plugins/mailchimp-forms-by-mailmunch/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,mailchimp-forms-by-mailmunch,low
+  tags: cve,wordpress,wp-plugin,mailchimp-forms-by-mailmunch,high
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.2.2')
+          - compare_versions(version, '<= 3.1.4')

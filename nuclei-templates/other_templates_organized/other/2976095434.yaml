@@ -1,25 +1,21 @@
 id: http
 info:
-  name: Allegro RomPager
+  name: Polycom VVX VoIP phone http config
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    device_type: remote management
-    info: Dell DRAC config
-    product: rompager
-    rarity: 0
-    vendor: allegro
-    verified: true
-    version: $1
+    device_type: VoIP phone
+    rarity: 6
 tcp:
-- name: 'null'
+- name: lpdstring
   inputs:
-  - data: ''
+  - data: \x01default\n
   host:
   - '{{Hostname}}'
+  port: 515,2947,3333,32211,19350
   extractors:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.1 200 OK\r\nContent-Type: text/html\r\nCache-Control: no-cache\r\nExpires: Thu, 26 Oct 1995 00:00:00 GMT\r\nTransfer-Encoding: chunked\r\nServer: Allegro-Software-RomPager/([\d.]+)\r\n\r\n'
+    - ^<html><head><title>Error</title></head>\n<body>Your client sent an invalid \x01default request without a\nprotocol version \(assuming HTTP v0\.9\)\.\n<p>The request can not be processed\.</body></html>$

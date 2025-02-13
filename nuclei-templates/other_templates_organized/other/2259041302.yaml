@@ -5,7 +5,8 @@ info:
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    info: protocol $1; NCSA GSSAPI authentication patch $3
+    info: protocol $1
+    operating_system: AIX
     product: openssh
     rarity: 0
     vendor: openbsd
@@ -21,4 +22,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-OpenSSH_([\w_.-]+) NCSA_GSSAPI_GPT_([-\w_.]+) GSI\n
+    - ^SSH-([\d.]+)-OpenSSH_([\w._-]+-pwexp\d+)\r?\n

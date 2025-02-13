@@ -1,12 +1,11 @@
 id: smtp
 info:
-  name: SCO smtpd
+  name: Cisco PIX sanitized smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    info: Unknown host
-    operating_system: SCO UNIX
+    device_type: firewall
     rarity: 0
 tcp:
 - name: 'null'
@@ -18,4 +17,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^421 [-\w_.]+ - Your name, '\[[-\w_.]+\]', is unknown to me\.\r\n
+    - ^220 [\*\d\ ]{2,300}\r\n

@@ -1,14 +1,12 @@
 id: ftp-proxy
 info:
-  name: Squid ftp proxy
+  name: JanaServer ftp proxy
   author: nmap,cn-kali-team
   tags: detect,tech,ftp-proxy,service
   severity: info
   metadata:
-    product: squid
+    operating_system: Windows
     rarity: 0
-    vendor: squid-cache
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +17,4 @@ tcp:
   - name: ftp-proxy
     type: regex
     regex:
-    - ^220 server ready - login please\r\n
+    - ^220 Ftp service of Jana-Server ready\r\n

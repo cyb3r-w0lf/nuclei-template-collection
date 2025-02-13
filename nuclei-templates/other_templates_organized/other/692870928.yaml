@@ -1,14 +1,16 @@
 id: rtsp
 info:
-  name: RealMedia EncoderServer
+  name: Apple AirTunes rtspd
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
   metadata:
     fallback:
     - get-request
-    operating_system: Windows
+    product: airtunes
     rarity: 5
+    vendor: apple
+    verified: true
     version: $1
 tcp:
 - name: rtsprequest
@@ -21,4 +23,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '(?i)^RTSP/1\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?Server: RealMedia EncoderServer Version (\d[-.\w]+) \(win32\)\r\n'
+    - '^RTSP/1\.0 200 OK\r\nServer: AirTunes/([\d.]+)\r\nPublic: ANNOUNCE, SETUP, RECORD, PAUSE, FLUSH, TEARDOWN, OPTIONS, GET_PARAMETER, SET_PARAMETER\r\n\r\n'

@@ -1,16 +1,17 @@
 id: smtp
 info:
-  name: Perl Net::SMTP::Server
+  name: Sendmail
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    info: or later
-    product: perl
+    info: on A/UX $2
+    operating_system: A/UX
+    product: sendmail
     rarity: 0
-    vendor: perl
+    vendor: sendmail
     verified: true
-    version: '1.1'
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +22,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 MacGyver SMTP Ready\.\r\n
+    - ^220-\S+ Sendmail ([\d.]+)/A/UX ([\d.]+) ready at .*\r\n220 ESMTP spoken here\r\n

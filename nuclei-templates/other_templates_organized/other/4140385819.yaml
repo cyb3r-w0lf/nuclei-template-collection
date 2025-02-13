@@ -1,18 +1,18 @@
 id: sip
 info:
-  name: Asterisk
+  name: CSipSimple sipd
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
   metadata:
-    device_type: PBX
     fallback:
     - get-request
-    product: asterisk
+    info: 'device: $SUBST(1,"_"," ")'
+    product: csipsimple
     rarity: 5
-    vendor: digium
+    vendor: csipsimple
     verified: true
-    version: $1
+    version: $2
 tcp:
 - name: sipoptions
   inputs:
@@ -24,4 +24,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 404 Not Found\r\n(?:[^\r\n]+\r\n)*?Server: Asterisk PBX ([\w._~+-]+)\r\n(?:[^\r\n]+\r\n)*?Allow: INVITE, ACK, CANCEL, OPTIONS, BYE, REFER, SUBSCRIBE, NOTIFY, INFO\r\n'
+    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?User-Agent: CSipSimple_([^/-]+)[-\d]*/(r\d+)\r\n'

@@ -1,11 +1,11 @@
 id: ssh
 info:
-  name: Cisco/3com IPSSHd
+  name: SCS sshd
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    info: protocol $1
+    info: protocol $1; $3
     rarity: 0
     version: $2
 tcp:
@@ -18,4 +18,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-IPSSH-([\d.]+)\r?\n
+    - '^sshd2\[\d+\]: .*\r\nSSH-([\d.]+)-(\d[-.\w]+) SSH Secure Shell \(([^\r\n\)]+)\)\r?\n'

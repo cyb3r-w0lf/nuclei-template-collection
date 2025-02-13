@@ -1,10 +1,11 @@
 id: pop3
 info:
-  name: Tobit David.fx pop3d
+  name: popper pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
+    info: Misconfigured
     rarity: 0
 tcp:
 - name: 'null'
@@ -16,4 +17,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK David\.fx Mail Access Server ready \(Tobit\.Software, Germany\)\r\n
+    - ^Unable to open trace file \"/var/spool/popper/

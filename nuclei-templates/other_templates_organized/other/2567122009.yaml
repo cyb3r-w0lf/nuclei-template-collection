@@ -1,6 +1,6 @@
 id: sip
 info:
-  name: Aladino SIP phone
+  name: Polycom SoundStation $1
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
@@ -8,8 +8,9 @@ info:
     device_type: VoIP phone
     fallback:
     - get-request
+    info: 'MAC: $3'
     rarity: 5
-    version: $1
+    version: $2
 tcp:
 - name: sipoptions
   inputs:
@@ -21,4 +22,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 500 Server Internal Error\r\n(?:[^\r\n]+\r\n)*?User-Agent: Thomson Inventel / HW_V[\w._-]+ / FW_V[\w._-]+ / SW_V([\w._-]+)\r\n'
+    - '(?i)^SIP/2\.0 200 OK\r\n(?:[^\r\n]+\r\n)*?User-Agent: PolycomSoundStationIP-SSIP_(\d+)-UA/([\d.]+)_(\w+)\r\n'

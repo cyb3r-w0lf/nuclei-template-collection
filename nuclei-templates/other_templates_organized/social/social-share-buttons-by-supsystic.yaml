@@ -1,22 +1,23 @@
-id: social-share-buttons-by-supsystic-9e709a956220338f98c3d2c7a60619ca
+id: social-share-buttons-by-supsystic
 
 info:
-  name: "Social Share Buttons by Supsystic <= 2.2.6 - SQL Injection"
+  name: >
+    Social Share Buttons by Supsystic <= 2.2.3 - Missing Authorization
   author: topscoder
-  severity: critical
-  description: "The Social Share Buttons by Supsystic plugin for WordPress is vulnerable to SQL Injection via the ‘value’ parameter in versions up to, and including, 2.2.6 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database."
+  severity: high
+  description: >
+    
   reference:
-    - https://plugins.trac.wordpress.org/changeset/2752389/social-share-buttons-by-supsystic/trunk?old=2743981&old_path=%2Fsocial-share-buttons-by-supsystic%2Ftrunk
-    - https://wordpress.org/plugins/social-share-buttons-by-supsystic/#developers
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ab693b1f-2842-4101-99f3-eaf5b7bf5d83?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    cvss-score: 9.8
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/social-share-buttons-by-supsystic/"
     google-query: inurl:"/wp-content/plugins/social-share-buttons-by-supsystic/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,social-share-buttons-by-supsystic,critical
+  tags: cve,wordpress,wp-plugin,social-share-buttons-by-supsystic,high
 
 http:
   - method: GET
@@ -54,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.2.6')
+          - compare_versions(version, '<= 2.2.3')

@@ -1,15 +1,14 @@
-id: wp-popup-banners-d12924cfc57422dd595dd6bd24062b99
+id: wp-popup-banners
 
 info:
   name: >
-    WP Popup Banners <= 1.2.5 - Authenticated (Subscriber+) SQL Injection via 'value'
+    WP Popup Banners <= 1.2.5 - Authenticated (Subscriber+) SQL Injection
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/aa64d6b4-5673-4d88-b5c7-d3441eaa0706?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8281cb20-73d3-4ab5-910e-d353b2a5cbd8?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

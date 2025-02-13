@@ -1,12 +1,12 @@
 id: pop3-proxy
 info:
-  name: CCProxy pop3d
+  name: ISafe pop3 proxy
   author: nmap,cn-kali-team
   tags: detect,tech,pop3-proxy,service
   severity: info
   metadata:
+    hostname: $1
     rarity: 0
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +17,4 @@ tcp:
   - name: pop3-proxy
     type: regex
     regex:
-    - ^\+OK CCProxy (\S+) POP3 Service Ready\r\n
+    - ^\+OK <[\d.]+@([-\w_.]+)> \[ISafe POP3 Proxy\] \r\n

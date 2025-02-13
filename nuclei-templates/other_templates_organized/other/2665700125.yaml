@@ -1,13 +1,11 @@
 id: ssh
 info:
-  name: ZyXEL ZyWALL sshd
+  name: AirTight WIPS sensor sshd
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    device_type: security-misc
-    info: protocol $1
-    operating_system: ZyNOS
+    info: protocol 2.0
     rarity: 0
 tcp:
 - name: 'null'
@@ -19,4 +17,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-Zyxel SSH server\r?\n
+    - ^SSH-2\.0-Server\r\n

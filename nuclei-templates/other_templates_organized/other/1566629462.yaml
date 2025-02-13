@@ -1,17 +1,14 @@
 id: ssh
 info:
-  name: Cisco switch sshd
+  name: Adtran sshd
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    device_type: switch
-    info: misconfigured
-    operating_system: IOS
-    product: ssh
+    info: protocol $1
+    operating_system: AOS
     rarity: 0
-    vendor: cisco
-    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -22,4 +19,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^Could not load host key\. Closing connection\.\.\.$
+    - ^SSH-([\d.]+)-Adtran_([\w._-]+)\r\n

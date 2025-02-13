@@ -1,15 +1,12 @@
 id: ftp
 info:
-  name: CommuniGate Pro ftpd
+  name: Ricoh Aficio SP $1 ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    product: communigate_pro
+    device_type: printer
     rarity: 0
-    vendor: stalker
-    verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +17,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 CommuniGate Pro FTP Server ([\d.]+) ready\r\n
+    - ^220 SP (C?\d+\w*) \([a-f0-9]+\) FTP server ready\r\n

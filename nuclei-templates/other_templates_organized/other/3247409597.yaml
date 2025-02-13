@@ -1,13 +1,12 @@
 id: smtp
 info:
-  name: Mirapoint Messaging Server MOS smtpd
+  name: NewsGator Enterprise Server smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    hostname: $1
     rarity: 0
-    version: $2
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +17,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([\w._-]+) ESMTP Mirapoint Messaging Server MOS ([^;\r\n]+)[;\r\n]
+    - ^220 Welcome NGOS SMTP Server version ([\w._-]+)\r\n$

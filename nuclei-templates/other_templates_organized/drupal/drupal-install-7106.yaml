@@ -4,18 +4,14 @@ info:
   name: Drupal Install
   author: NkxxkN
   severity: low
-  metadata:
-    max-request: 1
-    shodan-query: http.component:"drupal"
   tags: exposure,drupal
 
-http:
+requests:
   - method: GET
     path:
       - "{{BaseURL}}/install.php?profile=default"
-      - "{{BaseURL}}/core/install.php"
 
-    host-redirects: true
+    redirects: true
     max-redirects: 1
     matchers:
       - type: word

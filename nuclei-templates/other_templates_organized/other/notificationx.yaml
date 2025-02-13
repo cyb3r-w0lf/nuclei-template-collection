@@ -1,23 +1,23 @@
-id: notificationx-eea5a6573c9811771e6dcd995baedc80
+id: notificationx
 
 info:
-  name: "NotificationX <= 2.3.11 - SQL Injection"
+  name: >
+    NotificationX <= 1.8.2 - Cross-Site Request Forgery Bypass
   author: topscoder
-  severity: critical
-  description: "The NotificationX plugin for WordPress is vulnerable to generic SQL Injection via the ‘id’ parameter found within the notificationx/v1/notification REST endpoint in versions up to, and including, 2.3.11 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database."
+  severity: medium
+  description: >
+    
   reference:
-    - https://plugins.trac.wordpress.org/changeset/2685762
-    - https://wpscan.com/vulnerability/d1480717-726d-4be2-95cb-1007a3f010bb
-    - https://vulners.com/wpexploit/WPEX-ID%3AD1480717-726D-4BE2-95CB-1007A3F010BB
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3ebe7680-a76d-4178-a729-f0d79d861912?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    cvss-score: 9.8
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/notificationx/"
     google-query: inurl:"/wp-content/plugins/notificationx/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,notificationx,critical
+  tags: cve,wordpress,wp-plugin,notificationx,medium
 
 http:
   - method: GET
@@ -55,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.3.11')
+          - compare_versions(version, '< 1.8.3')

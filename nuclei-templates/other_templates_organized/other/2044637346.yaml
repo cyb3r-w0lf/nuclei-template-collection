@@ -1,16 +1,15 @@
 id: imap
 info:
-  name: Lotus Domino imapd
+  name: Zimbra imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    info: 'date: $2'
-    product: lotus_domino
+    hostname: $1
+    product: zimbra_collaboration_suite
     rarity: 0
-    vendor: ibm
+    vendor: zimbra
     verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +20,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK Domino IMAP4 Server Release (\d[-.\w ]+) +ready +(.*)\r\n
+    - ^\* OK ([-\w_.]+) Zimbra IMAP4rev1 service ready\r\n

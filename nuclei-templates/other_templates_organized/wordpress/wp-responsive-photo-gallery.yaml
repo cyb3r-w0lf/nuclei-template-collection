@@ -1,15 +1,14 @@
-id: wp-responsive-photo-gallery-0e6a1a91b3b66ff6ff6748a95cd459f7
+id: wp-responsive-photo-gallery
 
 info:
   name: >
-    Photo Gallery Slideshow & Masonry Tiled Gallery <= 1.0.15 - Authenticated (Subscriber+) Limited Server-Side Request Forgery
+    Photo Gallery Slideshow & Masonry Tiled Gallery <= 1.0.13 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/08e44434-8908-4c63-9e5b-9a8b387255d9?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/51a1c2de-56be-4487-874a-a916e8a6992a?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/wp-responsive-photo-gallery/"
     google-query: inurl:"/wp-content/plugins/wp-responsive-photo-gallery/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-responsive-photo-gallery,low
+  tags: cve,wordpress,wp-plugin,wp-responsive-photo-gallery,medium
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.0.15')
+          - compare_versions(version, '<= 1.0.13')

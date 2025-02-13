@@ -1,14 +1,13 @@
 id: ssh
 info:
-  name: SCS sshd
+  name: Huawei VRP sshd
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
     info: protocol $1
-    operating_system: Tru64 UNIX
+    operating_system: VRP
     rarity: 0
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +18,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-([\d.]+) SSH Secure Shell Tru64 UNIX\r?\n
+    - ^SSH-([\d.]+)--\n

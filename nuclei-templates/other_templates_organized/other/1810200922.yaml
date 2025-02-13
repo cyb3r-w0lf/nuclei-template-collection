@@ -1,11 +1,10 @@
 id: http
 info:
-  name: Konica Minolta bizhub printer http config
+  name: Finchsync PocketPC Synchonizer httpd
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    device_type: printer
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +16,4 @@ tcp:
   - name: http
     type: regex
     regex:
-    - '^HTTP/1\.1 408 Request Time-Out\r\nConnection: Close\r\n\r\n$'
+    - ^HTTP/1\.1 408 Request Timeout\nContent-Length:0\nContent-Type:text/html;charset=UTF-8\n\n$

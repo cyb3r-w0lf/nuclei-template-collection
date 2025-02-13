@@ -1,14 +1,12 @@
 id: pop3
 info:
-  name: Dovecot pop3d
+  name: WinRoute Pro pop3
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    product: dovecot
     rarity: 0
-    vendor: dovecot
-    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +17,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK Dovecot ready -
+    - ^\+OK WinRoute Pro ([\d.]+) POP3 server ready <[-\w_.]+@unspecified.host>\r\n

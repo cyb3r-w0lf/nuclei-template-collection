@@ -1,19 +1,24 @@
 id: login
 info:
-  name: OpenBSD or Solaris rlogind
+  name: IQinVision IQeye3 logind
   author: nmap,cn-kali-team
   tags: detect,tech,login,service
   severity: info
   metadata:
-    rarity: 0
+    device_type: webcam
+    fallback:
+    - dnsstatus-request
+    rarity: 7
+    version: version $1
 tcp:
-- name: 'null'
+- name: dnsstatus-request-tcp
   inputs:
-  - data: ''
+  - data: \0\x0C\0\0\x10\0\0\0\0\0\0\0\0\0
   host:
   - '{{Hostname}}'
+  port: 53,513,514,6050,41523
   extractors:
   - name: login
     type: regex
     regex:
-    - '^\x01rlogind: Permission denied\.\r\n'
+    - ^\0\r\n\nIQinVision IQeye3 Version ([vV].*)\n\r\nType HELP

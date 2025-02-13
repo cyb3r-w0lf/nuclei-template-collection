@@ -10,9 +10,8 @@ info:
     - https://twitter.com/MichalKoczwara/status/1551639708949692416
     - https://poshc2.readthedocs.io/en/latest/
   metadata:
-    max-request: 1
-    shodan-query: ssl:"P18055077"
     verified: "true"
+    shodan-query: ssl:"P18055077"
   tags: c2,ir,osint,posh,ssl
 
 ssl:

@@ -1,11 +1,11 @@
 id: telnet
 info:
-  name: Amino AmiNET set-top box telnetd
+  name: IBM OS/400 telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: media device
+    operating_system: OS/400
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +17,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\xff\xfd\x01\xff\xfd!\xff\xfb\x01\xff\xfb\x03\r\nAmiNET\d+ login: '
+    - ^\xff\xfd'\xff\xfd\x18$

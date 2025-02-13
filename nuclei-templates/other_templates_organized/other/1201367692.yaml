@@ -1,16 +1,13 @@
 id: imap
 info:
-  name: Microsoft Exchange 2000 imapd
+  name: AppleMailServer imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    operating_system: Windows
-    product: exchange_server
+    hostname: $1
     rarity: 0
-    vendor: microsoft
-    verified: true
-    version: $1
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +18,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK Microsoft Exchange 2000 IMAP4rev1 server version (\d[-.\w]+) \([-.\w]+\) ready\.\r\n
+    - ^\* OK ([-.\w]+) IMAP4rev1 AppleMailServer (\d[-.\w]+) ready\r\n

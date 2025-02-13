@@ -1,12 +1,15 @@
 id: imap
 info:
-  name: Merak Mail Server imapd
+  name: Microsoft Exchange Online imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
     operating_system: Windows
+    product: exchange_server
     rarity: 0
+    vendor: microsoft
+    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +20,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK \]-:\^:-\[ IMAP4rev1 .*\r\n
+    - ^\* OK The Microsoft Exchange IMAP4 service is ready\. \[\w+=*\]\r\n

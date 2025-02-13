@@ -1,15 +1,16 @@
 id: imap
 info:
-  name: Lotus Domino imapd
+  name: FirstClass imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    info: SSL-only; imaps on port $1
-    product: lotus_domino
+    hostname: $2
+    product: firstclass
     rarity: 0
-    vendor: ibm
+    vendor: opentext
     verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +21,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* BYE Domino IMAP4 Server Configured for SSL Connections only\. Please reconnect using SSL Port (\d+), .*\r\n
+    - ^\* OK FirstClass IMAP4rev1 server v([\d.]+) at ([-\w_.]+) ready\r\n
