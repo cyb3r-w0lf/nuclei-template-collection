@@ -9,7 +9,7 @@ info:
   metadata:
     verified: true
     max-request: 1
-  tags: cloud,enum,azure
+  tags: cloud,azure
 
 self-contained: true
 
@@ -34,5 +34,4 @@ http:
           - 200
           - 302
         condition: or
-
-# digest: 4a0a0047304502201886de38da3a1bc0e95ff00b7cbf1e6cb0ef6f13197aa042a25d3a4f1ee588ad022100e067b58657d10e3b2d41283022c15120ed1d17f20d58b821418e953bfbfe2b0f:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a0047304502204e87fb6ea9b294616dce1e74e429d8a83672921a242d1b3421a0c553eba83894022100bf53c3468808e2316f9194022db3618093873de428109de1984d0664f6bc89ee:922c64590222798bb761d5b6d8e72950

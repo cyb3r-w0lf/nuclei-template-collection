@@ -1,23 +1,24 @@
-id: woo-multi-currency
+id: woo-multi-currency-e455ea047c3b31ad025d596006c72348
 
 info:
   name: >
-    CURCY <= 2.1.25 - Missing Authorization to Currency Exchange Retrieval
+    CURCY <= 2.1.17 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: high
+  severity: medium
   description: >
-    
+    The CURCY plugin for WordPress is vulnerable to Reflected Cross-Site Scripting due to the use of add_query_arg without appropriate escaping on the URL in versions up to, and including, 2.1.17. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ca24aa2f-5d31-4128-af75-68bd24637ee7?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7870badf-a1c8-4a47-adac-d6535ab81d79?source=api-prod
   classification:
-    cvss-metrics: 
-    cvss-score: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/woo-multi-currency/"
     google-query: inurl:"/wp-content/plugins/woo-multi-currency/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,woo-multi-currency,high
+  tags: cve,wordpress,wp-plugin,woo-multi-currency,medium
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.1.25')
+          - compare_versions(version, '<= 2.1.17')

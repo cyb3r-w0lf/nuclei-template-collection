@@ -1,16 +1,19 @@
-id: sitepress-multilingual-cms
+id: sitepress-multilingual-cms-40b574cc7029370ce608bd0310e67c4d
 
 info:
-  name: "WPML <= 4.5.10 - Unprotected AJAX Actions"
+  name: >
+    WPML <= 4.6.0 - Reflected Cross-Site Scripting via wp_lang
   author: topscoder
   severity: medium
-  description: "The WPML plugin for WordPress contains several AJAX actions that fail to perform capability checks or nonce checks. These allow authenticated users to set content defaults, update language settings for legacy widgets, and abort translations."
+  description: >
+    The WPML plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the wp_lang parameter in versions up to, and including, 4.6.0 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.
   reference:
-    - https://wpml.org/changelog/2022/09/wpml-4-5-11-security-patch-update/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2b2302d9-426c-415b-a7d3-3a9de95d87d1?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:L
-    cvss-score: 5.4
-    cve-id:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/sitepress-multilingual-cms/"
     google-query: inurl:"/wp-content/plugins/sitepress-multilingual-cms/"
@@ -53,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.5.10')
+          - compare_versions(version, '<= 4.6.0')

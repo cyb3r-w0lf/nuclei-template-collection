@@ -1,14 +1,15 @@
-id: pootle-button
+id: pootle-button-3bed01d8d2f61cc69620382ca765c817
 
 info:
   name: >
-    pootle button <= 1.1.1 - Reflected Cross-Site Scripting
+    Pootle button <= 1.2.0 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/498f539a-f824-42fb-9df8-c1f82c4b3947?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/20087364-11d6-4346-8b80-c3a3739598f9?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.1.1')
+          - compare_versions(version, '<= 1.2.0')

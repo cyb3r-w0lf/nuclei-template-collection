@@ -1,14 +1,15 @@
-id: ai-engine
+id: ai-engine-c6a6622e05cafbce41ce40b2860abe7d
 
 info:
   name: >
-    AI Engine <= 2.1.4 - Authenticated (Editor+) Server-Side Request Forgery
+    AI Engine: ChatGPT Chatbot, Content Generator, GPT 3 & 4, Ultra-Customizable <= 1.6.82 - Authenticated (Admin+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/206d343d-6ed6-461c-bf7d-cf5011ed956f?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6d8f59b0-da92-43aa-990d-5271aa40d6b4?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.1.4')
+          - compare_versions(version, '< 1.6.83')

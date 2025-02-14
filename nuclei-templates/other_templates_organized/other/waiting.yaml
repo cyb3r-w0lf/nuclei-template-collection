@@ -1,14 +1,15 @@
-id: waiting
+id: waiting-a31f1134eb60333e444359cc1ca8820c
 
 info:
   name: >
-    Waiting: One-click countdowns <= 0.6.2 - Authenticated (Subscriber+) SQL Injection via 'pbc_down[meta][id]'
+    Waiting: One-click countdowns <= 0.6.2 - Missing Authorization Checks leading to Authenticated (Subscriber+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/17d12a35-35a1-4f7b-aa03-33ddafe17f5b?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/38cc5a39-6ec3-4ce9-b9ad-d4ca5dafe9a7?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

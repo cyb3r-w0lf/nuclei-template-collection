@@ -1,14 +1,15 @@
-id: wp-webinarsystem
+id: wp-webinarsystem-1c75d1e862be8f7df8e57e1cd3b79b71
 
 info:
   name: >
-    WebinarPress <= 1.33.9 - Reflected Cross-Site Scripting
+    WordPress Webinar Plugin – WebinarPress <= 1.33.24 - Missing Authorization to Authenticated (Subscriber+) Arbitrary File Creation
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ca0e51b2-640a-4bd1-b667-74107b7dcc6f?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f1c2cb3f-2f9e-40c5-9e5f-5b85a53e5868?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-webinarsystem/"
     google-query: inurl:"/wp-content/plugins/wp-webinarsystem/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-webinarsystem,medium
+  tags: cve,wordpress,wp-plugin,wp-webinarsystem,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.33.9')
+          - compare_versions(version, '<= 1.33.24')

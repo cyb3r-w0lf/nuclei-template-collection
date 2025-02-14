@@ -1,14 +1,15 @@
-id: pixtypes
+id: pixtypes-7648593683bbe71e9b65e42b822d721d
 
 info:
   name: >
-    PixTypes <= 1.4.14 - Cross-Site Request Forgery
+    PixTypes <= 1.4.15 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2ac7414c-8035-406a-ab1e-94d9f64e52fa?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ca05783d-7516-469e-b8a0-c23035db43b7?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.4.14')
+          - compare_versions(version, '<= 1.4.15')

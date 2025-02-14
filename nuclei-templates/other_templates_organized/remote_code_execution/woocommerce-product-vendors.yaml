@@ -1,23 +1,24 @@
-id: woocommerce-product-vendors
+id: woocommerce-product-vendors-671374560a63cd680ca50d70b93f8fd1
 
 info:
   name: >
-    WooCommerce Product Vendors <= 2.1.76 - Reflected Cross-Site Scripting
+    WooCommerce Products Vendor <= 2.1.65 - Unauthenticated SQL Injection
   author: topscoder
-  severity: medium
+  severity: critical
   description: >
-    
+    The WooCommerce Products Vendor plugin for WordPress is vulnerable to blind SQL Injection via the ‘s_postcode’ parameter in versions up to, and including, 2.1.65 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a93c0dd4-8341-438d-8730-470e9a230d97?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c5c17dea-7b61-4e73-ac61-3fe536c22962?source=api-prod
   classification:
-    cvss-metrics: 
-    cvss-score: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+    cvss-score: 9.8
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/woocommerce-product-vendors/"
     google-query: inurl:"/wp-content/plugins/woocommerce-product-vendors/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,woocommerce-product-vendors,medium
+  tags: cve,wordpress,wp-plugin,woocommerce-product-vendors,critical
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.1.76')
+          - compare_versions(version, '<= 2.1.65')

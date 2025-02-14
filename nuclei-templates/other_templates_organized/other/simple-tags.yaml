@@ -1,23 +1,24 @@
-id: simple-tags
+id: simple-tags-3c04b03b258bd2ce2a2ab8a45125fdd6
 
 info:
   name: >
-    TaxoPress <= 3.0.7.1 - Stored Cross-Site Scripting
+    TaxoPress <= 3.4.4 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: high
+  severity: medium
   description: >
-    
+    The TaxoPress plugin for WordPress is vulnerable to reflected Cross-Site Scripting in versions up to, and including 3.4.4 due to missing input and output sanitization of some user generated URLs.
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/282fabde-c3a5-49d0-987a-39f106f766cf?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/423627a6-623d-462c-a767-cf021566d9e1?source=api-prod
   classification:
-    cvss-metrics: 
-    cvss-score: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/simple-tags/"
     google-query: inurl:"/wp-content/plugins/simple-tags/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,simple-tags,high
+  tags: cve,wordpress,wp-plugin,simple-tags,medium
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.0.7.1')
+          - compare_versions(version, '<= 3.4.4')

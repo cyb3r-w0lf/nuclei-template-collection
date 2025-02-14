@@ -3,8 +3,10 @@ id: sap-netweaver-detect
 info:
   name: SAP NetWeaver ICM Detection
   author: randomstr1ng
-  description: Detection of SAP NetWeaver ABAP Webserver (ICM/ICF)
   severity: info
+  description: Detection of SAP NetWeaver ABAP Webserver (ICM/ICF)
+  metadata:
+    shodan-query: http.favicon.hash:-266008933
   tags: sap,webserver
 
 requests:

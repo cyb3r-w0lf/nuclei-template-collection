@@ -1,14 +1,15 @@
-id: spiffy-calendar
+id: spiffy-calendar-d82f9fea1c0052a360ce0b93257e0b34
 
 info:
   name: >
-    Spiffy Calendar <= 4.9.10 - Missing Authorization
+    Spiffy Calendar <= 4.9.13 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/114e8ba9-b6b0-4b54-982c-8e9efaa616c7?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5873ad24-a105-4ad0-b809-5bf13e61b0fa?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/spiffy-calendar/"
     google-query: inurl:"/wp-content/plugins/spiffy-calendar/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,spiffy-calendar,high
+  tags: cve,wordpress,wp-plugin,spiffy-calendar,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.9.10')
+          - compare_versions(version, '<= 4.9.13')

@@ -1,14 +1,15 @@
-id: wp-shoutbox-live-chat
+id: wp-shoutbox-live-chat-6cf95c19d3428154a8e369694e49a337
 
 info:
   name: >
-    Steveas WP Live Chat Shoutbox <= 1.4.2 - Unauthenticated SQL Injection
+    Steveas WP Live Chat Shoutbox <= 1.4.2 - Unauthenticated Stored Cross-Site Scripting
   author: topscoder
-  severity: critical
+  severity: high
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d4e1ca02-4eb5-4a46-99d5-89630f37d9ed?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2630dbfe-2e11-4671-9a75-377237ac1ea1?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-shoutbox-live-chat/"
     google-query: inurl:"/wp-content/plugins/wp-shoutbox-live-chat/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-shoutbox-live-chat,critical
+  tags: cve,wordpress,wp-plugin,wp-shoutbox-live-chat,high
 
 http:
   - method: GET

@@ -1,4 +1,4 @@
-id: simple-post
+id: simple-post-d21b2ec0c95ae1553b489f694f54a1d5
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/334ecb1e-027c-4a0f-88cb-34b02482f097?source=api-scan
   classification:
     cvss-metrics: 

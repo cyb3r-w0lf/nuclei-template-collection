@@ -1,11 +1,11 @@
 id: telnet-proxy
 info:
-  name: JanaServer telnet proxy
+  name: Blue Coat Shell proxy
   author: nmap,cn-kali-team
   tags: detect,tech,telnet-proxy,service
   severity: info
   metadata:
-    info: German
+    operating_system: SGOS
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +17,4 @@ tcp:
   - name: telnet-proxy
     type: regex
     regex:
-    - '^Eingabe Servername\[:Port\] : '
+    - ^\xff\xfb\x01\xff\xfb\x03Blue Coat Shell proxy\r\nShell-proxy>

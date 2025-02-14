@@ -1,17 +1,19 @@
-id: user-access-manager
+id: user-access-manager-9e41203339ac57cf536ad7b78cfc49e7
 
 info:
-  name: "User Access Manager <= 2.0.8 - Reflected Cross-Site Scripting"
+  name: >
+    User Access Manager <= 1.2.14 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
-  description: "The User Access Manager plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the ‘id’ parameter in versions up to, and including, 2.0.8 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link."
+  description: >
+    The User Access Manager plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the ‘id’ parameter in versions up to, and including, 1.2.14 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.
   reference:
-    - https://seclists.org/bugtraq/2017/May/31
-    - https://github.com/GM-Alex/user-access-manager/blob/master/readme.txt
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5b3268c2-7cdd-4839-9859-42218d4d632b?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
     cvss-score: 6.1
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/user-access-manager/"
     google-query: inurl:"/wp-content/plugins/user-access-manager/"
@@ -54,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 2.0.9')
+          - compare_versions(version, '<= 1.2.14')

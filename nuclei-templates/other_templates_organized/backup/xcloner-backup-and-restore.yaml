@@ -1,17 +1,18 @@
-id: xcloner-backup-and-restore
+id: xcloner-backup-and-restore-433bd148075da4a176a6a71beb3deef5
 
 info:
   name: >
-    Backup, Restore and Migrate WordPress Sites With the XCloner Plugin <= 3.1.2 - Remote Command Execution
+    Backup, Restore and Migrate WordPress Sites With the XCloner Plugin <= 3.1.4 - Path Traversal to Sensitive Information Disclosure
   author: topscoder
   severity: low
   description: >
-    
+    The XCloner plugin for WordPress is vulnerable to Sensitive Data Exposure in versions up to, and including, 3.1.4 via leaked directory listings from the 'files_xml.' AJAX action. This can allow authenticated attackers to extract sensitive data including otherwise private filepaths and backups.
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cd7c763f-5c2b-407e-bdb1-4ea34fac5f4d?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9d2345d2-0bcf-46fc-a857-0ec10a1b1c26?source=api-prod
   classification:
-    cvss-metrics: 
-    cvss-score: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:N/A:N
+    cvss-score: 4.3
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/xcloner-backup-and-restore/"
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.1.2')
+          - compare_versions(version, '<= 3.1.4')

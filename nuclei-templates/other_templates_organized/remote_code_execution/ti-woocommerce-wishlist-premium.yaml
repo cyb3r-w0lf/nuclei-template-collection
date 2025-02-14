@@ -1,4 +1,4 @@
-id: ti-woocommerce-wishlist-premium
+id: ti-woocommerce-wishlist-premium-693cf8c022651775af0db87e0b8f752d
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/d60b5741-5496-4e87-bcb0-adaa0db07d90?source=api-scan
   classification:
     cvss-metrics: 

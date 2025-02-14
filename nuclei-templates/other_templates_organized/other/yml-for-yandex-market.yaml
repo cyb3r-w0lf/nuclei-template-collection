@@ -1,4 +1,4 @@
-id: yml-for-yandex-market
+id: yml-for-yandex-market-1fed6fda81c2005a09e4186d608e63a1
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/a823a21e-78b5-4186-bb67-88799509970d?source=api-scan
   classification:
     cvss-metrics: 

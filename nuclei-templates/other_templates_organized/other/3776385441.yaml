@@ -1,14 +1,15 @@
 id: domain
 info:
-  name: dnsmasq
+  name: PowerDNS Authoritative Server
   author: nmap,cn-kali-team
   tags: detect,tech,domain,service
   severity: info
   metadata:
-    product: dnsmasq
+    product: authoritative
     rarity: 1
-    vendor: thekelleys
+    vendor: powerdns
     verified: true
+    version: $1
 tcp:
 - name: dnsversion-bind-req
   inputs:
@@ -20,4 +21,4 @@ tcp:
   - name: domain
     type: regex
     regex:
-    - ^(?:..)?\0\x06\x81\x83\0\x01\0\0\0\0\0\0\x07version\x04bind\0\0\x10\0\x03
+    - \x07version\x04bind\0\0\x10\0[\x01\x03]\xc0\x0c\0\x10\0[\x01\x03].{7}PowerDNS.Authoritative.Server.(\d[\w.-]+)

@@ -1,14 +1,15 @@
-id: weaverx-theme-support
+id: weaverx-theme-support-151ee1c6e308928fb46ff0b5624280dc
 
 info:
   name: >
-    Weaver Xtreme Theme Support <= 6.2.5 - Authenticated (Contributor+) Stored Cross-Site Scripting via Shortcode
+    Weaver Xtreme Theme Support <= 6.4 - Authenticated (Contributor+) Stored Cross-Site Scripting via div Shortcode
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7431ee0f-f485-48a4-9cdd-8fb2ac43e216?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bc121ed0-4cb3-4ba4-b693-413b1c25e4ca?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 6.2.5')
+          - compare_versions(version, '<= 6.4')

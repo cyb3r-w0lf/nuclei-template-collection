@@ -1,4 +1,4 @@
-id: wonderplugin-audio
+id: wonderplugin-audio-0052dbe25fe92f07d56a3b7c3839eeb3
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/99721c3e-cddf-4709-aef9-92bb42e43f83?source=api-scan
   classification:
     cvss-metrics: 

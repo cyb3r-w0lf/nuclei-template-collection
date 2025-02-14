@@ -1,17 +1,18 @@
-id: pop-up-pop-up
+id: pop-up-pop-up-161deb3f6cabc9be73cc15118602cc31
 
 info:
   name: >
-    Pop-up <= 1.1.5 - Privilege Escalation
+    Pop-up <= 1.1.1 - Missing authorization to Settings Change
   author: topscoder
   severity: low
   description: >
-    
+    The Pop-up plugin for WordPress is vulnerable to authorization bypass due to a missing capability check on the function wp_ajax_wp_mypopups  in versions up to, and including, 1.1.1. This makes it possible for authenticated attackers to change the plugin's settings.
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/88068243-9e2a-4893-a432-fd1973db7ca8?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ad953bc7-5747-4936-b702-37386299369e?source=api-prod
   classification:
-    cvss-metrics: 
-    cvss-score: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:H/A:N
+    cvss-score: 7.1
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/pop-up-pop-up/"
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.1.5')
+          - compare_versions(version, '<= 1.1.1')

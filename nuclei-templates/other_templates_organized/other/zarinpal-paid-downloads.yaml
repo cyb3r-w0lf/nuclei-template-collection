@@ -1,15 +1,15 @@
-id: zarinpal-paid-downloads-3b0c6f7e6ac3a1697666608e9915c04c
+id: zarinpal-paid-downloads-3dbf121fb22caf613613746bea6efc6a
 
 info:
   name: >
-    Zarinpal Paid Downloads <= 2.3 - Reflected Cross-Site Scripting
+    Zarinpal Paid Downloads <= 2.3 - Authenticated (Admin+) Arbitrary File Upload
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c3799c76-2b25-4346-948e-14445d93b7f1?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5d1fa835-1888-4758-97bf-f582e8ff3a04?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/zarinpal-paid-downloads/"
     google-query: inurl:"/wp-content/plugins/zarinpal-paid-downloads/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,zarinpal-paid-downloads,medium
+  tags: cve,wordpress,wp-plugin,zarinpal-paid-downloads,low
 
 http:
   - method: GET

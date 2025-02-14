@@ -1,14 +1,15 @@
-id: pie-forms-for-wp
+id: pie-forms-for-wp-a872a9766dfca00789624d4a2c502d7e
 
 info:
   name: >
-    WordPress Forms by Pie Forms <= 1.4.9.3 - Authenticated (Admin+) Stored Cross-Site Scripting
+    Drag & Drop Builder, Human Face Detector, Pre-built Templates, Spam Protection, User Email Notifications & more! <= 1.4.19 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3a75ff86-dc4d-4519-8cc5-183afc00cb65?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/125a1d8d-8cd9-439c-b765-198ad369f987?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/pie-forms-for-wp/"
     google-query: inurl:"/wp-content/plugins/pie-forms-for-wp/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,pie-forms-for-wp,low
+  tags: cve,wordpress,wp-plugin,pie-forms-for-wp,medium
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 1.4.9.4')
+          - compare_versions(version, '<= 1.4.19')

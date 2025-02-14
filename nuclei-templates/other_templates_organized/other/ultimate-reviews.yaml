@@ -1,14 +1,15 @@
-id: ultimate-reviews
+id: ultimate-reviews-2694f4537aecfa865fd90ece51eaf8f3
 
 info:
   name: >
-    Ultimate Reviews <= 3.0.15 - Authenticated Stored Cross-Site Scripting
+    Ultimate Reviews <= 3.2.8 - Unauthenticated stored Cross-Site Scripting via reviews
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2e889182-f02f-4b6b-bb98-357fadae3dc1?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/69e15a1b-4984-4889-8c57-a731a0334963?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/ultimate-reviews/"
     google-query: inurl:"/wp-content/plugins/ultimate-reviews/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,ultimate-reviews,low
+  tags: cve,wordpress,wp-plugin,ultimate-reviews,high
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.0.15')
+          - compare_versions(version, '<= 3.2.8')

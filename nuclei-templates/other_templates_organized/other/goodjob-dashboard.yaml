@@ -9,8 +9,8 @@ info:
   reference:
     - https://github.com/bensheldon/good_job
   metadata:
-    verified: true
     max-request: 2
+    verified: true
   tags: unauth,panel,goodjob
 
 http:
@@ -32,4 +32,4 @@ http:
       - type: status
         status:
           - 200
-# digest: 4a0a0047304502200f88486b919af124b4a7e84ce345aec134706dd9c816cd574d301f6f58d92df902210092638f723fdc576fadd3b50d953a409a0692bfe8aa01a68f0498b872df67a6cd:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022028c0c1819dc670db7d7edd178784d4b9ba170f04bdaba964417a78a50889f52c022100d848fb32caaa59ce81c4d7974336daabf65cc20a6948dc3d72d2cb6aacaf4a5b:922c64590222798bb761d5b6d8e72950

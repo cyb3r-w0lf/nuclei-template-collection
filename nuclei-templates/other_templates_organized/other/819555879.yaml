@@ -1,16 +1,15 @@
 id: pop3
 info:
-  name: UW Imap pop3d
+  name: MailEnable POP3 Server
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    hostname: $1
-    product: imap_toolkit
+    operating_system: Windows
+    product: mailenable
     rarity: 0
-    vendor: uw
+    vendor: mailenable
     verified: true
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +20,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK POP3 \[([-\w_.]+)\] v([\d.]+) server ready\r\n
+    - ^\+OK Welcome to MailEnable POP3 Server

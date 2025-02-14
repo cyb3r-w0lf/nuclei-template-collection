@@ -1,14 +1,15 @@
-id: wp-cleanfix
+id: wp-cleanfix-f0ca3d0896fc41a244e0d785c09cced6
 
 info:
   name: >
-    WP Cleanfix <= 3.0.1 - Cross-Site Request Forgery
+    WP Cleanfix Plugin < 5.0.0 - Remote Code Execution
   author: topscoder
-  severity: medium
+  severity: critical
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0d594e40-ae4d-43f7-b57e-8070a68d1c94?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3a2c62a8-bc00-43b7-a3e8-a45d0cb75854?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-cleanfix/"
     google-query: inurl:"/wp-content/plugins/wp-cleanfix/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-cleanfix,medium
+  tags: cve,wordpress,wp-plugin,wp-cleanfix,critical
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.0.1')
+          - compare_versions(version, '< 5.0.0')

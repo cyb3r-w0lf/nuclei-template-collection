@@ -1,23 +1,24 @@
-id: user-activity-log
+id: user-activity-log-d6930661d2702291e0454db8cc5d9470
 
 info:
   name: >
-    User Activity Log <= 1.4.6 - Reflected Cross Site Scripting
+    User Activity Log <= 1.6.2 - Unauthenticated SQL Injection via username
   author: topscoder
-  severity: medium
+  severity: critical
   description: >
-    The User Activity Log plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the "$_SERVER['QUERY_STRING']" in versions up to, and including, 1.4.6 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.
+    The User Activity Log plugin for WordPress is vulnerable to generic SQL Injection via the username value when logging in in versions up to, and including, 1.6.2 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query in the ual_shook_wp_login_failed function. This makes it possible for unauthenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database. The login_failed_non_existing_user option must be enabled for this to be successful.
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/57be47e2-9aac-42bd-af6a-5060d2f86449?source=api-prod
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8483196e-f476-41e5-a988-bcd8a9952a64?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    cvss-score: 6.1
+    cvss-metrics: CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H
+    cvss-score: 8.1
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/user-activity-log/"
     google-query: inurl:"/wp-content/plugins/user-activity-log/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,user-activity-log,medium
+  tags: cve,wordpress,wp-plugin,user-activity-log,critical
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.4.6')
+          - compare_versions(version, '<= 1.6.2')

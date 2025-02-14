@@ -1,14 +1,15 @@
-id: accessibility-help-button
+id: accessibility-help-button-f447b3f008264de8c75fc3cc496eafa1
 
 info:
   name: >
-    Call Now Accessibility Button <= 1.1 - Authenticated (Administrator+) Stored Cross-Site Scripting
+    Call Now Accessibility Button <= 1.0.2 - Authenticated (Administrator+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/04df6505-46c1-4e66-a363-4ccebacb5e42?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/732f6458-c39f-4e77-8ce6-68d74c67084a?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.1')
+          - compare_versions(version, '<= 1.0.2')

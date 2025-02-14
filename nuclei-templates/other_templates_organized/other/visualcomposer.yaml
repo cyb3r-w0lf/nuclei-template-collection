@@ -1,14 +1,15 @@
-id: visualcomposer
+id: visualcomposer-3865ed7e11353af6de37e0df218d8bf5
 
 info:
   name: >
-    Visual Composer Premium <= 45.6.0 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    Visual Composer Website Builder <= 45.0 - Authenticated Stored Cross-Site Scripting via 'Text Block'
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/622b9b46-774d-4251-9a79-73e5b398de57?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/38dd95b2-d747-44f3-a3f5-d32221381554?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 45.6.0')
+          - compare_versions(version, '<= 45.0')

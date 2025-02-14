@@ -1,14 +1,15 @@
-id: responsive-coming-soon
+id: responsive-coming-soon-2240817ba1ef4d06ab1f0f2c4b91e4e0
 
 info:
   name: >
-    Coming Soon Page & Maintenance Mode <= 2.2.1 - Maintenance Mode Bypass
+    Coming Soon Page & Maintenance Mode <= 1.8.1 - Unauthenticated Settings Reset
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e3c52d6e-b3f4-4ba8-aee4-b9f11704e1de?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/61fdc6e9-75ea-4226-9527-a5fd02efde70?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.2.1')
+          - compare_versions(version, '<= 1.8.1')

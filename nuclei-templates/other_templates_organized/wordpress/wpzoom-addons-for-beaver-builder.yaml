@@ -1,14 +1,15 @@
-id: wpzoom-addons-for-beaver-builder
+id: wpzoom-addons-for-beaver-builder-7614b2f79070d6ae55035889e0fe8a05
 
 info:
   name: >
-    Beaver Builder Addons by WPZOOM <= 1.3.4 - Authenticated (Contributor+) Stored Cross-Site Scripting via Image Box Widget
+    Beaver Builder Addons by WPZOOM <= 1.3.4 - Authenticated (Contributor+) Stored Cross-Site Scripting via Testimonials Widget
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/03564cae-df90-454b-8379-6ad9f22b7389?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/02fceb91-7691-4629-b18b-57959e9f3f62?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

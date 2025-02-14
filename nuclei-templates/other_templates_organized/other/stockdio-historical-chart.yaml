@@ -1,14 +1,15 @@
-id: stockdio-historical-chart
+id: stockdio-historical-chart-f559d07975ed3f6e399a87fbf773d6bc
 
 info:
   name: >
-    Stockdio Historical Chart < 2.8.1 - Reflected Cross-Site Scripting
+    Stockdio Historical Chart <= 2.8.18 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/57162a5e-5f5d-4b22-bb7f-0ff65332910b?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ecf476a8-e341-44d4-988c-a7fb3fb538d1?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/stockdio-historical-chart/"
     google-query: inurl:"/wp-content/plugins/stockdio-historical-chart/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,stockdio-historical-chart,medium
+  tags: cve,wordpress,wp-plugin,stockdio-historical-chart,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 2.8.1')
+          - compare_versions(version, '<= 2.8.18')

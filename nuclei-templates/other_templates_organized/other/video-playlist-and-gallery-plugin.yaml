@@ -1,4 +1,4 @@
-id: video-playlist-and-gallery-plugin
+id: video-playlist-and-gallery-plugin-253dcc36130a2f37cbf41a56b90fc629
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/6c671f1e-21a7-45b7-951d-41b1c308dc9d?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,13 +1,14 @@
-id: wp-simple-login-registration-plugin
+id: wp-simple-login-registration-plugin-de5f9ce1e3d146e9e6727544dce7396c
 
 info:
   name: >
     Simple Login Registration <= 1.0.2 - Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: high
   description: >
     The Simple Login Registration plugin for WordPress is vulnerable to Cross-Site Scripting in versions up to, and including, 1.0.2 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts that execute in a victim's browser.
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/94dc8fc6-8212-4f83-a844-f08174531d3b?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-simple-login-registration-plugin/"
     google-query: inurl:"/wp-content/plugins/wp-simple-login-registration-plugin/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-simple-login-registration-plugin,medium
+  tags: cve,wordpress,wp-plugin,wp-simple-login-registration-plugin,high
 
 http:
   - method: GET

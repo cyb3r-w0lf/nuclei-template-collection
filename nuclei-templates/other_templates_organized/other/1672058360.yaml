@@ -1,6 +1,6 @@
 id: rtsp
 info:
-  name: Planet ICA-HM132 or TRENDnet TV IP302PI rtspd
+  name: Samsung SNB-2000 webcam rtspd
   author: nmap,cn-kali-team
   tags: detect,tech,rtsp,service
   severity: info
@@ -20,4 +20,4 @@ tcp:
   - name: rtsp
     type: regex
     regex:
-    - '^RTSP/1\.0 400 Bad Request\r\nDate: .*\r\nAllow: OPTIONS, DESCRIBE, SETUP, TEARDOWN, SET_PARAMETER, PLAY\r\n\r\n'
+    - '^RTSP/1\.0 401 Unauthorized\r\nCSeq: 0\r\nDate: .*\r\nExpires: .*\r\nCache-Control: must-revalidate\r\nWWW-Authenticate: Digest realm=\"NET-i\", nonce=\"000000000000000000000000[0-9A-F]{8}\"\r\n\r\n'
