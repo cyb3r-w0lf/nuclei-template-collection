@@ -1,15 +1,15 @@
 id: sip
 info:
-  name: Genexis DRG $1 SIP
+  name: SIPfoundry sipXecs PBX
   author: nmap,cn-kali-team
   tags: detect,tech,sip,service
   severity: info
   metadata:
-    device_type: broadband router
     fallback:
     - get-request
+    operating_system: Linux
     rarity: 5
-    version: $2
+    version: $1
 tcp:
 - name: sipoptions
   inputs:
@@ -21,4 +21,4 @@ tcp:
   - name: sip
     type: regex
     regex:
-    - '(?i)^SIP/2\.0 400 Invalid Via Port 0\r\n(?:[^\r\n]+\r\n)*?User-Agent: drgos-drg(\d+)-([\w._-]+)\r\n'
+    - '(?i)^SIP/2\.0 406 Not acceptable\r\n(?:[^\r\n]+\r\n)*?Server: sipXecs/([\w._-]+) sipXecs/sipxbridge \(Linux\)\r\n'
