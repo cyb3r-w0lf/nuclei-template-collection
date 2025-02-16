@@ -1,12 +1,12 @@
 id: telnet
 info:
-  name: Grandstream $1 VoIP phone telnetd
+  name: CircleMUD-based MUD telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: VoIP phone
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +17,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\xff\xfb\x01\xff\xfb\x03Grandstream ([\w-]+) Command Shell\r\nPassword: '
+    - (?i)^\r\n.*Based\(loosely\) on CircleMUD ([\d.]+)

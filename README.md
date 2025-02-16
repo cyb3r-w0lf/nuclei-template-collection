@@ -27,16 +27,13 @@
 | CVE-2023 | 5163 |
 | CVE-2024 | 8857 |
 | CVE-2025 | 837 |
-| Other | 51934 |
+| Other | 51917 |
 ## Quantity changes in recent days
-|2025-01-23 | 2025-01-24 | 2025-01-25 | 2025-01-26 | 2025-02-13 | 2025-02-14 | 2025-02-15|
+|2025-01-24 | 2025-01-25 | 2025-01-26 | 2025-02-13 | 2025-02-14 | 2025-02-15 | 2025-02-16|
 |--- | ------ | ------ | ------ | ------ | ------ | ---|
-|51668 | 51963 | 52019 | 52076 | 76655 | 76801 | 76898|
+|51963 | 52019 | 52076 | 76655 | 76801 | 76898 | 76881|
 ## Recently added files
 | templates name | 
 | --- |
-| esaitongrce.yaml |
-| HIKVISION-iVms-read-download.token.yaml |
-| dahua-dss-zhihuixiaoyuan-s2_45-rce.yaml |
-| nsfocus-sas-bypassauth-status.yaml |
-| nsfocus-nf-bugsInfo-fileupload.yaml |
+| exposed-git-directory.yaml |
+| cve-2020-11581.yaml |

@@ -1,13 +1,13 @@
 id: ftp
 info:
-  name: DrayTek Vigor router ftpd
+  name: BSD ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: router
+    hostname: $1
     rarity: 0
-    version: $1
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 DrayTek FTP version ([\d.]+)\r\n
+    - (?i)^220- .*\n220 ([-.\w]+) FTP server \(Version (.*)\) ready\.\r\n

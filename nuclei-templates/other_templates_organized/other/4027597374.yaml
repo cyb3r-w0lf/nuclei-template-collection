@@ -1,15 +1,13 @@
 id: pop3
 info:
-  name: qmail-pop3d
+  name: CMailServer pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    operating_system: Unix
-    product: qmail
+    operating_system: Windows
     rarity: 0
-    vendor: djb
-    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +18,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK <\d{1,5}\.10\d{8}@[-.\w]+>\r\n$
+    - ^\+OK CMailServer ([\d.]+) POP3 Service Ready\r\n

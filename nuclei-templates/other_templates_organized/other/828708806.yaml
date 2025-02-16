@@ -1,13 +1,12 @@
 id: smtp
 info:
-  name: Mercury Mail smtpd
+  name: SoftStack Advanced smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    hostname: $1
+    operating_system: Windows
     rarity: 0
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +17,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([-.\w]+) Mercury (\d[-.\w]+) ESMTP server ready\.\r\n$
+    - ^220 Welcome to the Advanced SMTP Server\r\n
