@@ -1,15 +1,14 @@
-id: newstatpress-77120da33c7ecde1cba20211f7ba31cb
+id: newstatpress
 
 info:
   name: >
-    NewStatPress < 1.2.5 - Unauthenticated Stored Cross-Site Scripting
+    NewStatPress < 1.0.6 - SQL Injection
   author: topscoder
-  severity: high
+  severity: critical
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9a353364-73a9-428c-b702-0183b29c7e3d?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0502c622-975f-4218-8b53-efd776fe9d99?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/newstatpress/"
     google-query: inurl:"/wp-content/plugins/newstatpress/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,newstatpress,high
+  tags: cve,wordpress,wp-plugin,newstatpress,critical
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 1.2.5')
+          - compare_versions(version, '< 1.0.6')

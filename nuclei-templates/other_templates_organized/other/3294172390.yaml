@@ -1,16 +1,14 @@
 id: imap
 info:
-  name: SurgeMail imapd
+  name: Lotus Domino secure imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    hostname: $1
-    product: surgemail
+    product: lotus_domino
     rarity: 0
-    vendor: netwin
+    vendor: ibm
     verified: true
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +19,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK IMAP ([-\w_.]+) \(Version ([-\w.]+)\)\r\n
+    - ^\* OK Hi This is the IMAP SSL Server .*\r\n

@@ -1,4 +1,4 @@
-id: custom-admin-page-ff46f95a759f86c49549948006ba466c
+id: custom-admin-page
 
 info:
   name: >
@@ -8,7 +8,6 @@ info:
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/7a6c4945-68d3-4ce9-b00c-40591fa15ada?source=api-scan
   classification:
     cvss-metrics: 

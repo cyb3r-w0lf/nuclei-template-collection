@@ -1,15 +1,14 @@
-id: knight-lab-timelinejs-fc9575cffd43eab455fe76720d510ad0
+id: knight-lab-timelinejs
 
 info:
   name: >
-    Knight Lab Timeline <= 3.9.3.3 - Authenticated(Contributor+) Stored Cross-Site Scripting via Shortcode
+    TimelineJS3 < 3.7.0 - Stored Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/afb3e68e-6f79-4c46-b41e-8fd6eb43c755?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bf4e3fc3-b9f4-4ae5-ad48-2f764879360a?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/knight-lab-timelinejs/"
     google-query: inurl:"/wp-content/plugins/knight-lab-timelinejs/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,knight-lab-timelinejs,low
+  tags: cve,wordpress,wp-plugin,knight-lab-timelinejs,high
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.9.3.3')
+          - compare_versions(version, '< 3.7.0')

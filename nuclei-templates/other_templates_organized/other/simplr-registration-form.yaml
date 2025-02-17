@@ -1,15 +1,14 @@
-id: simplr-registration-form-3588478e17420fdb83920023c2188c2f
+id: simplr-registration-form
 
 info:
   name: >
-    Simplr Registration Form Plus+ <= 2.4.5 - Authenticated (Subscriber+) Insecure Direct Object Reference to Arbitrary User Password Change
+    Simplr Registration Form Plus+ <= 2.3.4 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6ddf0452-3afe-4ada-bccc-30c818968a81?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/810c641b-e9e0-462c-96ef-008c083208a0?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/simplr-registration-form/"
     google-query: inurl:"/wp-content/plugins/simplr-registration-form/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,simplr-registration-form,low
+  tags: cve,wordpress,wp-plugin,simplr-registration-form,medium
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.4.5')
+          - compare_versions(version, '<= 2.3.4')

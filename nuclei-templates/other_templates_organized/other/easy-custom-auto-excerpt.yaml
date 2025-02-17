@@ -1,15 +1,14 @@
-id: easy-custom-auto-excerpt-ec3ec912de14ab1c6794310305c09b44
+id: easy-custom-auto-excerpt
 
 info:
   name: >
-    Easy Custom Auto Excerpt <= 2.4.12 - Sensitive Information Exposure
+    Easy Custom Auto Excerpt < 2.4.7 - Stored Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8c1e1fe4-23be-4f66-ae9f-cabb83811b71?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/32ca6e56-add9-4024-831f-5dfa5130a7d8?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/easy-custom-auto-excerpt/"
     google-query: inurl:"/wp-content/plugins/easy-custom-auto-excerpt/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,easy-custom-auto-excerpt,low
+  tags: cve,wordpress,wp-plugin,easy-custom-auto-excerpt,high
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.4.12')
+          - compare_versions(version, '< 2.4.7')

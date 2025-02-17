@@ -1,15 +1,14 @@
-id: discy-db04901743b106eda5471daf79178a81
+id: discy
 
 info:
   name: >
-    WPQA - Builder forms Addon For WordPress (<= 5.9.2),  Himer (<= 1.9.3) and Discy (<= 5.5.3) - Authenticated (Subscriber+) Insecure Direct Object Reference
+    Discy - Social Questions and Answers WordPress Theme <= 4.9 - Missing Authorization
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/085da0fa-9487-4938-94ea-c1593be7c023?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/19f2fe7c-f702-4db6-9914-2839a62ffdd5?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/themes/discy/"
     google-query: inurl:"/wp-content/themes/discy/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-theme,discy,low
+  tags: cve,wordpress,wp-theme,discy,high
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 5.5.3')
+          - compare_versions(version, '<= 4.9')

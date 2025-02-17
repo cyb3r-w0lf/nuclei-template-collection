@@ -1,15 +1,14 @@
-id: wp-graphql-d9f408f219c4d2a7e53d1b0283d83371
+id: wp-graphql
 
 info:
   name: >
-    WPGraphQL <= 1.14.5 - Authenticated (Editor+) Server-Side Request Forgery
+    WPGraphQL <= 0.2.3 - Administrative User Creation
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/38efd6d6-b931-41a7-b55d-b98cdeef4145?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/80e74852-517e-4cd0-a7d3-6f6fe3433bff?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.14.5')
+          - compare_versions(version, '<= 0.2.3')

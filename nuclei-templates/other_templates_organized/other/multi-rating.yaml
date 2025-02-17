@@ -1,15 +1,14 @@
-id: multi-rating-cc792d8a685645d918ffa1ca3b54f7dc
+id: multi-rating
 
 info:
   name: >
-    Multi Rating <= 5.0.6 - Authenticated (Administrator+) Stored Cross-Site Scripting via plugin settings
+    Multi Rating <= 5.0.6 - Cross-Site Request Forgery to Arbitrary Ratings Value Change
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6ca2311c-7b44-4dad-bea0-131776205319?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/80ad0b55-bd85-4240-ae54-f72d6b81ea7c?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/multi-rating/"
     google-query: inurl:"/wp-content/plugins/multi-rating/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,multi-rating,low
+  tags: cve,wordpress,wp-plugin,multi-rating,medium
 
 http:
   - method: GET

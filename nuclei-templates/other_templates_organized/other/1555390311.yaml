@@ -1,15 +1,14 @@
 id: ftp
 info:
-  name: Core FTP Server
+  name: ABB Robotics ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    product: core_ftp
+    device_type: specialized
+    info: VxWorks $1 rev $2  **A ROBOT**
+    operating_system: VxWorks
     rarity: 0
-    vendor: coreftp
-    verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +19,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 Core FTP Server Version ([\w._-]+, build \d+) Registered\r\n
+    - ^220 ABB Robotics FTP server \(VxWorks ([\d.]+) rev ([\d.]+)\) ready\.\r\n

@@ -1,4 +1,4 @@
-id: edd-software-licensing-fcff7e14b1cb7b26222315b4cddd484f
+id: edd-software-licensing
 
 info:
   name: >
@@ -8,7 +8,6 @@ info:
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/8a9f17e3-f1cf-44c5-a4eb-38b43b00f912?source=api-scan
   classification:
     cvss-metrics: 

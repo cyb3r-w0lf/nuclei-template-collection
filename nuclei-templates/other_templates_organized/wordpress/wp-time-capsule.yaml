@@ -1,15 +1,14 @@
-id: wp-time-capsule-3ede49e3ee3375c82606dfbb7a3c8384
+id: wp-time-capsule
 
 info:
   name: >
-    Backup and Staging by WP Time Capsule <= 1.22.21 - Authenticated (Administrator+) PHP Object Injection
+    Backup and Staging by WP Time Capsule <= 1.22.6 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3b467d55-db84-488e-8e80-bcdf2b691c76?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9d4df759-1d5a-478a-aab1-f728fe909b5e?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/wp-time-capsule/"
     google-query: inurl:"/wp-content/plugins/wp-time-capsule/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-time-capsule,low
+  tags: cve,wordpress,wp-plugin,wp-time-capsule,medium
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.22.21')
+          - compare_versions(version, '<= 1.22.6')

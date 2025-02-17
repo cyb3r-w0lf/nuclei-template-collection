@@ -1,24 +1,23 @@
-id: ip-address-blocker-cf3deb5853fcc9bf0fb6884ebcfb1b2c
+id: ip-address-blocker
 
 info:
   name: >
-    LionScripts: IP Blocker Lite <= 10.4 - Cross-Site Request Forgery to Arbitrary File Upload
+    IP Blocker Lite <= 11.1.1 - IP Spoofing
   author: topscoder
-  severity: medium
+  severity: low
   description: >
-    The LionScripts: IP Blocker Lite plugin for WordPress is vulnerable to arbitrary file uploads via Cross-Site Request Forgery due to missing nonce verification and file type validation in the ip-address-blocker/trunk/lib/lionscripts_plg_wib.class.php file in versions up to, and including, 10.4. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected sites server which may make remote code execution possible.
+    
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/dae2d028-6976-468a-9e93-ec712887d657?source=api-prod
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2598795e-ea66-4c73-8fcb-6a832f65de52?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    cvss-score: 8.8
+    cvss-metrics: 
+    cvss-score: 
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/ip-address-blocker/"
     google-query: inurl:"/wp-content/plugins/ip-address-blocker/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,ip-address-blocker,medium
+  tags: cve,wordpress,wp-plugin,ip-address-blocker,low
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 10.4')
+          - compare_versions(version, '<= 11.1.1')

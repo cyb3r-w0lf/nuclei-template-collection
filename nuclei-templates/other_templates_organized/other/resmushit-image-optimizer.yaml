@@ -1,15 +1,14 @@
-id: resmushit-image-optimizer-8e138d835c51d3c6720b941fe121d84e
+id: resmushit-image-optimizer
 
 info:
   name: >
-    reSmush.it Image Optimizer <= 0.4.5 - Authenticated (Administrator+) Cross-Site Scripting
+    reSmush.it Image Optimizer <= 0.4.6 - Cross-Site Request Forgery
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9b8042b0-83d3-417f-a5e0-43ff4f7648fb?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8187c6eb-d962-48a7-bbe8-5949cfdefbce?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/resmushit-image-optimizer/"
     google-query: inurl:"/wp-content/plugins/resmushit-image-optimizer/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,resmushit-image-optimizer,low
+  tags: cve,wordpress,wp-plugin,resmushit-image-optimizer,medium
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 0.4.5')
+          - compare_versions(version, '<= 0.4.6')

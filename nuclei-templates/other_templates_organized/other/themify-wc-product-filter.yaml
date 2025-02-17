@@ -1,15 +1,14 @@
-id: themify-wc-product-filter-992af3462042c1e52389259e14b137b9
+id: themify-wc-product-filter
 
 info:
   name: >
-    Themify - WooCommerce Product Filter <= 1.4.9 - Unauthenticated SQL Injection via conditions Parameter
+    Themify – WooCommerce Product Filter <= 1.4.3 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: critical
+  severity: medium
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/451db756-9d62-4c8e-b735-e5e5207b81e3?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2f621cfa-d02e-4414-bb1d-6e23da3c92b9?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/themify-wc-product-filter/"
     google-query: inurl:"/wp-content/plugins/themify-wc-product-filter/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,themify-wc-product-filter,critical
+  tags: cve,wordpress,wp-plugin,themify-wc-product-filter,medium
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.4.9')
+          - compare_versions(version, '<= 1.4.3')

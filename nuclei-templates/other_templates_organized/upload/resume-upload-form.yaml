@@ -1,15 +1,14 @@
-id: resume-upload-form-8a2a77534be4f74f0d5da4bb24dfaa90
+id: resume-upload-form
 
 info:
   name: >
-    Upload Resume <= 1.2.0 - Authenticated Sensitive Information Disclosure via resume_upload_form_list shortcode
+    Upload Resume <= 1.2.0 - Captcha Bypass via resume_upload_form
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8246ea9f-3ccb-4448-bf32-135c8140b09b?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/fc0acff9-6852-4ecb-84f9-98a15dd30fc6?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

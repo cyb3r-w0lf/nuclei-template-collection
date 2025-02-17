@@ -1,14 +1,16 @@
 id: pop3
 info:
-  name: DBMail pop3d
+  name: Cyrus POP3
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    product: dbmail
+    hostname: $1
+    product: cyrus_imap_server
     rarity: 0
-    vendor: paul_j_stevens
+    vendor: cmu
     verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +21,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK DBMAIL pop3 server ready to rock <
+    - ^\+OK ([-.\w]+) Cyrus POP3 v(\d[-.\w\+]+) server ready ?\r\n

@@ -1,15 +1,14 @@
-id: content-control-a8ccee046bbf24cf1cd748ddd48a758e
+id: content-control
 
 info:
   name: >
-    Content Control <= 1.1.9 - Authenticated (Contributor+) Stored Cross-Site Scripting via Shortcode
+    Content Control <= 2.1.0 - Missing Authorization to Sensitive Information Exposure
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f6e8d21a-8c67-4e35-b18e-e100f31b2863?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a14cce74-6432-4b92-85c8-8b899e4248fd?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/content-control/"
     google-query: inurl:"/wp-content/plugins/content-control/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,content-control,low
+  tags: cve,wordpress,wp-plugin,content-control,high
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.1.9')
+          - compare_versions(version, '<= 2.1.0')

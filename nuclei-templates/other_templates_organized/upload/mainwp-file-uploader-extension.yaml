@@ -1,24 +1,23 @@
-id: mainwp-file-uploader-extension-d0f6747c9732f64b78471a454da82868
+id: mainwp-file-uploader-extension
 
 info:
   name: >
-    MainWP (Various extensions) - Cross-Site Request Forgery
+    MainWP File Uploader Extension <= 4.1 - Unauthenticated Arbitrary File Upload
   author: topscoder
-  severity: medium
+  severity: low
   description: >
-    Several MainWP extensions for WordPress are vulnerable to Cross-Site Request Forgery due to missing or incorrect nonce validation. This makes it possible for unauthenticated attackers to invoke functions normally intended for higher-privileged users such as administrators via forged request granted they can trick a site administrator into performing an action such as clicking on a link.
+    
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cb105ff0-5085-4813-81a6-b1f0798d576c?source=api-prod
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6ec02202-18e3-4a57-be2c-7dbf50e500dc?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    cvss-score: 8.8
+    cvss-metrics: 
+    cvss-score: 
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/mainwp-file-uploader-extension/"
     google-query: inurl:"/wp-content/plugins/mainwp-file-uploader-extension/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,mainwp-file-uploader-extension,medium
+  tags: cve,wordpress,wp-plugin,mainwp-file-uploader-extension,low
 
 http:
   - method: GET

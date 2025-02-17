@@ -1,15 +1,14 @@
-id: facebook-like-send-button-9393a99713afdf819be5fc8fab60b76f
+id: facebook-like-send-button
 
 info:
   name: >
-    FireCask Like & Share Button <= 1.2 - Authenticated (Contributor+) Stored Cross-Site Scripting via width Parameter
+    Peadig's Like & Share Button <= 1.1.5 - Authenticated (Administrator+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5b9d61cd-1955-40d0-99b4-c75f480733f8?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9d8e0ad2-3cfb-443f-9958-9639d0745dd7?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.2')
+          - compare_versions(version, '<= 1.1.5')

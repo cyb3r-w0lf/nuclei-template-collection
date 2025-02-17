@@ -1,15 +1,14 @@
-id: product-input-fields-for-woocommerce-c97944407bd399f70cfb424f4d5a0a32
+id: product-input-fields-for-woocommerce
 
 info:
   name: >
-    Product Input Fields for WooCommerce <= 1.7.0 - Cross-Site Request Forgery to Notice Dismissal
+    Product Input Fields for WooCommerce <= 1.2.6 - Missing Authorization
   author: topscoder
-  severity: medium
+  severity: high
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2123a3cc-08f1-4e30-ac61-275d45cd1227?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/01e41573-9329-48e1-9191-e8e1532f7afc?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/product-input-fields-for-woocommerce/"
     google-query: inurl:"/wp-content/plugins/product-input-fields-for-woocommerce/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,product-input-fields-for-woocommerce,medium
+  tags: cve,wordpress,wp-plugin,product-input-fields-for-woocommerce,high
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.7.0')
+          - compare_versions(version, '<= 1.2.6')

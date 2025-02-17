@@ -1,15 +1,14 @@
-id: popup-by-supsystic-43cc4f3da459e3e5e7f185c093130c69
+id: popup-by-supsystic
 
 info:
   name: >
-    Popup by Supsystic <= 1.10.19 - Missing Authorization to Sensitive Information Exposure
+    Popup by Supsystic <= 1.10.19 - Cross-Site Request Forgery
   author: topscoder
-  severity: high
+  severity: medium
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f458663f-6b1a-4acd-b2db-c66d7a915ab7?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/10021498-73c8-4767-b059-f282ddc35963?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/popup-by-supsystic/"
     google-query: inurl:"/wp-content/plugins/popup-by-supsystic/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,popup-by-supsystic,high
+  tags: cve,wordpress,wp-plugin,popup-by-supsystic,medium
 
 http:
   - method: GET

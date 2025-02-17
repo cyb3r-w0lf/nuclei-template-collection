@@ -1,15 +1,14 @@
-id: page-builder-by-azexo-b35ec2a2bd84bce44a22aea94447fbd5
+id: page-builder-by-azexo
 
 info:
   name: >
-    Page Builder by AZEXO <= 1.27.133 - Cross-Site Request Forgery to Stored Cross-Site Scripting via azh_save
+    Page Builder by AZEXO <= 1.27.133 - Missing Authorization to Post Creation
   author: topscoder
-  severity: medium
+  severity: high
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2efeffa2-b21a-4aa1-93b0-51c775758ab1?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/dd56cb73-1c40-44b1-b713-c0291832d988?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/page-builder-by-azexo/"
     google-query: inurl:"/wp-content/plugins/page-builder-by-azexo/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,page-builder-by-azexo,medium
+  tags: cve,wordpress,wp-plugin,page-builder-by-azexo,high
 
 http:
   - method: GET

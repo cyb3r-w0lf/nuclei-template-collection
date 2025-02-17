@@ -1,15 +1,14 @@
-id: mf-gig-calendar-d78d89bd5b9d18753a28f15dbd7ad83b
+id: mf-gig-calendar
 
 info:
   name: >
-    MF Gig Calendar  <= 1.2 - Authenticated (Contributor+) Stored Cross-Site Scripting via event_title and event_time
+    MF Gig Calendar <= 1.1 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/93029d39-adaa-4cf6-9081-28c9e84ec2e5?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/dba7f15a-29f8-4c7b-b506-7e82c563c6a9?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/mf-gig-calendar/"
     google-query: inurl:"/wp-content/plugins/mf-gig-calendar/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,mf-gig-calendar,low
+  tags: cve,wordpress,wp-plugin,mf-gig-calendar,medium
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.2')
+          - compare_versions(version, '<= 1.1')

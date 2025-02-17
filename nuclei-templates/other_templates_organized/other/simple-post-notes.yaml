@@ -1,15 +1,14 @@
-id: simple-post-notes-7f861b18ef94fc77e2e5522c08f180c6
+id: simple-post-notes
 
 info:
   name: >
-    Simple Post Notes <= 1.7.7 - Authenticated (Administrator+) Stored Cross-Site Scripting
+    Simple Post Notes <= 1.7.5 - Subscriber+ Stored Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a256e11e-b59d-4ce1-ac52-da89789e97a9?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8260a74a-e338-42f6-ad9d-cb30f1a9bc86?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/simple-post-notes/"
     google-query: inurl:"/wp-content/plugins/simple-post-notes/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,simple-post-notes,low
+  tags: cve,wordpress,wp-plugin,simple-post-notes,high
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.7.7')
+          - compare_versions(version, '<= 1.7.5')

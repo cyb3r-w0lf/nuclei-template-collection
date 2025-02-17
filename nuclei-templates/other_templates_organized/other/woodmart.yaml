@@ -1,15 +1,14 @@
-id: woodmart-a936e812c2c302b25f9c68e5d137ad5d
+id: woodmart
 
 info:
   name: >
-    WoodMart <= 7.2.1 - Authenticated (Subscriber+) Stored Cross-Site Scripting
+    Woodmart <= 7.1.1 - Cross-Site Request Forgery to License Update
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f9a60c4e-a524-4a99-858a-14787f37d60c?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/02fde6b1-d709-4329-ae9c-fea444c1aec8?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/themes/woodmart/"
     google-query: inurl:"/wp-content/themes/woodmart/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-theme,woodmart,low
+  tags: cve,wordpress,wp-theme,woodmart,medium
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 7.2.1')
+          - compare_versions(version, '<= 7.1.1')

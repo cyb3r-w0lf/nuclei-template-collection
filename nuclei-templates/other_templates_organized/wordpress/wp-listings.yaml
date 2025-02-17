@@ -1,15 +1,14 @@
-id: wp-listings-a0d6a78b6233880cd430488c31cef03a
+id: wp-listings
 
 info:
   name: >
-    IMPress Listings <= 2.6.2 - Authenticated (Contributor+) Stored Cross-Site Scripting via Listing Fields
+    IMPress Listings <= 2.6.2 - Missing Authorization
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d31b9022-ae45-4bc2-b820-fb88faf0796f?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f426c32e-a376-4447-b83f-409a8eb0c499?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/wp-listings/"
     google-query: inurl:"/wp-content/plugins/wp-listings/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-listings,low
+  tags: cve,wordpress,wp-plugin,wp-listings,high
 
 http:
   - method: GET

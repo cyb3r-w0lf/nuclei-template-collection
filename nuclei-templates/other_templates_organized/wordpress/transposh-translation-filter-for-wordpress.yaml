@@ -1,15 +1,14 @@
-id: transposh-translation-filter-for-wordpress-b72c8ec5fe5705ee9efbd882705ee98c
+id: transposh-translation-filter-for-wordpress
 
 info:
   name: >
-    Transposh WordPress Translation <= 1.0.7 -  Unauthenticated Stored Cross-Site Scripting via 'tp_translation'
+    Transposh WordPress Translation <= 1.0.8.1 - Missing Authorization Checks
   author: topscoder
   severity: high
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8aa19b3a-229e-460d-b592-c0a2c7fd5c06?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1e1d8afa-0a38-434b-b3d8-04019010ab21?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.0.7')
+          - compare_versions(version, '<= 1.0.8.1')

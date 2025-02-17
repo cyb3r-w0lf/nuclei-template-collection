@@ -1,15 +1,14 @@
-id: wp-fullcalendar-29f7413b28c48b1c8fc0cab7072d4116
+id: wp-fullcalendar
 
 info:
   name: >
-    WP FullCalendar <= 1.5 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    WP FullCalendar <= 1.4.1 - Missing Authorization to Information Disclosure
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/44d1c85a-9a19-4962-9db3-539fa5702d2f?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/27d25885-1a85-40a0-9759-3ae0c8d73d11?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/wp-fullcalendar/"
     google-query: inurl:"/wp-content/plugins/wp-fullcalendar/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-fullcalendar,low
+  tags: cve,wordpress,wp-plugin,wp-fullcalendar,high
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.5')
+          - compare_versions(version, '<= 1.4.1')

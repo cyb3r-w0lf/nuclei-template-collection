@@ -1,15 +1,14 @@
-id: infusionsoft-f62c86c4b406f41d39f7d5f2e1918a03
+id: infusionsoft
 
 info:
   name: >
-    Infusionsoft Gravity Forms Add-on 1.5.3 - 1.5.10 - Arbitrary File Upload
+    Infusionsoft Gravity Forms Add-on <= 1.5.11 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: critical
+  severity: medium
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8840bb3c-3e4b-48d5-bf01-2ed9bcfcf27a?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7c3726fa-e3ee-4c5d-a727-b33d0d077ef1?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/infusionsoft/"
     google-query: inurl:"/wp-content/plugins/infusionsoft/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,infusionsoft,critical
+  tags: cve,wordpress,wp-plugin,infusionsoft,medium
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '>= 1.5.3', '<= 1.5.10')
+          - compare_versions(version, '< 1.5.12')

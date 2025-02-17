@@ -1,15 +1,14 @@
-id: gym-management-a35ee77703770634f0f1a9c2fdf980ca
+id: gym-management
 
 info:
   name: >
-    WPGYM <= 67.1.0 - Missing Authorization to Authenticated (Subscriber+) Privilege Escalation
+    WPGYM - Wordpress Gym Management System (Unknown Version) - SQL Injection
   author: topscoder
-  severity: low
+  severity: critical
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cbff92c1-8492-4d0d-bd90-8fd33625bf6f?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/fef6c603-2beb-44df-8895-10ad0a9ef644?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/gym-management/"
     google-query: inurl:"/wp-content/plugins/gym-management/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,gym-management,low
+  tags: cve,wordpress,wp-plugin,gym-management,critical
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 67.1.0')
+          - compare_versions(version, '<= *')

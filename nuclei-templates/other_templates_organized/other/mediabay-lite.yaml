@@ -1,15 +1,14 @@
-id: mediabay-lite-f685a5cacaae890866e027ddf2291100
+id: mediabay-lite
 
 info:
   name: >
-    Mediabay <= 1.6 - Authenticated (Editor+) Stored Cross-Site Scripting Vulnerability
+    Mediabay <= 1.6 - Missing Authorization via AJAC actions
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b1954340-397c-4cc0-ba9d-d698d94ea608?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3a923f58-f6c7-47ee-87f6-27453b39d1cf?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/mediabay-lite/"
     google-query: inurl:"/wp-content/plugins/mediabay-lite/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,mediabay-lite,low
+  tags: cve,wordpress,wp-plugin,mediabay-lite,high
 
 http:
   - method: GET

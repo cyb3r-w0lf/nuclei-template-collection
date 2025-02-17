@@ -1,11 +1,13 @@
 id: telnet
 info:
-  name: Allied Telesyn $1 switch telnetd
+  name: DD-WRT telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: switch
+    device_type: WAP
+    info: DD-WRT $1
+    operating_system: Linux
     rarity: 0
     version: $2
 tcp:
@@ -18,4 +20,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - ^\x1b\[0;37;40m\x1b\[2J\x1b\[0;37;40m\x1b\[1m\x1b\[15;22HAT-(\w+), version ([\d.]+)\x1b
+    - '^\xff\xfd\x01\xff\xfd\x1f\xff\xfd!\xff\xfb\x01\xff\xfb\x03DD-WRT (v\d+)[^\r\n]*\r\nRelease: ([^\r\n]+)\r\n\xff\r\ngateway login: '

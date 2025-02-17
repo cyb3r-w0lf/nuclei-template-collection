@@ -1,15 +1,14 @@
-id: wp-event-solution-f612f1c63f5952fd3e3e18fbd73d8c74
+id: wp-event-solution
 
 info:
   name: >
-    Event Manager, Events Calendar, Tickets, Registrations – Eventin <= 4.0.4 - Missing Authorization to Authenticated (Contributor+) Event Data Import
+    Eventin <= 3.3.52 - Missing Authorization
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1725c7f3-2fac-4714-a63e-6c43694483fc?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f256036d-11e8-4311-baa0-d15193c72da0?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/wp-event-solution/"
     google-query: inurl:"/wp-content/plugins/wp-event-solution/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-event-solution,low
+  tags: cve,wordpress,wp-plugin,wp-event-solution,high
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.0.4')
+          - compare_versions(version, '<= 3.3.52')

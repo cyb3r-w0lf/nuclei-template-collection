@@ -1,15 +1,14 @@
-id: affiliate-for-woocommerce-e17e39e6ece58215c7eb1c44b8679ec0
+id: affiliate-for-woocommerce
 
 info:
   name: >
-    Affiliate For WooCommerce premium <= 4.7.0 - Authenticated Insecure Direct Object Reference
+    Affiliate For WooCommerce <= 4.7.0 - Missing Authorization
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b6c3daf6-2225-4929-8e76-169d680118ba?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c829217a-c5be-4713-bbf4-c1ba829c1187?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/affiliate-for-woocommerce/"
     google-query: inurl:"/wp-content/plugins/affiliate-for-woocommerce/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,affiliate-for-woocommerce,low
+  tags: cve,wordpress,wp-plugin,affiliate-for-woocommerce,high
 
 http:
   - method: GET

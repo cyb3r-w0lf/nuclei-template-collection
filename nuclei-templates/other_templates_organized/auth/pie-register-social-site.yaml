@@ -1,15 +1,15 @@
-id: pie-register-social-site-adda60447a26bd0423aeb0aa7895c074
+id: pie-register-social-site
 
 info:
   name: >
-    Registration Forms – User Registration Forms, Invitation-Based Registrations, Front-end User Profile, Login Form & Content Restriction Social Sites Login <= 1.7.9 - Authentication Bypass
+    Pie Register - Social Sites Login (Add on) <= 1.7.7 - Authentication Bypass
   author: topscoder
   severity: critical
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/466ff226-a47e-46f1-a46c-6260208ffd42?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b98179c3-8b32-4d75-9f3f-2367215a740b?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.7.9')
+          - compare_versions(version, '<= 1.7.7')

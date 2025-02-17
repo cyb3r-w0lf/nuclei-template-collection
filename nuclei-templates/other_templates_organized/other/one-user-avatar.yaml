@@ -1,15 +1,14 @@
-id: one-user-avatar-38cab75f654a2b2a6fc5d0bc2a75fde9
+id: one-user-avatar
 
 info:
   name: >
-    One User Avatar <= 2.3.6 - Cross-Site Request Forgery
+    One User Avatar <= 2.3.6 - Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: high
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c35ed3ef-49bd-4f64-bb0f-2abedb7b978e?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e17dd3e7-9bd9-4852-9512-72fe1e40f86a?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/one-user-avatar/"
     google-query: inurl:"/wp-content/plugins/one-user-avatar/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,one-user-avatar,medium
+  tags: cve,wordpress,wp-plugin,one-user-avatar,high
 
 http:
   - method: GET

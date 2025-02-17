@@ -1,24 +1,22 @@
-id: top-10-0bf2d1e180ba75216d2caec0d1016987
+id: top-10
 
 info:
-  name: >
-    Top 10 – Popular posts plugin for WordPress <= 2.4.3 - SQL Injection
+  name: "Top 10 – Popular posts plugin for WordPress < 2.3.1 - Cross-Site Scripting"
   author: topscoder
-  severity: low
-  description: >
-    The Top 10 – Popular posts plugin for WordPress plugin for WordPress is vulnerable to generic SQL Injection via the ‘get_results’ parameter in versions up to, and including, 2.4.3 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for authenticated attackers with admin level access to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.
+  severity: medium
+  description: "The Top 10 – Popular posts plugin for WordPress plugin for WordPress is vulnerable to Cross-Site Scripting via the 'page' parameter in versions before 2.3.1 due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts that execute in a victim's browser."
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9b320755-1255-4331-8176-ee67d8d4873e?source=api-prod
+    - https://sumofpwn.nl/advisory/2016/cross_site_scripting_vulnerability_in_top_10___popular_posts_plugin_for_wordpress.html
+    - https://seclists.org/fulldisclosure/2016/Jul/41
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:L
-    cvss-score: 7.4
-    cve-id: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
+    cve-id:
   metadata:
     fofa-query: "wp-content/plugins/top-10/"
     google-query: inurl:"/wp-content/plugins/top-10/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,top-10,low
+  tags: cve,wordpress,wp-plugin,top-10,medium
 
 http:
   - method: GET
@@ -56,4 +54,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 2.4.4')
+          - compare_versions(version, '< 2.3.1')

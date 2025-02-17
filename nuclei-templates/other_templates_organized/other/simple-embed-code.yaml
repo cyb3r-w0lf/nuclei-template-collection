@@ -1,15 +1,14 @@
-id: simple-embed-code-bfcfafab5a3cdea8a406448d5aefe06e
+id: simple-embed-code
 
 info:
   name: >
-    Code Embed <= 2.4 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    Code Embed <= 2.3.6 - Authenticated(Contributor+) Denial of Service
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ab4149e1-8378-4007-bbf2-1ac3c479e7ea?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2ef2ded1-dd56-4c33-98dc-d4c69e66568f?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.4')
+          - compare_versions(version, '<= 2.3.6')

@@ -1,18 +1,17 @@
-id: modula-best-grid-gallery-65821f6275da2b0327c81e777f894ee6
+id: modula-best-grid-gallery
 
 info:
   name: >
-    Modula <= 2.7.4 - Incomplete Authorization via 'save_image' and 'save_images'
+    Modula Image Gallery <= 2.2.4 - Authenticated Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
-    The Modula plugin for WordPress is vulnerable to unauthorized modification of data due to an incomplete capability check on the 'save_image' and 'save_images' functions in versions up to, and including, 2.7.4. This makes it possible for authenticated attackers with the 'edit_others_posts' but not the 'edit_posts' capability to save images. Note that this would only be considered a vulnerability on extremely unusual configurations.
+    
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f029bd86-d979-45d1-97fe-75c43fb71148?source=api-prod
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/691962c2-e67f-4f6e-9002-6f2a4ccbbdee?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:H/PR:H/UI:N/S:U/C:N/I:L/A:N
-    cvss-score: 2.2
+    cvss-metrics: 
+    cvss-score: 
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/modula-best-grid-gallery/"
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 2.7.5')
+          - compare_versions(version, '< 2.2.5')

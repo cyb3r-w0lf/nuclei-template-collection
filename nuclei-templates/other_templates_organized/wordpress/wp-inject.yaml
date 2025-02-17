@@ -1,15 +1,14 @@
-id: wp-inject-ae646b466c8855d3d20d0f1887831c5e
+id: wp-inject
 
 info:
   name: >
-    ImageInject <= 1.18 - Authenticated (Admin+) Stored XSS
+    ImageInject <= 1.15 - Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e3dd3b5e-b0df-45b0-b42d-eaea765f3193?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cb38d3bc-ae82-40ef-b20d-525d51432b1c?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/wp-inject/"
     google-query: inurl:"/wp-content/plugins/wp-inject/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-inject,low
+  tags: cve,wordpress,wp-plugin,wp-inject,high
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.18')
+          - compare_versions(version, '<= 1.15')

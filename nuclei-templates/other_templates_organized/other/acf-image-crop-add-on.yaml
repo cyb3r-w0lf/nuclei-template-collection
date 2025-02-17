@@ -1,4 +1,4 @@
-id: acf-image-crop-add-on-48209b6f934c02b05cd32cbf6656419d
+id: acf-image-crop-add-on
 
 info:
   name: >
@@ -8,7 +8,6 @@ info:
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/27b599af-f1f6-48af-90fe-4fc23b17a4ae?source=api-scan
   classification:
     cvss-metrics: 

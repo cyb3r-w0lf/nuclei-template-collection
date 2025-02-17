@@ -1,4 +1,4 @@
-id: bws-google-analytics-aa49fc6c3fa126497daa1dd4b67e61cd
+id: bws-google-analytics
 
 info:
   name: >
@@ -8,7 +8,6 @@ info:
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/f9900533-0724-445f-9d56-8a0422479448?source=api-scan
   classification:
     cvss-metrics: 

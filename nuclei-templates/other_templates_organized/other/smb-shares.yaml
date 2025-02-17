@@ -12,13 +12,17 @@ info:
     verified: true
     max-request: 1
     shodan-query: port:445
+    product: dionaea
+    vendor: dionaea
   tags: js,network,smb,enum
 javascript:
-  - code: |
+  - pre-condition: |
+      isPortOpen(Host,Port);
+    code: |
       var m = require("nuclei/smb");
       var c = m.SMBClient();
       var response = c.ListShares(Host, Port, User, Pass);
-      to_json(response);
+      Export(response);
 
     args:
       Host: "{{Host}}"
@@ -30,4 +34,4 @@ javascript:
       - type: json
         json:
           - '.[]'
-# digest: 4a0a00473045022074af30e3f523f1af8e7f6adf1b3da6943559db29198020d8803738b1934eff0b022100f8e908053b0b14f9231e0f654d889c305c39dc6cd5c1b52fd5b09359f583232d:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100ac8f9fd001b61f68f2bb3b4cf7567ff25af89c95c1a993d2ca4d3af4f2d8bfd20220610e8f2d46ae1d324c92d9396069ba130aa5542d034a46524c904ec1bd426034:922c64590222798bb761d5b6d8e72950

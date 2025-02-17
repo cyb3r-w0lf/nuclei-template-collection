@@ -1,18 +1,17 @@
-id: countdown-builder-834d1dcf6a8b4e4013eac75a4304e7f5
+id: countdown-builder
 
 info:
   name: >
-    Countdown, Coming Soon, Maintenance – Countdown & Clock <= 2.3.9.5 - Authenticated Cross-Site Scripting
+    Countdown & Clock <= 2.3.2 - Authenticated (Admin+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
-    The plugin Countdown, Coming Soon, Maintenance – Countdown & Clock for WordPress is vulnerable to Stored Cross-Site Scripting. This makes it possible for authenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.
+    
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cfec9303-bdc5-4ba7-90dd-0c7559459d23?source=api-prod
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/24ba8d30-843f-4178-9b10-3c3dc720205c?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:N
-    cvss-score: 5.5
+    cvss-metrics: 
+    cvss-score: 
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/countdown-builder/"
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.3.9.5')
+          - compare_versions(version, '<= 2.3.2')

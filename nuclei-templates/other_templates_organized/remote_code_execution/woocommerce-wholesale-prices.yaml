@@ -1,24 +1,23 @@
-id: woocommerce-wholesale-prices-90122b9cb1115b46367e7276c246b817
+id: woocommerce-wholesale-prices
 
 info:
   name: >
-    Wholesale Suite <= 2.1.5 - Cross-Site Request Forgery
+    Wholesale Suite <= 2.1.5 - Missing Authorization to Plugin Settings Change
   author: topscoder
-  severity: medium
+  severity: high
   description: >
-    The Wholesale Suite plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 2.1.5. This is due to missing or incorrect nonce validation on several functions. This makes it possible for unauthenticated attackers to invoke those functions, via forged request granted they can trick a site administrator into performing an action such as clicking on a link.
+    
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a7372314-fff1-42c4-99b6-10d7541d1a29?source=api-prod
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f713f2f8-545a-4f54-a028-8422c0942a63?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
-    cvss-score: 8.8
+    cvss-metrics: 
+    cvss-score: 
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/woocommerce-wholesale-prices/"
     google-query: inurl:"/wp-content/plugins/woocommerce-wholesale-prices/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,woocommerce-wholesale-prices,medium
+  tags: cve,wordpress,wp-plugin,woocommerce-wholesale-prices,high
 
 http:
   - method: GET

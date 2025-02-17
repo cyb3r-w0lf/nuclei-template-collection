@@ -1,24 +1,23 @@
-id: pods-883d5a54e4beac4e8aafa7cbf3b3381a
+id: pods
 
 info:
   name: >
-    Pods – Custom Content Types and Fields < 2.5.1.2 - SQL Injection
+    Pods - Custom Content Types and Fields - Missing Authorization
   author: topscoder
-  severity: critical
+  severity: high
   description: >
-    The Pods – Custom Content Types and Fields plugin for WordPress is vulnerable to SQL Injection via the ‘orderby’ parameter in versions before 2.5.1.2 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query. This makes it possible for attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database.
+    
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e95b2bfe-8675-4932-9b37-73ad15fa228e?source=api-prod
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c5d330cd-ad1f-451e-bf41-39cfeb296cf0?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    cvss-score: 9.8
+    cvss-metrics: 
+    cvss-score: 
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/pods/"
     google-query: inurl:"/wp-content/plugins/pods/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,pods,critical
+  tags: cve,wordpress,wp-plugin,pods,high
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 2.5.1.2')
+          - compare_versions(version, '>= 3', '< 3.0.10.2')

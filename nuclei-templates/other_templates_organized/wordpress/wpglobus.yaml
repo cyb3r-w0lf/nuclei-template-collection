@@ -1,15 +1,14 @@
-id: wpglobus-cce2f94dacea70828e82829298ee1f8c
+id: wpglobus
 
 info:
   name: >
-    WPGlobus – Multilingual Everything! <= 1.9.6 - Cross-Site Request Forgery to Cross-Site Scripting via wpglobus_option[selector_wp_list_pages][show_selector]
+    WPGlobus – Multilingual Everything! <= 1.9.6 - Cross-Site Scripting via wpglobus_option[post_type][page]
   author: topscoder
-  severity: medium
+  severity: high
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8b85b1e3-4eb0-4ba1-8d61-ec82fac123ce?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c32824cc-8895-462f-bd5b-03b8da4db680?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/wpglobus/"
     google-query: inurl:"/wp-content/plugins/wpglobus/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wpglobus,medium
+  tags: cve,wordpress,wp-plugin,wpglobus,high
 
 http:
   - method: GET

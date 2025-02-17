@@ -1,15 +1,14 @@
-id: cardoza-wordpress-poll-b0774285d9426b287eac7feba0eff411
+id: cardoza-wordpress-poll
 
 info:
   name: >
-    WordPress Poll <= 34.05 - SQL Injection
+    WordPress Poll <= 36 - SQL Injection
   author: topscoder
   severity: critical
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/21d244f4-f0cd-4d4d-8c6a-edea6b7b8145?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2facf62b-33cf-4438-a501-f96730077fa2?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 34.05')
+          - compare_versions(version, '<= 36')

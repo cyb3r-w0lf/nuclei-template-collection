@@ -1,15 +1,14 @@
-id: woo-order-export-lite-e16fee5ed100df3455de50afb35b2e20
+id: woo-order-export-lite
 
 info:
   name: >
-    Advanced Order Export For WooCommerce <= 3.5.5 - Unauthenticated PHP Object Injection via Order Details
+    Advanced Order Export For WooCommerce <= 3.1.7 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: critical
+  severity: medium
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a1c6eed6-7b3f-4b37-85f8-6613527daa54?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3d6488ce-e34a-4b23-806d-fa2fb948ea8f?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/woo-order-export-lite/"
     google-query: inurl:"/wp-content/plugins/woo-order-export-lite/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,woo-order-export-lite,critical
+  tags: cve,wordpress,wp-plugin,woo-order-export-lite,medium
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.5.5')
+          - compare_versions(version, '<= 3.1.7')

@@ -1,7 +1,7 @@
 id: wordpress-duplicator
 
 info:
-  name: Duplicator – WordPress Migration & Backup Plugin Detection
+  name: Duplicator – Migration & Backup Plugin Detection
   author: ricardomaia
   severity: info
   reference:
@@ -13,7 +13,6 @@ info:
 
 http:
   - method: GET
-
     path:
       - "{{BaseURL}}/wp-content/plugins/duplicator/readme.txt"
 
@@ -47,3 +46,4 @@ http:
         part: body
         regex:
           - '(?i)Stable.tag:\s?([\w.]+)'
+# digest: 4a0a00473045022100bebb86eb67132d6107eab18b643372cb30d95c56c9ef92d5f8efe7fab1e025c90220622bac304f2508e289fc02b21cb8d3b1aa806bd512dc19dda6b512e2366d7db4:922c64590222798bb761d5b6d8e72950

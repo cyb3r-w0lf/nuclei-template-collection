@@ -1,4 +1,4 @@
-id: ct-ultimate-gdpr-0d8c004233d501aa9245dabbd3d6fbac
+id: ct-ultimate-gdpr
 
 info:
   name: >
@@ -8,7 +8,6 @@ info:
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/40e2e8fb-ea36-4602-bead-8daf75d6dfb9?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,15 +1,14 @@
-id: startklar-elmentor-forms-extwidgets-61ac98acd239c65b6c8ad0facf1da6de
+id: startklar-elmentor-forms-extwidgets
 
 info:
   name: >
-    Startklar Elementor Addons <= 1.7.15 - Unauthenticated Path Traversal to Arbitrary Directory Deletion
+    Startklar Elementor Addons <= 1.7.13 - Unauthenticated Arbitrary File Upload
   author: topscoder
-  severity: low
+  severity: critical
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/baa20290-9c01-4f8d-adeb-fbfb15b9d6a9?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4221b33c-5cfa-48db-92bf-bf25ff3c5a5f?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/startklar-elmentor-forms-extwidgets/"
     google-query: inurl:"/wp-content/plugins/startklar-elmentor-forms-extwidgets/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,startklar-elmentor-forms-extwidgets,low
+  tags: cve,wordpress,wp-plugin,startklar-elmentor-forms-extwidgets,critical
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.7.15')
+          - compare_versions(version, '<= 1.7.13')

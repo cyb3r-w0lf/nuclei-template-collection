@@ -1,15 +1,14 @@
-id: mp3-music-player-by-sonaar-d773fb106b4d69a7febf1293c87c3ade
+id: mp3-music-player-by-sonaar
 
 info:
   name: >
-    MP3 Audio Player – Music Player, Podcast Player & Radio by Sonaar <= 5.8 - Authenticated (Contributor+) Stored Cross-Site Scripting via sonaar_audioplayer Shortcode
+    MP3 Audio Player for Music, Radio & Podcast by Sonaar <= 5.1 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/861d0218-0f0f-4299-a0ff-854832348457?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bcdbd108-5e17-4e67-a2a2-0f1464c1ba6c?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 5.8')
+          - compare_versions(version, '<= 5.1')
