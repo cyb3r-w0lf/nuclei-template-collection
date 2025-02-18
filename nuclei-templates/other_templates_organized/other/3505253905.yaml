@@ -1,15 +1,13 @@
 id: pop3
 info:
-  name: FirstClass pop3d
+  name: Neon Mail Server pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    hostname: $1
-    product: firstclass
+    hostname: $2
     rarity: 0
-    vendor: opentext
-    verified: true
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -20,4 +18,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK POP3 server at ([-\w_.]+) ready <[\d.]+@
+    - ^\+OK POP3 server \(Neon Mail Server System Advance ([-\w_.]+), [^)]*\) ready ([-\w_.]+)\. <

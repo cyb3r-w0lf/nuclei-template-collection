@@ -1,21 +1,25 @@
 id: smtp
 info:
-  name: Matrix SMTP Mail Server
+  name: MailEnable smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    info: on Matrix $2
-    rarity: 0
-    version: $1
+    hostname: $1
+    operating_system: Windows
+    product: mailenable
+    rarity: 8
+    vendor: mailenable
+    verified: true
 tcp:
-- name: 'null'
+- name: hello
   inputs:
-  - data: ''
+  - data: EHLO\r\n
   host:
   - '{{Hostname}}'
+  port: 25,587,3025
   extractors:
   - name: smtp
     type: regex
     regex:
-    - ^220 Matrix SMTP Mail Server v([\w.]+) on <MATRIX_([\w]+)> Simple Mail Transfer Service Ready\r\n
+    - ^220 ([\w._-]+)[^\r\n]*\r\n250-[^ ]* \[[^]]+\], this server offers \d+ extensions\r\n250
