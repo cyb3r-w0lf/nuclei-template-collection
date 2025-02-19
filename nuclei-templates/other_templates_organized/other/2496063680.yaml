@@ -1,13 +1,17 @@
 id: imap
 info:
-  name: Classic Hamster imapd
+  name: University of Washington IMAP imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    operating_system: Windows
+    hostname: $1
+    info: 'time zone: $3'
+    product: uw_imap
     rarity: 0
-    version: $1
+    vendor: uw
+    verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +22,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK IMAP4rev1 Server Classic Hamster (?:Vr.|Version) [\d.]+ \(Build ([\d.]+)\) greets you!\r\n
+    - ^\* OK \[CAPABILITY IMAP4REV1 [^]]+\] \[([\w.-]+)\] IMAP4rev1 (20\w+\.\d+) at [ \w,:]+ ([+-]\d+) \(\w+\)\r\n

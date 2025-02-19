@@ -1,11 +1,12 @@
 id: ssh
 info:
-  name: Huawei Unified Media Gateway sshd
+  name: Radware sshd
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
-    info: 'model: $2; protocol $1'
+    device_type: firewall
+    info: protocol 2.0
     rarity: 0
 tcp:
 - name: 'null'
@@ -17,4 +18,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-HUAWEI-UMG([\d.]+)\r?\n
+    - ^SSH-2\.0-1\.0 Radware SSH \r?\n

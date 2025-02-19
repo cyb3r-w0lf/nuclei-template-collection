@@ -1,21 +1,21 @@
 id: smtp
 info:
-  name: Tobit DvISE PostMan smtpd
+  name: Konica Minolta bizhub 350 printer smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
-    hostname: $1
-    rarity: 0
-    version: $2
+    device_type: printer
+    rarity: 8
 tcp:
-- name: 'null'
+- name: hello
   inputs:
-  - data: ''
+  - data: EHLO\r\n
   host:
   - '{{Hostname}}'
+  port: 25,587,3025
   extractors:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([-\w_.]+) Service ready by DvISE PostMan \((\d+)\) ESMTP Server \(Tobit Software, Germany\)\r\n
+    - ^220 \r\n501 \r\n
