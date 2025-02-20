@@ -1,12 +1,11 @@
 id: ftp
 info:
-  name: NET+OS ftpd
+  name: Konica Minolta bizhub printer ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    info: NET+OS $1
-    operating_system: NET+OS
+    device_type: printer
     rarity: 0
 tcp:
 - name: 'null'
@@ -18,4 +17,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 NET\+OS ([\d.]+) FTP server ready\.\r\n503 Bad sequence of commands\r\n
+    - ^220 KONICA MINOLTA FTP server ready\.\r\n
