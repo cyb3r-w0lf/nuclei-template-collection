@@ -1,13 +1,13 @@
 id: ssh
 info:
-  name: WRQ Reflection for Secure IT sshd
+  name: F-Secure sshd
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
     info: protocol $1
     rarity: 0
-    version: $2 build $3
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -18,4 +18,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-WRQReflectionForSecureIT_([\w._-]+) Build ([\w._-]+)\r\n
+    - ^SSH-([\d.]+)-([\d.]+) F-SECURE SSH.*\r?\n

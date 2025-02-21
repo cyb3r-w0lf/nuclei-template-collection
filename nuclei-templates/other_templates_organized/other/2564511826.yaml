@@ -1,12 +1,14 @@
 id: telnet
 info:
-  name: Reincarna/Linux.Wifatch virus
+  name: Funkwerk bintec $1 router
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    info: '**MALWARE**'
+    hostname: $3
+    info: 'location: $4'
     rarity: 0
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +19,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - ^\nREINCARNA / Linux\.Wifatch\n\nYour device has been infected by REINCARNA / Linux\.Wifatch\.\n\n
+    - '^\xff\xfb\x01\xff\xfb\x03\xff\xfd\x03\r\n\r\n\r\nWelcome to (R\w+) version (.*) from [\d /:]+\r\nsystemname is ([\w@_.-]+), location ([^\r\n]*)\r\n\r\n\r\nLogin: '
