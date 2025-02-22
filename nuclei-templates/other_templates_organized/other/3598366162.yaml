@@ -1,12 +1,16 @@
 id: pop3
 info:
-  name: ArGoSoft Mail Server Pro pop3d
+  name: Microsoft Exchange pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
+    info: German
     operating_system: Windows
+    product: exchange_server
     rarity: 0
+    vendor: microsoft
+    verified: true
     version: $1
 tcp:
 - name: 'null'
@@ -18,4 +22,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - ^\+OK ArGoSoft Mail Server Pro for WinNT/2000/XP, Version [-.\w]+ \(([-.\w]+)\)\r\n$
+    - ^\+OK Der Microsoft Exchange POP3-Server \(Version ([\d\.]+)\) ist betriebsbereit\.\r\n

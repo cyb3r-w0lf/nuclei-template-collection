@@ -1,16 +1,12 @@
 id: imap
 info:
-  name: Citadel imapd
+  name: Softalk imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    hostname: $1
-    product: ux
+    operating_system: Windows
     rarity: 0
-    vendor: citadel
-    verified: true
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +17,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK \[CAPABILITY IMAP4REV1[^\]]*?\] ([-.\w]+) IMAP4rev1 Citadel ([-.\w]+) ready\r\n
+    - ^\* OK Softalk IMAP Server ready\r\n
