@@ -1,16 +1,16 @@
 id: imap
 info:
-  name: Oracle Communications Messaging Exchange imapd
+  name: Dovecot imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    info: built $2
-    product: communications_unified
+    info: Ubuntu
+    operating_system: Linux
+    product: dovecot
     rarity: 0
-    vendor: oracle
+    vendor: dovecot
     verified: true
-    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +21,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK \[CAPABILITY IMAP4 IMAP4rev1 ACL QUOTA LITERAL\+ NAMESPACE UIDPLUS CHILDREN LANGUAGE XSENDER X-NETSCAPE XSERVERINFO AUTH=PLAIN STARTTLS\] Messaging Multiplexor \(Oracle Communications Messaging Exchange Server ([\w._-]+) \(built (\w+ +\d+ \d+)\)\)\r\n
+    - ^\* OK \[[^\[]+\] Dovecot \(Ubuntu\) ready\.\r\n

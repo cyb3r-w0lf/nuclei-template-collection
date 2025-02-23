@@ -1,12 +1,14 @@
 id: telnet
 info:
-  name: VideoLAN Server telnetd
+  name: D-Link router telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: media device
+    device_type: router
+    info: $1
     rarity: 0
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +19,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\r\n\0Videolan Server Administration System\0\r\n\r\n\0\xff\xfb\x01\xff\xfb\x03\xff\xfe\"Login: \0'
+    - '^\xff\xfb\x01\xff\xfd\x03\xff\xfb\x03\n\r +\*+\n\r +Welcome to ([-\w_.]+)\n\r +\*+\n\r\n\rD-Link Corp\., Inc\. Software Release ([-\w_.)(/]+)\n\rCopyright \(c\) \d+-\d+ by D-Link Corp\., Inc\.\n\r\n\rlogin: '
