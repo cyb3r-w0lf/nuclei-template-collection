@@ -1,15 +1,15 @@
-id: awesome-event-booking-b9cafcaaeccfdefa7c53b93caa3b97d8
+id: awesome-event-booking-659c9e19f7b8c63efe2593508531802d
 
 info:
   name: >
-    Awesome Event Booking <= 2.7.5 - Cross-Site Request Forgery
+    Awesome Event Booking <= 2.7.1 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5f29d895-ff0a-4ff9-9998-e7ab1a95d797?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ae970655-10a3-4917-a6d2-e9f8681c024f?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.7.5')
+          - compare_versions(version, '<= 2.7.1')

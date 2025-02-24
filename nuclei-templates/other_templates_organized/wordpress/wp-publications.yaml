@@ -1,14 +1,15 @@
-id: wp-publications
+id: wp-publications-95117d303503ee340e610b08c878e648
 
 info:
   name: >
-    wp-publications < 1.1 - Local File Inclusion
+    WP Publications <= 1.2 - Authenticated (Admin+) Stored Cross-Site Scripting
   author: topscoder
-  severity: critical
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1c08b7a7-297b-4ad7-b829-3ccbae7b2e41?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f7097b64-d915-4a26-91bf-1714302c84db?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-publications/"
     google-query: inurl:"/wp-content/plugins/wp-publications/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-publications,critical
+  tags: cve,wordpress,wp-plugin,wp-publications,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 0.0')
+          - compare_versions(version, '<= 1.2')

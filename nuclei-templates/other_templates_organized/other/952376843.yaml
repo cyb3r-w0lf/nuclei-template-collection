@@ -1,15 +1,14 @@
 id: smtp
 info:
-  name: Postfix smtpd
+  name: Symantec Messaging Gateway smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
     hostname: $1
-    info: whoson patch
-    product: postfix
+    product: messaging_gateway
     rarity: 0
-    vendor: postfix
+    vendor: symantec
     verified: true
 tcp:
 - name: 'null'
@@ -21,4 +20,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - ^220 ([-\w_.]+) ESMTP postfix NO UCE\r\n
+    - ^220 ([\w._-]+) ESMTP Symantec Messaging Gateway\r\n

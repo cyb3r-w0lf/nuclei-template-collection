@@ -1,14 +1,15 @@
-id: xpro-elementor-addons
+id: xpro-elementor-addons-bedd86d7fa630d1c694615da493f1eb6
 
 info:
   name: >
-    130+ Widgets | Best Addons For Elementor – FREE <= 1.4.2 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    140+ Widgets | Xpro Addons For Elementor – FREE <= 1.4.6 - Authenticated (Contributor+) Sensitive Information Exposure via Elementor Template
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/07e7f03e-0d5d-4405-a0e7-9547fc762f0e?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/382a46c2-9fec-4642-93b0-c06b9ed1c086?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.4.2')
+          - compare_versions(version, '<= 1.4.6')

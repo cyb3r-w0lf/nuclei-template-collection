@@ -1,23 +1,24 @@
-id: quick-restaurant-menu
+id: quick-restaurant-menu-9a9401ef69bfea744a84fc5e9b132d57
 
 info:
   name: >
-    Quick Restaurant Menu <= 2.0.2 - Cross-Site Request Forgery
+    Quick Restaurant Menu <= 2.0.0 - Authenticated (Subscriber+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
-    
+    The Quick Restaurant Menu plugin for WordPress is vulnerable to Stored Cross-Site Scripting via several parameters in its AJAX actions in versions up to, and including, 2.0.0 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with subscriber-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bfc7c214-8d76-453c-a05d-682aa425b06e?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/057a440e-4917-45c5-90ab-bb8654eae68f?source=api-prod
   classification:
-    cvss-metrics: 
-    cvss-score: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N
+    cvss-score: 6.4
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/quick-restaurant-menu/"
     google-query: inurl:"/wp-content/plugins/quick-restaurant-menu/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,quick-restaurant-menu,medium
+  tags: cve,wordpress,wp-plugin,quick-restaurant-menu,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.0.2')
+          - compare_versions(version, '<= 2.0.0')

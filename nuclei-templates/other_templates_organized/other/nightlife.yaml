@@ -1,17 +1,19 @@
-id: nightlife
+id: nightlife-66af289a45aee280f933e50a5adb668f
 
 info:
-  name: "Nightlife Theme (All Known Versions) - Arbitrary File Upload"
+  name: >
+    Nightlife Theme (All Known Versions) - Arbitrary File Upload
   author: topscoder
   severity: critical
-  description: "The Nightlife Theme for WordPress is vulnerable to arbitrary file uploads due to missing file type validation via the upload-file.php file in all known versions. This makes it possible for [authentication-level] attackers unauthenticated attackers to upload arbitrary files on the affected sites server which may make remote code execution possible."
+  description: >
+    The Nightlife Theme for WordPress is vulnerable to arbitrary file uploads due to missing file type validation via the upload-file.php file in all known versions. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected sites server which may make remote code execution possible.
   reference:
-    - https://en.0day.today/exploits/22091
-    - https://web.archive.org/web/20141007092653/http%3A//templatic.net/demos/wp-content/themes/Nightlife/change_log.txt
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2513a199-30a8-45a9-80b3-1f6e51534c88?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
     cvss-score: 9.8
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/themes/nightlife/"
     google-query: inurl:"/wp-content/themes/nightlife/"
@@ -54,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '>0')
+          - compare_versions(version, '<= *')

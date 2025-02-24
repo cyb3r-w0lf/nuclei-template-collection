@@ -1,23 +1,24 @@
-id: simple-file-list
+id: simple-file-list-fa26d86f8a006a8192a615c3852052d7
 
 info:
   name: >
-    Simple File List <= 4.4.11 - Reflected Cross-Site Scripting
+    Simple File List < 4.2.3 - Remote Code Execution
   author: topscoder
-  severity: medium
+  severity: critical
   description: >
-    
+    The Simple-File-List Plugin for WordPress is vulnerable to Remote Code Execution in versions up to, and including, 4.2.2 via the rename function which can be used to rename uploaded PHP code with a png extension to use a php extension. This allows unauthenticated attackers to execute code on the server.
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/da9e3db0-9cbf-4b1a-bdaa-d5d86be744af?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9eb835fd-6ebf-4162-856c-0366b663a07e?source=api-prod
   classification:
-    cvss-metrics: 
-    cvss-score: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
+    cvss-score: 9.8
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/simple-file-list/"
     google-query: inurl:"/wp-content/plugins/simple-file-list/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,simple-file-list,medium
+  tags: cve,wordpress,wp-plugin,simple-file-list,critical
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.4.11')
+          - compare_versions(version, '< 4.2.3')

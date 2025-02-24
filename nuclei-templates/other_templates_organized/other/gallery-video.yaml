@@ -1,22 +1,24 @@
-id: gallery-video
+id: gallery-video-5920d1f46f3d56f59ab7d308530f01e4
 
 info:
-  name: "Gallery - Video Gallery and YouTube Gallery <= 2.0.3 - Cross-Site Request Forgery"
+  name: >
+    Gallery - Video Gallery and YouTube Gallery <= 2.0.3 - Cross-Site Request Forgery
   author: topscoder
-  severity: high
-  description: "The Video Gallery and Youtube Gallery plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 2.0.3. This is due to missing or incorrect nonce validation on several functions. This makes it possible for unauthenticated attackers to perform various other attacks and/or run scripts on the vulnerable site via a forged request granted they can trick a site administrator into performing an action such as clicking on a link."
+  severity: medium
+  description: >
+    The Video Gallery and Youtube Gallery plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 2.0.3. This is due to missing or incorrect nonce validation on several functions. This makes it possible for unauthenticated attackers to perform various other attacks and/or run scripts on the vulnerable site via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.
   reference:
-    - https://plugins.trac.wordpress.org/changeset/1533377
-    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-gallery-video-gallery-and-youtube-gallery-multiple-vulnerabilities-2-0-3/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/02699ada-f4bf-45c4-89e8-018dfff40ac1?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
     cvss-score: 8.8
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/gallery-video/"
     google-query: inurl:"/wp-content/plugins/gallery-video/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,gallery-video,high
+  tags: cve,wordpress,wp-plugin,gallery-video,medium
 
 http:
   - method: GET

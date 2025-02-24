@@ -1,18 +1,19 @@
-id: payment-gateways-caller-for-wp-e-commerce
+id: payment-gateways-caller-for-wp-e-commerce-3ea6cef1cc360fce88ca31ae78e913c0
 
 info:
-  name: "Payment Gateways Caller for WP e-Commerce < 0.1.1 - Local File Inclusion"
+  name: >
+    Payment Gateways Caller for WP e-Commerce < 0.1.1 - Local File Inclusion
   author: topscoder
   severity: critical
-  description: "The Payment Gateways Caller for WP e-Commerce plugin for WordPress is vulnerable to Local File Inclusion in versions before 0.1.1 via the wpscmc_load_merchant function. This allows attackers to include and execute arbitrary files on the server, allowing the execution of any PHP code in those files. This can be used to bypass access controls, obtain sensitive data, or achieve code execution in cases where images and other “safe” file types can be uploaded and included."
+  description: >
+    The Payment Gateways Caller for WP e-Commerce plugin for WordPress is vulnerable to Local File Inclusion in versions before 0.1.1 via the wpscmc_load_merchant function. This allows attackers to include and execute arbitrary files on the server, allowing the execution of any PHP code in those files. This can be used to bypass access controls, obtain sensitive data, or achieve code execution in cases where images and other “safe” file types can be uploaded and included.
   reference:
-    - https://packetstormsecurity.com/files/123744/
-    - https://wordpress.org/plugins/payment-gateways-caller-for-wp-e-commerce/#developers
-    - https://plugins.trac.wordpress.org/changeset/792060
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9766a657-1cf2-448a-bd66-a27c0ebd8261?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
     cvss-score: 9.8
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/payment-gateways-caller-for-wp-e-commerce/"
     google-query: inurl:"/wp-content/plugins/payment-gateways-caller-for-wp-e-commerce/"

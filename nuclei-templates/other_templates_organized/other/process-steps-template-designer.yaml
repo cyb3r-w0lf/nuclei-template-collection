@@ -1,4 +1,4 @@
-id: process-steps-template-designer
+id: process-steps-template-designer-0363af3c4b2a0002ee0f092f4da28630
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/a98f6a68-5863-4147-86c4-8c19af469be3?source=api-scan
   classification:
     cvss-metrics: 

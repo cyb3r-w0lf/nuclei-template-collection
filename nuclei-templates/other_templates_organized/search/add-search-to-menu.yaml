@@ -1,23 +1,24 @@
-id: add-search-to-menu
+id: add-search-to-menu-c3d7a7e9f8e463318d5094564ba47a98
 
 info:
   name: >
-    Ivory Search <= 5.4 - Multiple Admin+ Stored Cross-Site Scripting
+    Ivory Search – WordPress Search Plugin <= 4.5.10 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: high
+  severity: low
   description: >
-    
+    The "Ivory Search – WordPress Search Plugin" plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the ‘post’ parameter in versions up to, and including, 4.5.10 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/736cb9a4-bd43-4aaa-a918-d15ca3ff4dbf?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6da0a85d-0c6f-40ae-8a3d-85222f0e7cc5?source=api-prod
   classification:
-    cvss-metrics: 
-    cvss-score: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/add-search-to-menu/"
     google-query: inurl:"/wp-content/plugins/add-search-to-menu/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,add-search-to-menu,high
+  tags: cve,wordpress,wp-plugin,add-search-to-menu,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 5.4')
+          - compare_versions(version, '<= 4.5.10')

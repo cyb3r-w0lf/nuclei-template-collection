@@ -9,7 +9,7 @@ info:
   metadata:
     verified: true
     max-request: 1
-  tags: enum,cloud,cloud-enum,gcp
+  tags: cloud,cloud-enum,gcp
 
 self-contained: true
 
@@ -40,5 +40,4 @@ http:
           - "status_code==302"
           - contains(location, "login")
         condition: and
-
-# digest: 490a00463044022049b2ab788a102342c3ee4b36d87315f145c3e963f1bd8389d1b2d9f90540f05402203bb1fa138a4e29c568c6bd421cb97c526e822c25fc952368295259787bc159d4:922c64590222798bb761d5b6d8e72950
+# digest: 490a00463044022017250b6b9f7ccf30e614e7bfb992e2e9ec13fd27556137cf4b13dc2f2a8c70b602200e352bbaebbd9dfbced84b3f9dff65c9d1b3dac47a0eec812b738a987931a14c:922c64590222798bb761d5b6d8e72950

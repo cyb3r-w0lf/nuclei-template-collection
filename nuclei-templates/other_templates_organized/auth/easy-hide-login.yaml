@@ -1,14 +1,15 @@
-id: easy-hide-login
+id: easy-hide-login-86639ce6014853dd93632de719acf3a1
 
 info:
   name: >
-    Easy Hide Login <= 1.0.8 - Cross-Site Request Forgery
+    Easy Hide Login <= 1.0.7 - Authenticated (Administrator+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/42fff63c-62ec-466e-9a05-60d76f80039e?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/745cf98c-ad3a-4ec9-9ee8-ae817d5d7358?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/easy-hide-login/"
     google-query: inurl:"/wp-content/plugins/easy-hide-login/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,easy-hide-login,medium
+  tags: cve,wordpress,wp-plugin,easy-hide-login,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.0.8')
+          - compare_versions(version, '<= 1.0.7')

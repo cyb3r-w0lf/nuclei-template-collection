@@ -1,14 +1,15 @@
-id: simple-restrict
+id: simple-restrict-90850679a67eedd0f52b61c718fdc816
 
 info:
   name: >
-    Simple Restrict <= 1.2.6 - Missing Authorization to Sensitive Information Exposure
+    Simple Restrict <= 1.2.7 - Unauthenticated Content Restriction Bypass to Sensitive Information Exposure
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/65963ce0-6589-4753-837c-14ef37a1a9e3?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bbb50bc9-5ad7-402e-a624-90f3302e1b0c?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/simple-restrict/"
     google-query: inurl:"/wp-content/plugins/simple-restrict/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,simple-restrict,high
+  tags: cve,wordpress,wp-plugin,simple-restrict,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.2.6')
+          - compare_versions(version, '<= 1.2.7')

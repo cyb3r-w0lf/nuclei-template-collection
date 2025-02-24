@@ -1,15 +1,15 @@
-id: pray-for-me
+id: pray-for-me-f6e2df816e9b6eda702083927acc1fab
 
 info:
   name: >
-    Pray For Me <= 1.0.4 - Unauthenticated Stored Cross-Site Scripting
+    Pray For Me <= 1.0.4 - Cross-Site Request Forgery to Settings Update
   author: topscoder
-  severity: high
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e62a77a4-d2c4-4043-99b2-0918ea18eeb5?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/94a18ddb-fa30-4a0f-9ce7-390dc1cee8a8?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/pray-for-me/"
     google-query: inurl:"/wp-content/plugins/pray-for-me/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,pray-for-me,high
+  tags: cve,wordpress,wp-plugin,pray-for-me,medium
 
 http:
   - method: GET

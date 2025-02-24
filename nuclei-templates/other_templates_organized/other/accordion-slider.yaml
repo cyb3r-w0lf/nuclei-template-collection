@@ -1,14 +1,15 @@
-id: accordion-slider
+id: accordion-slider-f57a9bb09c6115f6da291aba1defee73
 
 info:
   name: >
-    Accordion Slider <= 1.9.6 - Missing Authorization to Notice Dismissal
+    Multiple Plugins <= (Various Versions) - Authenticated (Contributor+) Stored DOM-Based Cross-Site Scripting via FancyBox JavaScript Library
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3dc69bba-39e0-46bd-8cdb-7cf1f7d36282?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d99d4b9a-aa09-434d-91a8-7afaa0e8b5db?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/accordion-slider/"
     google-query: inurl:"/wp-content/plugins/accordion-slider/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,accordion-slider,high
+  tags: cve,wordpress,wp-plugin,accordion-slider,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.9.6')
+          - compare_versions(version, '<= 1.9.12')

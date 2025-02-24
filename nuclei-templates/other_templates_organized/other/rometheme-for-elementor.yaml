@@ -1,14 +1,15 @@
-id: rometheme-for-elementor
+id: rometheme-for-elementor-86b3134bcf0d68e5241cd43f9f3fa5ca
 
 info:
   name: >
-    RomethemeKit For Elementor <= 1.4.1 - Missing Authorization
+    RomethemeKit For Elementor <= 1.5.2 - Authenticated (Contributor+) Sensitive Information Exposure via Elementor Templates
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2da883bf-5741-4eda-8a93-3b7feb90f4c6?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cd726b20-75c9-408e-86fc-061db591a9db?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/rometheme-for-elementor/"
     google-query: inurl:"/wp-content/plugins/rometheme-for-elementor/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,rometheme-for-elementor,high
+  tags: cve,wordpress,wp-plugin,rometheme-for-elementor,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.4.1')
+          - compare_versions(version, '<= 1.5.2')

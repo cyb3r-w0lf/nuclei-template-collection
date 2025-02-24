@@ -1,14 +1,15 @@
-id: wp-experiments-free
+id: wp-experiments-free-10749bf7fe7b2a1d940bf8e6769ee5b0
 
 info:
   name: >
-    Title Experiments Free <= 9.0.0 - SQL Injection
+    Title Experiments Free <= 9.0.4 - Cross-Site Request Forgery
   author: topscoder
-  severity: critical
+  severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0f35cc8b-11be-4664-be48-12a8db872d66?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7abf5f68-2a5f-4cdf-90cf-38dd7189b8c9?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-experiments-free/"
     google-query: inurl:"/wp-content/plugins/wp-experiments-free/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-experiments-free,critical
+  tags: cve,wordpress,wp-plugin,wp-experiments-free,medium
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 9.0.1')
+          - compare_versions(version, '<= 9.0.4')

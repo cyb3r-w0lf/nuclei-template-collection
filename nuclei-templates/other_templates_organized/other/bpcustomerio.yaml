@@ -1,23 +1,24 @@
-id: bpcustomerio
+id: bpcustomerio-508b3769759bc48f6f1ec3a8566599f7
 
 info:
-  name: "BuddyPress Customer.io Analytics Integration <= 1.1.6 - Cross-Site Request Forgery"
+  name: >
+    BuddyPress Customer.io Analytics Integration <= 1.1.6 - Cross-Site Request Forgery
   author: topscoder
-  severity: high
-  description: "The BuddyPress Customer.io Analytics Integration pluginfor WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 1.1.6. This is due to missing or incorrect nonce validation on several functions. This makes it possible for unauthenticated attackers to change plugin settings and perform other administrator-level actions via a forged request granted they can trick a site administrator into performing an action such as clicking on a link."
+  severity: medium
+  description: >
+    The BuddyPress Customer.io Analytics Integration pluginfor WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 1.1.6. This is due to missing or incorrect nonce validation on several functions. This makes it possible for unauthenticated attackers to change plugin settings and perform other administrator-level actions via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.
   reference:
-    - https://ithemes.com/blog/wordpress-vulnerability-report-july-7-2021/
-    - https://wpscan.com/vulnerability/df1fdca8-d08f-4577-8cdf-67ca1ac741ba
-    - https://wordpress.org/plugins/bpcustomerio/
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b910b678-5869-43e6-8993-fcf53fe4c66f?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
     cvss-score: 8.8
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/bpcustomerio/"
     google-query: inurl:"/wp-content/plugins/bpcustomerio/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,bpcustomerio,high
+  tags: cve,wordpress,wp-plugin,bpcustomerio,medium
 
 http:
   - method: GET

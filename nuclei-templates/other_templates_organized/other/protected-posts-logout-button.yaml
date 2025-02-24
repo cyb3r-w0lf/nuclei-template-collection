@@ -1,23 +1,24 @@
-id: protected-posts-logout-button
+id: protected-posts-logout-button-957a838f0a94224bbc569dce0a0c6889
 
 info:
   name: >
-    Protected Posts Logout Button <= 1.4.5 - Authenticated (Admin+) Cross-Site Scripting
+    Protected Posts Logout Button <= 1.4.4 - Cross-Site Request Forgery to Settings Update
   author: topscoder
-  severity: low
+  severity: medium
   description: >
-    
+    The Protected Posts Logout Button plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 1.4.4. This is due to missing or incorrect nonce validation on the pplb_options_save function. This makes it possible for unauthenticated attackers to update plugin settings via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6be26c07-cac4-42d8-becb-03045a54cd6c?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c79fd08c-97bc-4d55-832e-92d0897bc3dc?source=api-prod
   classification:
-    cvss-metrics: 
-    cvss-score: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:L
+    cvss-score: 5.4
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/protected-posts-logout-button/"
     google-query: inurl:"/wp-content/plugins/protected-posts-logout-button/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,protected-posts-logout-button,low
+  tags: cve,wordpress,wp-plugin,protected-posts-logout-button,medium
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.4.5')
+          - compare_versions(version, '<= 1.4.4')

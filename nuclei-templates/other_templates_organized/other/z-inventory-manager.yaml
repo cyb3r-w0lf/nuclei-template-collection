@@ -1,15 +1,15 @@
-id: z-inventory-manager-99604a3c99b451f7a919c8e2ba3cad3f
+id: z-inventory-manager-c162774d6b821e4e0eda5e53490f484d
 
 info:
   name: >
-    PlainInventory <= 3.1.6 - Unauthenticated PHP Object Injection
+    PlainInventory – Inventory Management Plugin <= 3.1.5 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: critical
+  severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c493191e-b2ec-4e5e-ac41-0cff24635a25?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/4aad3bc3-6b8e-41c4-b362-77834ae98bfa?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/z-inventory-manager/"
     google-query: inurl:"/wp-content/plugins/z-inventory-manager/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,z-inventory-manager,critical
+  tags: cve,wordpress,wp-plugin,z-inventory-manager,medium
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.1.6')
+          - compare_versions(version, '<= 3.1.5')

@@ -1,14 +1,15 @@
-id: wp-action-network
+id: wp-action-network-7005e1ddfd02d9ed631c4597de9bb38b
 
 info:
   name: >
-    Action Network <= 1.4.2 - Reflected Cross-Site Scripting via 'search'
+    Action Network <= 1.4.4 - Cross-Site Request Forgery to Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/f4366cf8-bf50-4d9f-9a85-2c2de7f7e90d?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c90dadc9-0109-4ebd-8135-3efd26682ad9?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.4.2')
+          - compare_versions(version, '<= 1.4.4')

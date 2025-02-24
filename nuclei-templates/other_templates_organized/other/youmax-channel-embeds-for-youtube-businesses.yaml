@@ -1,15 +1,15 @@
-id: youmax-channel-embeds-for-youtube-businesses-b62fd6b6d85984b5082ec0cff3d4dda8
+id: youmax-channel-embeds-for-youtube-businesses-f358807584233bf9bea48f113d224964
 
 info:
   name: >
-    Youtube Video Grid <= 1.9 - Cross-Site Request Forgery
+    Youtube Video Grid | Youmax <= 1.9 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/23f00e28-4ad1-4ae6-8d43-12097ee6bf90?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b9d67773-518e-4293-8d5f-3df29d96730c?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

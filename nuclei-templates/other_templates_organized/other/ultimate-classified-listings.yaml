@@ -1,15 +1,15 @@
-id: ultimate-classified-listings-b7976bb42b77b19343df13562bd4db03
+id: ultimate-classified-listings-f89f1e1f27b25e49cce31bbd3b64f5c8
 
 info:
   name: >
-    Ultimate Classified Listings <= 1.4 - Authenticated (Subscriber+) Stored Cross-Site Scripting
+    Ultimate Classified Listings <= 1.4 Authenticated (Administrator+) Stored Cross-Site Scripting via Title Parameter
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c506fd52-ec10-48bd-a221-713d6c5951ce?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2c925848-1ba7-4009-93c2-1648dbf808e9?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 

@@ -9,7 +9,7 @@ info:
   metadata:
     verified: true
     max-request: 1
-  tags: cloud,enum,cloud-enum,gcp
+  tags: cloud,cloud-enum,gcp
 
 self-contained: true
 
@@ -37,5 +37,4 @@ http:
         name: "Protected GCP Bucket"
         status:
           - 403
-
-# digest: 4a0a00473045022038ad1830fc8e77debc4c9fcab4d7eb4c62b9930c3f98860f5e6877c1e72578a4022100e3ea9b5730d32e9219e4716c79b5203733ff802460ee921d0f0c2199ecca7989:922c64590222798bb761d5b6d8e72950
+# digest: 4b0a00483046022100baff7bb9e12a115a59a755c8188c3544cc8497dc3a17860023486de9f4992def02210096b193c8507208f3d30cd9fc716d4be46cd9acb83418f2fa62f0d10ce305d026:922c64590222798bb761d5b6d8e72950

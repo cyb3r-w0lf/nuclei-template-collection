@@ -1,15 +1,15 @@
-id: goodlayers-core-68075b04fd6171f9f9d3e94560d13e9d
+id: goodlayers-core-0bc746811e7c1e3dab81d761317ba039
 
 info:
   name: >
-    Goodlayers Core <= 2.0.9 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    Goodlayers Core <= 2.1.2 - Authenticated (Subscriber+) Stored Cross-Site Scripting via SVG Upload
   author: topscoder
   severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/261bf532-48aa-406f-ba28-2ca3ae919522?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d20c09ee-bd75-4f96-b0b9-2cf6f87aa4cb?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.0.9')
+          - compare_versions(version, '<= 2.1.2')

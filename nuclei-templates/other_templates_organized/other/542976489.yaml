@@ -1,14 +1,12 @@
 id: ftp
 info:
-  name: Panasonic WJ-HD316 Digital Disk Recorder
+  name: Homer ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: media device
-    hostname: $1
+    operating_system: Windows
     rarity: 0
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +17,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - ^220 ([\w._-]+)\r FTP server\(Version([\w._-]+)\) ready\.\r\n
+    - ^220 Homer Ftp Server\r\n

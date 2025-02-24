@@ -1,17 +1,18 @@
-id: visitors-traffic-real-time-statistics
+id: visitors-traffic-real-time-statistics-c6745452201548557710380cc502c524
 
 info:
   name: >
-    Visitor Traffic Real Time Statistics <= 1.13 - Cross-Site Request Forgery
+    Visitor Traffic Real Time Statistics <= 2.13 - Cross-Site Request Forgery to Arbitrary Plugin Installation/Activation
   author: topscoder
   severity: medium
   description: >
-    
+    The Visitor Traffic Real Time Statistics Plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 2.13. This is due to missing or incorrect nonce validation on the 'cp_plugins_do_button_job_later_callback' AJAX action. This makes it possible for unauthenticated attackers to install and activate other plugins via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ae741363-b0aa-4263-bb49-d3baa213167a?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ea4e9263-36f7-490c-9dad-d3b806bcfdf4?source=api-prod
   classification:
-    cvss-metrics: 
-    cvss-score: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:H
+    cvss-score: 8.8
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/visitors-traffic-real-time-statistics/"
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.13')
+          - compare_versions(version, '<= 2.13')

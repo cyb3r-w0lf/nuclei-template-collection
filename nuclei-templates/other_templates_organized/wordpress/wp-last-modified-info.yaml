@@ -1,17 +1,19 @@
-id: wp-last-modified-info
+id: wp-last-modified-info-d5ebe95b583f629185f44767adcbce9b
 
 info:
-  name: "WP Last Modified Info <= 1.6.5 - Stored Cross-Site Scripting"
+  name: >
+    WP Last Modified Info <= 1.6.5 - Stored Cross-Site Scripting
   author: topscoder
   severity: medium
-  description: "The WP Last Modified Info plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the ‘Custom Message to Display on Posts’ text field in versions up to, and including, 1.6.5 due to insufficient input sanitization and output escaping. This makes it possible for Admin+ attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page."
+  description: >
+    The WP Last Modified Info plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the ‘Custom Message to Display on Posts’ text field in versions up to, and including, 1.6.5 due to insufficient input sanitization and output escaping. This makes it possible for Admin+ attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.
   reference:
-    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-wp-last-modified-info-cross-site-scripting-1-6-5/
-    - https://wpscan.com/vulnerability/c766e6bf-6608-40bd-af4d-5ea254c8353c
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9694c8b6-3e2f-499f-bdac-eed78d89e08a?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:N
     cvss-score: 5.5
-    cve-id:
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/wp-last-modified-info/"
     google-query: inurl:"/wp-content/plugins/wp-last-modified-info/"

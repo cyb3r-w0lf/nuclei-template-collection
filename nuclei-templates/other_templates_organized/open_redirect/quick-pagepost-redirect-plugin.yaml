@@ -1,14 +1,15 @@
-id: quick-pagepost-redirect-plugin
+id: quick-pagepost-redirect-plugin-f2e831db47ee0091e76581fa4f070672
 
 info:
   name: >
-    Quick Page/Post Redirect Plugin < 5.0.5 - Cross-Site Request Forgery to Stored Cross-Site Scripting
+    Quick Page/Post Redirect <= 5.2.3 - Authenticated (Administrator+) Stored Cross-Site Scripting via settings
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0b6e9430-bb78-47c3-9958-4f40028c3d93?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/be841d6b-e3b6-46d2-aba8-fee20c21e933?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/quick-pagepost-redirect-plugin/"
     google-query: inurl:"/wp-content/plugins/quick-pagepost-redirect-plugin/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,quick-pagepost-redirect-plugin,medium
+  tags: cve,wordpress,wp-plugin,quick-pagepost-redirect-plugin,low
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 5.0.5')
+          - compare_versions(version, '<= 5.2.3')

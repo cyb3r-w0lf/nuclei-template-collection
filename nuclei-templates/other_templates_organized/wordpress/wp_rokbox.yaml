@@ -1,17 +1,18 @@
-id: wp_rokbox
+id: wp_rokbox-a637d92f9859918fa0b38212f7692df5
 
 info:
   name: >
-    WordPress RokBox <= 2.13 - Full Path Disclosure
+    WordPress RokBox <= 2.13 - Cross-Site Scripting
   author: topscoder
   severity: high
   description: >
-    The WordPress RokBox plugin is vulnerable to Full Path Disclosure in versions up to, and including, 2.13 via the 'rokbox.php' and 'thumb.php' files. This can allow unauthenticated attackers to extract full paths to otherwise restricted files.
+    The WordPress RokBox plugin is vulnerable to Cross-Site Scripting via the 'src' and 'abouttext' parameters in the 'thumb.php' and 'jwplayer.swf' files in versions up to, and including, 2.13 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts that execute in a victim's browser.
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/581792f3-7b57-418c-802b-2ff04f5b83bf?source=api-prod
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b2ef036e-14a5-40df-93c3-ab1a1d9accc0?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N
-    cvss-score: 7.5
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/wp_rokbox/"

@@ -1,15 +1,15 @@
-id: ltl-freight-quotes-globaltranz-edition
+id: ltl-freight-quotes-globaltranz-edition-c608840fface72777bf62793d5651b92
 
 info:
   name: >
-    LTL Freight Quotes – GlobalTranz Edition <= 2.3.11 - Unauthenticated SQL Injection
+    LTL Freight Quotes – GlobalTranz Edition <= 2.3.12 - Missing Authorization to Unauthenticated Settings Update
   author: topscoder
-  severity: critical
+  severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7eb7c846-c82b-40c8-a5ae-88b30c761ba9?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0906e9b0-5093-4ddd-8868-8fcaad8e3a5b?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/ltl-freight-quotes-globaltranz-edition/"
     google-query: inurl:"/wp-content/plugins/ltl-freight-quotes-globaltranz-edition/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,ltl-freight-quotes-globaltranz-edition,critical
+  tags: cve,wordpress,wp-plugin,ltl-freight-quotes-globaltranz-edition,high
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.3.11')
+          - compare_versions(version, '<= 2.3.12')

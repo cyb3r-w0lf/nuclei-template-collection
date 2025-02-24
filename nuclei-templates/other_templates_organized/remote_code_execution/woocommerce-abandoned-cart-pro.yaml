@@ -1,4 +1,4 @@
-id: woocommerce-abandoned-cart-pro
+id: woocommerce-abandoned-cart-pro-882ff89d5e7160e359187d2adde9a1b3
 
 info:
   name: >
@@ -8,6 +8,7 @@ info:
   description: >
     
   reference:
+    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/a9cc5c6d-4396-4ebf-8788-f01dd9e9cfbc?source=api-scan
   classification:
     cvss-metrics: 

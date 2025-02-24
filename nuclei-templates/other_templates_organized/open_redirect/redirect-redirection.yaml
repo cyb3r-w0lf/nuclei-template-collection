@@ -1,16 +1,17 @@
-id: redirect-redirection
+id: redirect-redirection-f99aabe2932cbe5b21a08f4f3f764f4b
 
 info:
   name: >
-    Redirect Redirection <= 1.1.3 - Missing Authorization in 'addRedirectRule' function
+    Redirect Redirection <= 1.1.3 - Cross-Site Request Forgery via 'saveRedirectSettings' function
   author: topscoder
   severity: medium
   description: >
-    The Redirect Redirection plugin for WordPress is vulnerable to unauthorized modification of data due to a missing capability check on the addRedirectRule function called via an AJAX action in versions up to, and including, 1.1.3. This makes it possible for authenticated attackers with subscriber-level access, and above, to add redirect rules to a vulnerable site.
+    The Redirect Redirection plugin for WordPress is vulnerable to Cross-Site Request Forgery in versions up to, and including, 1.1.3. This is due to missing or incorrect nonce validation on the saveRedirectSettings function. This makes it possible for unauthenticated attackers to modify redirect settings, via a forged request granted they can trick a site administrator into performing an action such as clicking on a link.
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b57dd8e3-e3e1-4d6b-b9dd-b5a24c4886b4?source=api-prod
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8b421330-dd3c-4af0-9f42-95430117eb9b?source=api-prod
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:L/A:N
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N
     cvss-score: 4.3
     cve-id: 
   metadata:

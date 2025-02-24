@@ -1,14 +1,15 @@
-id: teachpress
+id: teachpress-71a6a913304ecbe45405f8271c619dfb
 
 info:
   name: >
-    teachPress <= 9.0.5 - Cross-Site Request Forgery via delete_database()
+    teachPress <= 9.0.2 - Reflected Cross-Site Scripting via meta_field_id  and cite_id
   author: topscoder
   severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3544357f-97c9-49cb-a48d-74b60480111d?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a33cc275-aa0d-4b8b-863a-6a32fac37512?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 9.0.5')
+          - compare_versions(version, '< 9.0.3')

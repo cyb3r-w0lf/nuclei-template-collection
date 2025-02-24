@@ -1,17 +1,18 @@
-id: securimage-wp
+id: securimage-wp-a650d5e4075d3be8f2ccf7aa932cdbb7
 
 info:
   name: >
-    Securimage-WP <= 3.6.16 - Cross-Site Request Forgery
+    Securimage-WP Plugin < 3.5.1 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
   description: >
-    
+    The Securimage-WP plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the ‘PHP_SELF’ parameter in versions up to, and including, 3.2.4 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/36f41de5-50d5-47ca-bbd0-eca3b756a0cd?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/22faab6d-a63f-4052-b7c6-92e11e4ca723?source=api-prod
   classification:
-    cvss-metrics: 
-    cvss-score: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/securimage-wp/"
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.6.16')
+          - compare_versions(version, '< 3.5.1')

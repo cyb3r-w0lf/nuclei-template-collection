@@ -1,23 +1,24 @@
-id: wpjobboard
+id: wpjobboard-3dee8597113ae14ae581012f1f6948c9
 
 info:
   name: >
-    WP Job Board <= 4.4.4 - SQL Injection
+    WPJobBoard <= 5.6.4 - Reflected Cross-Site Scripting & Cross-Frame Scripting
   author: topscoder
-  severity: critical
+  severity: medium
   description: >
-    
+    The WPJobBoard plugin for WordPress is vulnerable to Reflected Cross-Site Scripting and Cross-Frame Scripting via the ‘query' and 'location’ parameters in versions up to, and including, 5.6.4 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5bfedb93-76e6-4d3f-bf44-1e6d8947c7d1?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/414013e9-5baa-4f4f-bf67-f0e821ece807?source=api-prod
   classification:
-    cvss-metrics: 
-    cvss-score: 
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/wpjobboard/"
     google-query: inurl:"/wp-content/plugins/wpjobboard/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wpjobboard,critical
+  tags: cve,wordpress,wp-plugin,wpjobboard,medium
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 4.5')
+          - compare_versions(version, '<= 5.6.4')

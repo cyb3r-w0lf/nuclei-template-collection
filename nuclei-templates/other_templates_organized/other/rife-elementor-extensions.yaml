@@ -1,14 +1,15 @@
-id: rife-elementor-extensions
+id: rife-elementor-extensions-dc6023965b15500378ecf0767d5c2628
 
 info:
   name: >
-    Rife Elementor Extensions & Templates <= 1.1.5 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    Rife Elementor Extensions & Templates <= 1.2.5 - Authenticated (Contributor+) Stored Cross-Site Scripting via Writing Effect Headline Shortcode
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0f4bba27-efdc-4b2d-80be-4a5c17ef5e7c?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/520555b4-35e8-4ec1-85b8-3a43b5209661?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 1.1.6')
+          - compare_versions(version, '<= 1.2.5')

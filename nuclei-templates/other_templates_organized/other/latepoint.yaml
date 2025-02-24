@@ -1,31 +1,31 @@
-id: latepoint
+id: latepoint-4454330315b8dc897418f67ccb20b6fc
 
 info:
   name: >
-    LatePoint Plugin <= 4.9.9 - Missing Authorization and Sensitive Information Exposure via IDOR
+    LatePoint <= 5.0.11 - Unauthenticated Arbitrary User Password Change via SQL Injection
   author: topscoder
-  severity: high
+  severity: critical
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6215fa9f-06bc-4dc8-b1f5-a3bb75749f1d?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5c9a23a3-5eb5-4f5b-bf32-c9d163426f29?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
     cve-id: 
   metadata:
-    fofa-query: "wp-content/plugins/LatePoint/"
-    google-query: inurl:"/wp-content/plugins/LatePoint/"
+    fofa-query: "wp-content/plugins/latepoint/"
+    google-query: inurl:"/wp-content/plugins/latepoint/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,LatePoint,high
+  tags: cve,wordpress,wp-plugin,latepoint,critical
 
 http:
   - method: GET
     redirects: true
     max-redirects: 3
     path:
-      - "{{BaseURL}}/wp-content/plugins/LatePoint/readme.txt"
+      - "{{BaseURL}}/wp-content/plugins/latepoint/readme.txt"
 
     extractors:
       - type: regex
@@ -51,9 +51,9 @@ http:
 
       - type: word
         words:
-          - "LatePoint"
+          - "latepoint"
         part: body
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.9.9')
+          - compare_versions(version, '<= 5.0.11')

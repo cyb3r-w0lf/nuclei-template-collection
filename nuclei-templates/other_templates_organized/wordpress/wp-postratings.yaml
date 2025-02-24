@@ -1,14 +1,15 @@
-id: wp-postratings
+id: wp-postratings-f32f0d9e56b27a770dd9307119109eab
 
 info:
   name: >
-    WP-PostRatings <= 1.91 - IP Spoofing
+    WP-PostRatings <= 1.91.1 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6aed9434-1681-47d6-bbc1-0815db548a24?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/11dbc647-fa96-4c63-8f13-0c8ea6f33919?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.91')
+          - compare_versions(version, '<= 1.91.1')

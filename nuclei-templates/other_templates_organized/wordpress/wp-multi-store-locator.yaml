@@ -1,14 +1,15 @@
-id: wp-multi-store-locator
+id: wp-multi-store-locator-5004bc040e2b38826c53199d46d9bb5d
 
 info:
   name: >
-    WP Multi Store Locator <= 2.4 - Authenticated (Contributor+) Stored Cross-Site Scripting
+    WP Multistore Locator — WP Store Locator Plugin: Effortless Integration With Snazzy Maps <= 2.5.0 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b9da31ff-4173-4aee-a3a6-8eebaa0d71ab?source=api-scan
+    - https://github.com/topscoder/nuclei-wordfence-cve
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/74ec7886-153a-44f2-9603-d4f1780132ad?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -17,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wp-multi-store-locator/"
     google-query: inurl:"/wp-content/plugins/wp-multi-store-locator/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-multi-store-locator,low
+  tags: cve,wordpress,wp-plugin,wp-multi-store-locator,medium
 
 http:
   - method: GET
@@ -55,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.4')
+          - compare_versions(version, '<= 2.5.0')
