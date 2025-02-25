@@ -1,17 +1,14 @@
 id: pop3
 info:
-  name: XMail pop3d
+  name: Synametrics Xeams pop3d
   author: nmap,cn-kali-team
   tags: detect,tech,pop3,service
   severity: info
   metadata:
-    hostname: $1
-    operating_system: Linux
-    product: xmail
+    product: xeams
     rarity: 0
-    vendor: davide_libenzi
+    vendor: synametrics
     verified: true
-    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -22,4 +19,4 @@ tcp:
   - name: pop3
     type: regex
     regex:
-    - '^\+OK <[\d.]+@([-\w_.]+)> \[XMail ([\d.]+) \(Linux/Ix86\) POP3 Server\] service ready; '
+    - ^\+OK Synametrics POP3 server ready \d\d/\d\d/\d\d \d\d:\d\d [AP]M\r\n

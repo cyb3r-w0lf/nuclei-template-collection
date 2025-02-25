@@ -1,12 +1,14 @@
 id: smtp
 info:
-  name: Smail-ESMTP
+  name: SLmail smtpd
   author: nmap,cn-kali-team
   tags: detect,tech,smtp,service
   severity: info
   metadata:
+    hostname: $1
+    operating_system: Windows
     rarity: 0
-    version: $1
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +19,4 @@ tcp:
   - name: smtp
     type: regex
     regex:
-    - (?i)^220[- ][^ ]+ Smail-([^ ]+) .*ESMTP
+    - ^220 ([-\w_.]+) SMTP Server SLmail ([\d.]+) Ready ESMTP spoken here\r\n

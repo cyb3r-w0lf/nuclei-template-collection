@@ -1,14 +1,12 @@
 id: imap
 info:
-  name: Dovecot imapd
+  name: WebSTAR imapd
   author: nmap,cn-kali-team
   tags: detect,tech,imap,service
   severity: info
   metadata:
-    product: dovecot
+    operating_system: Mac OS X
     rarity: 0
-    vendor: dovecot
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +17,4 @@ tcp:
   - name: imap
     type: regex
     regex:
-    - ^\* OK Waiting for authentication process to respond\.\.\r\n
+    - ^\* OK WebSTAR Mail ready\r\n

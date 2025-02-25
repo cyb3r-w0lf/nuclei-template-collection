@@ -1,12 +1,13 @@
 id: telnet
 info:
-  name: Zoom X6 ADSL router telnetd
+  name: Siemens 5940 T1E1 router telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
-    device_type: broadband router
+    device_type: router
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +18,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\xff\xfb\x01\xff\xfb\x03\r\n                ,vvvdP9P\?\?\?\^   ,,,\r\n              vvd###P\^`\^         vvvvv v\r\n         vv#####\?\^                  \?\?\?\?####vv,\r\n      vv####\?\?     ,vvvdP\?\?\?\^  ,,,        \?\?##\^\r\n     v#####\?    ,vvd##P\?\^        #\?#v#vvv\r\n   v#####\?    v###P\^    ,vvv,        ''\?#\?,\r\n  ######\?   ####\?\^ ,vd#P\?\^     `\?\?\?##\r\n  #####\?   v####  ,d##P\^           ''''\r\n ######   v####  \]###L                   _   _          _                  ___\r\n #####\?   v####  \]##L                   /   / \\  \|\\ \|  \|_  \\/   /\\   \|\\ \|   \|\r\n ######    ####  \]###L                  \\_  \\_/  \| \\\|  \|_  /\\  /--\\  \| \\\|   \|\r\n'
+    - '^\r\nSiemens 5940 T1E1 \[COMBO\] Router \(5940-001\) v([\w._-]+) Ready\r\n\xff\xfb\x01\xff\xfb\x03\xff\xfd\x01\xff\xfe\x01Username: '

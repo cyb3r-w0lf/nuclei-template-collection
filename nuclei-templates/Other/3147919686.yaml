@@ -1,16 +1,15 @@
-id: http-proxy
+id: http
 info:
-  name: Microsoft ISA Server http proxy
+  name: nginx
   author: nmap,cn-kali-team
-  tags: detect,tech,http-proxy,service
+  tags: detect,tech,http,service
   severity: info
   metadata:
     fallback:
     - get-request
-    operating_system: Windows
-    product: isa_server
+    product: nginx
     rarity: 5
-    vendor: microsoft
+    vendor: igor_sysoev
     verified: true
 tcp:
 - name: rtsprequest
@@ -20,7 +19,7 @@ tcp:
   - '{{Hostname}}'
   port: 80,554,3052,3372,5000,7070,8080,10000
   extractors:
-  - name: http-proxy
+  - name: http
     type: regex
     regex:
-    - ^HTTP/1\.1 400 Bad Request \( The data is invalid\.  \)\r\n
+    - ^<html>\r\n<head><title>400 Bad Request</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>400 Bad Request</h1></center>\r\n<hr><center>nginx</center>\r\n</body>\r\n</html>\r\n$
