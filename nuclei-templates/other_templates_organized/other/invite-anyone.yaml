@@ -1,24 +1,23 @@
-id: invite-anyone-a6f861a5a3d65f866c7262a7eb365db7
+id: invite-anyone
 
 info:
   name: >
-    Invite Anyone <= 1.3.18 - PHP Object Injection
+    Invite Anyone <= 1.3.14 - Change of Email Invitation Content
   author: topscoder
-  severity: critical
+  severity: low
   description: >
-    The Invite Anyone plugin for WordPress is vulnerable to PHP Object Injection in versions up to, and including, 1.3.18 via deserialization of untrusted input from the 'invite-anyone/trunk/by-email/by-email.php' file. This allows unauthenticated attackers to inject a PHP Object.
+    
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b77c3d65-23c0-4bda-afea-9cad00fc04d6?source=api-prod
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/80388709-77ee-4f18-9da2-b99f562a20cd?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    cvss-score: 9.8
+    cvss-metrics: 
+    cvss-score: 
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/invite-anyone/"
     google-query: inurl:"/wp-content/plugins/invite-anyone/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,invite-anyone,critical
+  tags: cve,wordpress,wp-plugin,invite-anyone,low
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.3.18')
+          - compare_versions(version, '< 1.3.15')

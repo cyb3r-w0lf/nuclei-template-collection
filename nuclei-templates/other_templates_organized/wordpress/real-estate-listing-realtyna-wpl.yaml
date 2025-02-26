@@ -1,15 +1,14 @@
-id: real-estate-listing-realtyna-wpl-51ddc21c56aeaae7a80c3f0f12d9836d
+id: real-estate-listing-realtyna-wpl
 
 info:
   name: >
-    Realtyna Organic IDX plugin <= 4.14.13 - Authenticated (Admin+) Arbitrary File Upload
+    Realtyna Organic IDX plugin <= 4.14.4 - Unauthenticated SQL Injection
   author: topscoder
-  severity: low
+  severity: critical
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e2f9b5ae-bbb9-4b1d-8762-6889a9b8a209?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5f800156-1ccc-431f-9b2b-3b2ba3428bbc?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/real-estate-listing-realtyna-wpl/"
     google-query: inurl:"/wp-content/plugins/real-estate-listing-realtyna-wpl/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,real-estate-listing-realtyna-wpl,low
+  tags: cve,wordpress,wp-plugin,real-estate-listing-realtyna-wpl,critical
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.14.13')
+          - compare_versions(version, '<= 4.14.4')

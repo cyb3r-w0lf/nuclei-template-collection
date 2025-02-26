@@ -1,15 +1,14 @@
-id: gd-rating-system-c89a187f88eedcc6c6e57fe2bcd32270
+id: gd-rating-system
 
 info:
   name: >
-    GD Rating System <= 3.6.1 - Authenticated (Contributor+) Stored Cross-Site Scripting via extra_class Parameter
+    GD Rating System <= 2.3 - Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/66cad18d-a433-47f1-9cb6-c619c8717a0d?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c14f473f-ca49-4610-b5df-9eb0e064ece5?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/gd-rating-system/"
     google-query: inurl:"/wp-content/plugins/gd-rating-system/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,gd-rating-system,low
+  tags: cve,wordpress,wp-plugin,gd-rating-system,high
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.6.1')
+          - compare_versions(version, '< 2.3.1')

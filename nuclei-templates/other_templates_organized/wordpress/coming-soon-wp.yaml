@@ -1,15 +1,14 @@
-id: coming-soon-wp-8888acdc9a41200794ba7d8d7c0ca09e
+id: coming-soon-wp
 
 info:
   name: >
-    Coming Soon, Under Construction & Maintenance Mode By Dazzler <= 1.6.3 - Admin+ Stored Cross-Site Scripting
+    Coming Soon, Under Construction & Maintenance Mode By Dazzler <= 2.1.2 - Maintenance Mode Bypass
   author: topscoder
-  severity: high
+  severity: low
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1e9506bd-10a6-40ab-8162-cf4fad9cb882?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6dc144cd-7119-477f-9fa1-b00cab215077?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/coming-soon-wp/"
     google-query: inurl:"/wp-content/plugins/coming-soon-wp/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,coming-soon-wp,high
+  tags: cve,wordpress,wp-plugin,coming-soon-wp,low
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.6.3')
+          - compare_versions(version, '<= 2.1.2')

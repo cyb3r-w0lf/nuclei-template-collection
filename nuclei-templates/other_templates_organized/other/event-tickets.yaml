@@ -1,24 +1,23 @@
-id: event-tickets-c05d33ee0c0bdbe9a5d4708de1d3ae81
+id: event-tickets
 
 info:
   name: >
-    Freemius SDK <= 2.4.2 - Missing Authorization Checks
+    Event Tickets and Registration  <= 5.8.0  Events Tickets Plus <= 5.9.0 - Authenticated (Contributor+) Information Exposure
   author: topscoder
-  severity: medium
+  severity: low
   description: >
-    The Freemius SDK, as used by hundreds of WordPress plugin and theme developers, was vulnerable to Cross-Site Request Forgery and Information disclosure due to missing capability checks and nonce protection on the _get_debug_log, _get_db_option, and the _set_db_option functions in versions up to, and including 2.4.2. Any WordPress plugin or theme running a version of Freemius less than 2.4.3 is vulnerable.
+    
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/39fb0499-9ab4-4a2f-b0db-ece86bcf4d42?source=api-prod
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5c9d08f5-7c94-40e7-979f-023456aeb54e?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L
-    cvss-score: 6.3
+    cvss-metrics: 
+    cvss-score: 
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/event-tickets/"
     google-query: inurl:"/wp-content/plugins/event-tickets/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,event-tickets,medium
+  tags: cve,wordpress,wp-plugin,event-tickets,low
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 5.3.0.1')
+          - compare_versions(version, '<= 5.8.0')

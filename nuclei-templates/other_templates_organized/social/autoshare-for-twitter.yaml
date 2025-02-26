@@ -1,15 +1,14 @@
-id: autoshare-for-twitter-b98496a862f051b9926ad8f184b175ee
+id: autoshare-for-twitter
 
 info:
   name: >
-    Terser < 4.8.1 and 5.0.0-5.14.1 - Regular Expression Denial of Service
+    decode-uri-component <= 0.2.1 - Denial of Service
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d535c069-cfa3-4c41-9a01-b4c4e7c75764?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e3147a94-056a-4454-8815-44c0b9d1de81?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.1.2')
+          - compare_versions(version, '<= 1.2.1')

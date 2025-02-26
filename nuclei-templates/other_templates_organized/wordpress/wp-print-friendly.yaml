@@ -1,15 +1,14 @@
-id: wp-print-friendly-1eb0759933e12008ebe650787f91bbc2
+id: wp-print-friendly
 
 info:
   name: >
     WP Print Friendly <= 0.6 - Cross-Site Scripting
   author: topscoder
-  severity: high
+  severity: medium
   description: >
-    The WP Print Friendly plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the ‘add_query_arg’ function in versions up to, and including, 0.6 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.
+    The WP Print Friendly plugin for WordPress is vulnerable to Cross-Site Scripting in versions up to, and including, 0.6 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts that execute in a victim's browser.
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c7bfc7bf-19bb-43aa-95fc-7f4558699f41?source=api-prod
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/980ed456-b6a9-4ca0-99ce-513b20af6d8f?source=api-prod
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
     cvss-score: 6.1
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/wp-print-friendly/"
     google-query: inurl:"/wp-content/plugins/wp-print-friendly/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-print-friendly,high
+  tags: cve,wordpress,wp-plugin,wp-print-friendly,medium
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 0.6.1')
+          - compare_versions(version, '<= 0.6')

@@ -1,15 +1,14 @@
-id: archivist-custom-archive-templates-6f4543b7700ecf3ea39a36f368bbffcb
+id: archivist-custom-archive-templates
 
 info:
   name: >
-    Archivist – Custom Archive Templates <= 1.7.4 - Authenticated(Admin+) Stored Cross-Site Scripting
+    Archivist – Custom Archive Templates <= 1.7.5 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/90333dc7-8bdf-4a59-8001-7eb76b4bc61d?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0e230f9f-5eda-4362-973b-ada9cf425697?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/archivist-custom-archive-templates/"
     google-query: inurl:"/wp-content/plugins/archivist-custom-archive-templates/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,archivist-custom-archive-templates,low
+  tags: cve,wordpress,wp-plugin,archivist-custom-archive-templates,medium
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.7.4')
+          - compare_versions(version, '<= 1.7.5')

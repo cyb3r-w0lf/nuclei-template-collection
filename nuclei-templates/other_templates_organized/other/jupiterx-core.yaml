@@ -1,18 +1,17 @@
-id: jupiterx-core-5811a05b5cd0abb2bead7671bbc16dec
+id: jupiterx-core
 
 info:
   name: >
-    Jupiter X Core <= 2.0.9 - Missing Authorization Checks
+    JupiterX Theme <= 2.0.6 and JupiterX Core <= 2.0.6 - Authenticated Arbitrary Plugin Deactivation and Settings Modification
   author: topscoder
   severity: low
   description: >
-    The JupiterX Core plugin for WordPress suffers from several access control issues in versions up to, and including, 2.0.9. This allows authenticated users to view health check information, import templates, reset the database, create and restore partial database backups, and obtain the paths to created database backups which are protected by an .htaccess file
+    
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/52daa230-1600-4ace-9adf-3f4e9be51e9f?source=api-prod
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/147b7be2-8bbe-4e95-bfcb-1c4ff8a41a3b?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:L/A:L
-    cvss-score: 7.6
+    cvss-metrics: 
+    cvss-score: 
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/jupiterx-core/"
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.0.9')
+          - compare_versions(version, '<= 2.0.6')

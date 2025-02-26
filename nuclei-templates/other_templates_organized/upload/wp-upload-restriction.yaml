@@ -1,15 +1,14 @@
-id: wp-upload-restriction-3b5c347348b988baaab2601e987517ae
+id: wp-upload-restriction
 
 info:
   name: >
-    WP Upload Restriction <= 2.2.4 – Authenticated (Subscriber+) Stored Cross-Site Scripting
+    WP Upload Restriction <= 2.2.4 - Missing Authorization Checks
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/1257da54-e008-4e25-bc83-36246f00960e?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/205a6972-b49f-4b6d-b0de-7a047d5ee496?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/wp-upload-restriction/"
     google-query: inurl:"/wp-content/plugins/wp-upload-restriction/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-upload-restriction,low
+  tags: cve,wordpress,wp-plugin,wp-upload-restriction,high
 
 http:
   - method: GET

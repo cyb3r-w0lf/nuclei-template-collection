@@ -1,15 +1,14 @@
-id: woo-edit-templates-52ac4a41ac945104628da0254866ee1d
+id: woo-edit-templates
 
 info:
   name: >
-    Edit WooCommerce Templates <= 1.1.2 - Reflected Cross-Site Scripting via page
+    Edit WooCommerce Templates <= 1.1.1 - Unauthenticated Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: high
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3704b365-cbdf-4c74-9619-59f0a10e3c6a?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/34f7ab72-a4e3-4264-b6d3-530dd255dc87?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/woo-edit-templates/"
     google-query: inurl:"/wp-content/plugins/woo-edit-templates/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,woo-edit-templates,medium
+  tags: cve,wordpress,wp-plugin,woo-edit-templates,high
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.1.2')
+          - compare_versions(version, '<= 1.1.1')

@@ -1,24 +1,23 @@
-id: bulletin-announcements-4a810cc65741632e1fd712d53dd1f516
+id: bulletin-announcements
 
 info:
   name: >
-    Announcement & Notification Banner – Bulletin <= 3.5.1 - Authenticated (Subscriber+) Stored Cross-Site Scripting
+    Announcement & Notification Banner – Bulletin <= 3.6.0 - Missing Authorization Checks
   author: topscoder
-  severity: low
+  severity: high
   description: >
-    The Announcement & Notification Banner – Bulletin plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the 'bulletinTitle' value found in the 'formData' parameters in versions up to, and including, 3.5.1 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers with subscriber level permissions and above to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.
+    
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/337d052c-6ee2-4cd0-8a69-a4b66b25517a?source=api-prod
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d242a466-0611-4e64-8145-29f64100e62b?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N
-    cvss-score: 6.4
+    cvss-metrics: 
+    cvss-score: 
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/bulletin-announcements/"
     google-query: inurl:"/wp-content/plugins/bulletin-announcements/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,bulletin-announcements,low
+  tags: cve,wordpress,wp-plugin,bulletin-announcements,high
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.5.2')
+          - compare_versions(version, '<= 3.6.0')

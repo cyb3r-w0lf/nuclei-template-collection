@@ -1,15 +1,15 @@
-id: wpextended-9cc0ed1823b4c3428683ec68251b280e
+id: wpextended
 
 info:
   name: >
-    The Ultimate WordPress Toolkit – WP Extended <= 3.0.11 - Missing Authorization to Authenticated (Subscriber+) Stored Cross-Site Scripting
+    The Ultimate WordPress Toolkit – WP Extended <= 2.4.7 - Unauthenticated Stored Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/747d7649-bdf5-46d0-a496-59cb7eac77ac?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b825f4c2-8373-4aba-ab01-880cf0553b54?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/wpextended/"
     google-query: inurl:"/wp-content/plugins/wpextended/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wpextended,low
+  tags: cve,wordpress,wp-plugin,wpextended,high
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.0.11')
+          - compare_versions(version, '<= 2.4.7')

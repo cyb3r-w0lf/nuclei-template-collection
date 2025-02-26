@@ -1,16 +1,17 @@
 id: ssh
 info:
-  name: SilverSHielD sshd
+  name: Sysax Multi Server sshd
   author: nmap,cn-kali-team
   tags: detect,tech,ssh,service
   severity: info
   metadata:
     info: protocol $1
     operating_system: Windows
-    product: silvershield
+    product: multi_server
     rarity: 0
-    vendor: extenua
+    vendor: sysax
     verified: true
+    version: $2
 tcp:
 - name: 'null'
   inputs:
@@ -21,4 +22,4 @@ tcp:
   - name: ssh
     type: regex
     regex:
-    - ^SSH-([\d.]+)-SilverSHielD\r\n
+    - ^SSH-([\d.]+)-SysaxSSH_([\d.]+)\r\n

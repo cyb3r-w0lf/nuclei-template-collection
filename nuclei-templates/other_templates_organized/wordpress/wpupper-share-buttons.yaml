@@ -1,15 +1,14 @@
-id: wpupper-share-buttons-e1fe31b148cd8752559f4cc88dc1b62f
+id: wpupper-share-buttons
 
 info:
   name: >
-    WPUpper Share Buttons <= 3.51 - Cross-Site Request Forgery to Custom CSS Update
+    WPUpper Share Buttons <= 3.42 - Authenticated (Admin+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5ca55c87-6548-43b8-a23f-d31a51df9533?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/eda18b47-1c23-4ef5-9628-d6b5842bca04?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/wpupper-share-buttons/"
     google-query: inurl:"/wp-content/plugins/wpupper-share-buttons/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wpupper-share-buttons,medium
+  tags: cve,wordpress,wp-plugin,wpupper-share-buttons,low
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.51')
+          - compare_versions(version, '<= 3.42')

@@ -1,10 +1,11 @@
 id: telnet
 info:
-  name: Blackboard $1 POS device telnetd
+  name: Cayman-DSL router telnetd
   author: nmap,cn-kali-team
   tags: detect,tech,telnet,service
   severity: info
   metadata:
+    device_type: broadband router
     rarity: 0
 tcp:
 - name: 'null'
@@ -16,4 +17,4 @@ tcp:
   - name: telnet
     type: regex
     regex:
-    - '^\xff\xfb\x01\r\0\n\n\nBlackboard (AT\d+) Configuration\r\0\n\nEnter Password > '
+    - '^\xff\xfb\x01\xff\xfb\x03\xff\xfe\x01\n\rlogin: $'

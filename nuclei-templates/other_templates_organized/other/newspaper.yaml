@@ -1,31 +1,29 @@
-id: newspaper-d5cbaf3bfa08e436a493fc36e99f7f2f
+id: newspaper
 
 info:
-  name: >
-    Newspaper <= 10.3.3 - Reflected Cross-Site Scripting
+  name: "Newspaper < 9.2.2 - Cross-Site Scripting"
   author: topscoder
   severity: medium
-  description: >
-    The Newspaper plugin for WordPress is vulnerable to Reflected Cross-Site Scripting in versions up to, and including, 10.3.3 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.
+  description: "The Newspaper theme for WordPress is vulnerable to Cross-Site Scripting in versions up to, and including, 9.2.1 due to insufficient input sanitization and output escaping. This makes it possible for attackers to inject arbitrary web scripts that execute in a victim's browser."
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/441f5764-eab6-40fe-80cd-65da327b39b2?source=api-prod
+    - https://themeforest.net/item/newspaper/5489609
+    - https://tagdiv.com/newspaper/
   classification:
     cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
     cvss-score: 6.1
-    cve-id: 
+    cve-id:
   metadata:
-    fofa-query: "wp-content/themes/Newspaper/"
-    google-query: inurl:"/wp-content/themes/Newspaper/"
+    fofa-query: "wp-content/themes/newspaper/"
+    google-query: inurl:"/wp-content/themes/newspaper/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-theme,Newspaper,medium
+  tags: cve,wordpress,wp-theme,newspaper,medium
 
 http:
   - method: GET
     redirects: true
     max-redirects: 3
     path:
-      - "{{BaseURL}}/wp-content/themes/Newspaper/style.css"
+      - "{{BaseURL}}/wp-content/themes/newspaper/style.css"
 
     extractors:
       - type: regex
@@ -51,9 +49,9 @@ http:
 
       - type: word
         words:
-          - "Newspaper"
+          - "newspaper"
         part: body
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 10.3.3')
+          - compare_versions(version, '< 9.2.2')

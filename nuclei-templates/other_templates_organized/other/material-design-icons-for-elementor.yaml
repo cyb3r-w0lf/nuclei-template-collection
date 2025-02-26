@@ -1,15 +1,14 @@
-id: material-design-icons-for-elementor-8f7e6afbb5079547f8fa0d8233cb398d
+id: material-design-icons-for-elementor
 
 info:
   name: >
-    Material Design Icons for Page Builders <= 1.4.2 - Authenticated (Contributor+) Stored Cross-Site Scripting via Shortcode
+    Material Design Icons for Page Builders <= 1.4.2 - Cross-Site Request Forgery
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c2075960-fde4-4ca9-a000-23fdd6d5de1c?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/2482ef4b-697a-45a0-b45e-85b2af5b4735?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/material-design-icons-for-elementor/"
     google-query: inurl:"/wp-content/plugins/material-design-icons-for-elementor/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,material-design-icons-for-elementor,low
+  tags: cve,wordpress,wp-plugin,material-design-icons-for-elementor,medium
 
 http:
   - method: GET

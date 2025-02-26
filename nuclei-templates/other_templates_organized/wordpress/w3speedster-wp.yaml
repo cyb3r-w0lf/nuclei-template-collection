@@ -1,15 +1,14 @@
-id: w3speedster-wp-e6c5102070e09a142d85510888d85086
+id: w3speedster-wp
 
 info:
   name: >
-    W3SPEEDSTER <= 7.33 - Cross-Site Request Forgery to Stored Cross-Site Scripting
+    W3SPEEDSTER <= 7.19 - Cross-Site Request Forgery via launch
   author: topscoder
   severity: medium
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/ec46ab73-8429-4cfc-8867-1ee1db22b43c?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e358355e-097c-4a6d-a21a-3d08098efff0?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 7.33')
+          - compare_versions(version, '<= 7.19')

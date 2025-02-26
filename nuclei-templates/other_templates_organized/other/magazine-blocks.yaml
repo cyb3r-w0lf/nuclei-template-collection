@@ -1,15 +1,15 @@
-id: magazine-blocks-11ff16a6851aef38c1ec4ab32962f89b
+id: magazine-blocks
 
 info:
   name: >
-    Magazine Blocks – Blog Designer, Magazine & Newspaper Website Builder, Page Builder with Posts Blocks, Post Grid <= 1.3.14 - Reflected Cross-Site Scripting
+    Magazine Blocks <= 1.3.6 - Authenticated (Author+) Stored Cross-Site Scripting
   author: topscoder
-  severity: medium
+  severity: low
   description: >
     
   reference:
     - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e4c27225-f9db-4ae5-bb1f-ce8648c216eb?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/7fdc9003-35e9-4fe9-a3e9-353d6bab525a?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +18,7 @@ info:
     fofa-query: "wp-content/plugins/magazine-blocks/"
     google-query: inurl:"/wp-content/plugins/magazine-blocks/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,magazine-blocks,medium
+  tags: cve,wordpress,wp-plugin,magazine-blocks,low
 
 http:
   - method: GET
@@ -56,4 +56,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.3.14')
+          - compare_versions(version, '<= 1.3.6')

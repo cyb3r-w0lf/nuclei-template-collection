@@ -1,15 +1,14 @@
-id: proofreading-ab19ce26df8c6ee3a94feaf2f73b49d7
+id: proofreading
 
 info:
   name: >
-    Proofreading <= 1.2.1.1 - Reflected Cross-Site Scripting
+    Proofreading <= 1.1 - Reflected Cross-Site Scripting
   author: topscoder
   severity: medium
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b3f666a3-6287-4c9b-94d3-7bc457701af2?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e76e4c4c-3f84-46b0-b305-2513714a8525?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.2.1.1')
+          - compare_versions(version, '<= 1.1')

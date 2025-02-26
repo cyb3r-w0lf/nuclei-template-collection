@@ -1,15 +1,14 @@
-id: rescue-shortcodes-bc1e054dfd7836199e21e01e2881432a
+id: rescue-shortcodes
 
 info:
   name: >
-    Rescue Shortcodes <= 2.9 - Authenticated (Contributor+) Stored Cross-Site Scripting via rescue_progressbar Shortcode
+    Rescue Shortcodes <= 2.5 - Authenticated (Contributor+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a188c615-513b-4d65-8351-d70848696297?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/6a11e7c9-f565-4a8c-895f-425c6654b5a9?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.9')
+          - compare_versions(version, '<= 2.5')

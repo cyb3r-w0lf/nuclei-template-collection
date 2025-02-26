@@ -1,15 +1,14 @@
-id: wp-ical-availability-971fd0456c674a84b6679fe3c2cad4b1
+id: wp-ical-availability
 
 info:
   name: >
-    WP iCal Availability <= 1.0.3 - Cross-Site Request Forgery
+    WP iCal Availability <= 1.0.3 - Missing Authorization
   author: topscoder
-  severity: medium
+  severity: high
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/bc3f1d4e-84f7-4878-8b06-10444caa7dcf?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c38ac30d-95dc-415e-8ea6-507ed87d34db?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/wp-ical-availability/"
     google-query: inurl:"/wp-content/plugins/wp-ical-availability/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-ical-availability,medium
+  tags: cve,wordpress,wp-plugin,wp-ical-availability,high
 
 http:
   - method: GET

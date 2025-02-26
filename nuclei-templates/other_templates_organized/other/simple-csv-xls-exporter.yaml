@@ -1,4 +1,4 @@
-id: simple-csv-xls-exporter-f2a9e8ace27464af0d9b07c29aa3fa1c
+id: simple-csv-xls-exporter
 
 info:
   name: >
@@ -8,7 +8,6 @@ info:
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/219614b7-2394-490c-baf4-14a12249c4b5?source=api-scan
   classification:
     cvss-metrics: 

@@ -1,24 +1,23 @@
-id: wp-levoslideshow-f38426e337479cd79f277b7043c6c82b
+id: wp-levoslideshow
 
 info:
   name: >
-    Levo Slideshow <= 2.3 - Cross-Site Scripting
+    Levo Slideshow <= 2.3 - Arbitrary File Upload
   author: topscoder
-  severity: low
+  severity: critical
   description: >
-    The Levo Slideshow plugin for WordPress is vulnerable to Stored Cross-Site Scripting via the ‘image_description’ parameter in versions up to, and including, 2.3 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.
+    
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/81b9cebd-eff6-4650-977e-ee81089e683a?source=api-prod
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/9acdbd48-8d38-4d75-b2b1-c993e25cf92a?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:L/I:L/A:N
-    cvss-score: 6.4
+    cvss-metrics: 
+    cvss-score: 
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/wp-levoslideshow/"
     google-query: inurl:"/wp-content/plugins/wp-levoslideshow/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-levoslideshow,low
+  tags: cve,wordpress,wp-plugin,wp-levoslideshow,critical
 
 http:
   - method: GET

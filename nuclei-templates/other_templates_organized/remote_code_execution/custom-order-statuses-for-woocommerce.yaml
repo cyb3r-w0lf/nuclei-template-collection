@@ -1,15 +1,14 @@
-id: custom-order-statuses-for-woocommerce-a09537d5cd9de946cae705164a03d731
+id: custom-order-statuses-for-woocommerce
 
 info:
   name: >
-    Custom Order Statuses for WooCommerce <= 1.5.2 - Cross-Site Request Forgery
+    Custom Order Statuses for WooCommerce <= 1.5.2 - Missing Authorization
   author: topscoder
-  severity: medium
+  severity: high
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a6dadbb0-1ebe-43ff-b220-0c93d0f51d87?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e0981349-e627-4a3c-9972-01111a6b6140?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/custom-order-statuses-for-woocommerce/"
     google-query: inurl:"/wp-content/plugins/custom-order-statuses-for-woocommerce/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,custom-order-statuses-for-woocommerce,medium
+  tags: cve,wordpress,wp-plugin,custom-order-statuses-for-woocommerce,high
 
 http:
   - method: GET

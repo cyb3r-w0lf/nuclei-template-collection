@@ -1,24 +1,23 @@
-id: mstore-api-105ed18ef2da652c329af90470918787
+id: mstore-api
 
 info:
   name: >
-    MStore API < 3.4.5 - Arbitrary File Upload
+    MStore API <= 3.9.6 - Cross-Site Request Forgery to Order Title Update
   author: topscoder
-  severity: critical
+  severity: medium
   description: >
-    The MStore API plugin for WordPress is vulnerable to arbitrary file uploads due to missing authorization via the api/flutter_woo/config_file REST endpoint in versions before 3.4.5. This makes it possible for unauthenticated attackers to upload arbitrary files on the affected sites server which may make remote code execution possible.
+    
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/04b7a2ba-e299-4781-8ee6-644938bf9629?source=api-prod
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/cb5cb1a5-30d2-434f-90f9-d37aecfbe158?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    cvss-score: 9.8
+    cvss-metrics: 
+    cvss-score: 
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/mstore-api/"
     google-query: inurl:"/wp-content/plugins/mstore-api/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,mstore-api,critical
+  tags: cve,wordpress,wp-plugin,mstore-api,medium
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '< 3.4.5')
+          - compare_versions(version, '<= 3.9.6')

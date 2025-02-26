@@ -1,15 +1,14 @@
-id: wp-email-capture-fd302c5fd55b71c99b28f210cb840fa9
+id: wp-email-capture
 
 info:
   name: >
-    WordPress Email Marketing Plugin – WP Email Capture <= 3.10 - Information Exposure via wp_email_capture_options_process
+    WordPress Email Marketing Plugin – WP Email Capture <= 3.10 - Missing Authorization to Email Capture List Download
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/b4570948-1625-44b3-8af6-73765d9710ee?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a41d78b9-9bdb-48dd-b3ec-2559e79fa251?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/wp-email-capture/"
     google-query: inurl:"/wp-content/plugins/wp-email-capture/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wp-email-capture,low
+  tags: cve,wordpress,wp-plugin,wp-email-capture,high
 
 http:
   - method: GET

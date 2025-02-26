@@ -1,24 +1,23 @@
-id: woocommerce-customers-manager-5ed7cb1ecbd9d6039eb1469b27543751
+id: woocommerce-customers-manager
 
 info:
   name: >
-    Woocommerce Customers Manager < 26.6 - Reflected Cross-Site Scripting
+    WooCommerce Customers Manager <= 29.6 - Authenticated (Subscriber+) SQL Injection
   author: topscoder
-  severity: medium
+  severity: low
   description: >
-    The Woocommerce Customers Manager plugin for WordPress is vulnerable to Reflected Cross-Site Scripting via the ‘wccm_customers_ids’ and 'wccm_customers_emails' parameters in versions before 26.6 due to insufficient input sanitization and output escaping. This makes it possible for unauthenticated attackers to inject arbitrary web scripts in pages that execute if they can successfully trick a user into performing an action such as clicking on a link.
+    
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0444eff7-88bd-4933-94c5-bcb21a044b88?source=api-prod
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/a14cf955-e354-49c3-a685-d5bd51c79ba9?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
-    cvss-score: 6.1
+    cvss-metrics: 
+    cvss-score: 
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/woocommerce-customers-manager/"
     google-query: inurl:"/wp-content/plugins/woocommerce-customers-manager/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,woocommerce-customers-manager,medium
+  tags: cve,wordpress,wp-plugin,woocommerce-customers-manager,low
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 26.5')
+          - compare_versions(version, '<= 29.6')

@@ -1,15 +1,14 @@
-id: login-with-phone-number-aea0c3c842fc83ee23cca8b6e9587f2e
+id: login-with-phone-number
 
 info:
   name: >
-    Login with phone number <= 1.7.49 - Authenticated (Subscriber+) Authorization Bypass to Privilege Escalation
+    Login with phone number  <= 1.4.2 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: low
+  severity: medium
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/de7cde2c-142c-4004-9302-be335265d87d?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3819ffc4-8889-4199-9dd6-140490a17ed6?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/login-with-phone-number/"
     google-query: inurl:"/wp-content/plugins/login-with-phone-number/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,login-with-phone-number,low
+  tags: cve,wordpress,wp-plugin,login-with-phone-number,medium
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.7.49')
+          - compare_versions(version, '< 1.4.2')

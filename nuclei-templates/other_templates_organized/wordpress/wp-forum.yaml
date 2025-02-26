@@ -1,18 +1,18 @@
 id: wp-forum
 
 info:
-  name: "WP Forum <= 2.4 - SQL Injection"
+  name: >
+    WP Forum <= 2.4 - SQL Injection
   author: topscoder
   severity: critical
-  description: "The WP Forum plugin for WordPress is vulnerable to blind SQL Injection via the ‘topic’ parameter in versions up to, and including, 2.4 due to insufficient escaping on the user supplied parameter and lack of sufficient preparation on the existing SQL query.  This makes it possible for authenticated attackers to append additional SQL queries into already existing queries that can be used to extract sensitive information from the database."
+  description: >
+    
   reference:
-    - https://cxsecurity.com/issue/WLB-2013020035
-    - https://patchstack.com/database/vulnerability/forum/wordpress-forum-plugin-2-4-sql-injection
-    - https://www.acunetix.com/vulnerabilities/web/wordpress-plugin-wp-forum-sql-injection-2-4/
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3d7b4428-99ac-4f84-8595-941124121eb2?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H
-    cvss-score: 9.8
-    cve-id:
+    cvss-metrics: 
+    cvss-score: 
+    cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/wp-forum/"
     google-query: inurl:"/wp-content/plugins/wp-forum/"

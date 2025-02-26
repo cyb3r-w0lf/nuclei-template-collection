@@ -1,15 +1,14 @@
-id: romethemeform-97d475d27d126b1e5315ae63edf8641c
+id: romethemeform
 
 info:
   name: >
-    RomethemeForm For Elementor <= 1.1.5 - Missing Authorization via export_entries, rtformnewform, and rtformupdate
+    RomethemeForm For Elementor <= 1.1.2 - Missing Authorization
   author: topscoder
   severity: high
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/81a293ea-abda-4c90-a109-791ca5ba89a4?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/0d6adf41-6cb1-4c11-940d-fabc9298f3af?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.1.5')
+          - compare_versions(version, '<= 1.1.2')

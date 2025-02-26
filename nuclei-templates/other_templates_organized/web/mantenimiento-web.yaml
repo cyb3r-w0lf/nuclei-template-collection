@@ -1,4 +1,4 @@
-id: mantenimiento-web-046275a7381cc3ce245b52cf68bd68ac
+id: mantenimiento-web
 
 info:
   name: >
@@ -8,7 +8,6 @@ info:
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/aefb7e34-ec48-4e29-b3aa-85901e12d21c?source=api-scan
   classification:
     cvss-metrics: 

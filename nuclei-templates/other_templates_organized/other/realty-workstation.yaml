@@ -1,15 +1,14 @@
-id: realty-workstation-27a23d5e9a66c80716f7f53c1fd83306
+id: realty-workstation
 
 info:
   name: >
-    Realty Workstation <= 1.0.45 - Authentication Bypass to Account Takeover
+    Realty Workstation <= 1.0.9 - Authenticated SQL Injection
   author: topscoder
-  severity: critical
+  severity: low
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5c9320f9-2e1a-4d76-850b-fa6fb68cd09f?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/c5b2e22c-3811-4bf8-a8da-2ca9c38333dc?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/realty-workstation/"
     google-query: inurl:"/wp-content/plugins/realty-workstation/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,realty-workstation,critical
+  tags: cve,wordpress,wp-plugin,realty-workstation,low
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.0.45')
+          - compare_versions(version, '<= 1.0.9')

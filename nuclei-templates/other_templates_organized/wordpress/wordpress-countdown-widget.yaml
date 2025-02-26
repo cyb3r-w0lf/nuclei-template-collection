@@ -1,18 +1,17 @@
-id: wordpress-countdown-widget-c95d408d670954608cb516f25a54ecee
+id: wordpress-countdown-widget
 
 info:
   name: >
-    WordPress Countdown Widget <= 3.1.9.1 - Authenticated (Administrator+) Stored Cross-Site Scripting
+    WordPress Countdown Widget <= 3.1.9.2 - Authenticated (Administrator+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
-    The WordPress Countdown Widget plugin for WordPress is vulnerable to Stored Cross-Site Scripting via several parameters when saving overall plugin language settings in versions up to, and including, 3.1.9.1 due to insufficient input sanitization and output escaping. This makes it possible for authenticated attackers, with administrator-level permissions and above, to inject arbitrary web scripts in pages that will execute whenever a user accesses an injected page.
+    
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/259ed1a0-1bfa-4d38-845c-e5655c330702?source=api-prod
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5c79cbc1-4d8f-4330-b063-e5987238fca1?source=api-scan
   classification:
-    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:L/I:L/A:N
-    cvss-score: 5.5
+    cvss-metrics: 
+    cvss-score: 
     cve-id: 
   metadata:
     fofa-query: "wp-content/plugins/wordpress-countdown-widget/"
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 3.1.9.1')
+          - compare_versions(version, '<= 3.1.9.2')

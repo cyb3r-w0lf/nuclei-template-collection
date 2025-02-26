@@ -1,15 +1,14 @@
-id: js-support-ticket-6e4249abc9ed7d0c4f595044bee59cae
+id: js-support-ticket
 
 info:
   name: >
-    JS Help Desk – The Ultimate Help Desk & Support Plugin <= 2.8.8 - Unauthenticated Sensitive Information Exposure Through Unprotected Directory
+    JS Help Desk <= 2.7.1 - Missing Authorization to Plugin Settings Update
   author: topscoder
-  severity: low
+  severity: high
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/e8ed5d5d-86b0-40ac-a093-31392dea13a2?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/74403688-06a0-453f-ac44-bd731c389892?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/js-support-ticket/"
     google-query: inurl:"/wp-content/plugins/js-support-ticket/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,js-support-ticket,low
+  tags: cve,wordpress,wp-plugin,js-support-ticket,high
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 2.8.8')
+          - compare_versions(version, '2.7.1')

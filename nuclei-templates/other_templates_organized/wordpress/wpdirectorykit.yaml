@@ -1,15 +1,14 @@
-id: wpdirectorykit-af1541e5a3526de1ff9238116cd60e37
+id: wpdirectorykit
 
 info:
   name: >
-    WP Directory Kit <= 1.2.1 - Cross-Site Request Forgery to Plugin Settings Change/Delete, Demo Import, Directory Kit Modification/Deletion via admin_page_display
+    WP Directory Kit <= 1.2.6 - Missing Authorization
   author: topscoder
-  severity: medium
+  severity: high
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/8a7a6da3-d67c-42b3-8826-7e7fc9b938b4?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/60083262-198d-4a7d-bb0a-717a744e20f9?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/wpdirectorykit/"
     google-query: inurl:"/wp-content/plugins/wpdirectorykit/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,wpdirectorykit,medium
+  tags: cve,wordpress,wp-plugin,wpdirectorykit,high
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 1.2.1')
+          - compare_versions(version, '<= 1.2.6')

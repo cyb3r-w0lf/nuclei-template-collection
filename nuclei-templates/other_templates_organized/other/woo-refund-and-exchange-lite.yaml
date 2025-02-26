@@ -1,15 +1,14 @@
-id: woo-refund-and-exchange-lite-f05035a18768272d6ba642456bc4ef06
+id: woo-refund-and-exchange-lite
 
 info:
   name: >
-    Return Refund and Exchange For WooCommerce <= 4.4.5 - Unauthenticated Sensitive Information Exposure Through Unprotected Directory
+    Return Refund and Exchange For WooCommerce <= 4.0.8 - Arbitrary File Upload
   author: topscoder
-  severity: low
+  severity: critical
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/5f88a21d-28a9-4c91-9bf9-6b69f6a420e8?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3871bae4-f954-4692-8af8-1f96f8fcb778?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/woo-refund-and-exchange-lite/"
     google-query: inurl:"/wp-content/plugins/woo-refund-and-exchange-lite/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,woo-refund-and-exchange-lite,low
+  tags: cve,wordpress,wp-plugin,woo-refund-and-exchange-lite,critical
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.4.5')
+          - compare_versions(version, '<= 4.0.8')

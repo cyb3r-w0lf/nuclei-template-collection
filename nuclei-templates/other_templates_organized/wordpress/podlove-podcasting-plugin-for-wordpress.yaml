@@ -1,15 +1,14 @@
-id: podlove-podcasting-plugin-for-wordpress-1570c3865cfa7dacd94c993b9a1dcdda
+id: podlove-podcasting-plugin-for-wordpress
 
 info:
   name: >
-    Podlove Podcast Publisher <= 4.1.25 - Authenticated (Admin+) Stored Cross-Site Scripting via Feed Name
+    Podlove Podcast Publisher <= 3.8.2 - Authenticated (Admin+) Stored Cross-Site Scripting
   author: topscoder
   severity: low
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/39d41772-49f3-4bce-a170-cbe64ba99184?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/d353d8b7-76a5-45ce-aa7c-d571dedcbfd4?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 4.1.25')
+          - compare_versions(version, '<= 3.8.2')

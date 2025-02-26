@@ -1,15 +1,14 @@
-id: whmcs-bridge-8483c41059b1a8e448d35ba9865eee4d
+id: whmcs-bridge
 
 info:
   name: >
-    WHMCS Bridge <= 6.1 Subscriber+ Stored Cross-Site Scripting
+    WHMCS Bridge <= 6.3 - Reflected Cross-Site Scripting
   author: topscoder
-  severity: high
+  severity: medium
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
-    - https://www.wordfence.com/threat-intel/vulnerabilities/id/24ba85a0-dbc7-4c9d-a67f-d449c1d275ab?source=api-scan
+    - https://www.wordfence.com/threat-intel/vulnerabilities/id/3f08fd6e-4c1b-40e7-92ba-72cdd03ff585?source=api-scan
   classification:
     cvss-metrics: 
     cvss-score: 
@@ -18,7 +17,7 @@ info:
     fofa-query: "wp-content/plugins/whmcs-bridge/"
     google-query: inurl:"/wp-content/plugins/whmcs-bridge/"
     shodan-query: 'vuln:'
-  tags: cve,wordpress,wp-plugin,whmcs-bridge,high
+  tags: cve,wordpress,wp-plugin,whmcs-bridge,medium
 
 http:
   - method: GET
@@ -56,4 +55,4 @@ http:
 
       - type: dsl
         dsl:
-          - compare_versions(version, '<= 6.1')
+          - compare_versions(version, '<= 6.3')

@@ -1,4 +1,4 @@
-id: admin-bar-dashboard-control-84b8324c4da73ba07865fa1ff2ae10ce
+id: admin-bar-dashboard-control
 
 info:
   name: >
@@ -8,7 +8,6 @@ info:
   description: >
     
   reference:
-    - https://github.com/topscoder/nuclei-wordfence-cve
     - https://www.wordfence.com/threat-intel/vulnerabilities/id/37aa3d05-79b6-49ea-b698-afa78615e438?source=api-scan
   classification:
     cvss-metrics: 
