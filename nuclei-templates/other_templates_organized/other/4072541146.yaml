@@ -1,23 +1,26 @@
 id: http
 info:
-  name: Dreambox httpd
+  name: Boa httpd
   author: nmap,cn-kali-team
   tags: detect,tech,http,service
   severity: info
   metadata:
-    device_type: media device
-    fallback:
-    - get-request
-    rarity: 5
+    device_type: broadband router
+    info: Prolink ADSL router
+    product: boa
+    rarity: 7
+    vendor: boa
+    verified: true
+    version: $1
 tcp:
-- name: rtsprequest
+- name: oracle-tns
   inputs:
-  - data: OPTIONS / RTSP/1.0\r\n\r\n
+  - data: \0Z\0\0\x01\0\0\0\x016\x01,\0\0\x08\0\x7F\xFF\x7F\x08\0\0\0\x01\0 \0:\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\04\xE6\0\0\0\x01\0\0\0\0\0\0\0\0(CONNECT_DATA=(COMMAND=version))
   host:
   - '{{Hostname}}'
-  port: 80,554,3052,3372,5000,7070,8080,10000
+  port: 1035,1521,1522,1525,1526,1574,1748,1754,14238,20000
   extractors:
   - name: http
     type: regex
     regex:
-    - (?i)^HTTP/1\.1 406 Not Acceptable\r\n.*<blockquote>\n<TABLE border=0 cellPadding=1 width=\"80%\">\n<TR><TD>\n<FONT face=\"Helvetica\">\n<big>Request Error \(unsupported_protocol\)</big>\n<BR>\n<BR>\n</FONT>
+    - '^HTTP/1\.0 400 Bad Request\r\nDate: .*\r\nServer: Boa/([\w._-]+)\r\nConnection: close\r\nContent-Type: text/html\r\n\r\n<HTML><HEAD><TITLE>400 Bad Request</TITLE></HEAD>\n<BODY><H1>400 Bad Request</H1>\nYour client has issued a malformed or illegal request\.\n</BODY></HTML>\n$'

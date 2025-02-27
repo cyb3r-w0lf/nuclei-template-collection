@@ -1,12 +1,13 @@
 id: ftp
 info:
-  name: Fuji Xerox DocuPrint $1 ftpd
+  name: WebGate $2 eDVR camera ftpd
   author: nmap,cn-kali-team
   tags: detect,tech,ftp,service
   severity: info
   metadata:
-    device_type: printer
+    device_type: webcam
     rarity: 0
+    version: $1
 tcp:
 - name: 'null'
   inputs:
@@ -17,4 +18,4 @@ tcp:
   - name: ftp
     type: regex
     regex:
-    - '^220 FUJI XEROX DocuPrint ([A-Z][A-Z\d]+(?: ?[a-zA-Z]{1,2})?)\r\n'
+    - ^ftpd - accept the connection from [\d.]+\n220-eDVR FTP Server v([\d.]+) \(c\)Copyright WebGate Inc\. \w+-\w+\r\n220-Welcome to (DS\w+)\r\n220 You will be disconnected after 180 seconds of inactivity\.\r\n

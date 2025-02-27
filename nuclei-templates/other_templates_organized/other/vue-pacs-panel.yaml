@@ -8,11 +8,19 @@ info:
     Vue PACS was detected.
   reference:
     - https://www.usa.philips.com/healthcare/solutions/diagnostic-informatics/enterprise-imaging-pacs
+  classification:
+    cpe: cpe:2.3:a:philips:vue_pacs:*:*:*:*:*:*:*:*
   metadata:
     verified: true
     max-request: 1
-    shodan-query: http.title:"Vue PACS"
-  tags: vue,pacs,panel,login
+    vendor: philips
+    product: vue_pacs
+    shodan-query:
+      - http.title:"Vue PACS"
+      - http.title:"vue pacs"
+    fofa-query: title="vue pacs"
+    google-query: intitle:"vue pacs"
+  tags: vue,pacs,panel,login,philips
 
 http:
   - method: GET
@@ -39,4 +47,4 @@ http:
         group: 1
         regex:
           - 'version=([a-z0-9\.\s\-]+)'
-# digest: 4b0a00483046022100e9d2d21704dc5cfeb075f93edddda108e1a70939113d5d34b35d3a65c488292d022100c5b1dc89d8a2de62dded5b22f7ac6dd25dbd1c13731c02a2c68ec9828269351c:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100ba38e15b4df4243566eca5d9321bc6e5020e22b44672447265bd78276980a4f502201c176a7368f7333ea590904e0a3e011f47243c37004b8c0b7f11f33fdb31a867:922c64590222798bb761d5b6d8e72950

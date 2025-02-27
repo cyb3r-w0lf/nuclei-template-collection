@@ -4,7 +4,7 @@ info:
   name: Unauthenticated Gloo UI
   author: dhiyaneshDk
   severity: high
- 
+  tags: unauth,gloo
 
 requests:
   - method: GET

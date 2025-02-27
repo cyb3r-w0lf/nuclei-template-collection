@@ -1,14 +1,12 @@
 id: textui
 info:
-  name: Talk2M VPN service management
+  name: HP LaserJet telnet_debug
   author: nmap,cn-kali-team
   tags: detect,tech,textui,service
   severity: info
   metadata:
-    product: talk2m
+    device_type: printer
     rarity: 0
-    vendor: ewon
-    verified: true
 tcp:
 - name: 'null'
   inputs:
@@ -19,4 +17,4 @@ tcp:
   - name: textui
     type: regex
     regex:
-    - ^Welcome to Talk2MVpnService management Interface \r\n$
+    - '^\r\n\*{52}\r\n\* Welcome to telnet_debug {26}\*\r\n\* Type "help" to see a list of supported commands\. \*\r\n\*{52}\r\n\r\ntelnet_debug> '

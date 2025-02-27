@@ -33,4 +33,4 @@ http:
         dsl:
           - '!contains(host,"kaspersky.co.uk")'
           - '!contains(host,"kaspersky.com")'
-# digest: 4a0a00473045022100f1cedcffffbc5a9fc3629b2567d107f7bffdaf37c74d689ebeb12e6f96046fbe022035d068a0c18e45b8fd8e9267a83f14c44181ec53fd3fa4bcd78930a67d2f75d3:922c64590222798bb761d5b6d8e72950
+# digest: 4a0a00473045022100a6cb3d7d457fe8a6d52abbdc562d0efdae9cc2ef63ab02a29f7ac9d0c7dcfc35022024a04186f432e91ebdfe8cd2a1adde11d616e6379b7ca68198106a834e005345:922c64590222798bb761d5b6d8e72950
